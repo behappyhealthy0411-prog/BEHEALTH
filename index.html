@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代謝美學 - 重新理解身體的入口</title>
+    <!-- Google Fonts: 導入優雅的 Noto Serif TC (宋體) 與 Noto Sans TC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons (超細緻極簡圖示) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind Custom Configuration for Kyoto Aesthetics -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            50: '#FAF8F5',   // 溫潤米白 (主背景)
+                            100: '#F5F0EA',  // 稍深奶茶白
+                            200: '#EBE5DF',  // 奶茶灰
+                        },
+                        moss: {
+                            100: '#E2E7D8',  // 超淡苔綠
+                            500: '#8F9779',  // 經典苔綠 (主色)
+                            600: '#7B8365',  // 深苔綠
+                        },
+                        wood: {
+                            300: '#A89B90',  // 淺木棕
+                            500: '#8C7D70',  // 木質棕
+                            800: '#5C4E43',  // 深木褐
+                        },
+                        ink: {
+                            900: '#2D2B29',  // 霧灰黑
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif TC"', 'serif'],
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        widest: '0.18em',
+                        superwide: '0.25em',
+                    },
+                    lineHeight: {
+                        relaxed: '1.85',
+                        loose: '2.2',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* 訂製流暢的平滑與呼吸動畫效果 */
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #FAF8F5;
+            color: #2D2B29;
+            overflow-x: hidden;
+        }
+        
+        /* 緩慢優雅的呼吸動畫 */
+        @keyframes gentle-breath {
+            0%, 100% { opacity: 0.35; transform: scale(1); }
+            50% { opacity: 0.55; transform: scale(1.03); }
+        }
+        .breathing-light {
+            animation: gentle-breath 8s ease-in-out infinite;
+        }
+
+        /* 模擬清晨窗光緩緩流動 */
+        @keyframes window-light {
+            0%, 100% { transform: translate(-5%, -5%) rotate(-5deg); opacity: 0.15; }
+            50% { transform: translate(5%, 5%) rotate(5deg); opacity: 0.25; }
+        }
+        .window-shadow {
+            animation: window-light 16s ease-in-out infinite;
+        }
+
+        /* 慢速滾動淡入效果 */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1), transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-in-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 優雅的水波紋動畫 */
+        @keyframes ripple {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            100% { transform: scale(1.4); opacity: 0; }
+        }
+        .ripple-effect {
+            animation: ripple 4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+        }
+
+        /* 茶水蒸氣裊裊上升動畫 */
+        @keyframes vapor {
+            0% { transform: translateY(0) scaleX(1); opacity: 0; }
+            50% { transform: translateY(-8px) scaleX(1.1); opacity: 0.3; }
+            100% { transform: translateY(-18px) scaleX(0.95); opacity: 0; }
+        }
+        .tea-vapor {
+            animation: vapor 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="selection:bg-moss-100 selection:text-ink-900">
+
+    <!-- 頂部精緻導航欄 -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-cream-50/85 backdrop-blur-md border-b border-stone-200/40 px-6 py-4 md:px-12 transition-all duration-500">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#" class="font-serif text-lg tracking-superwide text-ink-900 hover:text-moss-500 transition-colors duration-300">
+                代謝美學 <span class="text-xs font-sans tracking-widest text-wood-500 ml-2">METABOLIC ESTHETICS</span>
+            </a>
+            
+            <!-- 靜音與呼吸指引輔助 -->
+            <div class="flex items-center space-x-6">
+                <!-- 呼吸教練按鈕 (點擊觸發呼吸指引) -->
+                <button onclick="toggleBreatheCoach()" class="flex items-center space-x-2 text-xs text-wood-500 hover:text-ink-900 transition-all tracking-widest duration-300 focus:outline-none bg-cream-100 px-3 py-1.5 rounded-full border border-stone-200/50">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-moss-500 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-moss-500"></span>
+                    </span>
+                    <span id="breathe-btn-text">同步呼吸</span>
+                </button>
+                <a href="https://lin.ee/pzxDU3O" target="_blank" class="hidden sm:inline-block bg-moss-500 text-cream-50 hover:bg-moss-600 px-5 py-2 text-xs tracking-widest rounded-full transition-all duration-300 shadow-sm">
+                    預約諮詢
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 呼吸導引覆蓋層 (預設隱藏，點擊觸發) -->
+    <div id="breathe-coach-overlay" class="fixed inset-0 z-50 bg-cream-50/98 backdrop-blur-lg flex flex-col justify-center items-center opacity-0 pointer-events-none transition-all duration-700">
+        <button onclick="toggleBreatheCoach()" class="absolute top-8 right-8 text-wood-500 hover:text-ink-900 focus:outline-none">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <div class="text-center max-w-md px-6">
+            <h3 class="font-serif text-lg text-ink-900 tracking-widest mb-12" id="breathe-instruction">請跟著圓圈，緩慢吸氣...</h3>
+            <!-- 呼吸圓圈動畫 -->
+            <div class="relative w-48 h-48 mx-auto flex items-center justify-center">
+                <div id="breathe-circle" class="absolute inset-0 rounded-full bg-moss-100 opacity-40 transition-all duration-[4000ms] ease-in-out scale-[0.7]"></div>
+                <div class="absolute w-36 h-36 rounded-full bg-cream-200 opacity-30"></div>
+                <i data-lucide="leaf" class="w-8 h-8 text-moss-500 relative z-10 animate-pulse"></i>
+            </div>
+            <p class="text-xs text-wood-500 tracking-widest mt-16 leading-loose">
+                把肩膀放下來。現在，你是安全的。<br>
+                在這裡，我們不趕時間。
+            </p>
+        </div>
+    </div>
+
+    <!-- 首頁主視覺 (Hero Section) -->
+    <section id="hero" class="relative min-h-screen flex flex-col justify-center px-6 md:px-12 py-32 overflow-hidden bg-cream-50">
+        <!-- 背景慢動畫：模擬晨光穿過日式木格窗 -->
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <!-- 晨光微黃微白 -->
+            <div class="window-shadow absolute -top-1/4 -left-1/4 w-[150%] h-[150%] bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-moss-100/15 via-cream-100/10 to-transparent"></div>
+            <!-- 木質感微弱圓形漸層，帶來溫暖感 -->
+            <div class="absolute bottom-0 right-0 w-3/4 h-3/4 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-wood-300/10 via-transparent to-transparent"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto relative z-10 text-center md:text-left pt-12">
+            <!-- 頂部自然氛圍空景示意 -->
+            <div class="mb-12 flex justify-center md:justify-start items-center space-x-3 text-wood-500 tracking-superwide text-xs">
+                <span>清晨自然光</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-wood-300"></span>
+                <span>一杯溫熱的茶</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-wood-300"></span>
+                <span>安靜流動的空氣</span>
+            </div>
+
+            <!-- 主標題 -->
+            <h1 class="font-serif text-3xl md:text-5xl lg:text-[2.75rem] text-ink-900 tracking-widest leading-normal md:leading-loose mb-16 fade-in-section opacity-0">
+                為什麼明明很努力，<br>
+                <span class="block mt-2">身體卻還是越來越卡？</span>
+            </h1>
+
+            <!-- 大量留白 -->
+            <div class="h-16 md:h-24"></div>
+
+            <!-- 副標題段落 -->
+            <div class="max-w-2xl space-y-8 text-wood-500 text-sm md:text-base tracking-widest leading-loose fade-in-section opacity-0">
+                <p class="font-serif text-ink-900 text-lg">很多時候，不是你不夠努力。</p>
+                <p>而是身體已經太累了。</p>
+                <p class="text-stone-500 font-light">
+                    透過代謝、睡眠、壓力、自律神經與生活節律的整合分析，重新理解身體為什麼開始疲勞、失衡、瘦不下來。
+                </p>
+            </div>
+
+            <!-- 標籤雲 (極簡風) -->
+            <div class="mt-16 flex flex-wrap justify-center md:justify-start gap-3 fade-in-section opacity-0">
+                <span class="px-4 py-2 bg-cream-100/80 border border-stone-200/50 rounded-full text-xs text-wood-500 tracking-widest">睡不好</span>
+                <span class="px-4 py-2 bg-cream-100/80 border border-stone-200/50 rounded-full text-xs text-wood-500 tracking-widest">容易累</span>
+                <span class="px-4 py-2 bg-cream-100/80 border border-stone-200/50 rounded-full text-xs text-wood-500 tracking-widest">體重卡住</span>
+                <span class="px-4 py-2 bg-cream-100/80 border border-stone-200/50 rounded-full text-xs text-wood-500 tracking-widest">嘴饞失控</span>
+                <span class="px-4 py-2 bg-cream-100/80 border border-stone-200/50 rounded-full text-xs text-wood-500 tracking-widest">血糖不穩</span>
+                <span class="px-4 py-2 bg-cream-100/80 border border-stone-200/50 rounded-full text-xs text-wood-500 tracking-widest">壓力大</span>
+                <span class="px-4 py-2 bg-cream-100/80 border border-stone-200/50 rounded-full text-xs text-wood-500 tracking-widest">自律神經失衡</span>
+            </div>
+
+            <!-- 行動按鈕 -->
+            <div class="mt-16 fade-in-section opacity-0">
+                <a href="#intro" class="inline-flex items-center space-x-3 bg-wood-500 text-cream-50 hover:bg-wood-800 px-8 py-4 rounded-full text-sm tracking-superwide transition-all duration-500 shadow-md group">
+                    <span>了解代謝美學</span>
+                    <i data-lucide="arrow-down" class="w-4 h-4 transform group-hover:translate-y-1 transition-transform duration-300"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- 滾動引導 -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2 opacity-50">
+            <span class="text-[9px] tracking-superwide text-wood-500 uppercase">Scroll down</span>
+            <div class="w-[1px] h-12 bg-gradient-to-b from-wood-300 to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- 第二區｜你是不是也有這些狀況？ -->
+    <section id="intro" class="py-24 md:py-36 px-6 md:px-12 bg-cream-100/50 border-t border-b border-stone-200/30">
+        <div class="max-w-5xl mx-auto">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+                
+                <!-- 左側：情境描述與安靜光景示意 (純CSS漸層與細線) -->
+                <div class="lg:col-span-5 space-y-8 lg:sticky lg:top-32">
+                    <div class="text-xs text-moss-500 tracking-superwide flex items-center space-x-2">
+                        <i data-lucide="sun" class="w-4 h-4"></i>
+                        <span>窗邊・慢慢吃早餐的人・安靜光影</span>
+                    </div>
+                    
+                    <h2 class="font-serif text-2xl md:text-3xl text-ink-900 tracking-widest leading-loose">
+                        你是不是也慢慢開始覺得，<br>身體不像以前那樣了？
+                    </h2>
+                    
+                    <!-- 模擬自然陰影與光照的氛圍框，中央為精緻的動態京都熱茶視覺 -->
+                    <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-cream-200 border border-stone-200/40 shadow-inner flex items-center justify-center p-6">
+                        <!-- 晨光動態條紋 -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-stone-400/5 via-transparent to-moss-100/10 z-0"></div>
+                        <div class="absolute top-1/4 left-1/10 w-1/2 h-1/2 bg-white/20 blur-xl rounded-full breathing-light"></div>
+                        
+                        <!-- 極簡幾何線條，表現京都建築的寧靜格柵感 -->
+                        <div class="absolute inset-x-8 top-0 bottom-0 flex justify-between opacity-15 pointer-events-none">
+                            <div class="w-[1px] h-full bg-wood-500"></div>
+                            <div class="w-[1px] h-full bg-wood-500"></div>
+                            <div class="w-[1px] h-full bg-wood-500"></div>
+                            <div class="w-[1px] h-full bg-wood-500"></div>
+                        </div>
+                        
+                        <!-- 靜物示意：精緻的動態 SVG 熱茶與微小漣漪 -->
+                        <div class="relative z-10 flex flex-col items-center">
+                            <!-- 茶杯 SVG -->
+                            <div class="relative w-16 h-16 flex items-center justify-center">
+                                <!-- 水蒸氣 (三個小粒子緩慢飄升) -->
+                                <div class="absolute -top-3 left-[26px] w-[1.5px] h-4 bg-wood-300 rounded-full tea-vapor" style="animation-delay: 0s;"></div>
+                                <div class="absolute -top-4 left-[32px] w-[1.5px] h-5 bg-wood-300 rounded-full tea-vapor" style="animation-delay: 1.2s;"></div>
+                                <div class="absolute -top-3 left-[38px] w-[1.5px] h-4 bg-wood-300 rounded-full tea-vapor" style="animation-delay: 0.6s;"></div>
+                                
+                                <!-- 茶杯本體 -->
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-wood-500/80">
+                                    <!-- 杯口圓與茶湯漣漪 -->
+                                    <ellipse cx="22" cy="14" rx="16" ry="6" stroke="currentColor" stroke-width="1" fill="#F5F0EA" />
+                                    <ellipse cx="22" cy="14" rx="10" ry="3.8" stroke="#8F9779" stroke-width="0.8" class="animate-pulse" />
+                                    <circle cx="20" cy="13" r="1" fill="#7B8365" opacity="0.6"/> <!-- 漂浮的茶梗 -->
+                                    <!-- 杯身 -->
+                                    <path d="M6 14C6 14 6 34 22 34C38 34 38 14 38 14" stroke="currentColor" stroke-width="1.2" />
+                                    <!-- 杯托 -->
+                                    <path d="M2 37C12 40 32 40 42 37" stroke="currentColor" stroke-width="0.8" />
+                                </svg>
+                            </div>
+                            <span class="text-[10px] tracking-superwide text-wood-500 mt-4 font-serif">A Moment of Stillness</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側：狀況卡片清單 -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="space-y-4">
+                        <!-- 狀況 1 -->
+                        <div class="p-6 bg-cream-50/80 rounded-xl border border-stone-200/30 hover:border-moss-100 transition-all duration-300">
+                            <p class="text-ink-900 text-sm md:text-base tracking-widest font-serif leading-relaxed">
+                                明明沒有吃很多，體重卻越來越難控制
+                            </p>
+                        </div>
+                        <!-- 狀況 2 -->
+                        <div class="p-6 bg-cream-50/80 rounded-xl border border-stone-200/30 hover:border-moss-100 transition-all duration-300">
+                            <p class="text-ink-900 text-sm md:text-base tracking-widest font-serif leading-relaxed">
+                                睡很久還是累，醒來像沒睡
+                            </p>
+                        </div>
+                        <!-- 狀況 3 -->
+                        <div class="p-6 bg-cream-50/80 rounded-xl border border-stone-200/30 hover:border-moss-100 transition-all duration-300">
+                            <p class="text-ink-900 text-sm md:text-base tracking-widest font-serif leading-relaxed">
+                                常常嘴饞、一直想吃東西，很難停下來
+                            </p>
+                        </div>
+                        <!-- 狀況 4 -->
+                        <div class="p-6 bg-cream-50/80 rounded-xl border border-stone-200/30 hover:border-moss-100 transition-all duration-300">
+                            <p class="text-ink-900 text-sm md:text-base tracking-widest font-serif leading-relaxed">
+                                晚上容易失眠、淺眠、半夜醒來
+                            </p>
+                        </div>
+                        <!-- 狀況 5 -->
+                        <div class="p-6 bg-cream-50/80 rounded-xl border border-stone-200/30 hover:border-moss-100 transition-all duration-300">
+                            <p class="text-ink-900 text-sm md:text-base tracking-widest font-serif leading-relaxed">
+                                健檢開始出現血糖、血脂、脂肪肝問題
+                            </p>
+                        </div>
+                        <!-- 狀況 6 -->
+                        <div class="p-6 bg-cream-50/80 rounded-xl border border-stone-200/30 hover:border-moss-100 transition-all duration-300">
+                            <p class="text-ink-900 text-sm md:text-base tracking-widest font-serif leading-relaxed">
+                                長期高壓，身體越來越緊繃
+                            </p>
+                        </div>
+                        <!-- 狀況 7 -->
+                        <div class="p-6 bg-cream-50/80 rounded-xl border border-stone-200/30 hover:border-moss-100 transition-all duration-300">
+                            <p class="text-ink-900 text-sm md:text-base tracking-widest font-serif leading-relaxed">
+                                很努力控制飲食，卻越來越挫折
+                            </p>
+                        </div>
+                        <!-- 狀況 8 -->
+                        <div class="p-6 bg-cream-50/80 rounded-xl border border-stone-200/30 hover:border-moss-100 transition-all duration-300">
+                            <p class="text-ink-900 text-sm md:text-base tracking-widest font-serif leading-relaxed">
+                                有時候不是胖，而是整個人都很浮腫、疲累
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 溫暖總結 -->
+                    <div class="pt-12 border-t border-stone-200/60 mt-8 space-y-6">
+                        <p class="font-serif text-lg text-ink-900 tracking-widest">
+                            很多時候，問題不只是「吃太多」。
+                        </p>
+                        <p class="text-wood-500 text-sm tracking-widest leading-loose">
+                            而是身體已經長期處在：<br>
+                            <span class="text-ink-900 font-medium">壓力、疲勞與失衡之中。</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- 第三區｜代謝美學在做什麼？ -->
+    <section class="py-24 md:py-36 px-6 md:px-12 bg-cream-50">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <span class="text-xs text-wood-500 tracking-superwide uppercase">Approach</span>
+                <h2 class="font-serif text-2xl md:text-3xl text-ink-900 tracking-widest leading-loose mt-4">
+                    代謝美學不是只看體重，<br>而是去理解身體為什麼開始失衡。
+                </h2>
+                <div class="w-12 h-[1px] bg-wood-300 mx-auto mt-8"></div>
+            </div>
+
+            <!-- 卡片格網 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 項目 1 -->
+                <div class="bg-cream-100/50 p-8 rounded-2xl border border-stone-200/30 hover:bg-cream-100 transition-all duration-500 space-y-6">
+                    <div class="w-10 h-10 rounded-full bg-cream-50 flex items-center justify-center text-moss-500 shadow-sm">
+                        <i data-lucide="moon" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-serif text-lg text-ink-900 tracking-widest">睡眠與恢復力</h3>
+                    <p class="text-xs text-wood-500 tracking-widest leading-loose">
+                        深層睡眠是身體代謝修復的黃金期。我們從睡眠品質與自律神經調整著手，找回真正的深層休息。
+                    </p>
+                </div>
+
+                <!-- 項目 2 -->
+                <div class="bg-cream-100/50 p-8 rounded-2xl border border-stone-200/30 hover:bg-cream-100 transition-all duration-500 space-y-6">
+                    <div class="w-10 h-10 rounded-full bg-cream-50 flex items-center justify-center text-moss-500 shadow-sm">
+                        <i data-lucide="activity" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-serif text-lg text-ink-900 tracking-widest">血糖與飢餓感</h3>
+                    <p class="text-xs text-wood-500 tracking-widest leading-loose">
+                        血糖的劇烈震盪，是引發嘴饞與能量卡關的元兇。透過無痛監測，掌握屬於你的溫和血糖曲線。
+                    </p>
+                </div>
+
+                <!-- 項目 3 -->
+                <div class="bg-cream-100/50 p-8 rounded-2xl border border-stone-200/30 hover:bg-cream-100 transition-all duration-500 space-y-6">
+                    <div class="w-10 h-10 rounded-full bg-cream-50 flex items-center justify-center text-moss-500 shadow-sm">
+                        <i data-lucide="wind" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-serif text-lg text-ink-900 tracking-widest">自律神經狀態</h3>
+                    <p class="text-xs text-wood-500 tracking-widest leading-loose">
+                        當交感神經過度興奮，身體便會關閉正常的脂肪燃燒與消化功能。我們需要練習如何讓自律神經踩下煞車。
+                    </p>
+                </div>
+
+                <!-- 項目 4 -->
+                <div class="bg-cream-100/50 p-8 rounded-2xl border border-stone-200/30 hover:bg-cream-100 transition-all duration-500 space-y-6">
+                    <div class="w-10 h-10 rounded-full bg-cream-50 flex items-center justify-center text-moss-500 shadow-sm">
+                        <i data-lucide="compass" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-serif text-lg text-ink-900 tracking-widest">壓力與生活節律</h3>
+                    <p class="text-xs text-wood-500 tracking-widest leading-loose">
+                        皮質醇（壓力荷爾蒙）過高會促使身體囤積脂肪。透過重建溫柔的生活節律，卸下身體的防備心。
+                    </p>
+                </div>
+
+                <!-- 項目 5 -->
+                <div class="bg-cream-100/50 p-8 rounded-2xl border border-stone-200/30 hover:bg-cream-100 transition-all duration-500 space-y-6">
+                    <div class="w-10 h-10 rounded-full bg-cream-50 flex items-center justify-center text-moss-500 shadow-sm">
+                        <i data-lucide="droplet" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-serif text-lg text-ink-900 tracking-widest">腸胃與消化狀況</h3>
+                    <p class="text-xs text-wood-500 tracking-widest leading-loose">
+                        腸道是第二個大腦，也是發炎程度的指標。修復腸道菌相與消化功能，是重建良好代謝的基石。
+                    </p>
+                </div>
+
+                <!-- 項目 6 -->
+                <div class="bg-cream-100/50 p-8 rounded-2xl border border-stone-200/30 hover:bg-cream-100 transition-all duration-500 space-y-6">
+                    <div class="w-10 h-10 rounded-full bg-cream-50 flex items-center justify-center text-moss-500 shadow-sm">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-serif text-lg text-ink-900 tracking-widest">慢性發炎與疲勞感</h3>
+                    <p class="text-xs text-wood-500 tracking-widest leading-loose">
+                        身體長期處於微發炎狀態時，體內的代謝功能就無法高效運作。我們共同找出體內的隱性發炎因子，進行系統性調養。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 第 7 點橫跨底部或特別拉出，保持空氣感 (替換細胞層級字眼) -->
+            <div class="mt-8 max-w-2xl mx-auto bg-moss-100/30 p-8 rounded-2xl border border-moss-500/10 text-center space-y-4">
+                <h3 class="font-serif text-lg text-ink-900 tracking-widest flex items-center justify-center space-x-2">
+                    <i data-lucide="sparkles" class="w-5 h-5 text-moss-500"></i>
+                    <span>荷爾蒙與基礎機能修復</span>
+                </h3>
+                <p class="text-xs text-wood-500 tracking-widest leading-loose max-w-lg mx-auto">
+                    甲狀腺、雌激素、胰島素等多重荷爾蒙的精密協同。不是單純控制卡路里，而是微調體內深層的能量平衡與生理調養。
+                </p>
+            </div>
+
+            <!-- 暖心強調 -->
+            <div class="mt-20 text-center max-w-xl mx-auto space-y-4">
+                <p class="font-serif text-lg text-ink-900 tracking-widest">
+                    因為很多人的問題，不是意志力不好。
+                </p>
+                <p class="text-wood-500 text-sm tracking-widest leading-loose">
+                    而是身體長期處於：<br>
+                    <span class="text-ink-900 font-medium">「撐著運作」的狀態。</span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 第四區｜身體其實在說什麼（核心體驗區：聽懂身體的悄悄話） -->
+    <section class="py-24 md:py-36 px-6 md:px-12 bg-cream-100/60 relative overflow-hidden">
+        <!-- 背景輕微呼吸微光 -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-moss-100/20 blur-3xl breathing-light"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            
+            <div class="text-center mb-16">
+                <span class="text-xs text-wood-500 tracking-superwide uppercase">Whisper of the body</span>
+                <h2 class="font-serif text-2xl md:text-3xl text-ink-900 tracking-widest leading-loose mt-4">
+                    身體其實一直在說話。
+                </h2>
+                <p class="text-xs text-wood-500 tracking-widest mt-3">點擊你身體的訊號，聽聽它背後真正想告訴你什麼：</p>
+            </div>
+
+            <!-- 交互探索區域：聽懂身體的悄悄話 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+                <!-- 按鈕 1 -->
+                <button onclick="revealWhisper('craving')" id="btn-craving" class="whisper-btn active-whisper-btn p-6 bg-cream-50 rounded-xl border border-stone-200 text-left transition-all duration-300 focus:outline-none hover:border-moss-500 shadow-sm flex flex-col justify-between h-36">
+                    <span class="font-serif text-lg text-ink-900 tracking-widest">「一直想吃東西」</span>
+                    <span class="text-xs text-wood-500 tracking-widest flex items-center">
+                        解讀背後訊息 <i data-lucide="chevron-right" class="w-3.5 h-3.5 ml-1"></i>
+                    </span>
+                </button>
+                <!-- 按鈕 2 -->
+                <button onclick="revealWhisper('tired')" id="btn-tired" class="whisper-btn p-6 bg-cream-50 rounded-xl border border-stone-200/50 text-left transition-all duration-300 focus:outline-none hover:border-moss-500 shadow-sm flex flex-col justify-between h-36">
+                    <span class="font-serif text-lg text-ink-900 tracking-widest">「明明很累，卻停不下來」</span>
+                    <span class="text-xs text-wood-500 tracking-widest flex items-center">
+                        解讀背後訊息 <i data-lucide="chevron-right" class="w-3.5 h-3.5 ml-1"></i>
+                    </span>
+                </button>
+                <!-- 按鈕 3 -->
+                <button onclick="revealWhisper('restrict')" id="btn-restrict" class="whisper-btn p-6 bg-cream-50 rounded-xl border border-stone-200/50 text-left transition-all duration-300 focus:outline-none hover:border-moss-500 shadow-sm flex flex-col justify-between h-36">
+                    <span class="font-serif text-lg text-ink-900 tracking-widest">「越控制飲食，越容易失控」</span>
+                    <span class="text-xs text-wood-500 tracking-widest flex items-center">
+                        解讀背後訊息 <i data-lucide="chevron-right" class="w-3.5 h-3.5 ml-1"></i>
+                    </span>
+                </button>
+            </div>
+
+            <!-- 悄悄話解密結果面板 (平滑切換，並加上 scroll-mt 以防捲動時被導航欄遮擋) -->
+            <div id="whisper-display-area" class="scroll-mt-28 bg-cream-50 p-8 md:p-12 rounded-2xl border border-stone-200/60 min-h-[300px] flex flex-col justify-center transition-all duration-500 shadow-sm">
+                <div id="whisper-content" class="transition-opacity duration-300">
+                    <!-- 預設內容 (一直想吃東西) -->
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-2 text-moss-500">
+                            <i data-lucide="smile" class="w-5 h-5"></i>
+                            <span class="text-xs tracking-widest">有時候不只是嘴饞，而是：</span>
+                        </div>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <li class="flex items-center space-x-3 text-sm text-wood-500 tracking-widest">
+                                <span class="w-1.5 h-1.5 rounded-full bg-moss-500"></span>
+                                <span>血糖長期大幅震盪</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-sm text-wood-500 tracking-widest">
+                                <span class="w-1.5 h-1.5 rounded-full bg-moss-500"></span>
+                                <span>深層睡眠嚴重不足</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-sm text-wood-500 tracking-widest">
+                                <span class="w-1.5 h-1.5 rounded-full bg-moss-500"></span>
+                                <span>皮質醇壓力過高</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-sm text-wood-500 tracking-widest">
+                                <span class="w-1.5 h-1.5 rounded-full bg-moss-500"></span>
+                                <span>身體的能量恢復力下降</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm text-wood-500 tracking-widest leading-loose pt-4 border-t border-stone-200/40">
+                            大腦開始不斷尋找快速能量，逼迫你尋求碳水與甜食。這是一套生存本能，而不是你的意志力有缺陷。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 溫柔留白結語 -->
+            <div class="mt-20 text-center space-y-4">
+                <p class="font-serif text-lg text-ink-900 tracking-widest">
+                    我們想做的，不是讓你更會忍耐。
+                </p>
+                <p class="text-wood-500 text-sm tracking-widest leading-loose">
+                    而是重新理解：<br>
+                    <span class="text-moss-500 font-medium">身體到底怎麼了。</span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 第五區｜我們怎麼進行？ (極簡優雅的步驟) -->
+    <section class="py-24 md:py-36 px-6 md:px-12 bg-cream-50">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="text-center mb-20">
+                <span class="text-xs text-wood-500 tracking-superwide uppercase">Process</span>
+                <h2 class="font-serif text-2xl md:text-3xl text-ink-900 tracking-widest leading-loose mt-4">
+                    我們會怎麼開始？
+                </h2>
+                <div class="w-12 h-[1px] bg-wood-300 mx-auto mt-6"></div>
+            </div>
+
+            <!-- 精緻纖細的豎向時間線結構 -->
+            <div class="relative pl-8 md:pl-20 border-l border-stone-200 space-y-16 py-4">
+                
+                <!-- 步驟 1 -->
+                <div class="relative group">
+                    <!-- 時間線上的小節點 -->
+                    <div class="absolute -left-[37px] md:-left-[85px] top-1.5 w-[11px] h-[11px] rounded-full bg-cream-50 border border-wood-500 flex items-center justify-center transition-all duration-500 group-hover:scale-125 bg-white">
+                        <div class="w-1.5 h-1.5 rounded-full bg-wood-500"></div>
+                    </div>
+                    
+                    <span class="block text-xs text-moss-500 tracking-superwide mb-2">STEP 1</span>
+                    <h3 class="font-serif text-lg text-ink-900 tracking-widest mb-4">重新了解身體目前的狀態</h3>
+                    <p class="text-sm text-wood-500 tracking-widest leading-loose max-w-2xl">
+                        透過問診、生活節律分析、完整抽血檢查或 CGM（連續血糖監測），像在清晨的鏡子前一樣，不帶批判地重新整理目前的代謝與恢復狀態。
+                    </p>
+                </div>
+
+                <!-- 步驟 2 -->
+                <div class="relative group">
+                    <!-- 時間線上的小節點 -->
+                    <div class="absolute -left-[37px] md:-left-[85px] top-1.5 w-[11px] h-[11px] rounded-full bg-cream-50 border border-wood-500 flex items-center justify-center transition-all duration-500 group-hover:scale-125 bg-white">
+                        <div class="w-1.5 h-1.5 rounded-full bg-wood-500"></div>
+                    </div>
+                    
+                    <span class="block text-xs text-moss-500 tracking-superwide mb-2">STEP 2</span>
+                    <h3 class="font-serif text-lg text-ink-900 tracking-widest mb-4">找到真正卡住的原因</h3>
+                    <p class="text-sm text-wood-500 tracking-widest leading-loose max-w-2xl">
+                        很多人的問題，不一定只是熱量。而可能是：
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="text-xs bg-cream-100 text-wood-500 px-3 py-1.5 rounded-full border border-stone-200/50">睡眠不足</span>
+                        <span class="text-xs bg-cream-100 text-wood-500 px-3 py-1.5 rounded-full border border-stone-200/50">壓力過高</span>
+                        <span class="text-xs bg-cream-100 text-wood-500 px-3 py-1.5 rounded-full border border-stone-200/50">血糖震盪</span>
+                        <span class="text-xs bg-cream-100 text-wood-500 px-3 py-1.5 rounded-full border border-stone-200/50">自律神經失衡</span>
+                        <span class="text-xs bg-cream-100 text-wood-500 px-3 py-1.5 rounded-full border border-stone-200/50">生理機能修復力下降</span>
+                    </div>
+                </div>
+
+                <!-- 步驟 3 -->
+                <div class="relative group">
+                    <!-- 時間線上的小節點 -->
+                    <div class="absolute -left-[37px] md:-left-[85px] top-1.5 w-[11px] h-[11px] rounded-full bg-cream-50 border border-wood-500 flex items-center justify-center transition-all duration-500 group-hover:scale-125 bg-white">
+                        <div class="w-1.5 h-1.5 rounded-full bg-wood-500"></div>
+                    </div>
+                    
+                    <span class="block text-xs text-moss-500 tracking-superwide mb-2">STEP 3</span>
+                    <h3 class="font-serif text-lg text-ink-900 tracking-widest mb-4">重新建立穩定節律</h3>
+                    <p class="text-sm text-wood-500 tracking-widest leading-loose max-w-2xl">
+                        拒絕極端的控制與忍耐。我們以極其溫和的手段引導，逐步恢復身體與生俱來的生理節奏：
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="text-xs bg-cream-100 text-wood-500 px-3 py-1.5 rounded-full border border-stone-200/50">穩定睡眠</span>
+                        <span class="text-xs bg-cream-100 text-wood-500 px-3 py-1.5 rounded-full border border-stone-200/50">穩定能量</span>
+                        <span class="text-xs bg-cream-100 text-wood-500 px-3 py-1.5 rounded-full border border-stone-200/50">穩定食慾</span>
+                        <span class="text-xs bg-cream-100 text-wood-500 px-3 py-1.5 rounded-full border border-stone-200/50">穩定血糖</span>
+                        <span class="text-xs bg-cream-100 text-wood-500 px-3 py-1.5 rounded-full border border-stone-200/50">穩定代謝</span>
+                    </div>
+                </div>
+
+                <!-- 步驟 4 -->
+                <div class="relative group">
+                    <!-- 時間線上的小節點 -->
+                    <div class="absolute -left-[37px] md:-left-[85px] top-1.5 w-[11px] h-[11px] rounded-full bg-cream-50 border border-wood-500 flex items-center justify-center transition-all duration-500 group-hover:scale-125 bg-white">
+                        <div class="w-1.5 h-1.5 rounded-full bg-wood-500"></div>
+                    </div>
+                    
+                    <span class="block text-xs text-moss-500 tracking-superwide mb-2">STEP 4</span>
+                    <h3 class="font-serif text-lg text-ink-900 tracking-widest mb-4">長期調整與陪伴</h3>
+                    <p class="text-sm text-wood-500 tracking-widest leading-loose max-w-2xl">
+                        身體的改變從不是一場高強度短跑，而是一趟溫和的徒步。我們不求快，只求重新建立一個能讓你在日常生活中，長期、舒適維持的優雅節奏。
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 第六區｜和一般減重有什麼不同？ -->
+    <section class="py-24 md:py-36 px-6 md:px-12 bg-cream-100/40 border-t border-b border-stone-200/30">
+        <div class="max-w-5xl mx-auto">
+            
+            <div class="text-center mb-20">
+                <span class="text-xs text-wood-500 tracking-superwide uppercase">The Difference</span>
+                <h2 class="font-serif text-2xl md:text-3xl text-ink-900 tracking-widest leading-loose mt-4">
+                    我們不是只想讓你瘦。
+                </h2>
+                <p class="text-xs text-wood-500 tracking-widest mt-3">而是希望身體重新穩定下來。</p>
+            </div>
+
+            <!-- 兩側極簡對比卡片 (加入 items-stretch 確保高度一致，水平對齊) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+                
+                <!-- 左：一般減重 (加入 h-full 與 flex 排版) -->
+                <div class="bg-cream-50/50 p-8 md:p-12 rounded-3xl border border-stone-200/40 flex flex-col justify-between relative h-full">
+                    <div class="space-y-8">
+                        <!-- 極簡框線感，不擁擠 -->
+                        <div class="flex items-center space-x-3 text-stone-400">
+                            <i data-lucide="arrow-right-left" class="w-4 h-4"></i>
+                            <span class="text-xs tracking-superwide uppercase">一般減重更常在做</span>
+                        </div>
+                        
+                        <ul class="space-y-6">
+                            <li class="flex items-center space-x-4">
+                                <i data-lucide="minus-circle" class="w-4 h-4 text-stone-400"></i>
+                                <span class="text-stone-500 font-light text-sm tracking-widest">少吃與極端卡路里限制</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <i data-lucide="minus-circle" class="w-4 h-4 text-stone-400"></i>
+                                <span class="text-stone-500 font-light text-sm tracking-widest">咬緊牙關的長期忍耐</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <i data-lucide="minus-circle" class="w-4 h-4 text-stone-400"></i>
+                                <span class="text-stone-500 font-light text-sm tracking-widest">追求紙面數字的快速瘦</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <i data-lucide="minus-circle" class="w-4 h-4 text-stone-400"></i>
+                                <span class="text-stone-500 font-light text-sm tracking-widest">單純依靠意志力與罪惡感控制</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <i data-lucide="minus-circle" class="w-4 h-4 text-stone-400"></i>
+                                <span class="text-stone-500 font-light text-sm tracking-widest">充滿焦慮與壓力的短期衝刺</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 右：代謝美學 (加入 h-full 與 flex 排版) -->
+                <div class="bg-moss-100/20 p-8 md:p-12 rounded-3xl border border-moss-500/10 flex flex-col justify-between relative overflow-hidden h-full">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-moss-500/5 rounded-full blur-2xl"></div>
+                    
+                    <div class="space-y-8 relative z-10">
+                        <div class="flex items-center space-x-3 text-moss-600">
+                            <i data-lucide="sparkle" class="w-4 h-4 text-moss-500"></i>
+                            <span class="text-xs tracking-superwide uppercase font-medium">代謝美學更在意的是</span>
+                        </div>
+                        
+                        <ul class="space-y-6">
+                            <li class="flex items-center space-x-4">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-moss-500"></i>
+                                <span class="text-ink-900 text-sm tracking-widest font-serif">探究身體為什麼開始失衡</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-moss-500"></i>
+                                <span class="text-ink-900 text-sm tracking-widest font-serif">睡眠質量與內在修復力</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-moss-500"></i>
+                                <span class="text-ink-900 text-sm tracking-widest font-serif">血糖與食慾的自然溫和穩定</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-moss-500"></i>
+                                <span class="text-ink-900 text-sm tracking-widest font-serif">自律神經系統與深層壓力的釋放</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-moss-500"></i>
+                                <span class="text-ink-900 text-sm tracking-widest font-serif">在日常中能長久維持的自律與節律</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-16 text-center max-w-xl mx-auto space-y-4">
+                <p class="text-sm text-wood-500 tracking-widest leading-loose">
+                    當身體開始感到安全並穩定，<br>
+                    <span class="text-ink-900 font-serif text-base block mt-2">體態、食慾與代謝，才有機會迎來真正的、持久的改變。</span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 第七區｜核心創辦理念 (已替換為 Dr. Hsu 創辦理念) -->
+    <section class="py-24 md:py-36 px-6 md:px-12 bg-cream-50">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                <!-- 左：創辦理念極簡肖像框 -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-64 h-80 rounded-2xl bg-cream-200 border border-stone-200/50 shadow-sm overflow-hidden flex items-center justify-center p-6">
+                        <!-- 極簡幾何京都茶屋感 -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-stone-300/10 to-transparent"></div>
+                        <!-- 霧化圓圈光影 -->
+                        <div class="absolute w-40 h-40 bg-moss-500/10 rounded-full blur-xl breathing-light"></div>
+                        
+                        <!-- 手寫體或極簡字樣替代個人頭像 -->
+                        <div class="relative z-10 text-center space-y-4">
+                            <div class="w-16 h-16 rounded-full border border-wood-500/20 mx-auto flex items-center justify-center bg-cream-50">
+                                <i data-lucide="heart" class="w-6 h-6 text-wood-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-lg text-ink-900 tracking-widest">代謝美學</h4>
+                                <p class="text-xs text-wood-500 tracking-widest mt-1">核心創辦理念</p>
+                                <p class="text-[9px] text-wood-300 tracking-superwide mt-1">DR. HSU & COLLABORATORS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右：暖心故事 -->
+                <div class="lg:col-span-7 space-y-8">
+                    <span class="text-xs text-wood-500 tracking-superwide uppercase">Our Vision</span>
+                    
+                    <h2 class="font-serif text-2xl md:text-3xl text-ink-900 tracking-widest leading-loose">
+                        為什麼開始做代謝美學？
+                    </h2>
+                    
+                    <div class="space-y-6 text-sm text-wood-500 tracking-widest leading-loose font-light">
+                        <p>在長年門診的臨床診察裡，Dr. Hsu 與團隊成員越來越常看見：</p>
+                        <p class="text-ink-900 font-serif">很多人其實不是不努力，而是已經太累了。</p>
+                        <p>
+                            長期的壓力累積、長期欠債的睡眠、無法停歇的飲食補償，與身體時刻緊繃的「求生狀態」，讓身體慢慢遺忘了原本精緻的節律。
+                        </p>
+                        <p>
+                            有些人拼拼命命控制，卻讓自己越來越焦慮；有些人明明已經吃得極少，體重卻還是卡住。
+                        </p>
+                        <p class="text-ink-900 font-serif text-base mt-8">
+                            所以我開始希望，我們不再只是冰冷地處理檢查單上的數字。
+                        </p>
+                        <p>
+                            而是重新停下來理解：<br>
+                            <span class="text-moss-500 font-medium">身體到底想說什麼。</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 最後 CTA 區 -->
+    <section id="cta" class="py-24 md:py-36 px-6 md:px-12 bg-cream-100/60 relative overflow-hidden border-t border-stone-200/40">
+        
+        <!-- 背景空景動態氛圍：極簡的一道光束 -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <div class="absolute -top-1/4 -right-1/4 w-[120%] h-[120%] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-moss-100/20 via-cream-100/10 to-transparent"></div>
+        </div>
+
+        <div class="max-w-3xl mx-auto text-center relative z-10 space-y-12">
+            
+            <div class="space-y-6">
+                <span class="text-xs text-wood-500 tracking-superwide uppercase">Epilogue</span>
+                <h2 class="font-serif text-2xl md:text-4xl text-ink-900 tracking-widest leading-loose">
+                    改變不一定要很激烈。<br>
+                    <span class="block mt-2">有時候，只是重新開始理解身體。</span>
+                </h2>
+                <div class="w-12 h-[1px] bg-wood-300 mx-auto mt-6"></div>
+            </div>
+
+            <!-- 大量留白 -->
+            <div class="h-6"></div>
+
+            <!-- CTA 按鈕組：LINE 預約、初診、地點 (連結更新為使用者指定的專屬連結) -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-lg mx-auto">
+                <a href="https://lin.ee/pzxDU3O" target="_blank" class="w-full sm:w-auto flex items-center justify-center space-x-2 bg-moss-500 text-cream-50 hover:bg-moss-600 px-8 py-4 rounded-full text-xs tracking-superwide transition-all duration-300 shadow-md">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>LINE 線上預約</span>
+                </a>
+                <button onclick="showModal('info')" class="w-full sm:w-auto bg-cream-50 text-wood-500 hover:text-ink-900 px-8 py-4 rounded-full text-xs tracking-superwide border border-stone-200 hover:border-wood-500 transition-all duration-300">
+                    初診流程與須知
+                </button>
+                <a href="https://maps.app.goo.gl/n16i5Zg6CiESYUMBA" target="_blank" class="w-full sm:w-auto flex items-center justify-center bg-cream-50 text-wood-500 hover:text-ink-900 px-8 py-4 rounded-full text-xs tracking-superwide border border-stone-200 hover:border-wood-500 transition-all duration-300">
+                    <i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1.5 text-moss-500"></i>
+                    <span>診所位置與交通</span>
+                </a>
+            </div>
+
+            <!-- 最溫暖的最後一席話 -->
+            <p class="text-xs text-wood-500/80 tracking-widest leading-loose pt-16 max-w-md mx-auto italic font-serif">
+                「在這裡看完後，第一次沒有那麼討厭自己的身體。」<br>
+                願你能在此，找到與身體握手言和的入口。
+            </p>
+
+        </div>
+    </section>
+
+    <!-- 初診資訊彈出視窗 (更新為 Dr. Hsu 所提供的精準諮詢與收費標準說明，排版更優雅) -->
+    <div id="modal-info" class="fixed inset-0 z-50 bg-ink-900/40 backdrop-blur-sm hidden flex items-center justify-center p-6 opacity-0 transition-opacity duration-300">
+        <div class="bg-cream-50 max-w-xl w-full rounded-2xl p-8 border border-stone-200 shadow-xl space-y-6 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('info')" class="absolute top-6 right-6 text-stone-400 hover:text-ink-900">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <h3 class="font-serif text-lg text-ink-900 tracking-widest border-b border-stone-200 pb-4">初診資訊與收費流程</h3>
+            
+            <div class="space-y-6 text-xs text-wood-500 tracking-widest leading-relaxed">
+                <p class="text-ink-900 font-serif text-sm">
+                    您好，感謝您對代謝美學的信任與支持。
+                </p>
+
+                <!-- 收費基準 -->
+                <div class="p-4 bg-cream-100 rounded-xl border border-stone-200/50 space-y-3">
+                    <div class="flex items-center space-x-2 text-moss-600 font-serif font-medium">
+                        <i data-lucide="lightbulb" class="w-4 h-4 text-moss-500"></i>
+                        <span>諮詢收費說明</span>
+                    </div>
+                    <ul class="space-y-2 pl-4 list-disc text-stone-600">
+                        <li>初次諮詢以 <strong class="text-ink-900">30 分鐘 NT$500</strong> 為基準。</li>
+                        <li>超過 30 分鐘，每 15 分鐘費用為 NT$500。</li>
+                    </ul>
+                </div>
+
+                <!-- 流程細節 -->
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <span class="flex-shrink-0 w-5 h-5 rounded-full bg-moss-100 text-moss-600 flex items-center justify-center text-[10px] font-bold">1</span>
+                        <div>
+                            <p class="font-serif text-ink-900 font-medium">事前線上問卷配合</p>
+                            <p class="text-stone-500 mt-1">主要搭配事前的兩份線上問卷，用以釐清健康訴求與初步檢測方向。</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <span class="flex-shrink-0 w-5 h-5 rounded-full bg-moss-100 text-moss-600 flex items-center justify-center text-[10px] font-bold">2</span>
+                        <div>
+                            <p class="font-serif text-ink-900 font-medium">攜帶外院基本健檢報告</p>
+                            <p class="text-stone-500 mt-1">若您攜帶三張以內的基本健檢報告（如血糖、血脂、肝腎功能等），醫師可直接進行初步評估與分析。</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <span class="flex-shrink-0 w-5 h-5 rounded-full bg-moss-100 text-moss-600 flex items-center justify-center text-[10px] font-bold">3</span>
+                        <div>
+                            <p class="font-serif text-ink-900 font-medium">較大量之外院資料分析</p>
+                            <p class="text-stone-500 mt-1">若您帶有外院較大量的檢查資料，醫師會依當場分析的複雜程度與時間，評估額外費用（約 NT$500 – 1,000 元不等）。</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <span class="flex-shrink-0 w-5 h-5 rounded-full bg-moss-100 text-moss-600 flex items-center justify-center text-[10px] font-bold">4</span>
+                        <div>
+                            <p class="font-serif text-ink-900 font-medium">特殊檢驗或功能醫學報告分析 (NT$4,000)</p>
+                            <p class="text-stone-500 mt-1">包含一次完整報告說明、A4 摘要報告乙份。（此項服務不再重複收取諮詢費，需另外預約，無法於初次諮詢當日進行）。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 暖心與專業備註 -->
+                <p class="text-[11px] text-stone-400 leading-loose border-t border-stone-200/50 pt-4">
+                    我們理解您可能已在外院進行檢測，但每位醫師的分析邏輯與臨床責任不同，為確保評估的精準與後續治療安全，我們仍需依據專業時間與責任收取費用。感謝您的理解，也謝謝您對高品質醫療的重視。
+                </p>
+
+                <!-- 前往 LINE 按鈕 -->
+                <div class="pt-2">
+                    <a href="https://lin.ee/pzxDU3O" target="_blank" class="w-full flex items-center justify-center space-x-2 bg-moss-500 hover:bg-moss-600 text-cream-50 py-3 rounded-full text-xs font-serif tracking-widest transition-colors duration-300">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>同意並前往 LINE 預約諮詢</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁腳 -->
+    <footer class="bg-cream-200/20 py-12 px-6 border-t border-stone-200/20 text-center">
+        <p class="text-[10px] tracking-superwide text-wood-300">
+            © 2026 代謝美學 METABOLIC ESTHETICS. ALL RIGHTS RESERVED.
+        </p>
+    </footer>
+
+    <!-- JS 邏輯區 -->
+    <script>
+        // 初始化 Lucide 圖示
+        lucide.createIcons();
+
+        // 滾動漸顯 Intersection Observer
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll(".fade-in-section");
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target); // 一次性顯露
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // 強制讓首屏主標題、副標題直接顯露 (如果沒有觸發)
+            setTimeout(() => {
+                document.querySelectorAll('#hero .fade-in-section').forEach(el => {
+                    el.classList.add('visible');
+                });
+            }, 150);
+        });
+
+        // 身體悄悄話互動邏輯
+        const whisperData = {
+            craving: {
+                title: '「一直想吃東西」',
+                bullets: [
+                    '血糖長期大幅震盪',
+                    '深層睡眠嚴重不足',
+                    '皮質醇壓力過高',
+                    '身體的能量恢復力下降'
+                ],
+                desc: '大腦開始不斷尋找快速能量，逼迫你尋求碳水與甜食。這是一套生存本能，而不是你的意志力有缺陷。'
+            },
+            tired: {
+                title: '「明明很累，卻停不下來」',
+                bullets: [
+                    '交感神經長期過度興奮',
+                    '身體缺乏安全感，維持在求生狀態',
+                    '心血管與肌肉無法真正鬆弛',
+                    '大腦的煞車機制（副交感）暫時失靈'
+                ],
+                desc: '有些人的身體已經長期處在高壓與緊繃狀態。即使你躺在床上，大腦和細胞也因為未釋放的壓力荷爾蒙，很難真正切換到放鬆與修復模式。這需要溫柔引導，而非自責。'
+            },
+            restrict: {
+                title: '「越控制飲食，越容易失控」',
+                bullets: [
+                    '熱量過低引發飢餓素（Ghrelin）暴增',
+                    '限制帶來的心理匱乏感與剝奪感',
+                    '壓力皮質醇高升阻礙脂肪代謝',
+                    '能量失衡導致身體主動降低新陳代謝'
+                ],
+                desc: '當身體長期處於壓力與匱乏感，暴食與補償性進食反而是身體為了「求生」而做出的保護反應。我們想做的，不是讓你更會忍耐，而是終止這場無止境的生存對抗。'
+            }
+        };
+
+        function revealWhisper(key) {
+            const container = document.getElementById('whisper-content');
+            const data = whisperData[key];
+            
+            // 更新按鈕活性狀態
+            document.querySelectorAll('.whisper-btn').forEach(btn => {
+                btn.classList.remove('border-moss-500', 'bg-moss-100/10');
+                btn.classList.add('border-stone-200/50');
+            });
+            const activeBtn = document.getElementById(`btn-${key}`);
+            activeBtn.classList.remove('border-stone-200/50');
+            activeBtn.classList.add('border-moss-500', 'bg-moss-100/10');
+
+            // 漸變淡出動畫
+            container.style.opacity = '0';
+            
+            setTimeout(() => {
+                let bulletsHtml = data.bullets.map(b => `
+                    <li class="flex items-center space-x-3 text-sm text-wood-500 tracking-widest">
+                        <span class="w-1.5 h-1.5 rounded-full bg-moss-500"></span>
+                        <span>${b}</span>
+                    </li>
+                `).join('');
+
+                container.innerHTML = `
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-2 text-moss-500">
+                            <i data-lucide="smile" class="w-5 h-5"></i>
+                            <span class="text-xs tracking-widest">有時候不只是意志力問題，而是：</span>
+                        </div>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            ${bulletsHtml}
+                        </ul>
+                        <p class="text-sm text-wood-500 tracking-widest leading-loose pt-4 border-t border-stone-200/40">
+                            ${data.desc}
+                        </p>
+                    </div>
+                `;
+                
+                // 重新渲染 Lucide 圖示
+                lucide.createIcons();
+                
+                // 漸變淡入
+                container.style.opacity = '1';
+
+                // 自動平滑滾動至顯示區
+                const displayArea = document.getElementById('whisper-display-area');
+                if (displayArea) {
+                    displayArea.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            }, 300);
+        }
+
+        // 呼吸指引教練切換
+        let breatheInterval;
+        let isCoaching = false;
+        
+        function toggleBreatheCoach() {
+            const overlay = document.getElementById('breathe-coach-overlay');
+            const btnText = document.getElementById('breathe-btn-text');
+            const circle = document.getElementById('breathe-circle');
+            const instruction = document.getElementById('breathe-instruction');
+            
+            isCoaching = !isCoaching;
+            
+            if (isCoaching) {
+                overlay.classList.remove('pointer-events-none', 'opacity-0');
+                overlay.classList.add('opacity-100');
+                btnText.innerText = "靜心中...";
+                
+                // 開始呼吸指引循環 (4秒吸、4秒呼)
+                let phase = 0; // 0: 吸氣, 1: 呼氣
+                instruction.innerText = "請跟著圓圈，緩慢吸氣...";
+                circle.style.transform = "scale(1.35)";
+                circle.style.opacity = "0.7";
+                
+                breatheInterval = setInterval(() => {
+                    phase = (phase + 1) % 2;
+                    if (phase === 0) {
+                        instruction.innerText = "請跟著圓圈，緩慢吸氣...";
+                        circle.style.transform = "scale(1.35)";
+                        circle.style.opacity = "0.7";
+                    } else {
+                        instruction.innerText = "呼出所有的疲憊，慢慢吐氣...";
+                        circle.style.transform = "scale(0.7)";
+                        circle.style.opacity = "0.3";
+                    }
+                }, 4000);
+            } else {
+                overlay.classList.add('pointer-events-none', 'opacity-0');
+                overlay.classList.remove('opacity-100');
+                btnText.innerText = "同步呼吸";
+                clearInterval(breatheInterval);
+            }
+        }
+
+        // 彈出式視窗切換邏輯
+        function showModal(id) {
+            const modal = document.getElementById(`modal-${id}`);
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.add('opacity-100');
+            }, 10);
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(`modal-${id}`);
+            modal.classList.remove('opacity-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+    </script>
+</body>
+</html>
