@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>半夜 2–3 點醒，真的只是失眠嗎？ — 代謝美學 METABOLIC ESTHETICS</title>
+    <!-- Google Fonts: 導入精緻的宋體/明體與無襯線黑體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 1. 嚴格品牌視覺變數 */
+        :root {
+            --bg-main: #FAF8F5;          /* 溫潤米白 */
+            --bg-sub: #F5F0EA;           /* 稍深奶茶白 */
+            --bg-block: #EBE5DF;         /* 奶茶灰 */
+            --text-main: #2D2B29;        /* 霧灰黑 */
+            --text-sub: #8C7D70;         /* 木質棕 */
+            --accent-moss: #8F9779;      /* 苔綠 */
+            --dark-green: #7B8365;       /* 深綠 */
+            --light-moss: #E2E7D8;       /* 淡苔綠 */
+            --font-serif: 'Noto Serif TC', serif;
+            --font-sans: 'Noto Sans TC', sans-serif;
+            --border-color: #E2DCD5;     /* 極細緻之灰褐分割線 */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 2.1;           /* 寬鬆舒暢的行距 */
+            letter-spacing: 0.09em;     /* 寬闊字距，舒緩呼吸感 */
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 2. 導覽列：極簡茶席氣息 */
+        .nav-header {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .brand-zh {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            line-height: 1.4;
+        }
+
+        .brand-en {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            color: var(--text-sub);
+            font-weight: 400;
+            margin-top: 0.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            letter-spacing: 0.1em;
+            font-weight: 400;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        /* 3. Hero區：大器留白，自然光般的靜謐氛圍 */
+        .hero-section {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 4rem;
+            text-align: center;
+        }
+
+        .category-tag {
+            font-size: 0.75rem;
+            color: var(--accent-moss);
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 1.8rem;
+            font-weight: 500;
+        }
+
+        .article-title {
+            font-family: var(--font-serif);
+            font-size: 1.9rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--text-main);
+            margin-bottom: 2rem;
+            word-break: keep-all;
+        }
+
+        .hero-intro {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+            line-height: 1.9;
+            max-width: 520px;
+            margin: 0 auto 4rem;
+            word-break: keep-all;
+        }
+
+        /* 核心探索問題盒 */
+        .question-box {
+            background-color: transparent;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2.5rem 1.5rem;
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .question-box-title {
+            font-family: var(--font-serif);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.1em;
+        }
+
+        .question-list {
+            list-style: none;
+        }
+
+        .question-list li {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 0.8rem;
+            padding-left: 1.2rem;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .question-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .question-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: var(--accent-moss);
+        }
+
+        /* 4. 文章正文：溫柔而專注的排版 */
+        .article-content {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 1.5rem 5rem;
+        }
+
+        .article-p {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            margin-bottom: 2.2rem;
+            text-align: justify;
+        }
+
+        .article-p.short-phrase {
+            margin-bottom: 1.6rem;
+        }
+
+        .section-heading {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            font-weight: 400;
+            color: var(--text-main);
+            margin: 5rem 0 2rem;
+            letter-spacing: 0.12em;
+            position: relative;
+            padding-bottom: 0.6rem;
+        }
+
+        /* 標題下極細木質飾線 */
+        .section-heading::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 25px;
+            height: 1px;
+            background-color: var(--text-sub);
+        }
+
+        /* 清單 */
+        .content-list {
+            list-style: none;
+            margin: 1.5rem 0 2.5rem;
+            padding-left: 0.5rem;
+        }
+
+        .content-list li {
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            padding-left: 1.2rem;
+            position: relative;
+            line-height: 1.8;
+            color: var(--text-main);
+        }
+
+        .content-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--text-sub);
+            font-weight: 300;
+        }
+
+        .highlight-text {
+            color: var(--dark-green);
+            font-weight: 400;
+        }
+
+        /* 5. 重點整理區：極具寧靜感的奶茶灰色塊 */
+        .summary-card {
+            background-color: var(--bg-sub);
+            border-radius: 4px;
+            padding: 2.5rem 2rem;
+            margin: 5rem 0;
+            border-left: 3px solid var(--accent-moss);
+        }
+
+        .summary-title {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        .summary-list {
+            list-style: none;
+        }
+
+        .summary-list li {
+            font-size: 0.92rem;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        .summary-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .summary-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--accent-moss);
+            font-size: 0.85rem;
+        }
+
+        /* 溫柔收尾段落 */
+        .closing-text {
+            text-align: center;
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            color: var(--text-sub);
+            line-height: 2;
+            margin: 6rem auto;
+            max-width: 520px;
+            word-break: keep-all;
+        }
+
+        /* 6. 延伸閱讀區：乾淨細緻卡片 */
+        .related-section {
+            margin-top: 5rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 4rem;
+        }
+
+        .related-title {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--text-main);
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.12em;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .related-card {
+            background-color: var(--bg-main);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 2rem 1.5rem;
+            text-decoration: none;
+            transition: border-color 0.4s ease, background-color 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .related-card:hover {
+            border-color: var(--accent-moss);
+            background-color: var(--bg-sub);
+        }
+
+        .related-card-category {
+            font-size: 0.7rem;
+            color: var(--text-sub);
+            letter-spacing: 0.15em;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .related-card-title {
+            font-family: var(--font-serif);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-main);
+            font-weight: 400;
+        }
+
+        /* 7. 返回按鈕與頁尾 */
+        .footer-navigation {
+            text-align: center;
+            padding: 4rem 1.5rem 6rem;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.9rem 2.6rem;
+            border: 1px solid var(--accent-moss);
+            color: var(--accent-moss);
+            text-decoration: none;
+            font-size: 0.88rem;
+            letter-spacing: 0.15em;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-family: var(--font-sans);
+            font-weight: 400;
+        }
+
+        .btn-back:hover {
+            background-color: var(--accent-moss);
+            color: #FFFFFF;
+        }
+
+        .btn-back-icon {
+            margin-right: 0.6rem;
+            font-size: 0.8rem;
+        }
+
+        .site-footer {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            font-size: 0.72rem;
+            color: var(--text-sub);
+            border-top: 1px solid var(--border-color);
+            letter-spacing: 0.12em;
+        }
+
+        /* 8. 響應式調整 */
+        @media (min-width: 768px) {
+            .hero-section {
+                padding: 8rem 2rem 5rem;
+            }
+
+            .article-title {
+                font-size: 2.1rem;
+            }
+
+            .article-content {
+                padding: 0 2rem 5rem;
+            }
+
+            .related-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .related-card {
+                padding: 2.2rem 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 導航欄 -->
+    <header class="nav-header">
+        <a href="index.html" class="brand">
+            <span class="brand-zh">代謝美學</span>
+            <span class="brand-en">METABOLIC ESTHETICS</span>
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">首頁</a>
+            <a href="sleep_recovery.html">睡眠與恢復力</a>
+            <a href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener noreferrer">預約諮詢</a>
+        </nav>
+    </header>
+
+    <!-- Hero 區 -->
+    <section class="hero-section">
+        <span class="category-tag">SLEEP & RECOVERY</span>
+        <h1 class="article-title">半夜 2–3 點醒，真的只是失眠嗎？</h1>
+        <p class="hero-intro">在夜深人靜的後半夜悄然醒來，我們常急著怪罪自己的神經系統。但有時，這只是身體在對你發出細微的、溫柔的訊號。</p>
+        
+        <!-- 本文探索問題 -->
+        <div class="question-box">
+            <h2 class="question-box-title">這篇文章我們將探索：</h2>
+            <ul class="question-list">
+                <li>為什麼總是在半夜 2–3 點醒？</li>
+                <li>半夜醒來代表失眠嗎？</li>
+                <li>睡眠與恢復力有什麼關係？</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 文章正文 -->
+    <article class="article-content">
+        <p class="article-p short-phrase">很多人都有同樣的困擾。</p>
+        <p class="article-p short-phrase">明明順利睡著了，卻總是在半夜 2–3 點左右醒來。</p>
+        <p class="article-p short-phrase">有些人醒來後還能再睡，有些人卻開始翻來覆去。</p>
+        <p class="article-p">久了之後，甚至會發現：後半夜越睡越淺、夢變多、醒來還是很累，連帶白天的精神也越來越差。</p>
+        <p class="article-p">於是我們開始懷疑：是不是自己失眠了？</p>
+        <p class="article-p"><span class="highlight-text">但很多時候，問題不一定只是失眠。</span></p>
+
+        <h3 class="section-heading">臨床上常看到的情況</h3>
+        <p class="article-p short-phrase">在門診裡，半夜固定時間醒來的人其實不少。常見的描述包括：</p>
+        <ul class="content-list">
+            <li>每天都差不多 2–3 點醒來</li>
+            <li>醒來後腦袋開始自動運轉、想事情</li>
+            <li>醒來後感覺到心跳變快</li>
+            <li>醒來後很難再次進入深睡狀態</li>
+        </ul>
+        <p class="article-p">有些人甚至已經持續好幾個月，日復一日地在這個時間點與黑夜對視。</p>
+
+        <h3 class="section-heading">為什麼特別容易在半夜 2–3 點醒？</h3>
+        <p class="article-p">從睡眠生理學的角度來看，半夜 2–3 點通常是人體進入後半夜睡眠週期的關鍵轉換點。在此時：</p>
+        <ul class="content-list">
+            <li>深睡的比例開始下降</li>
+            <li>淺睡的比例逐漸增加</li>
+            <li>自律神經系統開始悄悄作準備，迎接清晨的到來</li>
+        </ul>
+        <p class="article-p">如果身體整體的恢復能力不足，或是長期處於慢性的高壓狀態下，就非常容易在這個脆弱的睡眠週期轉換點被喚醒。</p>
+        <p class="article-p">因此，<span class="highlight-text">半夜醒來本身不一定是問題</span>。真正值得我們去注意和探討的是：為什麼身體此時無法順利地再次回到深層睡眠裡？</p>
+
+        <h3 class="section-heading">身體其實想告訴你什麼？</h3>
+        <p class="article-p">半夜 2–3 點醒來，很多時候並不是身體故意在打擾你。相反地，它更像是一種安靜的提醒。</p>
+        <p class="article-p short-phrase">提醒著我們：</p>
+        <ul class="content-list">
+            <li>最近的自己，是否真的太累了？</li>
+            <li>是否長期讓心靈與身體處於超載的高壓狀態？</li>
+            <li>是否已經很久、很久，沒有真正靜下來放鬆？</li>
+            <li>我們的睡眠時間或許足夠，但「恢復力」真的夠嗎？</li>
+            <li>身體是不是在不知不覺中，一直維持在隨時準備戰鬥的防禦模式？</li>
+        </ul>
+        <p class="article-p">當一個人的自我修復與恢復能力下降時，睡眠往往是最早、最直接出現變化和波動的地方之一。</p>
+
+        <h3 class="section-heading">可以先觀察什麼？</h3>
+        <p class="article-p">如果你發現自己也經常在半夜 2–3 點醒來，不需要驚慌，可以先試著溫和地觀察與紀錄以下幾件事：</p>
+        
+        <p class="article-p short-phrase"><strong class="highlight-text">1. 醒來的頻率</strong><br>是只有在壓力大的日子裡偶爾發生，還是幾乎每天、無一例外地出現？</p>
+        
+        <p class="article-p short-phrase"><strong class="highlight-text">2. 醒來後的即時感覺</strong><br>醒來那一刻，內心伴隨的是焦慮嗎？心跳有沒有變快？是想上廁所、肚子餓，還是單純地清醒過來？</p>
+        
+        <p class="article-p short-phrase"><strong class="highlight-text">3. 白天的生活狀態</strong><br>白天的精神狀態如何？容易覺得疲勞嗎？是否發現自己越來越依賴咖啡因？情緒起伏是否比平常更大一些？</p>
+        
+        <p class="article-p"><strong class="highlight-text">4. 最近的壓力源與作息變化</strong><br>回想一下最近：工作壓力是否增加？作息有沒有變動？睡眠時間是否被壓縮？自己是不是經常處於緊繃無法卸下武裝的狀態？</p>
+
+        <!-- 重點整理區：奶茶灰柔和色塊 -->
+        <div class="summary-card">
+            <h4 class="summary-title">重點整理</h4>
+            <ul class="summary-list">
+                <li>半夜 2–3 點醒來，並不一定代表你罹患了失眠症。</li>
+                <li>當身體的整體恢復力下降、壓力賀爾蒙過高時，後半夜就容易出現夜醒。</li>
+                <li>不要急著把夜醒視為需要排除的敵人，它其實是身體狀態的重要訊號。</li>
+            </ul>
+        </div>
+
+        <!-- 溫柔收尾段落 -->
+        <p class="closing-text">
+            與其急著把它視為必須解決的「睡眠問題」，<br>
+            不如先試著理解：最近的自己，是不是已經太久沒有好好被修復、真正恢復了。
+        </p>
+
+        <!-- 延伸閱讀區 -->
+        <section class="related-section">
+            <h4 class="related-title">延伸閱讀</h4>
+            <div class="related-grid">
+                <a href="#" class="related-card">
+                    <div>
+                        <span class="related-card-category">SLEEP & RECOVERY</span>
+                        <h5 class="related-card-title" style="margin-top: 0.5rem;">為什麼後半夜越睡越淺？</h5>
+                    </div>
+                </a>
+                <a href="#" class="related-card">
+                    <div>
+                        <span class="related-card-category">SLEEP & RECOVERY</span>
+                        <h5 class="related-card-title" style="margin-top: 0.5rem;">睡很久還是累？</h5>
+                    </div>
+                </a>
+                <a href="#" class="related-card">
+                    <div>
+                        <span class="related-card-category">GUT & DIGESTION</span>
+                        <h5 class="related-card-title" style="margin-top: 0.5rem;">逆流夜醒，身體在提醒什麼？</h5>
+                    </div>
+                </a>
+                <a href="#" class="related-card">
+                    <div>
+                        <span class="related-card-category">SHIFT WORK</span>
+                        <h5 class="related-card-title" style="margin-top: 0.5rem;">輪班族睡眠卡關的常見原因</h5>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </article>
+
+    <!-- 返回按鈕與頁尾 -->
+    <div class="footer-navigation">
+        <a href="sleep_recovery.html" class="btn-back">
+            <span class="btn-back-icon">←</span> 返回《睡眠與恢復力》
+        </a>
+    </div>
+
+    <footer class="site-footer">
+        <p>© 代謝美學 METABOLIC ESTHETICS. 緩慢生活的自我照護提案.</p>
+    </footer>
+
+</body>
+</html>
