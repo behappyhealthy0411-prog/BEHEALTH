@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="zh-TW" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -339,7 +339,7 @@
                     <!-- 溫暖總結 -->
                     <div class="pt-12 border-t border-stone-200/60 mt-8 space-y-6">
                         <p class="font-serif text-lg text-ink-900 tracking-widest">
-                            很多時候，問題不只是「吃太多」。
+                            Many times, the issue isn't simply "eating too much."
                         </p>
                         <p class="text-wood-500 text-sm tracking-widest leading-loose">
                             而是身體已經長期處在：<br>
@@ -384,7 +384,7 @@
                     <div class="w-10 h-10 rounded-full bg-cream-50 flex items-center justify-center text-moss-500 shadow-sm">
                         <i data-lucide="activity" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="font-serif text-lg text-ink-900 tracking-widest">血糖與飢餓感</h3>
+                    <h3 class="font-serif text-lg text-ink-900 tracking-widest">血糖與食慾</h3>
                     <p class="text-xs text-wood-500 tracking-widest leading-loose">
                         血糖的劇烈震盪，是引發嘴饞與能量卡關的元兇。透過無痛監測，掌握屬於你的溫和血糖曲線。
                     </p>
@@ -435,7 +435,7 @@
                 </div>
             </div>
 
-            <!-- 第 7 點橫跨底部或特別拉出，保持空氣感 (替換細胞層級字眼) -->
+            <!-- 第 7 點橫跨底部或特別拉出，保持空氣感 -->
             <div class="mt-8 max-w-2xl mx-auto bg-moss-100/30 p-8 rounded-2xl border border-moss-500/10 text-center space-y-4">
                 <h3 class="font-serif text-lg text-ink-900 tracking-widest flex items-center justify-center space-x-2">
                     <i data-lucide="sparkles" class="w-5 h-5 text-moss-500"></i>
@@ -461,7 +461,7 @@
     </section>
 
     <!-- 第四區｜身體其實在說什麼（核心體驗區：聽懂身體的悄悄話） -->
-    <section class="py-24 md:py-36 px-6 md:px-12 bg-cream-100/60 relative overflow-hidden">
+    <section id="whisper-section" class="py-24 md:py-36 px-6 md:px-12 bg-cream-100/60 relative overflow-hidden scroll-mt-20">
         <!-- 背景輕微呼吸微光 -->
         <div class="absolute inset-0 pointer-events-none overflow-hidden">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-moss-100/20 blur-3xl breathing-light"></div>
@@ -736,6 +736,267 @@
         </div>
     </section>
 
+    <!-- 【新增】身體知識樹入口區 (Knowledge Tree Portal) -->
+    <section id="knowledge-forest" class="py-24 md:py-36 px-6 md:px-12 bg-cream-50 scroll-mt-20">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <span class="text-xs text-wood-500 tracking-superwide uppercase">Metabolic Forest</span>
+                <h2 class="font-serif text-2xl md:text-3xl text-ink-900 tracking-widest leading-loose mt-4">
+                    代謝美學知識樹
+                </h2>
+                <p class="text-xs text-wood-500 tracking-widest mt-3 leading-relaxed">
+                    點選你有感應的葉片，開啟一場與身體和解、探尋本源的閱讀之旅。
+                </p>
+                <div class="w-12 h-[1px] bg-wood-300 mx-auto mt-8"></div>
+            </div>
+
+            <!-- 卡片容器 (響應式 3 欄式格網，完美配合 7 張卡片的置中微調) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 items-stretch">
+                
+                <!-- 樹一：身體其實在說什麼 -->
+                <div class="bg-cream-100/20 rounded-2xl p-8 border border-stone-200/30 hover:border-moss-500/20 hover:bg-cream-100/40 transition-all duration-500 flex flex-col justify-between h-full group fade-in-section relative cursor-pointer">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-cream-50 flex items-center justify-center text-moss-500 shadow-sm">
+                                <i data-lucide="leaf" class="w-4 h-4"></i>
+                            </div>
+                            <h3 class="font-serif text-lg text-ink-900 tracking-widest">身體其實在說什麼</h3>
+                        </div>
+                        <p class="text-xs text-wood-500 tracking-widest leading-loose font-serif italic">
+                            「有些不舒服，不是身體在跟你作對，而是它正在提醒你。」
+                        </p>
+                        <ul class="space-y-4 my-8 border-t border-stone-200/20 pt-6">
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼一直想吃東西？</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼明明很累，卻停不下來？</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼越控制飲食，越容易失控？</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4">
+                        <a href="#whisper-section" class="text-[10px] text-wood-500 tracking-superwide uppercase border-b border-stone-300/40 pb-1 hover:border-moss-500 hover:text-ink-900 transition-all duration-300 inline-block after:absolute after:inset-0">
+                            探索此樹
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 樹二：睡眠與恢復力 -->
+                <div class="bg-cream-100/20 rounded-2xl p-8 border border-stone-200/30 hover:border-moss-500/20 hover:bg-cream-100/40 transition-all duration-500 flex flex-col justify-between h-full group fade-in-section relative cursor-pointer">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-cream-50 flex items-center justify-center text-moss-500 shadow-sm">
+                                <i data-lucide="moon" class="w-4 h-4"></i>
+                            </div>
+                            <h3 class="font-serif text-lg text-ink-900 tracking-widest">睡眠與恢復力</h3>
+                        </div>
+                        <p class="text-xs text-wood-500 tracking-widest leading-loose font-serif italic">
+                            「睡眠不是單純睡著，而是身體是否真的進入修復狀態。」
+                        </p>
+                        <ul class="space-y-4 my-8 border-t border-stone-200/20 pt-6">
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼半夜 2–3 點會醒？</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼後半夜越睡越淺？</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼睡很久還是累？</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4">
+                        <a href="sleep_recovery.html" class="text-[10px] text-wood-500 tracking-superwide uppercase border-b border-stone-300/40 pb-1 hover:border-moss-500 hover:text-ink-900 transition-all duration-300 inline-block after:absolute after:inset-0">
+                            探索此樹
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 樹三：血糖與食慾 -->
+                <div class="bg-cream-100/20 rounded-2xl p-8 border border-stone-200/30 hover:border-moss-500/20 hover:bg-cream-100/40 transition-all duration-500 flex flex-col justify-between h-full group fade-in-section relative cursor-pointer">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-cream-50 flex items-center justify-center text-moss-500 shadow-sm">
+                                <i data-lucide="activity" class="w-4 h-4"></i>
+                            </div>
+                            <h3 class="font-serif text-lg text-ink-900 tracking-widest">血糖與食慾</h3>
+                        </div>
+                        <p class="text-xs text-wood-500 tracking-widest leading-loose font-serif italic">
+                            「嘴饞、疲累與血糖震盪，常常比意志力更早說出身體狀態。」
+                        </p>
+                        <ul class="space-y-4 my-8 border-t border-stone-200/20 pt-6">
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼吃不多，血糖還是高？</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼胰島素阻抗變好，A1C 卻變高？</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼下午特別想吃甜食？</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4">
+                        <a href="javascript:void(0)" onclick="showToast('血糖與食慾樹正在深層調養中，敬請期待...')" class="text-[10px] text-wood-500 tracking-superwide uppercase border-b border-stone-300/40 pb-1 hover:border-moss-500 hover:text-ink-900 transition-all duration-300 inline-block after:absolute after:inset-0">
+                            探索此樹
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 樹四：體重與代謝 -->
+                <div class="bg-cream-100/20 rounded-2xl p-8 border border-stone-200/30 hover:border-moss-500/20 hover:bg-cream-100/40 transition-all duration-500 flex flex-col justify-between h-full group fade-in-section relative cursor-pointer">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-cream-50 flex items-center justify-center text-moss-500 shadow-sm">
+                                <i data-lucide="compass" class="w-4 h-4"></i>
+                            </div>
+                            <h3 class="font-serif text-lg text-ink-900 tracking-widest">體重與代謝</h3>
+                        </div>
+                        <p class="text-xs text-wood-500 tracking-widest leading-loose font-serif italic">
+                            「體重卡住時，問題不一定是吃太多，而是身體已經進入保護模式。」
+                        </p>
+                        <ul class="space-y-4 my-8 border-t border-stone-200/20 pt-6">
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼明明很努力，還是瘦不下來？</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>一日兩餐適合所有人嗎？</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼減肥後容易復胖？</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4">
+                        <a href="javascript:void(0)" onclick="showToast('體重與代謝樹正在深層調養中，敬請期待...')" class="text-[10px] text-wood-500 tracking-superwide uppercase border-b border-stone-300/40 pb-1 hover:border-moss-500 hover:text-ink-900 transition-all duration-300 inline-block after:absolute after:inset-0">
+                            探索此樹
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 樹五：壓力與自律神經 -->
+                <div class="bg-cream-100/20 rounded-2xl p-8 border border-stone-200/30 hover:border-moss-500/20 hover:bg-cream-100/40 transition-all duration-500 flex flex-col justify-between h-full group fade-in-section relative cursor-pointer">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-cream-50 flex items-center justify-center text-moss-500 shadow-sm">
+                                <i data-lucide="wind" class="w-4 h-4"></i>
+                            </div>
+                            <h3 class="font-serif text-lg text-ink-900 tracking-widest">壓力與自律神經</h3>
+                        </div>
+                        <p class="text-xs text-wood-500 tracking-widest leading-loose font-serif italic">
+                            「真正耗損身體的，有時候不是忙，而是神經系統一直停不下來。」
+                        </p>
+                        <ul class="space-y-4 my-8 border-t border-stone-200/20 pt-6">
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼休息了還是累？</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼一直緊繃放鬆不了？</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼越努力越疲憊？</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4">
+                        <a href="javascript:void(0)" onclick="showToast('壓力與自律神經樹正在深層調養中，敬請期待...')" class="text-[10px] text-wood-500 tracking-superwide uppercase border-b border-stone-300/40 pb-1 hover:border-moss-500 hover:text-ink-900 transition-all duration-300 inline-block after:absolute after:inset-0">
+                            探索此樹
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 樹六：腸胃與消化 -->
+                <div class="bg-cream-100/20 rounded-2xl p-8 border border-stone-200/30 hover:border-moss-500/20 hover:bg-cream-100/40 transition-all duration-500 flex flex-col justify-between h-full group fade-in-section relative cursor-pointer">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-cream-50 flex items-center justify-center text-moss-500 shadow-sm">
+                                <i data-lucide="droplet" class="w-4 h-4"></i>
+                            </div>
+                            <h3 class="font-serif text-lg text-ink-900 tracking-widest">腸胃與消化</h3>
+                        </div>
+                        <p class="text-xs text-wood-500 tracking-widest leading-loose font-serif italic">
+                            「腸胃不是只負責消化，也常常反映身體是否真正放鬆。」
+                        </p>
+                        <ul class="space-y-4 my-8 border-t border-stone-200/20 pt-6">
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼睡到一半胸口不舒服醒來？</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼吃健康飲食反而脹氣？</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼液態食物反而容易逆流？</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4">
+                        <a href="javascript:void(0)" onclick="showToast('腸胃與消化樹正在深層調養中，敬請期待...')" class="text-[10px] text-wood-500 tracking-superwide uppercase border-b border-stone-300/40 pb-1 hover:border-moss-500 hover:text-ink-900 transition-all duration-300 inline-block after:absolute after:inset-0">
+                            探索此樹
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 樹七：輪班族專區 (在寬螢幕上置中展開，呈現不妥協的精緻佈局) -->
+                <div class="bg-moss-100/10 rounded-2xl p-8 border border-moss-500/10 hover:border-moss-500/35 hover:bg-moss-100/20 transition-all duration-500 flex flex-col justify-between h-full group fade-in-section lg:col-span-3 lg:max-w-xl lg:mx-auto lg:w-full relative cursor-pointer">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-cream-50 flex items-center justify-center text-moss-500 shadow-sm">
+                                <i data-lucide="clock" class="w-4 h-4"></i>
+                            </div>
+                            <h3 class="font-serif text-lg text-ink-900 tracking-widest">輪班族專區</h3>
+                        </div>
+                        <p class="text-xs text-wood-500 tracking-widest leading-loose font-serif italic">
+                            「輪班不是單純作息不同，而是身體節律長期被迫調整。」
+                        </p>
+                        <ul class="space-y-4 my-8 border-t border-stone-200/20 pt-6">
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>為什麼輪班族只睡三、四個小時就醒？</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>輪夜班時，吃低碳會更累嗎？</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-xs text-stone-500 tracking-widest leading-relaxed">
+                                <span class="text-moss-500 mt-0.5">•</span>
+                                <span>輪班族怎麼吃，睡眠比較接得住？</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4">
+                        <a href="javascript:void(0)" onclick="showToast('輪班專區正在深層調養中，敬請期待...')" class="text-[10px] text-wood-500 tracking-superwide uppercase border-b border-stone-300/40 pb-1 hover:border-moss-500 hover:text-ink-900 transition-all duration-300 inline-block after:absolute after:inset-0">
+                            探索此專區
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
     <!-- 第七區｜核心創辦理念 (已替換為 Dr. Hsu 創辦理念) -->
     <section class="py-24 md:py-36 px-6 md:px-12 bg-cream-50">
         <div class="max-w-4xl mx-auto">
@@ -925,10 +1186,40 @@
         </p>
     </footer>
 
+    <!-- 溫雅提示框 (Toast) -->
+    <div id="toast" class="fixed bottom-12 left-1/2 -translate-x-1/2 z-50 bg-wood-800 text-cream-50 px-6 py-3.5 rounded-full text-xs tracking-widest shadow-lg opacity-0 pointer-events-none transition-all duration-500 ease-out flex items-center space-x-2 border border-stone-200/25">
+        <i data-lucide="sparkle" class="w-3.5 h-3.5 text-moss-100 animate-spin" style="animation-duration: 4s;"></i>
+        <span id="toast-text">此知識樹正在灌溉中，敬請期待...</span>
+    </div>
+
     <!-- JS 邏輯區 -->
     <script>
         // 初始化 Lucide 圖示
         lucide.createIcons();
+
+        // 溫雅提示框邏輯
+        let toastTimeout;
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastText = document.getElementById('toast-text');
+            
+            toastText.innerText = message;
+            
+            // 清除之前的計時器
+            clearTimeout(toastTimeout);
+            
+            // 顯露 Toast
+            toast.classList.remove('opacity-0', 'pointer-events-none');
+            toast.classList.add('opacity-100');
+            toast.style.transform = 'translate(-50%, -8px)';
+            
+            // 3秒後自動消失
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0', 'pointer-events-none');
+                toast.style.transform = 'translate(-50%, 0)';
+            }, 3000);
+        }
 
         // 滾動漸顯 Intersection Observer
         document.addEventListener("DOMContentLoaded", () => {
@@ -989,7 +1280,7 @@
                     '壓力皮質醇高升阻礙脂肪代謝',
                     '能量失衡導致身體主動降低新陳代謝'
                 ],
-                desc: '當身體長期處於壓力與匱乏感，暴食與補償性進食反而是身體為了「求生」而做出的保護反應。我們想做的，不是讓你更會忍耐，而是終止這場無止境的生存對抗。'
+                desc: '當身體長期處於壓力與匱乏感，暴食與補償性進食反而是身體為了「求生」而做出的保護反应。我們想做的，不是讓你更會忍耐，而是終止這場無止境的生存對抗。'
             }
         };
 
@@ -1098,6 +1389,7 @@
             }, 10);
         }
 
+        // 關閉視窗
         function closeModal(id) {
             const modal = document.getElementById(`modal-${id}`);
             modal.classList.remove('opacity-100');
