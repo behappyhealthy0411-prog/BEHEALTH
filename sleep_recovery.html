@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>睡眠與恢復力 - 代謝美學 BEHEALTH</title>
+    <style>
+        /* --- 品牌設計系統變數 --- */
+        :root {
+            --bg-base: #F8F7F4;       /* 溫暖米白色背景 */
+            --bg-card: #FFFFFF;       /* 純白卡片背景 */
+            --bg-footer: #F1EFEA;     /* 稍深的沉穩米色，用於頁尾 */
+            --text-primary: #253529;  /* 森林黛綠（主文字色） */
+            --text-secondary: #5C6A5F;/* 苔蘚灰綠（副文字色） */
+            --accent-green: #6C8E75;  /* 柔和點綴綠（細線、箭頭） */
+            --accent-pale: #D6DDD8;   /* 極淡綠（框線與 Hover 微光） */
+            --border-soft: #EBECE8;   /* 柔和分隔線 */
+            
+            --font-serif: "Georgia", "Noto Serif TC", "PMingLiU", serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+            --transition-smooth: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        /* --- 基礎重設與全域設定 --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 2.0;
+            letter-spacing: 0.08em;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        /* --- 網頁共用容器 --- */
+        .container {
+            width: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* --- 極簡導覽列（與首頁呼應） --- */
+        .navbar {
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border-soft);
+            background-color: transparent;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.15em;
+        }
+
+        .logo span {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 300;
+            color: var(--text-secondary);
+            margin-left: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-item {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            position: relative;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--accent-green);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        .nav-item:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-item:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* --- Hero 視覺核心區 --- */
+        .hero {
+            padding: 120px 0 90px 0;
+            text-align: center;
+        }
+
+        .hero-title-en {
+            font-family: var(--font-serif);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: var(--accent-green);
+            letter-spacing: 0.25em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .hero-title {
+            font-size: 2.25rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 45px;
+            letter-spacing: 0.12em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 50px;
+            line-height: 2.1;
+            font-weight: 400;
+        }
+
+        .hero-description {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 2.2;
+        }
+
+        /* 優雅的分隔線 */
+        .divider {
+            width: 1px;
+            height: 80px;
+            background-color: var(--accent-pale);
+            margin: 70px auto 0 auto;
+        }
+
+        /* --- 睡眠地圖（主要網格區塊） --- */
+        .sleep-map {
+            padding-bottom: 140px;
+        }
+
+        .map-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 70px;
+        }
+
+        /* 四個子類別的卡片群組 */
+        .map-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .group-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 20px;
+        }
+
+        .group-num {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--accent-green);
+            font-style: italic;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .group-title {
+            font-size: 1.35rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-bottom: 10px;
+            letter-spacing: 0.1em;
+        }
+
+        .group-intro {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+        }
+
+        /* 卡片堆疊設計 */
+        .cards-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            padding: 35px;
+            border-radius: 8px;
+            border: 1px solid var(--border-soft);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 210px;
+            box-shadow: 0 4px 20px rgba(37, 53, 41, 0.01);
+            transition: var(--transition-smooth);
+        }
+
+        /* 卡片滑鼠懸停效果 */
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(37, 53, 41, 0.04);
+            border-color: var(--accent-pale);
+            background-color: #FAFBF9;
+        }
+
+        .card-body {
+            margin-bottom: 25px;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-bottom: 14px;
+            line-height: 1.6;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .card-action {
+            font-size: 0.85rem;
+            color: var(--accent-green);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            align-self: flex-start;
+            transition: var(--transition-smooth);
+        }
+
+        .card:hover .card-action {
+            color: var(--text-primary);
+            transform: translateX(6px);
+        }
+
+        /* --- 頁尾區塊（深層沉澱） --- */
+        .footer {
+            background-color: var(--bg-footer);
+            padding: 100px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-soft);
+        }
+
+        .footer-title {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-bottom: 35px;
+            letter-spacing: 0.15em;
+        }
+
+        .footer-content {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 2.2;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        /* --- 響應式網格斷點設定（RWD） --- */
+        @media (min-width: 768px) {
+            .hero {
+                padding: 160px 0 100px 0;
+            }
+            .hero-title {
+                font-size: 2.6rem;
+            }
+            /* 桌面版轉化為優雅的雙欄排版 */
+            .map-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 80px 48px;
+            }
+            .card {
+                padding: 40px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .map-grid {
+                gap: 90px 64px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 極簡頂部導覽列 -->
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">BEHEALTH<span>代謝美學</span></a>
+            <div class="nav-links">
+                <a href="#" class="nav-item">首頁</a>
+                <a href="#" class="nav-item">睡眠與恢復</a>
+                <a href="#" class="nav-item">日常食記</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 區 -->
+    <header class="hero">
+        <div class="container">
+            <span class="hero-title-en">Sleep & Restoration</span>
+            <h1 class="hero-title">睡眠與恢復力</h1>
+            <p class="hero-subtitle">
+                睡眠不只是睡著。<br>
+                很多時候，<br>
+                睡眠的變化，<br>
+                其實是身體正在發出的訊號。
+            </p>
+            <p class="hero-description">
+                有些人半夜總是在固定時間醒來，<br>
+                有些人睡很久卻還是疲憊，<br>
+                有些人明明很累卻無法真正休息。<br><br>
+                這些現象的背後，往往不只是睡眠本身，<br>
+                而是恢復力、自律神經、消化系統與生活節奏，<br>
+                正在透過睡眠表現出來。
+            </p>
+            <div class="divider"></div>
+        </div>
+    </header>
+
+    <!-- 睡眠地圖網格區 -->
+    <main class="sleep-map">
+        <div class="container">
+            <div class="map-grid">
+                
+                <!-- ① 夜醒型 -->
+                <section class="map-group">
+                    <div class="group-header">
+                        <span class="group-num">01 /</span>
+                        <h2 class="group-title">夜醒型</h2>
+                        <p class="group-intro">明明睡得著，卻總是在半夜醒來。</p>
+                    </div>
+                    <div class="cards-stack">
+                        <a href="#" class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">半夜2–3點醒，真的只是失眠嗎？</h3>
+                                <p class="card-text">固定時間醒來，很多時候不只是失眠，而是體內系統特定韻律的提醒。</p>
+                            </div>
+                            <span class="card-action">閱讀更多 →</span>
+                        </a>
+                        <a href="#" class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">為什麼後半夜越睡越淺？</h3>
+                                <p class="card-text">後半夜的淺眠，可能深刻地反映著體內自主神經與恢復力的微妙變化。</p>
+                            </div>
+                            <span class="card-action">閱讀更多 →</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- ② 恢復不足型 -->
+                <section class="map-group">
+                    <div class="group-header">
+                        <span class="group-num">02 /</span>
+                        <h2 class="group-title">恢復不足型</h2>
+                        <p class="group-intro">睡眠時間夠，卻始終覺得沒有恢復。</p>
+                    </div>
+                    <div class="cards-stack">
+                        <a href="#" class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">睡很久還是累？</h3>
+                                <p class="card-text">問題有時候不在睡眠的長度，而在於深層核心的恢復效率。</p>
+                            </div>
+                            <span class="card-action">閱讀更多 →</span>
+                        </a>
+                        <a href="#" class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">一直做夢代表睡不好嗎？</h3>
+                                <p class="card-text">夢境的繁多與活躍，有時候正是身體和心靈正在重新整理訊息的動態過程。</p>
+                            </div>
+                            <span class="card-action">閱讀更多 →</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- ③ 腸胃干擾型 -->
+                <section class="map-group">
+                    <div class="group-header">
+                        <span class="group-num">03 /</span>
+                        <h2 class="group-title">腸胃干擾型</h2>
+                        <p class="group-intro">有些夜醒，其實來自消化系統。</p>
+                    </div>
+                    <div class="cards-stack">
+                        <a href="#" class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">胸悶夜醒，可能不只是心臟問題</h3>
+                                <p class="card-text">某些深夜突發的胸口不適，實質上很可能是微弱的胃食道逆流所引起的反射性緊繃。</p>
+                            </div>
+                            <span class="card-action">閱讀更多 →</span>
+                        </a>
+                        <a href="#" class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">逆流夜醒，身體其實在提醒什麼？</h3>
+                                <p class="card-text">睡眠的沉靜與腸胃的波動，兩者在神經傳導上的連結比我們想像的更為緊密。</p>
+                            </div>
+                            <span class="card-action">閱讀更多 →</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- ④ 節律型 -->
+                <section class="map-group">
+                    <div class="group-header">
+                        <span class="group-num">04 /</span>
+                        <h2 class="group-title">節律型</h2>
+                        <p class="group-intro">生活節奏改變，睡眠也會跟著改變。</p>
+                    </div>
+                    <div class="cards-stack">
+                        <a href="#" class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">輪班族睡眠卡關的常見原因</h3>
+                                <p class="card-text">輪班不單單是睡不夠的問題，更是內在生理時鐘（晝夜節律）面臨的全面協調考驗。</p>
+                            </div>
+                            <span class="card-action">閱讀更多 →</span>
+                        </a>
+                        <a href="#" class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">晚睡晚起真的比較不好嗎？</h3>
+                                <p class="card-text">健康的指標關鍵有時不在於時鐘上的指針早晚，而在於作息的規律性與光照模式。</p>
+                            </div>
+                            <span class="card-action">閱讀更多 →</span>
+                        </a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- 頁尾區 -->
+    <footer class="footer">
+        <div class="container">
+            <h2 class="footer-title">睡眠是一面鏡子</h2>
+            <div class="footer-content">
+                <p>
+                    當睡眠開始改變時，有時候不是睡眠出了問題。<br>
+                    而是身體正在透過睡眠，告訴我們一些更重要的事情。
+                </p>
+                <p style="margin-top: 25px; font-weight: 500; color: var(--text-primary);">
+                    理解睡眠，往往也是重新理解身體的開始。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
