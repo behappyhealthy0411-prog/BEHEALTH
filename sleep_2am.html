@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS for Grid and responsive utilities -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
     <style>
         /* 1. 嚴格品牌視覺變數 */
@@ -147,14 +149,14 @@
         /* 4. Q&A 區塊：完美對齊 sleep_tired_after_sleep.html 版型 */
         .qa-section {
             padding: 3rem 0;
-            background-color: rgba(245, 240, 234, 0.4); /* bg-cream-100/40 */
+            background-color: rgba(245, 240, 234, 0.4);
             border-top: 1px solid rgba(45, 43, 41, 0.08);
             border-bottom: 1px solid rgba(45, 43, 41, 0.08);
             backdrop-filter: blur(4px);
         }
 
         .qa-container {
-            max-width: 768px; /* max-w-3xl */
+            max-width: 768px;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
@@ -174,7 +176,7 @@
         .qa-divider {
             width: 2rem;
             height: 1px;
-            background-color: rgba(143, 151, 121, 0.4); /* bg-moss-500/40 */
+            background-color: rgba(143, 151, 121, 0.4);
             margin: 0.5rem auto 0;
         }
 
@@ -184,10 +186,10 @@
         }
 
         .qa-card {
-            background-color: var(--theme-light-opacity); /* bg-[#E2E7D8]/45 */
+            background-color: var(--theme-light-opacity);
             padding: 1.8rem 1.5rem;
-            border-radius: 1rem; /* rounded-2xl */
-            border: 1px solid var(--theme-light); /* border-[#E2E7D8] */
+            border-radius: 1rem;
+            border: 1px solid var(--theme-light);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -203,47 +205,41 @@
 
         .qa-num {
             font-size: 0.75rem;
-            color: var(--theme-dark); /* text-[#7B8365] */
+            color: var(--theme-dark);
             font-weight: 600;
             margin-bottom: 0.5rem;
             display: block;
         }
 
         .qa-text {
-            font-size: 0.88rem; /* text-[14px] */
+            font-size: 0.88rem;
             color: var(--text-main);
             letter-spacing: 0.05em;
             line-height: 1.6;
             font-weight: 500;
         }
 
-        /* 5. 文章正文：溫柔而專注的排版 */
+        /* 5. 修正後的文章正文排版樣式 */
         .article-content {
-            max-width: 680px;
+            max-width: 720px;
             margin: 0 auto;
-            padding: 4rem 1.5rem;
+            padding: 4rem 24px;
         }
 
-        .article-p {
-            font-size: 0.95rem;
-            color: var(--text-main);
-            margin-bottom: 2.2rem;
-            text-align: justify;
-        }
-
-        .article-p.short-phrase {
-            margin-bottom: 1.6rem;
+        .article-section {
+            margin-bottom: 4rem;
         }
 
         .section-heading {
             font-family: var(--font-serif);
-            font-size: 1.35rem;
+            font-size: 1.45rem;
             font-weight: 400;
-            color: var(--text-main);
-            margin: 5rem 0 2rem;
+            color: #2D2B29;
+            margin: 4.5rem 0 1.8rem;
             letter-spacing: 0.12em;
             position: relative;
             padding-bottom: 0.6rem;
+            line-height: 1.4;
         }
 
         /* 標題下極細木質飾線 */
@@ -257,49 +253,116 @@
             background-color: var(--text-sub);
         }
 
-        /* 清單 */
-        .content-list {
-            list-style: none;
-            margin: 1.5rem 0 2.5rem;
-            padding-left: 0.5rem;
-        }
-
-        .content-list li {
+        .article-p {
+            font-family: var(--font-sans);
             font-size: 0.95rem;
-            margin-bottom: 1.2rem;
-            padding-left: 1.2rem;
-            position: relative;
-            line-height: 1.8;
-            color: var(--text-main);
-        }
-
-        .content-list li::before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: var(--text-sub);
-            font-weight: 300;
+            color: #8C7D70;
+            line-height: 2.1;
+            margin-bottom: 1.5rem;
+            text-align: justify;
         }
 
         .highlight-text {
-            color: var(--theme-dark);
+            color: #2D2B29;
             font-weight: 400;
         }
 
-        /* 6. 重點整理區：極具寧靜感的奶茶灰色塊 */
-        .summary-card {
+        /* 溫柔精緻卡片清單 */
+        .gentle-card {
+            background-color: rgba(226, 231, 216, 0.25); /* 淡苔綠低飽和 */
+            border: 1px solid rgba(143, 151, 121, 0.2);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .gentle-card.cream-style {
             background-color: var(--bg-sub);
-            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gentle-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .gentle-card li {
+            font-family: var(--font-sans);
+            font-size: 0.93rem;
+            color: var(--text-main);
+            margin-bottom: 1.2rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        .gentle-card li:last-child {
+            margin-bottom: 0;
+        }
+
+        .gentle-card li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--theme-primary);
+            font-size: 0.85rem;
+        }
+
+        .gentle-card.cream-style li::before {
+            color: var(--text-sub);
+        }
+
+        /* 4張自我觀察卡片 */
+        .observation-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+            margin: 2.5rem 0;
+        }
+
+        .observation-item {
+            background-color: var(--bg-sub);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .observation-item:hover {
+            border-color: var(--theme-primary);
+            transform: translateY(-1px);
+        }
+
+        .observation-title {
+            font-family: var(--font-serif);
+            font-size: 1.05rem;
+            color: var(--text-main);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .observation-desc {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            line-height: 1.8;
+        }
+
+        /* 重點整理柔和色塊 */
+        .summary-card {
+            background-color: rgba(226, 231, 216, 0.35); /* #E2E7D8 低透明 */
+            border: 1px solid var(--theme-light);        /* #E2E7D8 */
+            border-radius: 8px;
             padding: 2.5rem 2rem;
             margin: 5rem 0;
-            border-left: 3px solid var(--theme-primary);
         }
 
         .summary-title {
             font-family: var(--font-serif);
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 600;
-            color: var(--text-main);
+            color: #2D2B29; /* 規範深文字色 */
             margin-bottom: 1.5rem;
             letter-spacing: 0.1em;
         }
@@ -309,8 +372,9 @@
         }
 
         .summary-list li {
+            font-family: var(--font-sans);
             font-size: 0.92rem;
-            color: var(--text-main);
+            color: #2D2B29; /* 規範深文字色 */
             margin-bottom: 1rem;
             padding-left: 1.5rem;
             position: relative;
@@ -341,7 +405,7 @@
             word-break: keep-all;
         }
 
-        /* 7. 延伸閱讀區：呼應核心機轉之交叉色系卡片 */
+        /* 6. 延伸閱讀區：呼應核心機轉之交叉色系卡片 */
         .related-section {
             margin-top: 5rem;
             border-top: 1px solid var(--border-color);
@@ -487,8 +551,9 @@
                 gap: 1.2rem;
             }
 
-            .article-content {
-                padding: 4rem 2rem;
+            .observation-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
             }
 
             .related-grid {
@@ -549,89 +614,161 @@
         </div>
     </section>
 
-    <!-- 文章正文 -->
+    <!-- 文章正文 (寬敞大器、留白呼吸感之 Noto Sans/Serif 排版樣式) -->
     <article class="article-content">
-        <p class="article-p short-phrase">很多人都有同樣的困擾。</p>
-        <p class="article-p short-phrase">明明順利睡著了，</p>
-        <p class="article-p short-phrase">卻總是在半夜 2–3 點左右醒來。</p>
-        <p class="article-p short-phrase">有些人醒來後還能再睡，</p>
-        <p class="article-p short-phrase">有些人卻開始翻來覆去。</p>
-        <p class="article-p">久了之後，甚至會發現：</p>
-        <ul class="content-list">
-            <li>後半夜越睡越淺</li>
-            <li>夢變多</li>
-            <li>醒來還是很累</li>
-            <li>白天精神越來越差</li>
-        </ul>
-        <p class="article-p">於是開始懷疑：</p>
-        <p class="article-p short-phrase">是不是自己失眠了？</p>
-        <p class="article-p short-phrase">但很多時候，</p>
-        <p class="article-p"><span class="highlight-text">問題不一定只是失眠。</span></p>
-
-        <h3 class="section-heading">臨床上常看到的情況</h3>
-        <p class="article-p short-phrase">在門診裡，</p>
-        <p class="article-p short-phrase">半夜固定時間醒來的人其實不少。</p>
-        <p class="article-p short-phrase">常見的描述包括：</p>
-        <ul class="content-list">
-            <li>每天都差不多 2–3 點醒來</li>
-            <li>醒來後腦袋開始運轉</li>
-            <li>醒來會想事情</li>
-            <li>醒來後心跳變快</li>
-            <li>醒來後很難再進入深睡</li>
-        </ul>
-        <p class="article-p">有些人甚至已經持續好幾個月。</p>
-
-        <h3 class="section-heading">為什麼特別容易在半夜 2–3 點醒？</h3>
-        <p class="article-p">從睡眠生理來看，</p>
-        <p class="article-p">半夜 2–3 點通常是人體進入後半夜睡眠週期的轉換點。</p>
-        <p class="article-p short-phrase">此時：</p>
-        <ul class="content-list">
-            <li>深睡比例開始下降</li>
-            <li>淺睡比例逐漸增加</li>
-            <li>自律神經開始準備迎接清晨</li>
-        </ul>
-        <p class="article-p">如果身體恢復能力不足，</p>
-        <p class="article-p">或長期處於高壓狀態，</p>
-        <p class="article-p">就比較容易在這個時間點被喚醒。</p>
-        <p class="article-p">因此，</p>
-        <p class="article-p">半夜醒來本身不一定是問題。</p>
-        <p class="article-p">真正值得注意的是：</p>
-        <p class="article-p"><span class="highlight-text">為什麼身體無法順利再回到深層睡眠。</span></p>
-
-        <h3 class="section-heading">身體其實想告訴你什麼？</h3>
-        <p class="article-p">半夜 2–3 點醒來，</p>
-        <p class="article-p">很多時候不是身體故意打擾你。</p>
-        <p class="article-p">反而像是一種提醒。</p>
-        <p class="article-p short-phrase">提醒我們：</p>
-        <ul class="content-list">
-            <li>最近是否太累了？</li>
-            <li>是否長期處於高壓狀態？</li>
-            <li>是否已經很久沒有真正放鬆？</li>
-            <li>睡眠時間夠，但恢復力夠嗎？</li>
-            <li>身體是否一直處於備戰模式？</li>
-        </ul>
-        <p class="article-p">當恢復能力下降時，</p>
-        <p class="article-p">睡眠往往是最早出現變化的地方之一。</p>
-
-        <h3 class="section-heading">可以先觀察什麼？</h3>
-        <p class="article-p">如果你經常在半夜 2–3 點醒來，</p>
-        <p class="article-p">可以先記錄：</p>
         
-        <p class="article-p short-phrase"><strong class="highlight-text">1. 醒來頻率</strong><br>是偶爾發生，還是幾乎每天都出現？</p>
-        
-        <p class="article-p short-phrase"><strong class="highlight-text">2. 醒來後的感覺</strong><br>焦慮？心跳快？想上廁所？肚子餓？單純醒來？</p>
-        
-        <p class="article-p short-phrase"><strong class="highlight-text">3. 白天狀態</strong><br>精神如何？容易疲勞嗎？是否越來越依賴咖啡？是否容易情緒起伏？</p>
-        
-        <p class="article-p"><strong class="highlight-text">4. 最近壓力變化</strong><br>有沒有工作壓力增加、作息改變、睡眠時間縮短，或長期處於緊繃狀態？</p>
+        <!-- 段落區塊 1：導入與淺層困擾 -->
+        <section class="article-section">
+            <p class="article-p">
+                很多人都有同樣的困擾。<br>
+                明明順利睡著了，卻總是在半夜 2–3 點左右醒來。<br>
+                有些人醒來後還能再睡，有些人卻開始翻來覆去。
+            </p>
 
-        <!-- 重點整理區：奶茶灰柔和色塊 -->
+            <p class="article-p">
+                久了之後，甚至會發現：
+            </p>
+
+            <!-- 溫柔的淡苔綠卡片 -->
+            <div class="gentle-card">
+                <ul>
+                    <li>後半夜越睡越淺</li>
+                    <li>夢變多</li>
+                    <li>醒來還是很累</li>
+                    <li>白天精神越來越差</li>
+                </ul>
+            </div>
+
+            <p class="article-p">
+                於是開始懷疑：是不是自己失眠了？<br>
+                但很多時候，<span class="highlight-text">問題不一定只是失眠。</span>
+            </p>
+        </section>
+
+        <!-- 段落區塊 2：臨床描述 -->
+        <section class="article-section">
+            <h3 class="section-heading">臨床上常看到的情況</h3>
+            <p class="article-p">
+                在門診裡，半夜固定時間醒來的人其實不少。
+            </p>
+
+            <p class="article-p">
+                常見的描述包括：
+            </p>
+
+            <!-- 溫柔的奶茶米白卡片 -->
+            <div class="gentle-card cream-style">
+                <ul>
+                    <li>每天都差不多 2–3 點醒來</li>
+                    <li>醒來後腦袋開始運轉</li>
+                    <li>醒來會想事情</li>
+                    <li>醒來後心跳變快</li>
+                    <li>醒來後很難再進入深睡</li>
+                </ul>
+            </div>
+
+            <p class="article-p">
+                有些人甚至已經持續好幾個月。
+            </p>
+        </section>
+
+        <!-- 段落區塊 3：生理週期與機制 -->
+        <section class="article-section">
+            <h3 class="section-heading">為什麼特別容易在半夜 2–3 點醒？</h3>
+            <p class="article-p">
+                從睡眠生理來看，半夜 2–3 點通常是人體進入後半夜睡眠週期的轉換點。
+            </p>
+
+            <p class="article-p">
+                此時：
+            </p>
+
+            <!-- 溫柔的淡苔綠卡片 -->
+            <div class="gentle-card">
+                <ul>
+                    <li>深睡比例開始下降</li>
+                    <li>淺睡比例逐漸增加</li>
+                    <li>自律神經開始準備迎接清晨</li>
+                </ul>
+            </div>
+
+            <p class="article-p">
+                如果身體恢復能力不足，或長期處於高壓狀態，就比較容易在這個時間點被喚醒。
+            </p>
+
+            <p class="article-p">
+                因此，半夜醒來本身不一定是問題。<br>
+                真正值得注意的是：<span class="highlight-text">為什麼身體無法順利再回到深層睡眠。</span>
+            </p>
+        </section>
+
+        <!-- 段落區塊 4：身體訊號與提醒 -->
+        <section class="article-section">
+            <h3 class="section-heading">身體其實想告訴你什麼？</h3>
+            <p class="article-p">
+                半夜 2–3 點醒來，很多時候不是身體故意打擾你。<br>
+                反而像是一種提醒。
+            </p>
+
+            <p class="article-p">
+                提醒我們：
+            </p>
+
+            <!-- 溫柔的奶茶米白卡片 -->
+            <div class="gentle-card cream-style">
+                <ul>
+                    <li>最近是否太累了？</li>
+                    <li>是否長期處於高壓狀態？</li>
+                    <li>是否已經很久沒有真正放鬆？</li>
+                    <li>睡眠時間夠，但恢復力夠嗎？</li>
+                    <li>身體是否一直處於備戰模式？</li>
+                </ul>
+            </div>
+
+            <p class="article-p">
+                當恢復能力下降時，睡眠往往是最早出現變化的地方之一。
+            </p>
+        </section>
+
+        <!-- 段落區塊 5：自我紀錄與觀察 -->
+        <section class="article-section">
+            <h3 class="section-heading">可以先觀察什麼？</h3>
+            <p class="article-p">
+                如果你經常在半夜 2–3 點醒來，可以先記錄：
+            </p>
+
+            <!-- 4張精緻的自我觀察卡片 -->
+            <div class="observation-grid">
+                <!-- 卡片 1 -->
+                <div class="observation-item">
+                    <h4 class="observation-title">1. 醒來頻率</h4>
+                    <p class="observation-desc">是偶爾發生，還是幾乎每天都出現？</p>
+                </div>
+                <!-- 卡片 2 -->
+                <div class="observation-item">
+                    <h4 class="observation-title">2. 醒來後的感覺</h4>
+                    <p class="observation-desc">焦慮？心跳快？想上廁所？肚子餓？單純醒來？</p>
+                </div>
+                <!-- 卡片 3 -->
+                <div class="observation-item">
+                    <h4 class="observation-title">3. 白天狀態</h4>
+                    <p class="observation-desc">精神如何？容易疲勞嗎？是否越來越依賴咖啡？是否容易情緒起伏？</p>
+                </div>
+                <!-- 卡片 4 -->
+                <div class="observation-item">
+                    <h4 class="observation-title">4. 最近壓力變化</h4>
+                    <p class="observation-desc">有沒有：工作壓力增加、作息改變、睡眠時間縮短，或長期處於緊繃狀態？</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 重點整理區：淡苔綠柔和色塊 -->
         <div class="summary-card">
             <h4 class="summary-title">重點整理</h4>
             <ul class="summary-list">
                 <li>半夜 2–3 點醒來，不一定代表失眠。</li>
-                <li>恢復力下降時較容易出現夜醒，睡眠是身體狀態的重要訊號。</li>
-                <li>不要急著把夜醒視為需要排除的敵人，它其實是身體狀態的重要訊號。</li>
+                <li>很多時候，它更像是身體透過睡眠發出的訊號。</li>
+                <li>與其急著把它視為睡眠問題，不如先試著理解：最近的自己，是不是已經太久沒有真正恢復了。</li>
             </ul>
         </div>
 
