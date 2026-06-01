@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>為什麼睡很久還是累？ - 睡眠與恢復力 | 代謝美學 METABOLIC ESTHETICS</title>
+    
+    <!-- 引入 Tailwind CSS 進行現代化樣式排版 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 引入 Google Fonts 提升中英文字體質感 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#5A6F62',     /* 靜謐苔綠色 */
+                            greenLight: '#EBF0EB',/* 極淡苔綠 */
+                            dark: '#2D312E',      /* 溫和炭黑 */
+                            beige: '#F9F8F4',     /* 柔和暖米白 */
+                            beigeLight: '#F3EFE9',/* 燕麥暖沙色 */
+                            accent: '#C5A880'     /* 優雅金棕/大地色 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'PingFang TC', 'Heiti TC', 'Microsoft JhengHei', 'sans-serif'],
+                        serif: ['Noto Serif TC', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', 'PingFang TC', 'Heiti TC', sans-serif;
+            background-color: #F9F8F4;
+            color: #2D312E;
+            -webkit-font-smoothing: antialiased;
+        }
+        .serif-heading {
+            font-family: 'Noto Serif TC', serif;
+        }
+        /* 細緻的閱讀進度條 */
+        #read-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background-color: #5A6F62;
+            width: 0%;
+            transition: width 0.1s ease-out;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-brand-greenLight selection:text-brand-green">
+
+    <!-- 閱讀進度條 -->
+    <div id="read-progress"></div>
+
+    <header class="sticky top-0 z-50 bg-brand-beige/95 backdrop-blur-md border-b border-stone-200/40">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- 品牌 LOGO 區 -->
+            <a href="index.html" class="flex flex-col group">
+                <span class="serif-heading font-medium text-lg tracking-widest text-brand-dark transition-colors group-hover:text-brand-green">代謝美學</span>
+                <span class="text-[9px] tracking-[0.22em] text-stone-400 font-light mt-0.5 uppercase">METABOLIC ESTHETICS</span>
+            </a>
+
+            <!-- 導覽連結 -->
+            <nav class="hidden md:flex items-center space-x-10 text-sm tracking-widest text-stone-600">
+                <a href="index.html" class="hover:text-brand-green transition-colors py-2">首頁</a>
+                <a href="sleep_recovery.html" class="text-brand-green border-b border-brand-green/30 hover:border-brand-green transition-all py-2">睡眠與恢復力</a>
+                <a href="https://lin.ee/pzxDU3O" target="_blank" class="bg-brand-green text-white px-5 py-2.5 rounded-full hover:bg-opacity-90 transition-all text-xs font-medium tracking-[0.15em] shadow-sm">預約諮詢</a>
+            </nav>
+
+            <!-- 行動裝置選單按鈕 -->
+            <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-between w-5 h-4 text-brand-dark focus:outline-none" aria-label="選單">
+                <span class="w-full h-[1.5px] bg-brand-dark transition-all origin-left"></span>
+                <span class="w-full h-[1.5px] bg-brand-dark transition-all"></span>
+                <span class="w-full h-[1.5px] bg-brand-dark transition-all origin-left"></span>
+            </button>
+        </div>
+
+        <!-- 行動裝置下拉選單 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-beige border-b border-stone-200/40 px-6 py-8 space-y-5 animate-fade-in">
+            <a href="index.html" class="block text-sm tracking-widest text-stone-600 hover:text-brand-green py-1">首頁</a>
+            <a href="sleep_recovery.html" class="block text-sm tracking-widest text-brand-green font-medium py-1">睡眠與恢復力</a>
+            <div class="pt-4">
+                <a href="https://lin.ee/pzxDU3O" target="_blank" class="block text-center bg-brand-green text-white py-3 rounded-full text-xs font-medium tracking-[0.15em]">預約諮詢</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative pt-20 pb-16 md:py-28 overflow-hidden bg-gradient-to-b from-[#FAF9F5] to-transparent">
+            <!-- 背景裝飾粒子 (柔和漸層) -->
+            <div class="absolute -right-40 -top-40 w-96 h-96 rounded-full bg-brand-greenLight/20 blur-3xl pointer-events-none"></div>
+            <div class="absolute -left-40 bottom-0 w-96 h-96 rounded-full bg-brand-beigeLight/40 blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+                <!-- 分類標籤 -->
+                <div class="inline-flex items-center space-x-2.5 mb-6 md:mb-8">
+                    <span class="text-xs tracking-[0.25em] font-medium text-brand-green">睡眠與恢復力</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-accent/40"></span>
+                    <span class="text-[10px] tracking-[0.2em] text-stone-400 font-light uppercase">SLEEP & RECOVERY</span>
+                </div>
+
+                <!-- 標題 -->
+                <h1 class="serif-heading text-3xl md:text-5xl font-normal tracking-wide text-brand-dark leading-snug md:leading-tight mb-8">
+                    為什麼睡很久還是累？
+                </h1>
+
+                <!-- 引言區 -->
+                <div class="max-w-xl mx-auto border-t border-stone-200/60 pt-8 pb-4">
+                    <p class="text-base md:text-lg text-stone-600 leading-relaxed tracking-wide font-light space-y-2">
+                        <span class="block">睡眠時間夠，</span>
+                        <span class="block">不代表身體真的恢復了。</span>
+                    </p>
+                    <p class="text-base md:text-lg text-stone-600 leading-relaxed tracking-wide font-light mt-4 space-y-2">
+                        <span class="block">很多人以為自己缺的是睡眠，</span>
+                        <span class="block">其實身體缺的，</span>
+                        <span class="block">可能是恢復能力。</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Q&A Section -->
+        <section class="py-12 bg-white/60 border-y border-stone-200/20 backdrop-blur-sm">
+            <div class="max-w-3xl mx-auto px-6">
+                <div class="text-center mb-8">
+                    <span class="text-xs tracking-widest text-brand-accent font-medium">本文將為您解答</span>
+                    <div class="w-8 h-[1px] bg-brand-accent/40 mx-auto mt-2"></div>
+                </div>
+
+                <!-- 柔和 Q&A 卡片 -->
+                <div class="grid gap-4 md:grid-cols-3">
+                    <div class="bg-[#FAF9F5]/70 p-6 rounded-2xl border border-stone-100 flex flex-col justify-center min-h-[110px] transition-all hover:translate-y-[-2px] hover:shadow-sm">
+                        <span class="text-xs text-brand-green font-semibold mb-2 block">Q 1</span>
+                        <p class="text-[14px] text-brand-dark tracking-wide leading-relaxed font-medium">為什麼睡很久還是累？</p>
+                    </div>
+                    <div class="bg-[#FAF9F5]/70 p-6 rounded-2xl border border-stone-100 flex flex-col justify-center min-h-[110px] transition-all hover:translate-y-[-2px] hover:shadow-sm">
+                        <span class="text-xs text-brand-green font-semibold mb-2 block">Q 2</span>
+                        <p class="text-[14px] text-brand-dark tracking-wide leading-relaxed font-medium">睡滿 8 小時還是很累正常嗎？</p>
+                    </div>
+                    <div class="bg-[#FAF9F5]/70 p-6 rounded-2xl border border-stone-100 flex flex-col justify-center min-h-[110px] transition-all hover:translate-y-[-2px] hover:shadow-sm">
+                        <span class="text-xs text-brand-green font-semibold mb-2 block">Q 3</span>
+                        <p class="text-[14px] text-brand-dark tracking-wide leading-relaxed font-medium">睡眠時間夠，為什麼精神還是不好？</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="py-16 md:py-24">
+            <article class="max-w-2xl mx-auto px-6 text-stone-700 leading-relaxed tracking-wider space-y-8 text-[15px] md:text-base font-light">
+                
+                <p>很多人來門診時都會說：</p>
+                
+                <div class="pl-4 border-l-2 border-brand-green/30 space-y-2 text-stone-600 py-1 my-6">
+                    <p>我其實睡得不少。</p>
+                    <p>平常都有睡 7、8 個小時。</p>
+                    <p>假日甚至可以睡到 9、10 個小時。</p>
+                    <p class="font-normal text-brand-dark">但奇怪的是，醒來之後還是覺得累。</p>
+                </div>
+
+                <p>有些人甚至會覺得：</p>
+
+                <!-- 細緻清單 -->
+                <ul class="space-y-3 bg-stone-100/50 p-6 rounded-2xl border border-stone-200/20 my-6">
+                    <li class="flex items-center space-x-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-green"></span>
+                        <span>起床很困難</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-green"></span>
+                        <span>白天精神不好</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-green"></span>
+                        <span>下午容易昏沉</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-green"></span>
+                        <span>需要咖啡才能開始一天</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-green"></span>
+                        <span>週末越睡越想睡</span>
+                    </li>
+                </ul>
+
+                <p>於是開始懷疑：是不是自己睡眠品質不好？</p>
+
+                <!-- 小標題 -->
+                <h3 class="serif-heading text-lg md:text-xl font-normal text-brand-dark tracking-wide pt-8 pb-2 border-b border-stone-200/60">
+                    睡眠時間，不等於恢復品質
+                </h3>
+
+                <p>很多人以為：睡得越久，恢復得越好。但身體其實不是這樣運作。</p>
+                <p>就像躺在床上八個小時，不代表八個小時都在修復。同樣地，睡了八個小時，也不代表身體真的完成了恢復。</p>
+                <p>有時候，問題不是睡眠時間不夠，而是身體沒有真正進入修復狀態。</p>
+
+                <!-- 小標題 -->
+                <h3 class="serif-heading text-lg md:text-xl font-normal text-brand-dark tracking-wide pt-10 pb-2 border-b border-stone-200/60">
+                    為什麼會睡很久還是累？
+                </h3>
+
+                <!-- 核心原因項目 1 -->
+                <div class="space-y-3 pt-4">
+                    <h4 class="font-medium text-brand-dark flex items-center text-base md:text-lg">
+                        <span class="serif-heading text-brand-accent mr-2">01.</span> 
+                        身體睡著了，但神經系統沒有休息
+                    </h4>
+                    <p class="text-stone-600 pl-6 leading-relaxed">
+                        有些人雖然睡著了，但身體仍然維持著警戒模式。白天習慣撐著、習慣處理事情、習慣照顧別人、習慣擔心未來。
+                        久了之後，即使晚上躺下來，神經系統也不一定能立刻放鬆。因此看起來睡著了，實際上卻沒有真正休息。
+                    </p>
+                </div>
+
+                <!-- 核心原因項目 2 -->
+                <div class="space-y-3 pt-4">
+                    <h4 class="font-medium text-brand-dark flex items-center text-base md:text-lg">
+                        <span class="serif-heading text-brand-accent mr-2">02.</span> 
+                        睡眠被反覆打斷
+                    </h4>
+                    <div class="text-stone-600 pl-6 space-y-3">
+                        <p>有些人會出現：</p>
+                        <div class="grid grid-cols-2 gap-2 my-2 text-stone-700 font-medium">
+                            <span class="bg-brand-greenLight/35 px-3 py-1.5 rounded-lg text-sm">✓ 半夜 2–3 點醒來</span>
+                            <span class="bg-brand-greenLight/35 px-3 py-1.5 rounded-lg text-sm">✓ 後半夜越睡越淺</span>
+                            <span class="bg-brand-greenLight/35 px-3 py-1.5 rounded-lg text-sm">✓ 一直做夢</span>
+                            <span class="bg-brand-greenLight/35 px-3 py-1.5 rounded-lg text-sm">✓ 常常翻身</span>
+                        </div>
+                        <p>雖然總睡眠時間看起來不少，但睡眠結構已經被切碎了。就像手機一直充電又一直拔掉，充了一整晚，電量卻沒有真正充滿。</p>
+                    </div>
+                </div>
+
+                <!-- 核心原因項目 3 -->
+                <div class="space-y-3 pt-4">
+                    <h4 class="font-medium text-brand-dark flex items-center text-base md:text-lg">
+                        <span class="serif-heading text-brand-accent mr-2">03.</span> 
+                        身體一直在處理代謝負擔
+                    </h4>
+                    <div class="text-stone-600 pl-6 space-y-3">
+                        <p>有些人的睡眠問題，其實不是睡眠本身。而是身體晚上還在加班。例如：</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-stone-700 text-sm">
+                            <li class="flex items-center space-x-2"><span class="w-1.5 h-1.5 bg-brand-accent rounded-full"></span> <span>晚餐太晚或吃宵夜</span></li>
+                            <li class="flex items-center space-x-2"><span class="w-1.5 h-1.5 bg-brand-accent rounded-full"></span> <span>胃食道逆流</span></li>
+                            <li class="flex items-center space-x-2"><span class="w-1.5 h-1.5 bg-brand-accent rounded-full"></span> <span>血糖波動</span></li>
+                            <li class="flex items-center space-x-2"><span class="w-1.5 h-1.5 bg-brand-accent rounded-full"></span> <span>長期發炎狀態</span></li>
+                        </ul>
+                        <p>當身體還在忙著處理這些事情，就比較難把資源留給修復。</p>
+                    </div>
+                </div>
+
+                <!-- 核心原因項目 4 -->
+                <div class="space-y-3 pt-4 pb-6">
+                    <h4 class="font-medium text-brand-dark flex items-center text-base md:text-lg">
+                        <span class="serif-heading text-brand-accent mr-2">04.</span> 
+                        長期處於恢復力不足的狀態
+                    </h4>
+                    <p class="text-stone-600 pl-6 leading-relaxed">
+                        有時候，真正的問題不是昨晚沒睡好。而是身體已經累了很久。
+                        長期壓力、作息混亂、過度疲勞、缺乏放鬆，都可能讓恢復能力慢慢下降。
+                        於是出現一種狀況：睡眠時間越來越長，精神卻沒有變得比較好。
+                    </p>
+                </div>
+
+                <!-- 自我觀察訊號 -->
+                <div class="bg-brand-beigeLight/50 p-8 rounded-2xl border border-stone-200/40 my-10">
+                    <h4 class="serif-heading text-lg text-brand-dark font-medium mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                        可以先觀察哪些訊號？
+                    </h4>
+                    <p class="text-stone-500 text-sm mb-5 font-light">如果您符合以下幾項：</p>
+                    <div class="grid gap-3.5 text-stone-700">
+                        <div class="flex items-start space-x-3 text-sm">
+                            <span class="text-brand-green mt-0.5 flex-shrink-0">☑</span>
+                            <span>睡滿 7–8 小時仍覺得累</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm">
+                            <span class="text-brand-green mt-0.5 flex-shrink-0">☑</span>
+                            <span>起床需要很久才能清醒</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm">
+                            <span class="text-brand-green mt-0.5 flex-shrink-0">☑</span>
+                            <span>下午容易昏沉</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm">
+                            <span class="text-brand-green mt-0.5 flex-shrink-0">☑</span>
+                            <span>需要咖啡提神</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm">
+                            <span class="text-brand-green mt-0.5 flex-shrink-0">☑</span>
+                            <span>週末特別想補眠</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm">
+                            <span class="text-brand-green mt-0.5 flex-shrink-0">☑</span>
+                            <span>明明很累卻不容易放鬆</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm">
+                            <span class="text-brand-green mt-0.5 flex-shrink-0">☑</span>
+                            <span>常常半夜醒來</span>
+                        </div>
+                    </div>
+                    <p class="text-stone-600 text-sm mt-6 pt-4 border-t border-stone-200/50 italic">
+                        那麼問題可能已經不只是睡眠時間不足。而是恢復能力開始下降。
+                    </p>
+                </div>
+
+                <!-- 代謝美學專屬觀點 -->
+                <div class="border-t border-b border-brand-green/10 py-10 my-12 text-center relative">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-beige px-4">
+                        <span class="serif-heading text-xs tracking-[0.2em] text-brand-green font-medium">代謝美學觀點</span>
+                    </div>
+                    
+                    <p class="text-base md:text-lg text-brand-dark serif-heading font-medium leading-relaxed max-w-lg mx-auto mb-6">
+                        很多人以為自己缺的是睡眠。<br>但在門診裡，我們更常看到的是：<br>身體缺的其實是「恢復」。
+                    </p>
+
+                    <div class="max-w-md mx-auto text-left text-stone-600 text-sm space-y-4 pt-4 border-t border-stone-200/40">
+                        <p class="text-center text-xs text-stone-400 tracking-wider">因此我們不只會問：你睡多久？ 更會想知道：</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pl-4 md:pl-12">
+                            <div class="flex items-center space-x-2"><span class="text-brand-accent">✧</span> <span>睡眠穩定嗎？</span></div>
+                            <div class="flex items-center space-x-2"><span class="text-brand-accent">✧</span> <span>半夜會醒嗎？</span></div>
+                            <div class="flex items-center space-x-2"><span class="text-brand-accent">✧</span> <span>白天壓力大嗎？</span></div>
+                            <div class="flex items-center space-x-2"><span class="text-brand-accent">✧</span> <span>身體有真正放鬆嗎？</span></div>
+                        </div>
+                        <p class="text-center text-xs text-stone-500 pt-2 italic">「因為睡眠，其實只是恢復能力的其中一面鏡子。」</p>
+                    </div>
+                </div>
+
+                <!-- 結語 -->
+                <p>睡很久還是累，不一定代表你需要睡更多。</p>
+                <p>很多時候，它反而是在提醒：身體的恢復效率下降了。與其一直追求睡眠時間，不如回頭看看：最近的自己，是不是已經太久沒有真正恢復了。</p>
+
+            </article>
+        </section>
+
+        <!-- Key Takeaways Section -->
+        <section class="py-16 bg-brand-beigeLight/35 border-t border-stone-200/30">
+            <div class="max-w-2xl mx-auto px-6">
+                <div class="bg-[#FAF9F5] rounded-3xl p-8 md:p-10 border border-brand-green/10 shadow-sm relative overflow-hidden">
+                    <!-- 點綴色條 -->
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-brand-green"></div>
+                    
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="serif-heading text-xl font-normal text-brand-green tracking-wide">重點整理</span>
+                    </div>
+
+                    <ul class="space-y-4 text-stone-700 text-[15px] tracking-wide leading-relaxed font-light">
+                        <li class="flex items-start space-x-3.5">
+                            <span class="text-brand-green mt-1 text-sm flex-shrink-0">✦</span>
+                            <span>睡眠時間不等於恢復品質</span>
+                        </li>
+                        <li class="flex items-start space-x-3.5">
+                            <span class="text-brand-green mt-1 text-sm flex-shrink-0">✦</span>
+                            <span>睡著不代表身體真的完成修復</span>
+                        </li>
+                        <li class="flex items-start space-x-3.5">
+                            <span class="text-brand-green mt-1 text-sm flex-shrink-0">✦</span>
+                            <span>夜醒、做夢、血糖波動與壓力都可能影響恢復</span>
+                        </li>
+                        <li class="flex items-start space-x-3.5">
+                            <span class="text-brand-green mt-1 text-sm flex-shrink-0">✦</span>
+                            <span>很多人缺的不是睡眠，而是恢復能力</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Readings Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-3xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="text-xs tracking-[0.25em] text-stone-400 font-light uppercase">READ MORE</span>
+                    <h3 class="serif-heading text-xl md:text-2xl font-normal text-brand-dark tracking-wide mt-2">延伸閱讀</h3>
+                </div>
+
+                <div class="grid gap-6 md:grid-cols-2">
+                    <!-- 卡片 1 -->
+                    <a href="sleep_2am.html" class="group bg-[#FAF9F5]/50 hover:bg-[#FAF9F5] p-8 rounded-2xl border border-stone-200/30 transition-all hover:shadow-md flex flex-col justify-between h-[180px]">
+                        <div>
+                            <span class="text-[10px] tracking-[0.15em] text-brand-green font-medium block mb-2">睡眠與恢復力</span>
+                            <h4 class="serif-heading text-base font-normal text-brand-dark tracking-wide group-hover:text-brand-green transition-colors leading-snug">
+                                半夜 2–3 點醒，真的只是失眠嗎？
+                            </h4>
+                        </div>
+                        <span class="text-xs tracking-widest text-brand-accent group-hover:translate-x-1 transition-transform inline-flex items-center mt-4">
+                            探索原因 <span class="ml-1 text-[10px]">→</span>
+                        </span>
+                    </a>
+
+                    <!-- 卡片 2 -->
+                    <a href="sleep_light_sleep.html" class="group bg-[#FAF9F5]/50 hover:bg-[#FAF9F5] p-8 rounded-2xl border border-stone-200/30 transition-all hover:shadow-md flex flex-col justify-between h-[180px]">
+                        <div>
+                            <span class="text-[10px] tracking-[0.15em] text-brand-green font-medium block mb-2">睡眠與恢復力</span>
+                            <h4 class="serif-heading text-base font-normal text-brand-dark tracking-wide group-hover:text-brand-green transition-colors leading-snug">
+                                為什麼後半夜越睡越淺？
+                            </h4>
+                        </div>
+                        <span class="text-xs tracking-widest text-brand-accent group-hover:translate-x-1 transition-transform inline-flex items-center mt-4">
+                            探索原因 <span class="ml-1 text-[10px]">→</span>
+                        </span>
+                    </a>
+
+                    <!-- 卡片 3 (Mock Link) -->
+                    <div class="bg-stone-50/50 p-8 rounded-2xl border border-stone-200/20 flex flex-col justify-between h-[180px] opacity-85">
+                        <div>
+                            <span class="text-[10px] tracking-[0.15em] text-stone-400 font-medium block mb-2">準備上線中</span>
+                            <h4 class="serif-heading text-base font-normal text-stone-500 tracking-wide leading-snug">
+                                一直做夢代表睡不好嗎？
+                            </h4>
+                        </div>
+                        <span class="text-xs tracking-widest text-stone-400 inline-flex items-center mt-4">
+                            即將公開 <span class="ml-1 text-[10px]">·</span>
+                        </span>
+                    </div>
+
+                    <!-- 卡片 4 (Mock Link) -->
+                    <div class="bg-stone-50/50 p-8 rounded-2xl border border-stone-200/20 flex flex-col justify-between h-[180px] opacity-85">
+                        <div>
+                            <span class="text-[10px] tracking-[0.15em] text-stone-400 font-medium block mb-2">準備上線中</span>
+                            <h4 class="serif-heading text-base font-normal text-stone-500 tracking-wide leading-snug">
+                                很多人睡不好，其實不是失眠，而是身體還沒準備休息
+                            </h4>
+                        </div>
+                        <span class="text-xs tracking-widest text-stone-400 inline-flex items-center mt-4">
+                            即將公開 <span class="ml-1 text-[10px]">·</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 返回按鈕 -->
+                <div class="text-center mt-12">
+                    <a href="sleep_recovery.html" class="inline-flex items-center space-x-2 text-sm text-stone-500 hover:text-brand-green transition-colors border-b border-stone-300 hover:border-brand-green pb-1 tracking-wider">
+                        <span>← 返回 睡眠與恢復力</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Brand Footer Banner -->
+    <section class="bg-brand-green text-white py-20 px-6 relative overflow-hidden">
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-white/[0.03] blur-2xl"></div>
+        <div class="max-w-3xl mx-auto text-center relative z-10">
+            <span class="text-[10px] tracking-[0.3em] text-brand-greenLight/70 font-light block mb-4 uppercase">METABOLIC ESTHETICS</span>
+            <h2 class="serif-heading text-2xl md:text-3xl font-light tracking-widest mb-8 text-brand-greenLight">
+                恢復力，才是睡眠真正的目的
+            </h2>
+            <div class="text-sm md:text-base font-light text-brand-greenLight/85 leading-relaxed tracking-widest space-y-3 max-w-lg mx-auto mb-10 border-t border-white/10 pt-8">
+                <p>很多時候，我們以為自己需要的是更多睡眠。</p>
+                <p>其實身體真正需要的，是有機會完成恢復。</p>
+                <p>理解睡眠，往往也是重新理解身體的開始。</p>
+            </div>
+            
+            <a href="https://lin.ee/pzxDU3O" target="_blank" class="inline-block bg-white text-brand-green px-8 py-3.5 rounded-full hover:bg-brand-greenLight transition-all text-xs font-semibold tracking-[0.2em] shadow-md">
+                預約一對一身體美學諮詢
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Copyright -->
+    <footer class="bg-brand-beige border-t border-stone-200/30 py-8">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-xs text-stone-400 font-light tracking-widest space-y-4 md:space-y-0">
+            <div class="flex flex-col items-center md:items-start">
+                <span class="serif-heading text-sm text-stone-600 font-medium mb-1 tracking-wider">代謝美學</span>
+                <span class="text-[9px] uppercase tracking-[0.2em]">METABOLIC ESTHETICS</span>
+            </div>
+            <p>© 2026 METABOLIC ESTHETICS. 版權所有.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 行動裝置選單控制邏輯
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuBtn.children[0].style.transform = 'rotate(45deg) translate(2px, 2px)';
+                menuBtn.children[1].style.opacity = '0';
+                menuBtn.children[2].style.transform = 'rotate(-45deg) translate(2px, -2px)';
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuBtn.children[0].style.transform = 'none';
+                menuBtn.children[1].style.opacity = '1';
+                menuBtn.children[2].style.transform = 'none';
+            }
+        });
+
+        // 閱讀進度條邏輯
+        window.addEventListener('scroll', () => {
+            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('read-progress').style.width = scrolled + '%';
+        });
+    </script>
+</body>
+</html>
