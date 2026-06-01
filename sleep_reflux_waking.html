@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逆流夜醒，身體其實在提醒什麼？｜代謝美學 METABOLIC ESTHETICS</title>
+    <!-- Google Fonts: Noto Serif TC (Serif) & Noto Sans TC (Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            mainBg: '#FAF8F5',
+                            secBg: '#F5F0EA',
+                            blockBg: '#EBE5DF',
+                            textMain: '#2D2B29',
+                            textSec: '#8C7D70',
+                            accent: '#8F9779', // 共用苔綠
+                            darkMoss: '#7B8365',
+                            lightMoss: '#E2E7D8'
+                        },
+                        olive: { // 腸胃與消化核心主題色
+                            main: '#9A9B6E',
+                            dark: '#7E7F55',
+                            light: '#E8E8D5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        serif: ['"Noto Serif TC"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FAF8F5;
+            color: #2D2B29;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* 微妙流暢的轉換效果 */
+        .hover-transition {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+    </style>
+</head>
+<body class="font-sans leading-relaxed tracking-wide selection:bg-brand-lightMoss selection:text-brand-darkMoss">
+
+    <!-- 頂部導覽列 -->
+    <nav class="sticky top-0 z-50 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-stone-200/20 py-5 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <!-- 品牌名稱 (固定左上角) -->
+            <a href="index.html" class="flex flex-col group">
+                <span class="font-serif text-lg font-medium tracking-widest text-brand-textMain hover-transition group-hover:opacity-80">代謝美學</span>
+                <span class="text-[9px] tracking-[0.25em] text-brand-textSec font-light uppercase mt-0.5">METABOLIC ESTHETICS</span>
+            </a>
+            
+            <!-- 導覽連結 (固定右上角三個連結) -->
+            <div class="flex items-center space-x-6 md:space-x-10 text-sm">
+                <a href="index.html" class="text-brand-textSec hover:text-brand-textMain hover-transition">首頁</a>
+                <a href="sleep_recovery.html" class="text-brand-textMain font-medium border-b border-brand-accent/40 pb-0.5">睡眠與恢復力</a>
+                <a href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener noreferrer" class="bg-brand-accent hover:bg-brand-darkMoss text-white px-5 py-2 rounded-full text-xs tracking-widest hover-transition shadow-sm flex items-center">
+                    預約諮詢
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 區 (保持大量留白、空氣感) -->
+    <header class="py-20 md:py-32 px-6 bg-gradient-to-b from-[#FAF8F5] to-[#F5F0EA]/30">
+        <div class="max-w-3xl mx-auto text-center">
+            <!-- 英文分類小標 -->
+            <span class="text-[11px] tracking-[0.35em] text-brand-textSec font-medium uppercase block mb-3">
+                SLEEP & RECOVERY
+            </span>
+            <!-- 中文分類小標 -->
+            <span class="text-sm tracking-widest text-brand-textSec block mb-8">
+                睡眠與恢復力 · 腸胃干擾型
+            </span>
+            <!-- 文章標題 -->
+            <h1 class="font-serif text-3xl md:text-4xl lg:text-[40px] text-brand-textMain leading-snug font-medium mb-10 tracking-wider">
+                逆流夜醒，<br class="md:hidden">身體其實在提醒什麼？
+            </h1>
+            <!-- 2-4行溫柔引言 -->
+            <div class="w-12 h-[1px] bg-brand-textSec/20 mx-auto mb-8"></div>
+            <p class="text-brand-textSec font-light text-[15px] md:text-[16px] leading-loose max-w-2xl mx-auto">
+                很多人以為半夜醒來是睡眠問題。<br>
+                但有時候，真正讓你醒來的不是睡眠本身。<br>
+                而是身體正在努力處理一場來自消化系統的干擾。
+            </p>
+        </div>
+    </header>
+
+    <!-- Q&A 區塊 (依照核心主題：腸胃與消化，使用橄欖綠系色票) -->
+    <section class="py-16 bg-[#F5F0EA]/40 border-y border-stone-200/30 backdrop-blur-sm">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <span class="text-xs tracking-[0.25em] text-brand-textSec font-medium block uppercase">
+                    這篇文章會帶你看懂
+                </span>
+                <div class="w-8 h-[1px] bg-olive-main/40 mx-auto mt-3"></div>
+            </div>
+
+            <!-- 手機版單欄，桌面版三欄，高度一致 -->
+            <div class="grid gap-5 md:grid-cols-3">
+                <!-- Q1 -->
+                <div class="bg-[#E8E8D5]/40 p-6 rounded-2xl border border-[#E8E8D5] flex flex-col justify-between min-h-[140px] hover-transition hover:translate-y-[-2px] hover:shadow-sm">
+                    <div>
+                        <span class="text-xs text-[#7E7F55] font-semibold mb-3 block tracking-widest">Q 1</span>
+                        <p class="text-[14px] text-brand-textMain tracking-wide leading-relaxed font-medium">
+                            胃食道逆流為什麼常在半夜發作？
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="bg-[#E8E8D5]/40 p-6 rounded-2xl border border-[#E8E8D5] flex flex-col justify-between min-h-[140px] hover-transition hover:translate-y-[-2px] hover:shadow-sm">
+                    <div>
+                        <span class="text-xs text-[#7E7F55] font-semibold mb-3 block tracking-widest">Q 2</span>
+                        <p class="text-[14px] text-brand-textMain tracking-wide leading-relaxed font-medium">
+                            半夜醒來、喉嚨卡卡或一直清喉嚨，可能和逆流有關嗎？
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-[#E8E8D5]/40 p-6 rounded-2xl border border-[#E8E8D5] flex flex-col justify-between min-h-[140px] hover-transition hover:translate-y-[-2px] hover:shadow-sm">
+                    <div>
+                        <span class="text-xs text-[#7E7F55] font-semibold mb-3 block tracking-widest">Q 3</span>
+                        <p class="text-[14px] text-brand-textMain tracking-wide leading-relaxed font-medium">
+                            除了胃酸，還有哪些消化問題會影響睡眠？
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主內容區 -->
+    <article class="py-20 px-6 max-w-2xl mx-auto">
+        <div class="space-y-12 text-brand-textMain">
+            
+            <!-- 段落 1 -->
+            <section class="space-y-6">
+                <h2 class="font-serif text-xl md:text-2xl text-brand-textMain font-medium tracking-wide">
+                    很多人以為自己失眠了
+                </h2>
+                <p class="text-[15px] leading-loose text-brand-textMain/90 font-light">
+                    當睡眠不再連貫，焦慮往往隨之而來。然而，半夜醒來的背後，身體可能正試圖傳遞另一種層次的訊息。
+                </p>
+                
+                <!-- 觀察卡片 (門診觀察描述) -->
+                <div class="bg-[#F5F0EA] p-8 rounded-2xl border border-stone-200/30 my-8">
+                    <p class="text-xs tracking-[0.2em] text-[#7E7F55] font-semibold mb-4 uppercase">門診常見描述</p>
+                    <ul class="space-y-3 font-serif text-[15px] text-brand-textMain/85 leading-relaxed">
+                        <li class="flex items-start">
+                            <span class="text-olive-main mr-2">◦</span>「我不是睡不著，而是睡到一半突然醒來。」
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-olive-main mr-2">◦</span>「醒來以後胸口怪怪的，有時候喉嚨卡卡的。」
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-olive-main mr-2">◦</span>「甚至會想一直吞口水，整個人變得很緊繃。」
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="text-[15px] leading-loose text-brand-textMain/90 font-light">
+                    許多人因此開始擔心，自己是不是失眠了？是不是自律神經失調？還是心臟出了什麼問題？
+                </p>
+                
+                <!-- 呼吸感引言 -->
+                <div class="border-l-2 border-olive-main/40 pl-6 py-2 my-8">
+                    <p class="font-serif italic text-brand-textSec text-[15px] leading-loose">
+                        但有些人的答案，其實並不在大腦的睡眠開關，而是在深處的消化系統。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 段落 2 -->
+            <section class="space-y-6 pt-6 border-t border-stone-200/20">
+                <h2 class="font-serif text-xl md:text-2xl text-brand-textMain font-medium tracking-wide">
+                    為什麼逆流常發生在半夜？
+                </h2>
+                <p class="text-[15px] leading-loose text-brand-textMain/90 font-light">
+                    在白天的活動中，我們站立或坐著，重力會自然幫助胃內容物留在胃部深處。然而，當我們在夜間平躺下來，重力屏障減弱，原本消化道屏障功能就較為敏感的人，胃酸、未消化完的食物，甚至是看不見的微細氣體，便更容易朝食道方向緩步移動。
+                </p>
+                
+                <!-- 知識整理色塊 (消化干擾因子) -->
+                <div class="bg-[#E8E8D5]/30 p-8 rounded-2xl border border-[#E8E8D5]/60 my-8">
+                    <h3 class="text-sm font-semibold text-olive-dark tracking-wider mb-5">
+                        引發夜間消化道干擾的隱形因子
+                    </h3>
+                    <div class="grid gap-3 text-[14px] text-brand-textMain/90">
+                        <div class="flex items-center">
+                            <span class="w-1.5 h-1.5 rounded-full bg-olive-main mr-3"></span>
+                            <span><strong>晚餐節奏：</strong> 吃得過晚，食物尚未完全排空</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-1.5 h-1.5 rounded-full bg-olive-main mr-3"></span>
+                            <span><strong>胃部負荷：</strong> 晚餐份量過大，壓力升高</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-1.5 h-1.5 rounded-full bg-olive-main mr-3"></span>
+                            <span><strong>作息重疊：</strong> 飯後過快平躺，物理阻力減低</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-1.5 h-1.5 rounded-full bg-olive-main mr-3"></span>
+                            <span><strong>運作遲緩：</strong> 本身消化速度慢，食物滯留過久</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-1.5 h-1.5 rounded-full bg-olive-main mr-3"></span>
+                            <span><strong>胃部壓力：</strong> 顯著的胃脹氣推擠賁門</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-[15px] leading-loose text-brand-textMain/90 font-light">
+                    當這些細微的生理壓力在夜間悄悄累積，身體為了防衛，便會喚醒大腦。這時，我們醒來往往以為是神經緊繃，其實是消化系統在向睡眠系統發出求救訊號。
+                </p>
+            </section>
+
+            <!-- 段落 3 -->
+            <section class="space-y-6 pt-6 border-t border-stone-200/20">
+                <h2 class="font-serif text-xl md:text-2xl text-brand-textMain font-medium tracking-wide">
+                    有時候，逆流不一定是火燒心
+                </h2>
+                <p class="text-[15px] leading-loose text-brand-textMain/90 font-light">
+                    提到胃食道逆流，大眾常聯想到強烈的胸口灼熱、胃酸逆流或火燒心。然而，許多人的夜間逆流是非典型且沉默的。
+                </p>
+
+                <!-- 對照卡片：非典型症狀觀察 -->
+                <div class="border border-stone-200/40 rounded-2xl overflow-hidden my-8">
+                    <div class="bg-[#F5F0EA] px-6 py-4 border-b border-stone-200/40">
+                        <span class="text-xs tracking-widest text-[#7E7F55] font-semibold">非典型夜醒特徵</span>
+                    </div>
+                    <div class="p-6 bg-white/40 grid gap-4 md:grid-cols-2 text-[14px]">
+                        <div class="space-y-2">
+                            <p class="font-medium text-brand-textMain">■ 常見的生理觀察</p>
+                            <ul class="space-y-1.5 text-brand-textSec font-light">
+                                <li>· 半夜固定時間突然醒來</li>
+                                <li>· 喉嚨始終有微弱的異物感</li>
+                                <li>· 醒來時下意識想一直清喉嚨</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="font-medium text-brand-textMain">■ 晨起時的延續反應</p>
+                            <ul class="space-y-1.5 text-brand-textSec font-light">
+                                <li>· 早上起床感覺聲音些許沙啞</li>
+                                <li>· 醒來後嘴巴苦苦的、喉嚨乾澀</li>
+                                <li>· 半夜無由來的咳嗽</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-[15px] leading-loose text-brand-textMain/90 font-light">
+                    因為缺乏顯著的灼熱痛感，這些細碎的特徵常被歸類為「睡眠障礙」，進而忽視了那是消化系統疲累的呼喊。
+                </p>
+            </section>
+
+            <!-- 段落 4 -->
+            <section class="space-y-6 pt-6 border-t border-stone-200/20">
+                <h2 class="font-serif text-xl md:text-2xl text-brand-textMain font-medium tracking-wide">
+                    睡眠和消化，其實是同一套恢復系統
+                </h2>
+                <p class="text-[15px] leading-loose text-brand-textMain/90 font-light">
+                    當身體進入深層睡眠時，副交感神經開始主導。這不僅是睡眠修復大腦的時刻，更是消化系統最重要的自我重整與修護時間。
+                </p>
+                <p class="text-[15px] leading-loose text-brand-textMain/90 font-light">
+                    如果我們讓消化負擔過大、長期累積胃脹氣，或者夜間持續處於微弱的逆流狀態中，身體便必須挪用修復睡眠的能量去處理未竟的消化工作，迫使原本和諧的恢復節奏中斷。
+                </p>
+                <div class="p-6 bg-[#FAF8F5] border border-[#E8E8D5] rounded-2xl text-center my-6">
+                    <p class="text-[14px] font-medium text-[#7E7F55] tracking-wider leading-relaxed">
+                        「看似睡眠系統出了差錯，核心卻在消化系統的未竟之業。」
+                    </p>
+                </div>
+            </section>
+
+            <!-- 段落 5 (可以先觀察什麼) -->
+            <section class="space-y-6 pt-6 border-t border-stone-200/20">
+                <h2 class="font-serif text-xl md:text-2xl text-brand-textMain font-medium tracking-wide">
+                    您可以先觀察什麼？
+                </h2>
+                <p class="text-[15px] leading-loose text-brand-textMain/90 font-light">
+                    了解機轉後，我們不需要立刻尋求強力的壓制手段，而是可以帶著溫柔的心念，從日常小地方開始細細觀察與核對：
+                </p>
+                
+                <div class="grid gap-6 md:grid-cols-2 mt-6">
+                    <div class="p-6 bg-[#F5F0EA]/60 rounded-xl space-y-2">
+                        <span class="text-xs text-olive-dark font-semibold tracking-wider block">01｜晚餐時間與作息</span>
+                        <p class="text-[14px] text-brand-textMain/85 leading-relaxed font-light">
+                            確認自己的晚餐是否常在晚上八點後才進行？用餐到躺下中間是否有維持 3 小時以上的間隔？
+                        </p>
+                    </div>
+                    <div class="p-6 bg-[#F5F0EA]/60 rounded-xl space-y-2">
+                        <span class="text-xs text-olive-dark font-semibold tracking-wider block">02｜平躺時的喉部反應</span>
+                        <p class="text-[14px] text-brand-textMain/85 leading-relaxed font-light">
+                            半夜驚醒的那一刻，留意自己的喉嚨是否乾癢、是否有股微弱的酸氣，或是自發性地想清喉嚨？
+                        </p>
+                    </div>
+                    <div class="p-6 bg-[#F5F0EA]/60 rounded-xl space-y-2">
+                        <span class="text-xs text-olive-dark font-semibold tracking-wider block">03｜清晨起床的口氣</span>
+                        <p class="text-[14px] text-brand-textMain/85 leading-relaxed font-light">
+                            剛醒來時，嘴裡是否殘留發苦、乾澀的質地？聲音是否有稍微沙啞，需要活動一陣子才恢復？
+                        </p>
+                    </div>
+                    <div class="p-6 bg-[#F5F0EA]/60 rounded-xl space-y-2">
+                        <span class="text-xs text-olive-dark font-semibold tracking-wider block">04｜腹部的緊繃感受</span>
+                        <p class="text-[14px] text-brand-textMain/85 leading-relaxed font-light">
+                            睡前摸摸肚子，是柔軟舒適的、還是有些許緊繃、敲起來有空洞的脹氣感？
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </article>
+
+    <!-- 重點整理區 (使用低透明度之輔助色塊，展現溫和調性) -->
+    <section class="py-16 bg-[#E8E8D5]/35 border-t border-b border-[#E8E8D5]/60">
+        <div class="max-w-xl mx-auto px-6">
+            <div class="text-center mb-8">
+                <span class="text-xs tracking-[0.25em] text-[#7E7F55] font-semibold block uppercase">
+                    重點整理
+                </span>
+                <div class="w-8 h-[1px] bg-olive-main/40 mx-auto mt-3"></div>
+            </div>
+            
+            <div class="space-y-6 text-[15px] text-brand-textMain/90 leading-loose">
+                <p class="text-center font-serif italic text-brand-textMain mb-4">
+                    逆流夜醒不一定只是胃酸問題，它往往反映了：
+                </p>
+                <ul class="space-y-4 max-w-md mx-auto">
+                    <li class="flex items-start">
+                        <span class="text-olive-main font-bold mr-3">✓</span>
+                        <span><strong>晚餐的步調</strong>：用餐時間點決定了夜間消化的起跑點。</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-olive-main font-bold mr-3">✓</span>
+                        <span><strong>消化的速率</strong>：身體是否有足夠的時間消化排空。</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-olive-main font-bold mr-3">✓</span>
+                        <span><strong>腸胃的負擔</strong>：過量進食或高張力食物干擾賁門開關。</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-olive-main font-bold mr-3">✓</span>
+                        <span><strong>夜間的修護力</strong>：系統性地調整，才能回歸深層休息。</span>
+                    </li>
+                </ul>
+                <div class="pt-6 border-t border-[#E8E8D5] text-center text-sm text-brand-textSec">
+                    睡眠與消化，本就是同一套恢復系統的兩個面向。
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 溫柔收尾段落 -->
+    <section class="py-24 px-6 max-w-2xl mx-auto text-center">
+        <div class="inline-block w-1.5 h-1.5 rounded-full bg-olive-main/50 mb-8"></div>
+        <p class="font-serif text-[16px] md:text-[18px] text-brand-textMain leading-loose max-w-xl mx-auto">
+            有時候，身體半夜叫醒你，<br>
+            不是為了打擾睡眠。<br>
+            而是在提醒你：<br>
+            也許該關心的不只是睡眠本身，<br>
+            而是整個消化與恢復的節奏。
+        </p>
+    </section>
+
+    <!-- 延伸閱讀區 (卡片與 Q&A 區塊呼應，採低調溫潤風格) -->
+    <section class="py-16 bg-[#F5F0EA]/50 border-t border-stone-200/20">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <span class="text-xs tracking-[0.25em] text-brand-textSec font-medium block uppercase">
+                    延伸閱讀
+                </span>
+                <div class="w-8 h-[1px] bg-brand-textSec/30 mx-auto mt-3"></div>
+            </div>
+
+            <!-- 3張延伸卡片 -->
+            <div class="grid gap-6 md:grid-cols-3">
+                <!-- 相關文章 1 -->
+                <a href="sleep_2am.html" class="bg-white/40 hover:bg-[#E8E8D5]/20 p-6 rounded-2xl border border-stone-200/30 flex flex-col justify-between min-h-[140px] hover-transition hover:translate-y-[-2px] hover:shadow-sm group">
+                    <div>
+                        <span class="text-[10px] tracking-[0.2em] text-[#7E7F55] font-semibold mb-2 block uppercase">SLEEP & NERVOUS SYSTEM</span>
+                        <h4 class="font-serif text-[15px] text-brand-textMain font-medium leading-snug group-hover:text-[#7E7F55] hover-transition">
+                            半夜2–3點醒，真的只是失眠嗎？
+                        </h4>
+                    </div>
+                    <span class="text-[11px] text-[#7E7F55] font-medium mt-4 flex items-center">
+                        閱讀文章 <span class="ml-1 text-xs group-hover:translate-x-1 hover-transition">→</span>
+                    </span>
+                </a>
+
+                <!-- 相關文章 2 -->
+                <a href="sleep_light_sleep.html" class="bg-white/40 hover:bg-[#E8E8D5]/20 p-6 rounded-2xl border border-stone-200/30 flex flex-col justify-between min-h-[140px] hover-transition hover:translate-y-[-2px] hover:shadow-sm group">
+                    <div>
+                        <span class="text-[10px] tracking-[0.2em] text-[#7E7F55] font-semibold mb-2 block uppercase">SLEEP & RECOVERY</span>
+                        <h4 class="font-serif text-[15px] text-brand-textMain font-medium leading-snug group-hover:text-[#7E7F55] hover-transition">
+                            為什麼後半夜越睡越淺？
+                        </h4>
+                    </div>
+                    <span class="text-[11px] text-[#7E7F55] font-medium mt-4 flex items-center">
+                        閱讀文章 <span class="ml-1 text-xs group-hover:translate-x-1 hover-transition">→</span>
+                    </span>
+                </a>
+
+                <!-- 相關文章 3 -->
+                <a href="sleep_tired_after_sleep.html" class="bg-white/40 hover:bg-[#E8E8D5]/20 p-6 rounded-2xl border border-stone-200/30 flex flex-col justify-between min-h-[140px] hover-transition hover:translate-y-[-2px] hover:shadow-sm group">
+                    <div>
+                        <span class="text-[10px] tracking-[0.2em] text-[#7E7F55] font-semibold mb-2 block uppercase">SLEEP & RECOVERY</span>
+                        <h4 class="font-serif text-[15px] text-brand-textMain font-medium leading-snug group-hover:text-[#7E7F55] hover-transition">
+                            睡很久還是累？
+                        </h4>
+                    </div>
+                    <span class="text-[11px] text-[#7E7F55] font-medium mt-4 flex items-center">
+                        閱讀文章 <span class="ml-1 text-xs group-hover:translate-x-1 hover-transition">→</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- 返回分類頁按鈕 -->
+            <div class="mt-16 text-center">
+                <a href="sleep_recovery.html" class="inline-flex items-center space-x-2 text-xs tracking-widest text-[#7E7F55] hover:text-[#9A9B6E] border border-[#7E7F55]/30 hover:border-[#9A9B6E] px-6 py-3 rounded-full hover-transition">
+                    <span>← 返回 睡眠與恢復力 分類頁</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="bg-[#F5F0EA] border-t border-stone-200/20 py-12 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 text-xs text-brand-textSec">
+            <div class="flex flex-col items-center md:items-start space-y-1">
+                <span class="font-serif font-medium text-brand-textMain">代謝美學 METABOLIC ESTHETICS</span>
+                <span class="font-light">傾聽身體細微的訊號，重建內在的和諧秩序。</span>
+            </div>
+            <div class="flex space-x-6">
+                <span>© 2026 代謝美學. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
