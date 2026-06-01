@@ -126,58 +126,54 @@
             color: var(--text-sub);
             line-height: 1.9;
             max-width: 520px;
-            margin: 0 auto 4rem;
+            margin: 0 auto 3.5rem;
             word-break: keep-all;
         }
 
-        /* 核心探索問題盒 */
-        .question-box {
-            background-color: transparent;
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-            padding: 2.5rem 1.5rem;
+        /* 4. 探索問題區塊：三張獨立卡片版型 (對齊 sleep_tired_after_sleep.html) */
+        .question-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
             margin-top: 2rem;
             text-align: left;
         }
 
-        .question-box-title {
-            font-family: var(--font-serif);
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--text-main);
-            margin-bottom: 1.2rem;
-            letter-spacing: 0.1em;
+        .question-card {
+            background-color: var(--bg-sub);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 1.8rem 1.5rem;
+            transition: border-color 0.4s ease, background-color 0.4s ease, transform 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .question-list {
-            list-style: none;
+        .question-card:hover {
+            border-color: var(--accent-moss);
+            background-color: var(--bg-main);
+            transform: translateY(-2px);
         }
 
-        .question-list li {
-            font-size: 0.9rem;
+        .question-num {
+            font-size: 0.65rem;
             color: var(--text-sub);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
             margin-bottom: 0.8rem;
-            padding-left: 1.2rem;
-            position: relative;
-            line-height: 1.7;
+            font-weight: 500;
         }
 
-        .question-list li:last-child {
-            margin-bottom: 0;
+        .question-text {
+            font-family: var(--font-serif);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-main);
+            font-weight: 400;
         }
 
-        .question-list li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0.55em;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background-color: var(--accent-moss);
-        }
-
-        /* 4. 文章正文：溫柔而專注的排版 */
+        /* 5. 文章正文：溫柔而專注的排版 */
         .article-content {
             max-width: 680px;
             margin: 0 auto;
@@ -246,7 +242,7 @@
             font-weight: 400;
         }
 
-        /* 5. 重點整理區：極具寧靜感的奶茶灰色塊 */
+        /* 6. 重點整理區：極具寧靜感的奶茶灰色塊 */
         .summary-card {
             background-color: var(--bg-sub);
             border-radius: 4px;
@@ -301,7 +297,7 @@
             word-break: keep-all;
         }
 
-        /* 6. 延伸閱讀區：乾淨細緻卡片 */
+        /* 7. 延伸閱讀區：乾淨細緻卡片 */
         .related-section {
             margin-top: 5rem;
             border-top: 1px solid var(--border-color);
@@ -358,7 +354,7 @@
             font-weight: 400;
         }
 
-        /* 7. 返回按鈕與頁尾 */
+        /* 8. 返回按鈕與頁尾 */
         .footer-navigation {
             text-align: center;
             padding: 4rem 1.5rem 6rem;
@@ -401,7 +397,7 @@
             letter-spacing: 0.12em;
         }
 
-        /* 8. 響應式調整 */
+        /* 9. 響應式調整 */
         @media (min-width: 768px) {
             .hero-section {
                 padding: 8rem 2rem 5rem;
@@ -409,6 +405,11 @@
 
             .article-title {
                 font-size: 2.1rem;
+            }
+
+            .question-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.2rem;
             }
 
             .article-content {
@@ -440,58 +441,28 @@
         </nav>
     </header>
 
- <!-- Hero 區 -->
-<section class="hero-section">
-    <span class="category-tag">SLEEP & RECOVERY</span>
-    <p class="article-category">睡眠與恢復力 · 夜醒型</p>
-
-    <h1 class="article-title">半夜 2–3 點醒，真的只是失眠嗎？</h1>
-
-    <p class="hero-intro">
-        有些醒來，不一定是睡眠出了問題。
-        很多時候，是身體正在透過固定時間的夜醒，
-        提醒我們恢復力與自律神經的狀態。
-    </p>
-    
-    <!-- 這篇文章會帶你看懂 -->
-   <!-- Q&A Section -->
-<section class="py-12 bg-white/60 border-y border-stone-200/20 backdrop-blur-sm">
-    <div class="max-w-3xl mx-auto px-6">
-
-        <div class="text-center mb-8">
-            <span class="text-xs tracking-widest text-brand-accent font-medium">
-                這篇文章會帶你看懂
-            </span>
-            <div class="w-8 h-[1px] bg-brand-accent/40 mx-auto mt-2"></div>
+    <!-- Hero 區 -->
+    <section class="hero-section">
+        <span class="category-tag">SLEEP & RECOVERY</span>
+        <h1 class="article-title">半夜 2–3 點醒，真的只是失眠嗎？</h1>
+        <p class="hero-intro">在夜深人靜的後半夜悄然醒來，我們常急著怪罪自己的神經系統。但有時，這只是身體在對你發出細微的、溫柔的訊號。</p>
+        
+        <!-- 本文探索問題 (Q&A 獨立三卡片版型) -->
+        <div class="question-grid">
+            <div class="question-card">
+                <span class="question-num">Question 01</span>
+                <p class="question-text">為什麼總是在半夜 2–3 點醒？</p>
+            </div>
+            <div class="question-card">
+                <span class="question-num">Question 02</span>
+                <p class="question-text">半夜醒來代表失眠嗎？</p>
+            </div>
+            <div class="question-card">
+                <span class="question-num">Question 03</span>
+                <p class="question-text">睡眠與恢復力有什麼關係？</p>
+            </div>
         </div>
-
-        <div class="grid gap-4 md:grid-cols-3">
-
-            <div class="bg-[#FAF9F5]/70 p-6 rounded-2xl border border-stone-100 flex flex-col justify-center min-h-[110px]">
-                <span class="text-xs text-brand-green font-semibold mb-2 block">Q 1</span>
-                <p class="text-[14px] text-brand-dark tracking-wide leading-relaxed font-medium">
-                    為什麼總是在半夜 2–3 點醒來？
-                </p>
-            </div>
-
-            <div class="bg-[#FAF9F5]/70 p-6 rounded-2xl border border-stone-100 flex flex-col justify-center min-h-[110px]">
-                <span class="text-xs text-brand-green font-semibold mb-2 block">Q 2</span>
-                <p class="text-[14px] text-brand-dark tracking-wide leading-relaxed font-medium">
-                    固定時間醒來，身體可能正在提醒什麼？
-                </p>
-            </div>
-
-            <div class="bg-[#FAF9F5]/70 p-6 rounded-2xl border border-stone-100 flex flex-col justify-center min-h-[110px]">
-                <span class="text-xs text-brand-green font-semibold mb-2 block">Q 3</span>
-                <p class="text-[14px] text-brand-dark tracking-wide leading-relaxed font-medium">
-                    夜醒與恢復力、自律神經有什麼關係？
-                </p>
-            </div>
-
-        </div>
-    </div>
-</section>
-</section>
+    </section>
 
     <!-- 文章正文 -->
     <article class="article-content">
@@ -565,13 +536,13 @@
         <section class="related-section">
             <h4 class="related-title">延伸閱讀</h4>
             <div class="related-grid">
-                <a href="sleep_light_sleep.html" class="related-card">
+                <a href="#" class="related-card">
                     <div>
                         <span class="related-card-category">SLEEP & RECOVERY</span>
                         <h5 class="related-card-title" style="margin-top: 0.5rem;">為什麼後半夜越睡越淺？</h5>
                     </div>
                 </a>
-                <a href="sleep_tired_after_sleep.html" class="related-card">
+                <a href="#" class="related-card">
                     <div>
                         <span class="related-card-category">SLEEP & RECOVERY</span>
                         <h5 class="related-card-title" style="margin-top: 0.5rem;">睡很久還是累？</h5>
