@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>血糖與食慾 | 代謝美學 METABOLIC ESTHETICS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
+    <!-- 使用 Noto Sans TC 統一字體風格 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-main: #FAF8F5;
@@ -26,9 +27,11 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        /* 調整標題字體系統，移除 Serif，改用 Sans 並調整字重 */
         h1, h2, h3 {
-            font-family: 'Noto Serif TC', serif;
-            font-weight: 300;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 500; /* 設定為中等字重，保持理性與清楚 */
+            letter-spacing: 0.02em;
         }
 
         /* 導覽列 */
@@ -39,7 +42,7 @@
             padding: 40px 60px;
         }
         .nav-logo a { text-decoration: none; color: var(--text-main); }
-        .nav-logo span { display: block; font-size: 1.2rem; letter-spacing: 0.1em; }
+        .nav-logo span { display: block; font-size: 1.2rem; letter-spacing: 0.1em; font-weight: 400; }
         .nav-logo small { display: block; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--text-sec); }
         
         .nav-links a {
@@ -54,8 +57,8 @@
 
         /* Hero */
         .hero { padding: 80px 20px; max-width: 800px; margin: 0 auto; text-align: center; }
-        .hero .subtitle { font-size: 0.8rem; letter-spacing: 0.3em; color: var(--tree-dark); margin-bottom: 20px; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 30px; }
+        .hero .subtitle { font-size: 0.8rem; letter-spacing: 0.3em; color: var(--tree-dark); margin-bottom: 20px; font-weight: 500; }
+        .hero h1 { font-size: 2.2rem; margin-bottom: 30px; font-weight: 600; }
         .hero p { font-size: 1.1rem; color: var(--text-sec); margin: 0 auto 15px auto; max-width: 600px; }
 
         /* 分類區塊 */
@@ -63,8 +66,8 @@
         .section-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 60px; }
         .category-group { margin-bottom: 40px; }
         .category-header { display: flex; align-items: baseline; gap: 20px; margin-bottom: 30px; }
-        .category-num { font-family: 'Noto Serif TC', serif; font-size: 2rem; color: var(--tree-main); }
-        .category-info h2 { font-size: 1.5rem; margin: 0; }
+        .category-num { font-size: 1.8rem; color: var(--tree-main); font-weight: 400; }
+        .category-info h2 { font-size: 1.4rem; margin: 0; font-weight: 600; }
         .category-desc { color: var(--text-sec); margin-top: 10px; font-size: 0.95rem; }
 
         .card-stack { display: flex; flex-direction: column; gap: 20px; }
@@ -77,13 +80,13 @@
             border: 1px solid transparent;
         }
         .card:hover { background-color: var(--tree-light); border-color: var(--tree-main); transform: translateY(-5px); }
-        .card h3 { font-size: 1.1rem; margin-top: 0; }
+        .card h3 { font-size: 1.1rem; margin-top: 0; font-weight: 600; }
         .card p { color: var(--text-sec); font-size: 0.9rem; margin-bottom: 20px; flex-grow: 1; }
         .card a { color: var(--text-main); text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid var(--text-main); width: fit-content; }
 
         /* 頁尾 */
         .footer-cta { background-color: var(--bg-block); padding: 100px 60px; text-align: center; }
-        .footer-cta h2 { font-size: 1.8rem; margin-bottom: 30px; }
+        .footer-cta h2 { font-size: 1.6rem; margin-bottom: 30px; font-weight: 500; }
         .footer-cta p { max-width: 500px; margin: 0 auto 40px auto; color: var(--text-sec); }
         .btn-home {
             display: inline-block;
@@ -143,12 +146,12 @@
                     <div class="card">
                         <h3>嘴饞到底是餓了，還是累了？</h3>
                         <p>想吃東西不一定是意志力差，也可能是身體正在尋找恢復感。</p>
-                        <a href="glucose_craving_types.html">閱讀文章 →</a>
+                        <a href="#">閱讀文章 →</a>
                     </div>
                     <div class="card">
                         <h3>明明吃飽了，為什麼還想吃？</h3>
                         <p>飽足感和血糖、壓力與睡眠都有關。</p>
-                        <a href="glucose_full_but_hungry.html">閱讀文章 →</a>
+                        <a href="#">閱讀文章 →</a>
                     </div>
                 </div>
             </section>
