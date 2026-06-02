@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飯後昏沉，是身體在提醒你什麼？ | 代謝美學 METABOLIC ESTHETICS</title>
+    <!-- 引入字體 Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: { 50: '#FAF8F5', 100: '#F5F0EA' },
+                        stone: { 200: '#EBE5DF' },
+                        ink: { 900: '#2D2B29' },
+                        wood: { 500: '#8C7D70' },
+                        glucose: { main: '#C6B27A', dark: '#A69260', light: '#F1E8C8' }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #FAF8F5; color: #2D2B29; font-family: 'Noto Sans TC', sans-serif; }
+    </style>
+</head>
+<body class="leading-relaxed">
+
+    <nav class="max-w-4xl mx-auto px-6 py-8 flex justify-between items-center">
+        <a href="index.html" class="text-left">
+            <div class="text-lg font-bold text-ink-900">代謝美學</div>
+            <div class="text-[10px] tracking-widest text-wood-500 uppercase">METABOLIC ESTHETICS</div>
+        </a>
+        <div class="flex gap-6 text-sm">
+            <a href="index.html" class="text-ink-900 border-b border-ink-900">首頁</a>
+            <a href="glucose_appetite.html" class="text-ink-900 hover:text-wood-500">血糖與食慾</a>
+            <a href="https://lin.ee/pzxDU3O" class="bg-glucose-main text-white px-4 py-2 rounded-full hover:bg-glucose-dark transition-colors">預約諮詢</a>
+        </div>
+    </nav>
+
+    <header class="max-w-3xl mx-auto px-6 py-20 text-center">
+        <div class="text-[10px] tracking-widest text-glucose-dark uppercase mb-4 font-medium">GLUCOSE & APPETITE</div>
+        <h2 class="text-sm text-ink-900 mb-6 uppercase tracking-wider font-semibold">血糖與食慾 · 血糖波動型</h2>
+        <h1 class="text-4xl md:text-5xl text-ink-900 mb-8 font-semibold">飯後昏沉，是身體在提醒你什麼？</h1>
+        <p class="text-lg text-wood-500 leading-loose">
+            有些人吃完飯後，會覺得精神變好。<br>
+            有些人卻開始想睡、注意力下降、甚至腦袋像被蓋上一層霧。<br>
+            很多時候，這不只是吃太飽。<br>
+            而是身體正在透過訊號，告訴你代謝環節中，有值得注意的地方。
+        </p>
+    </header>
+
+    <section class="py-12 bg-glucose-light/30 border-y border-stone-200/30">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 class="text-xs tracking-widest text-wood-500 font-medium text-center mb-8 uppercase">這篇文章會帶你看懂</h3>
+            <div class="grid gap-4 md:grid-cols-3">
+                <div class="bg-white/50 p-6 rounded-2xl border border-glucose-light/50 flex flex-col justify-center min-h-[120px]">
+                    <span class="text-xs text-glucose-dark font-semibold mb-2 block">Q 1</span>
+                    <p class="text-[14px] text-ink-900 tracking-wide leading-relaxed font-medium">飯後昏沉一定是血糖太高嗎？</p>
+                </div>
+                <div class="bg-white/50 p-6 rounded-2xl border border-glucose-light/50 flex flex-col justify-center min-h-[120px]">
+                    <span class="text-xs text-glucose-dark font-semibold mb-2 block">Q 2</span>
+                    <p class="text-[14px] text-ink-900 tracking-wide leading-relaxed font-medium">為什麼有些人吃完特別想睡？</p>
+                </div>
+                <div class="bg-white/50 p-6 rounded-2xl border border-glucose-light/50 flex flex-col justify-center min-h-[120px]">
+                    <span class="text-xs text-glucose-dark font-semibold mb-2 block">Q 3</span>
+                    <p class="text-[14px] text-ink-900 tracking-wide leading-relaxed font-medium">飯後昏沉和代謝狀態有什麼關係？</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <article class="max-w-2xl mx-auto px-6 py-16 text-ink-900 prose prose-stone font-sans">
+        
+        <h3 class="text-2xl font-semibold mb-6">飯後昏沉，不一定只是吃太飽</h3>
+        <p>很多人習慣說：「我只是吃太飽了。」但如果這件事常常發生，那值得多觀察一下。因為飯後昏沉是一個「訊號」，它可能與<strong>血糖波動、恢復不足、睡眠品質下降、長期壓力、或消化承接能力下降</strong>有關。血糖只是其中一個觀察的方向，而非唯一的原因。</p>
+        
+        <h3 class="text-2xl font-semibold mt-12 mb-6">身體的能量轉換其實需要很多步驟</h3>
+        <p>食物進入身體後，需要經過消化、吸收、血糖上升、胰島素調節、細胞利用，最終產生能量。任何一個環節不夠順，都可能出現「吃了卻沒有精神」的狀況。</p>
+
+        <h3 class="text-2xl font-semibold mt-12 mb-6">常見的三種類型</h3>
+        
+        <p class="text-lg font-semibold text-glucose-dark mt-8 mb-4">第一型｜血糖波動型</p>
+        <p>可能出現：飯後想睡、精神不集中、腦霧、飯後 1～3 小時特別想吃甜食。重點不在血糖絕對值高低，而是血糖變化速度與波動幅度。</p>
+        
+        <p class="text-lg font-semibold text-glucose-dark mt-8 mb-4">第二型｜恢復不足型</p>
+        <p>常見於睡眠品質差、夜醒、長期疲勞、壓力大。有些人血糖其實不高，但身體長期處於硬撐狀態。進食後副交感神經開始活化，疲勞感便被放大。</p>
+        
+        <p class="text-lg font-semibold text-glucose-dark mt-8 mb-4">第三型｜消化承接型</p>
+        <p>常伴隨胃脹、打嗝、飯後胃悶、吃油容易不舒服。此時昏沉感不一定來自血糖，而可能是消化系統本身的承接能力下降。</p>
+
+        <h3 class="text-2xl font-semibold mt-12 mb-6">午餐後特別昏沉，要觀察什麼？</h3>
+        <p><strong>第一個觀察：</strong>是不是午餐最容易發生？如果早餐、晚餐還好，只有午餐特別明顯，有時候和睡眠不足、上午累積疲勞有關。</p>
+        <p><strong>第二個觀察：</strong>是否伴隨想吃甜食？如果昏沉 → 想喝飲料 → 想吃甜食，常常代表能量調節不夠穩定。</p>
+        <p><strong>第三個觀察：</strong>飯後多久開始？30 分鐘內較可能是波動幅度；1～3 小時後較可能是血糖回落或代謝恢復需求。</p>
+
+        <h3 class="text-2xl font-semibold mt-12 mb-6">可以先做什麼？</h3>
+        <ul class="list-disc pl-5 space-y-2 mb-8">
+            <li><strong>吃慢一點：</strong>減少狼吞虎嚥。</li>
+            <li><strong>增加蛋白質比例：</strong>蛋、魚、肉、豆製品，通常比單純增加澱粉更有幫助。</li>
+            <li><strong>飯後活動五到十分鐘：</strong>例如散步、七秒深蹲，幫助能量利用。</li>
+        </ul>
+    </article>
+
+    <section class="max-w-2xl mx-auto px-6 pb-12">
+        <div class="bg-glucose-light/40 p-8 rounded-2xl">
+            <h3 class="text-xl font-semibold mb-4">重點整理</h3>
+            <p>飯後昏沉不是診斷，而是一個值得觀察的訊號。常見原因包括血糖波動、恢復不足、睡眠品質下降、壓力過高、消化承接能力下降。如果飯後昏沉經常發生，與其急著提神，不如開始觀察：身體到底是在提醒我哪一個環節需要被照顧？</p>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 py-12 border-t border-stone-200">
+        <h3 class="text-xs tracking-widest text-wood-500 font-medium mb-8 text-center uppercase">延伸閱讀</h3>
+        <div class="grid gap-4 md:grid-cols-3">
+            <a href="glucose_craving_types.html" class="bg-white/50 p-6 rounded-2xl border border-stone-200/40 text-center hover:bg-cream-100 transition-colors">嘴饞到底是餓了，還是累了？</a>
+            <a href="glucose_full_but_hungry.html" class="bg-white/50 p-6 rounded-2xl border border-stone-200/40 text-center hover:bg-cream-100 transition-colors">明明吃飽了，為什麼還想吃？</a>
+            <a href="glucose_afternoon_sweets.html" class="bg-white/50 p-6 rounded-2xl border border-stone-200/40 text-center hover:bg-cream-100 transition-colors">下午特別想吃甜食，是血糖不穩嗎？</a>
+        </div>
+        <div class="mt-12 text-center">
+            <a href="glucose_appetite.html" class="text-wood-500 border border-stone-200 px-6 py-2 rounded-full hover:bg-stone-200 transition-colors">返回血糖與食慾</a>
+        </div>
+    </section>
+
+    <footer class="max-w-2xl mx-auto px-6 py-16 text-center text-wood-500">
+        <p class="italic text-lg leading-loose">
+            有時候，飯後想睡不是因為懶惰。<br>
+            而是身體正在告訴你：能量的調節沒有想像中順利。<br>
+            當我們開始理解昏沉背後的原因，就能更清楚看見身體真正需要什麼。
+        </p>
+    </footer>
+
+    <div class="text-center py-8 text-[10px] text-wood-500 tracking-widest uppercase">
+        © 2026 METABOLIC ESTHETICS
+    </div>
+
+</body>
+</html>
