@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>血糖與食慾 | 代謝美學</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #FAF8F5;
+            --bg-sec: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --text-main: #2D2B29;
+            --text-sec: #8C7D70;
+            --accent: #8F9779;
+            --tree-main: #C6B27A;
+            --tree-dark: #A69260;
+            --tree-light: #F1E8C8;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-family: 'Noto Sans TC', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Noto Serif TC', serif;
+            font-weight: 300;
+            color: var(--text-main);
+        }
+
+        /* 導覽列 */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 60px;
+        }
+        .nav-logo a {
+            text-decoration: none;
+            color: var(--text-main);
+            display: block;
+        }
+        .nav-logo span {
+            display: block;
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+        }
+        .nav-logo small {
+            display: block;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: var(--text-sec);
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            margin-left: 30px;
+            padding-bottom: 2px;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+        .nav-links a:hover {
+            border-bottom: 1px solid var(--text-main);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 80px 60px;
+            max-width: 800px;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .hero .subtitle {
+            font-size: 0.8rem;
+            letter-spacing: 0.3em;
+            color: var(--tree-dark);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-sec);
+            margin-bottom: 15px;
+        }
+
+        /* 分類區塊 */
+        .content-section {
+            padding: 60px;
+        }
+        .category-group {
+            margin-bottom: 80px;
+        }
+        .category-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            border-bottom: 1px solid var(--tree-main);
+            padding-bottom: 5px;
+        }
+        .category-desc {
+            color: var(--text-sec);
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background-color: var(--bg-block);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        .card p {
+            color: var(--text-sec);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+        .card a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--text-main);
+            width: fit-content;
+        }
+
+        /* 頁尾 */
+        .footer-nav {
+            padding: 100px 60px;
+            text-align: center;
+        }
+        .footer-intro {
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+        }
+        .footer-intro h2 {
+            margin-bottom: 30px;
+        }
+        .btn-home {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 1px solid var(--text-main);
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            transition: all 0.3s;
+        }
+        .btn-home:hover {
+            background: var(--text-main);
+            color: var(--bg-main);
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 30px 20px; }
+            .hero { padding: 40px 20px; }
+            .content-section { padding: 40px 20px; }
+            .footer-nav { padding: 60px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <a href="index.html">
+                <span>代謝美學</span>
+                <small>METABOLIC ESTHETICS</small>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">首頁</a>
+            <a href="https://lin.ee/pzxDU3O" target="_blank">預約諮詢</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="subtitle">GLUCOSE & APPETITE</div>
+        <h1>血糖與食慾</h1>
+        <p>食慾不只是意志力問題。</p>
+        <p>很多時候，身體會透過飢餓、嘴饞、飯後昏沉，提醒我們血糖與恢復節奏正在波動。</p>
+        <p style="margin-top: 20px; font-size: 0.95rem;">有些人明明吃飽了還想吃。<br>有些人下午特別容易昏沉。<br>有些人一到晚上就開始想找東西吃。<br>這些狀況不一定只是自制力不足，而可能和血糖波動、壓力恢復、睡眠品質與進食節奏有關。</p>
+    </header>
+
+    <main class="content-section">
+        
+        <section class="category-group">
+            <h2 class="category-title">① 嘴饞與食慾型</h2>
+            <p class="category-desc">有些想吃，不是真的餓。而是身體正在透過食慾，表達疲勞、習慣或情緒需求。</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>嘴饞到底是餓了，還是累了？</h3>
+                    <p>想吃東西不一定是意志力差，也可能是身體正在尋找恢復感。</p>
+                    <a href="#">閱讀文章 →</a>
+                </div>
+                <div class="card">
+                    <h3>明明吃飽了，為什麼還想吃？</h3>
+                    <p>飽足感和血糖、壓力與睡眠都有關。</p>
+                    <a href="#">閱讀文章 →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-group">
+            <h2 class="category-title">② 血糖波動型</h2>
+            <p class="category-desc">血糖不一定要超標，身體才會有感覺。有些波動，會先表現在精神、食慾與疲勞感。</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>飯後昏沉，是血糖在提醒你什麼？</h3>
+                    <p>飯後想睡不只是吃太飽，也可能是血糖波動與胰島素反應。</p>
+                    <a href="#">閱讀文章 →</a>
+                </div>
+                <div class="card">
+                    <h3>為什麼下午特別想睡？</h3>
+                    <p>下午昏沉有時候不是懶，而是能量節奏正在往下掉。</p>
+                    <a href="#">閱讀文章 →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-group">
+            <h2 class="category-title">③ 進食節律型</h2>
+            <p class="category-desc">血糖不是只看吃什麼。什麼時間吃，吃得穩不穩，也會影響身體的代謝節奏。</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>早餐不餓正常嗎？</h3>
+                    <p>早餐不餓不一定是壞事，但要看身體是否真的有穩定恢復。</p>
+                    <a href="#">閱讀文章 →</a>
+                </div>
+                <div class="card">
+                    <h3>晚上特別想吃東西，是意志力不好嗎？</h3>
+                    <p>晚間食慾常常和白天吃太少、壓力與睡眠切換有關。</p>
+                    <a href="#">閱讀文章 →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-group">
+            <h2 class="category-title">④ 代謝代償型</h2>
+            <p class="category-desc">有些人不是吃太多才卡住。而是身體已經進入節能、防守或代償狀態。</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>一直餓，是代謝變快還是血糖不穩？</h3>
+                    <p>頻繁飢餓可能是代謝需求，也可能是血糖與壓力節奏不穩。</p>
+                    <a href="#">閱讀文章 →</a>
+                </div>
+                <div class="card">
+                    <h3>為什麼吃很少還是瘦不下來？</h3>
+                    <p>吃少不一定會讓身體願意消耗，有時候反而讓身體更想保存能量。</p>
+                    <a href="#">閱讀文章 →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-nav">
+        <div class="footer-intro">
+            <h2>食慾，是身體的一種語言</h2>
+            <p>很多人以為血糖只和糖尿病有關。<br>但在代謝美學裡，我們更在意的是：血糖如何影響精神、食慾、睡眠與恢復力。<br>當我們看懂食慾，有時候也就開始看懂身體正在經歷什麼。</p>
+        </div>
+        <a href="index.html" class="btn-home">返回代謝美學首頁</a>
+    </footer>
+
+</body>
+</html>
