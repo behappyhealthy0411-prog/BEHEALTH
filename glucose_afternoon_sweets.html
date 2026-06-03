@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下午特別想吃甜食，是血糖不穩嗎？｜代謝美學 METABOLIC ESTHETICS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --text-primary: #2D2B29;
+            --text-secondary: #8C7D70;
+            --tree-main: #C6B27A;
+            --tree-dark: #A69260;
+            --tree-light: #F1E8C8;
+            --tree-light-alpha: rgba(241, 232, 200, 0.4);
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Noto Sans TC', sans-serif;
+            line-height: 2;
+            letter-spacing: 0.05em;
+        }
+
+        h1 { font-family: 'Noto Sans TC', sans-serif; font-weight: 600; }
+        h2, h3, .serif-title { font-family: 'Noto Serif TC', serif; font-weight: 500; }
+        
+        .tracking-widest { letter-spacing: 0.25em; }
+
+        .content-card {
+            background-color: var(--tree-light-alpha);
+            border: 1px solid var(--tree-light);
+            border-radius: 24px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .btn-tree {
+            background-color: var(--tree-main);
+            color: white;
+            padding: 14px 40px;
+            border-radius: 99px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 14px;
+        }
+        .btn-tree:hover {
+            background-color: var(--tree-dark);
+            transform: translateY(-1px);
+        }
+
+        .summary-section {
+            background-color: var(--tree-light-alpha);
+            padding: 60px 40px;
+            border-radius: 32px;
+            margin: 80px 0;
+        }
+
+        .custom-list li {
+            position: relative;
+            padding-left: 1.5em;
+            margin-bottom: 0.75em;
+        }
+        .custom-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: var(--tree-main);
+        }
+
+        .observation-item {
+            border-bottom: 1px solid rgba(198, 178, 122, 0.2);
+            padding-bottom: 24px;
+            margin-bottom: 24px;
+        }
+        .observation-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 頂部導覽列 -->
+    <nav class="fixed top-0 w-full z-50 bg-[#FAF8F5]/80 backdrop-blur-md px-8 py-6 flex justify-between items-center">
+        <div class="text-[14px] font-medium leading-tight tracking-widest">
+            代謝美學<br>
+            <span class="text-[10px] font-light uppercase">Metabolic Esthetics</span>
+        </div>
+        <div class="flex gap-8 text-[13px] tracking-widest text-[#8C7D70]">
+            <a href="index.html" class="hover:text-[#2D2B29] transition-colors">首頁</a>
+            <a href="glucose_appetite.html" class="hover:text-[#2D2B29] transition-colors">血糖與食慾</a>
+            <a href="https://lin.ee/pzxDU3O" target="_blank" class="hover:text-[#2D2B29] transition-colors">預約諮詢</a>
+        </div>
+    </nav>
+
+    <!-- Hero 區 -->
+    <header class="pt-48 pb-24 px-6 text-center max-w-4xl mx-auto">
+        <div class="mb-8">
+            <span class="text-[11px] tracking-[0.4em] text-[#8C7D70] font-medium uppercase block mb-3">GLUCOSE & APPETITE</span>
+            <span class="text-[14px] text-[#A69260] tracking-widest font-medium">血糖與食慾 · 血糖波動型</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl leading-snug mb-10 text-[#2D2B29]">
+            下午特別想吃甜食，<br>是血糖不穩嗎？
+        </h1>
+        <div class="text-[#8C7D70] text-[16px] md:text-lg max-w-2xl mx-auto leading-relaxed font-light">
+            有些人一天最想吃甜食的時間，不是晚上，而是下午三、四點。明明午餐才吃過，卻開始想喝飲料、想吃餅乾、想來一點甜的。這不一定只是嘴饞，也可能是身體正在透過食慾，提醒你能量節奏開始不穩。
+        </div>
+    </header>
+
+    <!-- Q&A Section -->
+    <section class="py-16 bg-[#F1E8C8]/30 border-y border-[#F1E8C8]/50">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <span class="text-[12px] tracking-[0.3em] text-[#8C7D70] font-medium uppercase">這篇文章會帶你看懂</span>
+                <div class="w-8 h-[1px] bg-[#A69260]/40 mx-auto mt-3"></div>
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-3">
+                <!-- Q1 -->
+                <div class="bg-[#F1E8C8]/45 p-8 rounded-2xl border border-[#F1E8C8] flex flex-col justify-center min-h-[140px] transition-all hover:translate-y-[-2px]">
+                    <span class="text-[11px] text-[#A69260] font-semibold mb-3 block uppercase tracking-tighter">Q 1</span>
+                    <p class="text-[14px] text-[#2D2B29] leading-relaxed font-medium">為什麼下午特別容易想吃甜食？</p>
+                </div>
+                <!-- Q2 -->
+                <div class="bg-[#F1E8C8]/45 p-8 rounded-2xl border border-[#F1E8C8] flex flex-col justify-center min-h-[140px] transition-all hover:translate-y-[-2px]">
+                    <span class="text-[11px] text-[#A69260] font-semibold mb-3 block uppercase tracking-tighter">Q 2</span>
+                    <p class="text-[14px] text-[#2D2B29] leading-relaxed font-medium">下午想吃甜食一定是血糖不穩嗎？</p>
+                </div>
+                <!-- Q3 -->
+                <div class="bg-[#F1E8C8]/45 p-8 rounded-2xl border border-[#F1E8C8] flex flex-col justify-center min-h-[140px] transition-all hover:translate-y-[-2px]">
+                    <span class="text-[11px] text-[#A69260] font-semibold mb-3 block uppercase tracking-tighter">Q 3</span>
+                    <p class="text-[14px] text-[#2D2B29] leading-relaxed font-medium">可以從哪些地方觀察身體狀態？</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主內容區 -->
+    <main class="max-w-2xl mx-auto px-6 py-24">
+        
+        <article class="mb-20">
+            <h2 class="text-2xl mb-8 text-[#A69260]">下午想吃甜食，其實很常見</h2>
+            <p class="mb-6">很多人都有類似經驗：上午還可以，午餐後撐一陣子，到了下午三、四點，精神開始下降，注意力變差，嘴巴開始想找一點甜的。</p>
+            <p class="mb-6">這時候最吸引人的，通常不是正餐，而是：<span class="text-[#A69260] font-medium">奶茶、咖啡甜點、巧克力、餅乾、麵包或甜飲料</span>。這種狀態不一定代表意志力不好。它更像是身體正在發出一個訊號：能量開始往下掉了。</p>
+        </article>
+
+        <article class="mb-20">
+            <h2 class="text-2xl mb-8 text-[#A69260]">血糖波動，是其中一個常見原因</h2>
+            <p class="mb-6">如果午餐內容比較偏向精製澱粉多、蛋白質不足、纖維不足、吃得太快或飯後久坐，有些人會出現血糖快速上升，接著又快速回落的狀態。</p>
+            <div class="bg-[#EBE5DF]/40 p-8 rounded-2xl border-l-4 border-[#C6B27A] mb-8">
+                這時候大腦可能會開始尋找快速能量。而甜食，就是最容易被身體想到的選項。下午想吃甜食，確實可以是血糖波動的一種表現，但它不一定只代表血糖。
+            </div>
+            <p class="mb-6">代謝美學比較在意的，不是直接把下午嘴饞等於血糖不穩。而是回頭看：為什麼身體在這個時間點需要支援？</p>
+        </article>
+
+        <!-- 類型分析卡片 -->
+        <section class="content-card mb-20">
+            <h3 class="text-xl mb-8 text-[#A69260] serif-title text-center">常見的三種類型</h3>
+            <div class="space-y-10">
+                <div class="observation-item">
+                    <h4 class="font-semibold text-[#2D2B29] mb-3 flex items-center">
+                        <span class="w-2 h-2 bg-[#C6B27A] rounded-full mr-3"></span>第一種：血糖回落型
+                    </h4>
+                    <p class="text-sm text-[#8C7D70] leading-loose">常見於午餐後一到三小時。午餐吃完後一開始還好，但過一段時間開始昏沉、注意力下降、想喝飲料。這可能不是血糖高本身，而是血糖從高點往下回落時，身體尋找下一波能量。</p>
+                </div>
+                <div class="observation-item">
+                    <h4 class="font-semibold text-[#2D2B29] mb-3 flex items-center">
+                        <span class="w-2 h-2 bg-[#C6B27A] rounded-full mr-3"></span>第二種：午餐不穩型
+                    </h4>
+                    <p class="text-sm text-[#8C7D70] leading-loose">例如只吃麵包、飯糰，蛋白質或蔬菜太少。在這種能量基礎不穩的狀況下，身體下午自然容易想找甜食補上。</p>
+                </div>
+                <div class="observation-item">
+                    <h4 class="font-semibold text-[#2D2B29] mb-3 flex items-center">
+                        <span class="w-2 h-2 bg-[#C6B27A] rounded-full mr-3"></span>第三種：恢復不足型
+                    </h4>
+                    <p class="text-sm text-[#8C7D70] leading-loose">前一天睡不好，早上靠咖啡硬撐。到了下午身體開始撐不住，甜食帶來的是短暫的安撫感、提神感與恢復感。</p>
+                </div>
+            </div>
+        </section>
+
+        <article class="mb-20">
+            <h2 class="text-2xl mb-8 text-[#A69260]">可以先觀察什麼？</h2>
+            <div class="space-y-6">
+                <p><strong>· 嘴饞前有沒有先累？</strong><br><span class="text-[#8C7D70] text-sm">若伴隨打哈欠、腦袋鈍、注意力下降，那嘴饞可能與疲勞有關。</span></p>
+                <p><strong>· 午餐內容穩不穩？</strong><br><span class="text-[#8C7D70] text-sm">回顧蛋白質夠嗎？澱粉是否比例過高？是否有攝取蔬菜？</span></p>
+                <p><strong>· 是不是固定同一個時間？</strong><br><span class="text-[#8C7D70] text-sm">若每天都在三、四點發生，可能代表當前的作息與能量節奏需要調整。</span></p>
+                <p><strong>· 吃甜食後真的有恢復嗎？</strong><br><span class="text-[#8C7D70] text-sm">如果吃完只舒服一下，很快又更累，代表身體需要的不是糖，而是更穩定的能量支持。</span></p>
+            </div>
+        </article>
+
+        <!-- 重點整理區 -->
+        <section class="summary-section">
+            <div class="text-center mb-10">
+                <span class="text-[12px] tracking-[0.3em] text-[#8C7D70] font-medium uppercase">Summary</span>
+                <h2 class="text-2xl text-[#2D2B29] mt-2 serif-title">重點整理</h2>
+            </div>
+            <ul class="custom-list space-y-4 max-w-md mx-auto text-[#2D2B29]">
+                <li>下午想吃甜食，不一定只是意志力問題。</li>
+                <li>這可能與血糖回落、午餐蛋白質不足、睡眠不足有關。</li>
+                <li>甜食可能是身體在疲累時尋求的「快速補償」。</li>
+                <li>目標不是戒糖，而是回頭照顧身體的能量節奏。</li>
+            </ul>
+        </section>
+
+        <!-- 溫柔收尾 -->
+        <section class="text-center py-12 mb-16">
+            <div class="w-12 h-[1px] bg-[#C6B27A]/30 mx-auto mb-10"></div>
+            <p class="text-[#8C7D70] leading-loose italic font-light">
+                有時候，下午那份想吃甜食的衝動，<br>
+                不是身體在故意搗亂。而是它用最直接的方式提醒你：<br>
+                能量正在下降。<br><br>
+                如果我們願意停下來看一看，就會發現，食慾不是敵人。<br>
+                它常常是身體寫給我們的一張小紙條，提醒我們：<br>
+                這一天的能量節奏，也許需要被重新照顧。
+            </p>
+        </section>
+
+        <!-- 按鈕區 -->
+        <div class="flex flex-col items-center gap-8">
+            <a href="https://lin.ee/pzxDU3O" target="_blank" class="btn-tree tracking-widest uppercase">
+                立即預約諮詢
+            </a>
+            <a href="glucose_appetite.html" class="text-[13px] text-[#8C7D70] border-b border-[#8C7D70]/40 pb-1 hover:text-[#A69260] transition-all tracking-widest">
+                返回血糖與食慾 →
+            </a>
+        </div>
+    </main>
+
+    <!-- 延伸閱讀 -->
+    <section class="bg-[#F5F0EA] py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-[11px] tracking-[0.3em] text-[#8C7D70] uppercase">Recommended</span>
+                <h2 class="text-2xl mt-2 serif-title">延伸閱讀</h2>
+            </div>
+            <div class="grid gap-6 md:grid-cols-2">
+                <a href="glucose_craving_types.html" class="bg-[#FAF8F5] p-8 rounded-2xl border border-[#EBE5DF] hover:border-[#C6B27A]/50 transition-all group">
+                    <p class="text-[10px] text-[#A69260] mb-2 tracking-[0.2em] uppercase font-medium">Glucose & Appetite</p>
+                    <h3 class="text-[17px] text-[#2D2B29] group-hover:text-[#A69260] transition-colors">嘴饞到底是餓了，還是累了？</h3>
+                </a>
+                <a href="glucose_breakfast_not_hungry.html" class="bg-[#FAF8F5] p-8 rounded-2xl border border-[#EBE5DF] hover:border-[#C6B27A]/50 transition-all group">
+                    <p class="text-[10px] text-[#A69260] mb-2 tracking-[0.2em] uppercase font-medium">Glucose & Appetite</p>
+                    <h3 class="text-[17px] text-[#2D2B29] group-hover:text-[#A69260] transition-colors">早餐不餓，代表代謝比較好嗎？</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="bg-[#FAF8F5] py-16 px-6 border-t border-[#EBE5DF]">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-[#8C7D70]">
+            <div class="text-[13px] font-medium tracking-widest text-[#2D2B29]">
+                代謝美學<br>
+                <span class="text-[10px] font-light uppercase">Metabolic Esthetics</span>
+            </div>
+            <div class="text-[11px] tracking-[0.2em]">
+                © 2024 Metabolic Esthetics. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
