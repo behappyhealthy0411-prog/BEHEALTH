@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://behappyhealthy0411-prog.github.io/BEHEALTH/sitemap.xml
