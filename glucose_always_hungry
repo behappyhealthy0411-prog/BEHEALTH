@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>為什麼一直餓？不一定只是血糖問題 | 代謝美學</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: { 100: '#FAF8F5', 200: '#F5F0EA', 300: '#EBE5DF' },
+                        wood: { 500: '#8C7D70' },
+                        moss: { 500: '#7B8365', 100: '#E2E7D8' },
+                        glucose: { main: '#C6B27A', dark: '#A69260', light: '#F1E8C8' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; color: #2D2B29; background-color: #FAF8F5; }
+        h1, h2, h3 { font-family: 'Noto Serif TC', serif; }
+        .hero-title { font-family: 'Noto Sans TC', sans-serif; }
+    </style>
+</head>
+<body class="leading-relaxed">
+
+    <!-- 導覽列 -->
+    <nav class="flex justify-between items-center px-8 py-6 max-w-5xl mx-auto">
+        <div class="text-sm">
+            <div class="font-medium">代謝美學</div>
+            <div class="tracking-[0.2em] text-[10px]">METABOLIC ESTHETICS</div>
+        </div>
+        <div class="flex gap-8 text-sm text-wood-500">
+            <a href="index.html" class="hover:text-moss-500 transition-colors">首頁</a>
+            <a href="glucose_appetite.html" class="hover:text-moss-500 transition-colors">血糖與食慾</a>
+            <a href="https://lin.ee/pzxDU3O" class="hover:text-moss-500 transition-colors">預約諮詢</a>
+        </div>
+    </nav>
+
+    <!-- Hero 區 -->
+    <header class="py-20 text-center px-6">
+        <span class="tracking-widest text-xs text-wood-500 mb-2 block">GLUCOSE & APPETITE</span>
+        <h2 class="text-lg text-wood-500 mb-6">血糖與食慾 · 代謝代償型</h2>
+        <h1 class="hero-title text-4xl md:text-5xl font-semibold mb-8">為什麼一直餓？不一定只是血糖問題</h1>
+        <p class="max-w-xl mx-auto text-wood-500 leading-loose">
+            有些人總覺得自己很容易餓。<br>
+            早餐吃完沒多久又餓。<br>
+            下午容易餓。<br>
+            晚上也容易餓。<br>
+            於是開始懷疑：<br>
+            是不是血糖不穩？<br>
+            是不是代謝太快？<br>
+            是不是自己控制力不夠？<br>
+            但從生理角度來看，<br>
+            持續飢餓其實不一定只有一種原因。<br>
+            有時候是身體真的需要更多能量，<br>
+            有時候則是身體的調節系統正在發出訊號。
+        </p>
+    </header>
+
+    <!-- Q&A Section -->
+    <section class="py-12 bg-glucose-light/30 border-y border-stone-200/30 backdrop-blur-sm">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-8">
+                <span class="text-xs tracking-widest text-wood-500 font-medium">這篇文章會帶你看懂</span>
+                <div class="w-8 h-[1px] bg-glucose-dark/40 mx-auto mt-2"></div>
+            </div>
+            <div class="grid gap-4 md:grid-cols-3">
+                <div class="bg-glucose-light/45 p-6 rounded-2xl border border-glucose-light flex flex-col justify-center min-h-[120px]">
+                    <span class="text-xs text-glucose-dark font-semibold mb-2 block">Q 1</span>
+                    <p class="text-[14px] text-[#2D2B29] tracking-wide leading-relaxed font-medium">為什麼明明有吃東西，還是一直覺得餓？</p>
+                </div>
+                <div class="bg-glucose-light/45 p-6 rounded-2xl border border-glucose-light flex flex-col justify-center min-h-[120px]">
+                    <span class="text-xs text-glucose-dark font-semibold mb-2 block">Q 2</span>
+                    <p class="text-[14px] text-[#2D2B29] tracking-wide leading-relaxed font-medium">一直餓一定是血糖不穩嗎？</p>
+                </div>
+                <div class="bg-glucose-light/45 p-6 rounded-2xl border border-glucose-light flex flex-col justify-center min-h-[120px]">
+                    <span class="text-xs text-glucose-dark font-semibold mb-2 block">Q 3</span>
+                    <p class="text-[14px] text-[#2D2B29] tracking-wide leading-relaxed font-medium">什麼樣的飢餓值得特別留意？</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主內容區 -->
+    <main class="max-w-2xl mx-auto px-6 py-16">
+        
+        <!-- 開場知識卡 -->
+        <div class="bg-white p-8 rounded-xl border border-stone-100 mb-12 shadow-sm">
+            <h3 class="font-medium text-lg mb-6 text-glucose-dark">飢餓感是一種訊號，不是一種診斷</h3>
+            <p class="mb-6">很多人把飢餓直接解讀成：</p>
+            <ul class="mb-6 text-sm text-wood-500 list-disc pl-5">
+                <li>血糖不穩</li>
+                <li>代謝很好</li>
+                <li>吃得不夠</li>
+            </ul>
+            <p class="mb-6">但事實上，飢餓感受到許多系統共同影響：</p>
+            <ul class="mb-6 text-sm text-wood-500 list-disc pl-5">
+                <li>能量需求</li>
+                <li>血糖調節</li>
+                <li>飽足訊號</li>
+                <li>睡眠</li>
+                <li>壓力</li>
+                <li>長期飲食模式</li>
+            </ul>
+            <p class="font-semibold text-glucose-dark border-t border-glucose-light/30 pt-4">因此：一直餓，不一定代表同一件事。</p>
+        </div>
+
+        <h2 class="text-2xl font-semibold mb-6">第一種｜身體真的需要更多能量</h2>
+        <p class="mb-4">這是最單純的一種。例如開始規律運動、重訓恢復期、活動量增加或生病恢復中，身體需要更多能量來修復與適應，因此食慾增加是合理反應。</p>
+        
+        <div class="bg-glucose-light/20 p-6 rounded-lg mb-10 border-l-4 border-glucose-main">
+            <p class="font-semibold mb-4 text-sm text-glucose-dark">觀察卡</p>
+            <p class="mb-2 text-sm">如果：</p>
+            <ul class="text-sm space-y-2 text-wood-500">
+                <li>✔ 正餐吃得下</li>
+                <li>✔ 雞腿便當願意吃</li>
+                <li>✔ 吃完能穩定飽足數小時</li>
+            </ul>
+            <p class="mt-4 text-sm font-medium text-glucose-dark">比較像是：身體真的需要更多能量。</p>
+        </div>
+
+        <h2 class="text-2xl font-semibold mb-6">第二種｜飽足感訊號建立不好</h2>
+        <p class="mb-4">有些人其實有吃東西，但因蛋白質、蔬菜纖維不足，或是精製澱粉比例過高，容易出現剛吃完不久又開始想吃東西的情況。</p>
+        <p class="mb-2 font-medium">常見表現</p>
+        <ul class="list-disc pl-5 mb-8 text-wood-500 text-sm space-y-1">
+            <li>很快又餓</li>
+            <li>特別想吃甜食</li>
+            <li>想喝飲料</li>
+            <li>下午精神容易下降</li>
+        </ul>
+        <p class="mb-8 italic text-sm text-wood-500">小提醒：這時候問題未必是熱量不足，而是身體沒有順利收到「已經夠了」的訊號。</p>
+
+        <h2 class="text-2xl font-semibold mb-6">第三種｜恢復不足型</h2>
+        <p class="mb-4">這是現代人很常見的狀況。研究發現，睡眠不足時飢餓素（Ghrelin）上升、飽足訊號（Leptin）下降，導致即使熱量已足夠，仍可能比平常更容易餓。</p>
+        <p class="mb-2 font-medium">常見表現</p>
+        <ul class="list-disc pl-5 mb-8 text-wood-500 text-sm space-y-1">
+            <li>晚上特別容易找東西吃</li>
+            <li>壓力大時更容易餓</li>
+            <li>明明很累卻一直想吃</li>
+            <li>吃完後滿足感維持不久</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mb-6">第四種｜長期節食後的代謝代償</h2>
+        <p class="mb-4">有些人已經減重很久，長期吃很少或長期壓抑食慾，這時候身體可能開始提高尋找食物的驅動力。從演化角度來看，這是一種保護機制，因為身體會擔心能量是不是不夠了，於是持續提高對食物的敏感度。</p>
+        <p class="mb-2 font-medium">常見表現</p>
+        <ul class="list-disc pl-5 mb-12 text-wood-500 text-sm space-y-1">
+            <li>一直想找東西吃</li>
+            <li>飽足感變差</li>
+            <li>對高熱量食物特別敏感</li>
+            <li>越節食越難控制食慾</li>
+        </ul>
+
+        <!-- 重點整理區 -->
+        <section class="bg-glucose-light/30 p-8 rounded-2xl my-12">
+            <h3 class="text-xl font-semibold mb-6">重點整理：為什麼一直餓？</h3>
+            <p class="mb-4 text-sm font-semibold">常見不只一種原因：</p>
+            <div class="space-y-4 text-sm text-wood-500">
+                <p><strong>需求增加型：</strong>身體真的需要更多能量。</p>
+                <p><strong>飽足訊號失衡型：</strong>吃進去了，但飽足感建立不好。</p>
+                <p><strong>恢復不足型：</strong>睡眠與壓力影響食慾調節。</p>
+                <p><strong>代謝代償型：</strong>長期節食後，身體提高尋找食物的驅動力。</p>
+            </div>
+        </section>
+
+        <!-- 延伸閱讀 -->
+        <section class="mb-12">
+            <h3 class="text-lg font-medium mb-6 text-center">延伸閱讀</h3>
+            <div class="grid gap-4">
+                <a href="glucose_craving_types.html" class="bg-glucose-light/10 p-4 rounded-xl border border-glucose-light/30 text-sm hover:bg-glucose-light/30 transition">嘴饞到底是餓了還是累了？</a>
+                <a href="glucose_full_but_hungry.html" class="bg-glucose-light/10 p-4 rounded-xl border border-glucose-light/30 text-sm hover:bg-glucose-light/30 transition">明明吃飽了，為什麼還想吃？</a>
+                <a href="glucose_afternoon_sweets.html" class="bg-glucose-light/10 p-4 rounded-xl border border-glucose-light/30 text-sm hover:bg-glucose-light/30 transition">下午特別想吃甜食，是血糖不穩嗎？</a>
+                <div class="bg-glucose-light/5 p-4 rounded-xl border border-glucose-light/20 text-sm text-wood-500/60 cursor-not-allowed">為什麼吃很少還是瘦不下來？（待更新）</div>
+            </div>
+        </section>
+
+        <p class="text-center text-wood-500 italic mb-12 leading-relaxed">
+            有時候，身體不是故意讓你一直餓。<br>
+            它只是透過飢餓感，提醒你看看最近的生活狀態。<br>
+            也許需要更多能量，也許需要更多恢復，也許只是累得太久了。<br>
+            比起急著對抗食慾，更值得做的，是先理解身體到底想告訴你什麼。
+        </p>
+
+        <div class="text-center">
+            <a href="glucose_appetite.html" class="inline-block bg-glucose-dark text-white px-8 py-3 rounded-full text-sm hover:bg-glucose-main transition">返回血糖與食慾</a>
+        </div>
+    </main>
+
+    <footer class="py-12 text-center text-[10px] text-wood-500 tracking-widest border-t border-stone-200">
+        代謝美學 METABOLIC ESTHETICS
+    </footer>
+
+</body>
+</html>
