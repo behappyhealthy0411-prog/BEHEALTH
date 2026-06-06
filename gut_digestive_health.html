@@ -9,17 +9,30 @@
     <style>
         body { background-color: #FAF8F5; color: #2D2B29; font-family: 'Noto Sans TC', sans-serif; }
         h1, h2, h3 { font-family: 'Noto Serif TC', serif; }
-        .hero-title { font-family: 'Noto Sans TC', sans-serif; } /* 非襯線字體 */
-        .accent-text { color: #7E7F55; }
+        .hero-title { font-family: 'Noto Sans TC', sans-serif !important; }
+        
         .text-main { color: #2D2B29; }
         .text-secondary { color: #8C7D70; }
-        .tracking-widest-lg { letter-spacing: 0.25em; }
-        .article-card { background: #FFFFFF; border: 1px solid #EBE5DF; transition: all 0.3s ease; }
-        .article-card:hover { border-color: #9A9B6E; }
+        
+        /* 橄欖綠色系應用 */
+        .accent-border { border-color: #7E7F55; }
+        .accent-text { color: #7E7F55; }
+        .theme-bg-hover:hover { background-color: #E8E8D5; }
+        
+        .article-card { 
+            background: #FFFFFF; 
+            border: 1px solid #EBE5DF; 
+            transition: all 0.3s ease; 
+            display: flex; 
+            flex-direction: column; 
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
 
+    <!-- 導覽列 -->
     <nav class="max-w-5xl mx-auto w-full px-6 py-10 flex justify-between items-center">
         <div class="flex flex-col">
             <h1 class="text-xl font-bold tracking-widest text-main">代謝美學</h1>
@@ -33,8 +46,9 @@
     </nav>
 
     <main class="max-w-5xl mx-auto px-6 py-12 flex-grow">
+        <!-- Hero 區 -->
         <section class="mb-20 text-center">
-            <div class="text-sm text-[#7E7F55] tracking-widest-lg uppercase mb-4">DIGESTION & GUT HEALTH</div>
+            <div class="text-sm text-[#7E7F55] tracking-widest uppercase mb-4">DIGESTION & GUT HEALTH</div>
             <div class="text-sm text-secondary mb-8">腸胃與消化 · 身體訊號分類</div>
             <h2 class="hero-title text-3xl md:text-4xl font-normal text-main mb-8 leading-relaxed">為什麼吃東西，<br>總是容易不舒服？</h2>
             <div class="space-y-4 text-secondary leading-loose max-w-xl mx-auto">
@@ -47,6 +61,7 @@
             </div>
         </section>
 
+        <!-- 開場知識卡 -->
         <section class="bg-[#EBE5DF] p-10 mb-20 rounded-sm text-center">
             <h3 class="text-xl font-medium text-main mb-6">不是每個腸胃問題都一樣</h3>
             <p class="text-secondary leading-loose max-w-lg mx-auto">
@@ -54,81 +69,83 @@
             </p>
         </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
+        <!-- 四大分類網格 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
             
-            <!-- 01 -->
-            <div>
+            <!-- 01｜吃進去就不舒服型 -->
+            <div class="flex flex-col">
                 <h3 class="text-xl text-[#7E7F55] mb-4">01｜吃進去就不舒服型</h3>
                 <p class="text-secondary text-sm leading-relaxed mb-8">食物剛入口沒多久，就開始覺得胃悶、打嗝、容易飽或吃不下。這一型重點不是吃了多少，而是身體承接食物的能力正在發出訊號。</p>
-                <div class="space-y-4">
-                    <div class="article-card p-6">
-                        <p class="font-bold text-main text-sm mb-2">為什麼明明沒吃多少，卻一直覺得很飽？</p>
-                        <p class="text-secondary text-xs mb-4 leading-relaxed">這篇會帶你看懂，為什麼有些人吃幾口就覺得撐、胃悶，或一餐吃很久。這不一定只是胃小，也可能和胃部承接、壓力與消化節奏有關。</p>
-                        <a href="#" class="text-xs text-[#7E7F55] hover:underline">閱讀更多 →</a>
+                <div class="flex flex-col gap-4">
+                    <div class="article-card p-8 theme-bg-hover group">
+                        <p class="font-bold text-main text-lg mb-4 leading-snug">為什麼明明沒吃多少，卻一直覺得很飽？</p>
+                        <p class="text-secondary text-sm mb-6 leading-relaxed flex-grow">這篇會帶你看懂，為什麼有些人吃幾口就覺得撐、胃悶，或一餐吃很久。這不一定只是胃小，也可能和胃部承接、壓力與消化節奏有關。</p>
+                        <a href="#" class="text-sm text-[#7E7F55] hover:underline mt-auto">閱讀更多 →</a>
                     </div>
-                    <div class="article-card p-6">
-                        <p class="font-bold text-main text-sm mb-2">為什麼吃飯常常胃悶、一直打嗝？</p>
-                        <p class="text-secondary text-xs mb-4 leading-relaxed">這篇會整理飯後胃悶、打嗝、胸口悶脹背後可能的原因，幫助你區分是吃太快、消化負擔，還是胃部節奏正在變慢。</p>
-                        <a href="#" class="text-xs text-[#7E7F55] hover:underline">閱讀更多 →</a>
+                    <div class="article-card p-8 theme-bg-hover group">
+                        <p class="font-bold text-main text-lg mb-4 leading-snug">為什麼吃飯常常胃悶、一直打嗝？</p>
+                        <p class="text-secondary text-sm mb-6 leading-relaxed flex-grow">這篇會整理飯後胃悶、打嗝、胸口悶脹背後可能的原因，幫助你區分是吃太快、消化負擔，還是胃部節奏正在變慢。</p>
+                        <a href="#" class="text-sm text-[#7E7F55] hover:underline mt-auto">閱讀更多 →</a>
                     </div>
                 </div>
             </div>
 
-            <!-- 02 -->
-            <div>
+            <!-- 02｜吃完過一陣子才不舒服型 -->
+            <div class="flex flex-col">
                 <h3 class="text-xl text-[#7E7F55] mb-4">02｜吃完過一陣子才不舒服型</h3>
                 <p class="text-secondary text-sm leading-relaxed mb-8">剛吃完可能還好，但過了一兩個小時後，開始覺得肚子脹、放屁變多，或下午晚上特別不舒服。這一型重點在食物進入後，後續消化與發酵過程是否順利。</p>
-                <div class="space-y-4">
-                    <div class="article-card p-6">
-                        <p class="font-bold text-main text-sm mb-2">為什麼肚子總是脹脹的？</p>
-                        <p class="text-secondary text-xs mb-4 leading-relaxed">這篇會帶你看懂脹氣不一定只是吃錯東西，也可能和咀嚼、消化能力、腸道發酵、排便節律與壓力狀態有關。</p>
-                        <a href="#" class="text-xs text-[#7E7F55] hover:underline">閱讀更多 →</a>
+                <div class="flex flex-col gap-4">
+                    <div class="article-card p-8 theme-bg-hover group">
+                        <p class="font-bold text-main text-lg mb-4 leading-snug">為什麼肚子總是脹脹的？</p>
+                        <p class="text-secondary text-sm mb-6 leading-relaxed flex-grow">這篇會帶你看懂脹氣不一定只是吃錯東西，也可能和咀嚼、消化能力、腸道發酵、排便節律與壓力狀態有關。</p>
+                        <a href="#" class="text-sm text-[#7E7F55] hover:underline mt-auto">閱讀更多 →</a>
                     </div>
-                    <div class="article-card p-6">
-                        <p class="font-bold text-main text-sm mb-2">為什麼吃得很健康，反而更容易脹氣？</p>
-                        <p class="text-secondary text-xs mb-4 leading-relaxed">這篇會討論豆漿、生菜、燕麥、高蛋白、堅果等健康食物，為什麼有時候反而讓腸胃更有負擔。</p>
-                        <a href="#" class="text-xs text-[#7E7F55] hover:underline">閱讀更多 →</a>
+                    <div class="article-card p-8 theme-bg-hover group">
+                        <p class="font-bold text-main text-lg mb-4 leading-snug">為什麼吃得很健康，反而更容易脹氣？</p>
+                        <p class="text-secondary text-sm mb-6 leading-relaxed flex-grow">這篇會討論豆漿、生菜、燕麥、高蛋白、堅果等健康食物，為什麼有時候反而讓腸胃更有負擔。</p>
+                        <a href="#" class="text-sm text-[#7E7F55] hover:underline mt-auto">閱讀更多 →</a>
                     </div>
                 </div>
             </div>
 
-            <!-- 03 -->
-            <div>
+            <!-- 03｜東西一直往上跑型 -->
+            <div class="flex flex-col">
                 <h3 class="text-xl text-[#7E7F55] mb-4">03｜東西一直往上跑型</h3>
                 <p class="text-secondary text-sm leading-relaxed mb-8">食物吃下去後，本來應該一路往下消化，但有些人卻常出現火燒心、逆流、喉嚨卡卡，或躺下更明顯的不舒服。這一型重點在上衝感與胃食道逆流相關訊號。</p>
-                <div class="space-y-4">
-                    <div class="article-card p-6">
-                        <p class="font-bold text-main text-sm mb-2">為什麼喝流質反而容易逆流？</p>
-                        <p class="text-secondary text-xs mb-4 leading-relaxed">這篇會說明豆漿、芝麻糊、濃湯等流質食物，為什麼不一定比較好消化，反而可能增加胃部容量與逆流感。</p>
-                        <a href="#" class="text-xs text-[#7E7F55] hover:underline">閱讀更多 →</a>
+                <div class="flex flex-col gap-4">
+                    <div class="article-card p-8 theme-bg-hover group">
+                        <p class="font-bold text-main text-lg mb-4 leading-snug">為什麼喝流質反而容易逆流？</p>
+                        <p class="text-secondary text-sm mb-6 leading-relaxed flex-grow">這篇會說明豆漿、芝麻糊、濃湯等流質食物，為什麼不一定比較好消化，反而可能增加胃部容量與逆流感。</p>
+                        <a href="#" class="text-sm text-[#7E7F55] hover:underline mt-auto">閱讀更多 →</a>
                     </div>
-                    <div class="article-card p-6">
-                        <p class="font-bold text-main text-sm mb-2">為什麼吃得不多，還是會胃食道逆流？</p>
-                        <p class="text-secondary text-xs mb-4 leading-relaxed">這篇會從進食時間、姿勢、胃排空、腹壓與睡前飲食角度，整理為什麼吃得不多仍可能逆流。</p>
-                        <a href="#" class="text-xs text-[#7E7F55] hover:underline">閱讀更多 →</a>
+                    <div class="article-card p-8 theme-bg-hover group">
+                        <p class="font-bold text-main text-lg mb-4 leading-snug">為什麼吃得不多，還是會胃食道逆流？</p>
+                        <p class="text-secondary text-sm mb-6 leading-relaxed flex-grow">這篇會從進食時間、姿勢、胃排空、腹壓與睡前飲食角度，整理為什麼吃得不多仍可能逆流。</p>
+                        <a href="#" class="text-sm text-[#7E7F55] hover:underline mt-auto">閱讀更多 →</a>
                     </div>
                 </div>
             </div>
 
-            <!-- 04 -->
-            <div>
+            <!-- 04｜東西一直往下衝型 -->
+            <div class="flex flex-col">
                 <h3 class="text-xl text-[#7E7F55] mb-4">04｜東西一直往下衝型</h3>
                 <p class="text-secondary text-sm leading-relaxed mb-8">有些人的困擾不是吃不下，而是排便總是不穩定。可能常常腹瀉、排便次數太多，也可能每天都有上廁所，卻總覺得排不乾淨。</p>
-                <div class="space-y-4">
-                    <div class="article-card p-6">
-                        <p class="font-bold text-main text-sm mb-2">每天都有上廁所，就代表排便正常嗎？</p>
-                        <p class="text-secondary text-xs mb-4 leading-relaxed">這篇會帶你看懂，排便不只看有沒有每天上，也要看形狀、完整感、費力程度與排便後是否舒服。</p>
-                        <a href="#" class="text-xs text-[#7E7F55] hover:underline">閱讀更多 →</a>
+                <div class="flex flex-col gap-4">
+                    <div class="article-card p-8 theme-bg-hover group">
+                        <p class="font-bold text-main text-lg mb-4 leading-snug">每天都有上廁所，就代表排便正常嗎？</p>
+                        <p class="text-secondary text-sm mb-6 leading-relaxed flex-grow">這篇會帶你看懂，排便不只看有沒有每天上，也要看形狀、完整感、費力程度與排便後是否舒服。</p>
+                        <a href="#" class="text-sm text-[#7E7F55] hover:underline mt-auto">閱讀更多 →</a>
                     </div>
-                    <div class="article-card p-6">
-                        <p class="font-bold text-main text-sm mb-2">為什麼總是在拉肚子？</p>
-                        <p class="text-secondary text-xs mb-4 leading-relaxed">這篇會整理反覆腹瀉、飯後急便、吃油就拉、壓力大就跑廁所等狀況，幫助你理解腸胃節律為什麼變得太快。</p>
-                        <a href="#" class="text-xs text-[#7E7F55] hover:underline">閱讀更多 →</a>
+                    <div class="article-card p-8 theme-bg-hover group">
+                        <p class="font-bold text-main text-lg mb-4 leading-snug">為什麼總是在拉肚子？</p>
+                        <p class="text-secondary text-sm mb-6 leading-relaxed flex-grow">這篇會整理反覆腹瀉、飯後急便、吃油就拉、壓力大就跑廁所等狀況，幫助你理解腸胃節律為什麼變得太快。</p>
+                        <a href="#" class="text-sm text-[#7E7F55] hover:underline mt-auto">閱讀更多 →</a>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- 頁尾結尾 -->
         <section class="mt-12 pt-12 text-center border-t border-[#EBE5DF]">
             <h3 class="text-lg font-medium text-main mb-8">每一個腸胃訊號，都在告訴我們一些事情</h3>
             <p class="text-secondary leading-loose max-w-lg mx-auto mb-12">
