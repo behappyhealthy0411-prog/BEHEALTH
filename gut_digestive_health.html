@@ -30,27 +30,52 @@
     <!-- Hero 區 -->
     <header class="py-16 text-center">
         <div class="text-[#8F9779] text-xs tracking-widest mb-4 uppercase">GUT & DIGESTION</div>
-        <h1 class="text-4xl mb-6">為什麼吃東西，總是容易不舒服？</h1>
+        <h1 class="text-4xl mb-6 font-medium">為什麼吃東西，總是容易不舒服？</h1>
         <p class="max-w-xl mx-auto leading-loose text-[#8C7D70]">
             有些人的困擾是吃幾口就飽。有些人吃完幾個小時後開始脹氣。有些人總是胃食道逆流。也有人長期腹瀉、便秘或排便不順。理解身體訊號，往往比急著限制飲食更重要。
         </p>
     </header>
 
+    <!-- 醫療提醒區塊 -->
+    <section class="max-w-3xl mx-auto px-6 mb-16">
+        <div class="bg-[#F5F0EA] border-l-4 border-[#8F9779] p-8 md:p-10 rounded-r-lg">
+            <h2 class="text-xl mb-6 font-medium serif">先提醒：有些腸胃症狀，需要先排除結構性問題</h2>
+            <p class="text-[#8C7D70] leading-loose mb-8">
+                腸胃不舒服不一定都是嚴重問題，但如果症狀持續、越來越明顯，或合併以下警訊，建議先就醫評估，確認消化器官是否有發炎、潰瘍、阻塞、出血或其他結構性問題。
+            </p>
+            
+            <!-- 警訊標籤區 -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
+                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">體重明顯下降</div>
+                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">吞嚥困難、卡住</div>
+                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">持續嘔吐</div>
+                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">黑便或血便</div>
+                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">貧血</div>
+                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">夜間痛醒</div>
+                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">腹痛越來越明顯</div>
+                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">食慾明顯下降</div>
+                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">高齡新發症狀</div>
+            </div>
+
+            <p class="text-[#8C7D70] leading-loose text-sm">
+                如果檢查後比較偏向功能性消化不順，再回來看自己比較接近哪一種消化節奏。先排除需要醫療處理的問題，接下來才更適合討論功能性的腸胃節奏調整。
+            </p>
+        </div>
+    </section>
+
     <!-- 分類內容區 -->
     <main class="max-w-5xl mx-auto px-6 mb-20">
-        <!-- 使用 grid 確保左右兩大欄高度同步 -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             
             <!-- 01 型 -->
             <section class="flex flex-col h-full">
-                <h2 class="text-2xl mb-4">01｜吃進去就不舒服型</h2>
+                <h2 class="text-2xl mb-4 serif">01｜吃進去就不舒服型</h2>
                 <p class="text-[#8C7D70] mb-8">食物剛入口沒多久，就開始覺得胃悶、打嗝、容易飽或吃不下。這一型重點不是吃了多少，而是身體承接食物的能力正在發出訊號。</p>
-                <!-- 使用 flex-1 確保內部的兩張卡片強制等分高度 -->
                 <div class="flex flex-col gap-4 flex-grow">
                     <div class="bg-[#EBE5DF] p-6 flex flex-col flex-1 hover:bg-[#E8E8D5] transition-colors">
                         <h3 class="text-xl font-bold mb-3">為什麼明明沒吃多少，卻一直覺得很飽？</h3>
                         <p class="text-sm mb-6 flex-grow">這不一定只是胃小，也可能和胃部承接、壓力與消化節奏有關。</p>
-                        <a href="gut_fullness.html" class="mt-auto text-[#7B8365] font-medium text-sm">閱讀更多 →</a>
+                        <a href="#" class="mt-auto text-[#7B8365] font-medium text-sm">閱讀更多 →</a>
                     </div>
                     <div class="bg-[#EBE5DF] p-6 flex flex-col flex-1 hover:bg-[#E8E8D5] transition-colors">
                         <h3 class="text-xl font-bold mb-3">為什麼吃飯常常胃悶、一直打嗝？</h3>
@@ -62,7 +87,7 @@
 
             <!-- 02 型 -->
             <section class="flex flex-col h-full">
-                <h2 class="text-2xl mb-4">02｜吃完過一陣子才不舒服型</h2>
+                <h2 class="text-2xl mb-4 serif">02｜吃完過一陣子才不舒服型</h2>
                 <p class="text-[#8C7D70] mb-8">剛吃完可能還好，但過了一兩個小時後，開始覺得肚子脹、放屁變多，或下午晚上特別不舒服。</p>
                 <div class="flex flex-col gap-4 flex-grow">
                     <div class="bg-[#EBE5DF] p-6 flex flex-col flex-1 hover:bg-[#E8E8D5] transition-colors">
@@ -80,7 +105,7 @@
 
             <!-- 03 型 -->
             <section class="flex flex-col h-full">
-                <h2 class="text-2xl mb-4">03｜東西一直往上跑型</h2>
+                <h2 class="text-2xl mb-4 serif">03｜東西一直往上跑型</h2>
                 <p class="text-[#8C7D70] mb-8">本來應該一路往下消化，但有些人卻常出現火燒心、逆流、喉嚨卡卡，或躺下更明顯的不舒服。</p>
                 <div class="flex flex-col gap-4 flex-grow">
                     <div class="bg-[#EBE5DF] p-6 flex flex-col flex-1 hover:bg-[#E8E8D5] transition-colors">
@@ -98,7 +123,7 @@
 
             <!-- 04 型 -->
             <section class="flex flex-col h-full">
-                <h2 class="text-2xl mb-4">04｜東西一直往下衝型</h2>
+                <h2 class="text-2xl mb-4 serif">04｜東西一直往下衝型</h2>
                 <p class="text-[#8C7D70] mb-8">有些人的困擾不是吃不下，而是排便總是不穩定。可能常常腹瀉、排便次數太多，或排不乾淨。</p>
                 <div class="flex flex-col gap-4 flex-grow">
                     <div class="bg-[#EBE5DF] p-6 flex flex-col flex-1 hover:bg-[#E8E8D5] transition-colors">
@@ -119,7 +144,7 @@
 
     <!-- 結尾 -->
     <footer class="bg-[#F5F0EA] py-20 text-center px-6">
-        <h2 class="text-2xl mb-6">每一個腸胃訊號，都在告訴我們一些事情</h2>
+        <h2 class="text-2xl mb-6 serif">每一個腸胃訊號，都在告訴我們一些事情</h2>
         <p class="max-w-lg mx-auto leading-loose text-[#8C7D70] mb-12">
             有時候問題不一定出在食物本身。而是身體處理食物的能力、消化節奏、排便規律，甚至恢復狀態正在改變。與其急著戒掉更多食物，不如先理解身體正在發出什麼訊號。
         </p>
