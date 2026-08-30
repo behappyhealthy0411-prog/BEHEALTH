@@ -57,10 +57,6 @@
     });
   }
 
-  document.querySelectorAll('a[href="body_signals.html"]').forEach((link) => {
-    if (!link.closest('.bs-site-nav') && !link.closest('.bs-site-footer')) link.textContent = '返回身體訊號樹';
-  });
-
   document.querySelectorAll('footer').forEach((footer) => footer.remove());
   const footer = document.createElement('footer');
   footer.className = 'bs-site-footer';
@@ -68,11 +64,10 @@
     <p class="bs-footer-title">身體訊號，是身體的一種語言</p>
     <p class="bs-footer-copy">先理解身體正在說什麼，再找到適合現在的照顧方式。</p>
     <div class="bs-footer-actions">
-      <a href="body_signals.html">回到身體訊號樹</a>
-      <a href="index.html">回到代謝美學首頁</a>
-      <a class="bs-footer-cta" href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener">LINE 預約諮詢</a>
+      <a class="bs-footer-button bs-footer-tree" href="body_signals.html">回到身體訊號樹</a>
+      <a class="bs-footer-button bs-footer-home" href="index.html">回到代謝美學首頁</a>
+      <a class="bs-footer-button bs-footer-cta" href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener">LINE 預約諮詢</a>
     </div>
     <p class="bs-copyright">© 2026 代謝美學 METABOLIC ESTHETICS</p>`;
   document.body.appendChild(footer);
 })();
-
