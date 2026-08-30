@@ -96,7 +96,7 @@ body.body-signals-scope::before {
   border-bottom: 1px solid var(--bs-wood);
 }
 
-.bs-cta {
+.bs-nav-links .bs-cta {
   padding: 9px 18px !important;
   border-radius: 999px !important;
   background: var(--bs-wood) !important;
@@ -104,7 +104,7 @@ body.body-signals-scope::before {
   box-shadow: none !important;
 }
 
-.bs-cta:hover { background: var(--bs-wood-dark) !important; }
+.bs-nav-links .bs-cta:hover { background: var(--bs-wood-dark) !important; color: #fff !important; }
 
 .bs-breadcrumb {
   width: min(780px, calc(100% - 40px));
