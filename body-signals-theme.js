@@ -37,7 +37,7 @@
       Array.from(grid.children).forEach((section) => {
         if (!section.matches('section')) return;
         section.classList.add('bs-category-section');
-        section.querySelectorAll('a[href^="body_signals_"]').forEach((link) => {
+        section.querySelectorAll('a[href$=".html"]').forEach((link) => {
           const card = link.closest('div');
           if (card) card.classList.add('bs-category-card');
         });
