@@ -25,403 +25,60 @@
             --accent-light: #F1E8C8;
             --accent-soft: rgba(241, 232, 200, 0.42);
         }
-
         * { box-sizing: border-box; }
-
-        body {
-            margin: 0;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            font-family: var(--font-sans);
-            font-weight: 300;
-            line-height: 1.95;
-            letter-spacing: 0.03em;
-        }
-
+        body { margin: 0; background-color: var(--bg-primary); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.95; letter-spacing: 0.03em; }
         a { color: inherit; text-decoration: none; }
-
-        .navbar {
-            padding: 28px 0;
-            border-bottom: 1px solid var(--bg-block);
-            background-color: transparent;
-        }
-
-        .nav-wrapper {
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .logo-main {
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 0.22em;
-            line-height: 1.2;
-        }
-
-        .logo-sub {
-            margin-top: 4px;
-            font-size: 10px;
-            letter-spacing: 0.2em;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            align-items: center;
-            font-size: 13px;
-            color: var(--text-secondary);
-            letter-spacing: 0.08em;
-        }
-
-        .nav-item {
-            position: relative;
-            padding-bottom: 4px;
-            transition: color 0.25s ease;
-        }
-
-        .nav-item:hover,
-        .nav-item.active { color: var(--accent-dark); }
-
-        .nav-item.active::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            height: 1px;
-            background-color: var(--accent-main);
-        }
-
-        .article-hero {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 82px 24px 52px;
-            text-align: center;
-        }
-
-        .hero-tag {
-            display: block;
-            color: var(--accent-dark);
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 0.32em;
-            text-transform: uppercase;
-        }
-
-        .hero-category {
-            margin-top: 10px;
-            color: var(--text-secondary);
-            font-size: 14px;
-            letter-spacing: 0.14em;
-        }
-
-        .article-title {
-            margin: 34px 0 0;
-            font-size: clamp(32px, 5vw, 48px);
-            line-height: 1.35;
-            letter-spacing: 0.02em;
-            font-weight: 500;
-        }
-
-        .hero-intro {
-            max-width: 620px;
-            margin: 30px auto 0;
-            color: var(--text-secondary);
-            font-size: 17px;
-            line-height: 2.05;
-        }
-
-        .qa-section {
-            padding: 38px 0;
-            background-color: rgba(245, 240, 234, 0.58);
-            border-top: 1px solid rgba(45, 43, 41, 0.08);
-            border-bottom: 1px solid rgba(45, 43, 41, 0.08);
-        }
-
-        .qa-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .section-mini-title {
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 0.24em;
-            text-transform: uppercase;
-        }
-
-        .qa-divider {
-            width: 32px;
-            height: 1px;
-            margin: 10px auto 24px;
-            background-color: rgba(198, 178, 122, 0.45);
-        }
-
-        .qa-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
-
-        .qa-card {
-            background-color: var(--accent-soft);
-            border: 1px solid var(--accent-light);
-            padding: 22px 20px;
-            min-height: 112px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .qa-label {
-            color: var(--accent-dark);
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .qa-card p {
-            margin: 0;
-            font-size: 14px;
-            line-height: 1.7;
-            font-weight: 400;
-        }
-
-        .article-content {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 66px 24px 36px;
-        }
-
-        .article-content p {
-            margin: 0 0 22px;
-            color: var(--text-primary);
-            font-size: 16px;
-        }
-
-        .article-content h2 {
-            margin: 58px 0 22px;
-            font-size: 25px;
-            line-height: 1.55;
-            font-weight: 500;
-            letter-spacing: 0.04em;
-        }
-
-        .article-content h2::after {
-            content: "";
-            display: block;
-            width: 42px;
-            height: 1px;
-            margin-top: 14px;
-            background-color: var(--accent-main);
-        }
-
-        .gentle-card,
-        .observation-item,
-        .summary-card {
-            border-radius: 4px;
-            border: 1px solid var(--border-color);
-        }
-
-        .gentle-card {
-            background-color: rgba(241, 232, 200, 0.30);
-            border-color: rgba(198, 178, 122, 0.24);
-            padding: 24px 28px;
-            margin: 24px 0;
-        }
-
-        .gentle-card.cream-style {
-            background-color: var(--bg-secondary);
-            border-color: var(--border-color);
-        }
-
-        .gentle-card ul,
-        .summary-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .gentle-card li,
-        .summary-list li {
-            position: relative;
-            padding-left: 24px;
-            margin-bottom: 10px;
-        }
-
-        .gentle-card li:last-child,
-        .summary-list li:last-child { margin-bottom: 0; }
-
-        .gentle-card li::before,
-        .summary-list li::before {
-            content: "✦";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: var(--accent-dark);
-            font-size: 13px;
-        }
-
-        .observation-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-            margin: 28px 0 8px;
-        }
-
-        .observation-item {
-            background-color: var(--bg-secondary);
-            padding: 24px;
-        }
-
-        .observation-item h3 {
-            margin: 0 0 10px;
-            color: var(--accent-dark);
-            font-size: 17px;
-            font-weight: 500;
-            line-height: 1.6;
-        }
-
-        .observation-item p {
-            margin: 0;
-            color: var(--text-secondary);
-            font-size: 15px;
-            line-height: 1.85;
-        }
-
-        .summary-card {
-            background-color: rgba(241, 232, 200, 0.38);
-            border-color: var(--accent-light);
-            padding: 32px;
-            margin: 56px 0 48px;
-        }
-
-        .summary-card h2 {
-            margin-top: 0;
-        }
-
-        .closing-note {
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 17px;
-            line-height: 2.1;
-            margin: 48px auto 8px;
-        }
-
-        .related-section {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 58px 24px 28px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-            margin-top: 28px;
-        }
-
-        .related-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 24px;
-            min-height: 220px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
-        }
-
-        .related-card:hover {
-            background-color: var(--accent-light);
-            border-color: var(--accent-main);
-            transform: translateY(-5px);
-        }
-
-        .related-label {
-            color: var(--accent-dark);
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-        }
-
-        .related-card h3 {
-            margin: 18px 0 12px;
-            font-size: 18px;
-            line-height: 1.55;
-            font-weight: 500;
-        }
-
-        .related-card p {
-            margin: 0;
-            color: var(--text-secondary);
-            font-size: 14px;
-            line-height: 1.8;
-        }
-
-        .read-more {
-            margin-top: 22px;
-            color: var(--accent-dark);
-            font-size: 13px;
-            font-weight: 400;
-        }
-
-        .article-nav {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 36px 24px 64px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            gap: 28px;
-            flex-wrap: wrap;
-        }
-
-        .text-link {
-            color: var(--text-secondary);
-            font-size: 14px;
-            border-bottom: 1px solid rgba(140, 125, 112, 0.42);
-            padding-bottom: 3px;
-            transition: color 0.25s ease, border-color 0.25s ease;
-        }
-
-        .text-link:hover {
-            color: var(--accent-dark);
-            border-color: var(--accent-dark);
-        }
-
-        @media (max-width: 760px) {
-            .nav-wrapper {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .nav-links {
-                width: 100%;
-                justify-content: space-between;
-                gap: 14px;
-                font-size: 12px;
-            }
-
-            .article-hero { padding-top: 58px; }
-            .qa-grid,
-            .observation-grid,
-            .related-grid { grid-template-columns: 1fr; }
-            .article-content { padding-top: 52px; }
-            .related-card { min-height: auto; }
-        }
+        .navbar { padding: 28px 0; border-bottom: 1px solid var(--bg-block); background-color: transparent; }
+        .nav-wrapper { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+        .logo-main { font-size: 14px; font-weight: 500; letter-spacing: 0.22em; line-height: 1.2; }
+        .logo-sub { margin-top: 4px; font-size: 10px; letter-spacing: 0.2em; color: var(--text-secondary); text-transform: uppercase; }
+        .nav-links { display: flex; gap: 28px; align-items: center; font-size: 13px; color: var(--text-secondary); letter-spacing: 0.08em; }
+        .nav-item { position: relative; padding-bottom: 4px; transition: color 0.25s ease; }
+        .nav-item:hover, .nav-item.active { color: var(--accent-dark); }
+        .nav-item.active::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background-color: var(--accent-main); }
+        .article-hero { max-width: 760px; margin: 0 auto; padding: 82px 24px 52px; text-align: center; }
+        .hero-tag { display: block; color: var(--accent-dark); font-size: 12px; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; }
+        .hero-category { margin-top: 10px; color: var(--text-secondary); font-size: 14px; letter-spacing: 0.14em; }
+        .article-title { margin: 34px 0 0; font-size: clamp(32px, 5vw, 48px); line-height: 1.35; letter-spacing: 0.02em; font-weight: 500; }
+        .hero-intro { max-width: 620px; margin: 30px auto 0; color: var(--text-secondary); font-size: 17px; line-height: 2.05; }
+        .qa-section { padding: 38px 0; background-color: rgba(245, 240, 234, 0.58); border-top: 1px solid rgba(45, 43, 41, 0.08); border-bottom: 1px solid rgba(45, 43, 41, 0.08); }
+        .qa-container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+        .section-mini-title { text-align: center; color: var(--text-secondary); font-size: 12px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; }
+        .qa-divider { width: 32px; height: 1px; margin: 10px auto 24px; background-color: rgba(198, 178, 122, 0.45); }
+        .qa-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .qa-card { background-color: var(--accent-soft); border: 1px solid var(--accent-light); padding: 22px 20px; min-height: 112px; display: flex; flex-direction: column; justify-content: center; }
+        .qa-label { color: var(--accent-dark); font-size: 12px; font-weight: 600; margin-bottom: 6px; }
+        .qa-card p { margin: 0; font-size: 14px; line-height: 1.7; font-weight: 400; }
+        .article-content { max-width: 720px; margin: 0 auto; padding: 66px 24px 36px; }
+        .article-content p { margin: 0 0 22px; color: var(--text-primary); font-size: 16px; }
+        .article-content h2 { margin: 58px 0 22px; font-size: 25px; line-height: 1.55; font-weight: 500; letter-spacing: 0.04em; }
+        .article-content h2::after { content: ""; display: block; width: 42px; height: 1px; margin-top: 14px; background-color: var(--accent-main); }
+        .gentle-card, .observation-item, .summary-card { border-radius: 4px; border: 1px solid var(--border-color); }
+        .gentle-card { background-color: rgba(241, 232, 200, 0.30); border-color: rgba(198, 178, 122, 0.24); padding: 24px 28px; margin: 24px 0; }
+        .gentle-card.cream-style { background-color: var(--bg-secondary); border-color: var(--border-color); }
+        .gentle-card ul, .summary-list { list-style: none; padding: 0; margin: 0; }
+        .gentle-card li, .summary-list li { position: relative; padding-left: 24px; margin-bottom: 10px; }
+        .gentle-card li:last-child, .summary-list li:last-child { margin-bottom: 0; }
+        .gentle-card li::before, .summary-list li::before { content: "✦"; position: absolute; left: 0; top: 0; color: var(--accent-dark); font-size: 13px; }
+        .observation-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 28px 0 8px; }
+        .observation-item { background-color: var(--bg-secondary); padding: 24px; }
+        .observation-item h3 { margin: 0 0 10px; color: var(--accent-dark); font-size: 17px; font-weight: 500; line-height: 1.6; }
+        .observation-item p { margin: 0; color: var(--text-secondary); font-size: 15px; line-height: 1.85; }
+        .summary-card { background-color: rgba(241, 232, 200, 0.38); border-color: var(--accent-light); padding: 32px; margin: 56px 0 48px; }
+        .summary-card h2 { margin-top: 0; }
+        .closing-note { text-align: center; color: var(--text-secondary); font-size: 17px; line-height: 2.1; margin: 48px auto 8px; }
+        .related-section { max-width: 960px; margin: 0 auto; padding: 58px 24px 28px; border-top: 1px solid var(--border-color); }
+        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
+        .related-card { background-color: var(--bg-card); border: 1px solid var(--border-color); padding: 24px; min-height: 220px; display: flex; flex-direction: column; justify-content: space-between; transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease; }
+        .related-card:hover { background-color: var(--accent-light); border-color: var(--accent-main); transform: translateY(-5px); }
+        .related-label { color: var(--accent-dark); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
+        .related-card h3 { margin: 18px 0 12px; font-size: 18px; line-height: 1.55; font-weight: 500; }
+        .related-card p { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.8; }
+        .read-more { margin-top: 22px; color: var(--accent-dark); font-size: 13px; font-weight: 400; }
+        .article-nav { max-width: 720px; margin: 0 auto; padding: 36px 24px 64px; text-align: center; display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
+        .text-link { color: var(--text-secondary); font-size: 14px; border-bottom: 1px solid rgba(140, 125, 112, 0.42); padding-bottom: 3px; transition: color 0.25s ease, border-color 0.25s ease; }
+        .text-link:hover { color: var(--accent-dark); border-color: var(--accent-dark); }
+        @media (max-width: 760px) { .nav-wrapper { flex-direction: column; align-items: flex-start; } .nav-links { width: 100%; justify-content: space-between; gap: 14px; font-size: 12px; } .article-hero { padding-top: 58px; } .qa-grid, .observation-grid, .related-grid { grid-template-columns: 1fr; } .article-content { padding-top: 52px; } .related-card { min-height: auto; } }
     </style>
 </head>
 <body>
@@ -443,9 +100,7 @@
         <span class="hero-tag">GLUCOSE & APPETITE</span>
         <div class="hero-category">血糖與食慾 · 進食節律型</div>
         <h1 class="article-title">早餐不餓，代表代謝比較好嗎？</h1>
-        <p class="hero-intro">
-            有些人起床就餓，有些人直到中午都不想吃東西。近年因為斷食流行，很多人開始把早餐不餓視為代謝變好的證明。但早餐不餓，真的代表身體狀態比較好嗎？
-        </p>
+        <p class="hero-intro">有些人起床就餓，有些人直到中午都不想吃東西。近年因為斷食流行，很多人開始把早餐不餓視為代謝變好的證明。但早餐不餓，真的代表身體狀態比較好嗎？</p>
     </header>
 
     <section class="qa-section">
@@ -453,18 +108,9 @@
             <div class="section-mini-title">這篇文章會帶你看懂</div>
             <div class="qa-divider"></div>
             <div class="qa-grid">
-                <div class="qa-card">
-                    <div class="qa-label">Q 1</div>
-                    <p>為什麼有些人早上起來完全不餓？</p>
-                </div>
-                <div class="qa-card">
-                    <div class="qa-label">Q 2</div>
-                    <p>早餐不餓，真的代表代謝比較好嗎？</p>
-                </div>
-                <div class="qa-card">
-                    <div class="qa-label">Q 3</div>
-                    <p>什麼情況下，早餐不餓反而值得觀察？</p>
-                </div>
+                <div class="qa-card"><div class="qa-label">Q 1</div><p>為什麼有些人早上起來完全不餓？</p></div>
+                <div class="qa-card"><div class="qa-label">Q 2</div><p>早餐不餓，真的代表代謝比較好嗎？</p></div>
+                <div class="qa-card"><div class="qa-label">Q 3</div><p>什麼情況下，早餐不餓反而值得觀察？</p></div>
             </div>
         </div>
     </section>
@@ -491,7 +137,7 @@
         <p>有些人早餐不餓，是因為晚餐太晚、睡前還有吃東西，或前一天消化工作一直延續到夜間。這時候早上不餓，可能只是胃和身體還沒真正清空、恢復與重新啟動。</p>
         <p>也有些人早上不餓，但上午精神很差，只是靠咖啡、茶或忙碌撐過去。這種「不餓」，不一定是穩定，而可能是身體把飢餓感壓下去，直到下午或晚上才用更強的食慾反彈回來。</p>
 
-        <h2>早餐不餓，常見有三種狀況</h2>
+        <h2>早餐不餓，常見有四種狀況</h2>
         <div class="observation-grid">
             <div class="observation-item">
                 <h3>第一種：晚餐太晚型</h3>
@@ -537,43 +183,16 @@
             </ul>
         </div>
 
-        <p class="closing-note">
-            早餐不餓，有時只是身體適應了你的生活節奏。<br>
-            有時則是在提醒你：<br>
-            一整天的能量與進食節律，可能需要重新被看見。<br>
-            與其急著問早餐到底該不該吃，<br>
-            不如先觀察：我這一天，真的過得穩定嗎？
-        </p>
+        <p class="closing-note">早餐不餓，有時只是身體適應了你的生活節奏。<br>有時則是在提醒你：<br>一整天的能量與進食節律，可能需要重新被看見。<br>與其急著問早餐到底該不該吃，<br>不如先觀察：我這一天，真的過得穩定嗎？</p>
     </main>
 
     <section class="related-section">
         <div class="section-mini-title">延伸閱讀</div>
         <div class="qa-divider"></div>
         <div class="related-grid">
-            <a class="related-card" href="glucose_afternoon_sweets.html">
-                <div>
-                    <div class="related-label">01｜如果下午特別想吃甜食</div>
-                    <h3>下午特別想吃甜食，是血糖不穩嗎？</h3>
-                    <p>下午想吃甜食，可能和血糖回落、午餐內容與身體恢復感有關。</p>
-                </div>
-                <div class="read-more">閱讀文章 →</div>
-            </a>
-            <a class="related-card" href="glucose_full_but_hungry.html">
-                <div>
-                    <div class="related-label">02｜如果明明吃飽還想吃</div>
-                    <h3>明明吃飽了，為什麼還想吃？</h3>
-                    <p>吃飽不等於滿足，食慾也可能反映睡眠、壓力與大腦獎賞系統。</p>
-                </div>
-                <div class="read-more">閱讀文章 →</div>
-            </a>
-            <a class="related-card" href="glucose_aftermeal_sleepy.html">
-                <div>
-                    <div class="related-label">03｜如果飯後容易昏沉</div>
-                    <h3>飯後昏沉，是身體在提醒你什麼？</h3>
-                    <p>飯後昏沉不只是吃太飽，也可能和血糖波動、恢復不足與消化承接有關。</p>
-                </div>
-                <div class="read-more">閱讀文章 →</div>
-            </a>
+            <a class="related-card" href="glucose_afternoon_sweets.html"><div><div class="related-label">01｜如果下午特別想吃甜食</div><h3>下午特別想吃甜食，是血糖不穩嗎？</h3><p>下午想吃甜食，可能和血糖回落、午餐內容與身體恢復感有關。</p></div><div class="read-more">閱讀文章 →</div></a>
+            <a class="related-card" href="glucose_full_but_hungry.html"><div><div class="related-label">02｜如果明明吃飽還想吃</div><h3>明明吃飽了，為什麼還想吃？</h3><p>吃飽不等於滿足，食慾也可能反映睡眠、壓力與大腦獎賞系統。</p></div><div class="read-more">閱讀文章 →</div></a>
+            <a class="related-card" href="glucose_aftermeal_sleepy.html"><div><div class="related-label">03｜如果飯後容易昏沉</div><h3>飯後昏沉，是身體在提醒你什麼？</h3><p>飯後昏沉不只是吃太飽，也可能和血糖波動、恢復不足與消化承接有關。</p></div><div class="read-more">閱讀文章 →</div></a>
         </div>
     </section>
 
