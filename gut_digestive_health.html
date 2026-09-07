@@ -1,155 +1,516 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>腸胃與消化 · 代謝美學</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+    <title>腸胃與消化｜代謝美學</title>
+    <meta name="description" content="吃東西總是容易不舒服？從吃進去就不舒服、吃完後脹氣、逆流與排便不穩，重新理解腸胃正在發出的訊號。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/gut_digestive_health.html">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+
     <style>
-        body { font-family: 'Noto Sans TC', sans-serif; background-color: #FAF8F5; color: #2D2B29; }
-        h1, h2, .serif { font-family: 'Noto Serif TC', serif; }
-        .tracking-widest { letter-spacing: 0.25em; }
+        :root {
+            --bg-base: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #8C7D70;
+            --accent-main: #AD7A56;
+            --accent-dark: #8F5F43;
+            --accent-light: #EFE0D2;
+            --font-sans: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            --transition-slow: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 2.05;
+            letter-spacing: 0.04em;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        a { color: inherit; text-decoration: none; transition: var(--transition-slow); }
+
+        .container {
+            width: 100%;
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .navbar {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--bg-block);
+            background-color: transparent;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo { display: flex; flex-direction: column; line-height: 1.3; }
+
+        .logo-main {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            letter-spacing: 0.15em;
+        }
+
+        .logo-sub {
+            font-size: 0.72rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            letter-spacing: 0.12em;
+            margin-top: 2px;
+        }
+
+        .nav-links { display: flex; gap: 28px; align-items: center; }
+
+        .nav-item {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-main);
+            transform-origin: bottom right;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .nav-item:hover { color: var(--text-primary); }
+        .nav-item:hover::after, .nav-item.active::after { transform: scaleX(1); transform-origin: bottom left; }
+        .nav-item.active { color: var(--accent-dark); }
+
+        .hero {
+            padding: 120px 0 70px 0;
+            text-align: center;
+        }
+
+        .hero-tag {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--accent-main);
+            letter-spacing: 0.3em;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 45px;
+            letter-spacing: 0.12em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            margin-bottom: 34px;
+            line-height: 2.2;
+            font-weight: 400;
+        }
+
+        .hero-description {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin: 0 auto;
+            line-height: 2.2;
+        }
+
+        .divider {
+            width: 1px;
+            height: 70px;
+            background-color: var(--bg-block);
+            margin: 70px auto 0 auto;
+        }
+
+        .notice {
+            margin: 0 auto 95px;
+        }
+
+        .notice-card {
+            max-width: 820px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border-left: 4px solid var(--accent-main);
+            padding: 34px 38px;
+        }
+
+        .notice-card h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: 1.8;
+            letter-spacing: 0.06em;
+            margin-bottom: 22px;
+        }
+
+        .notice-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 2.1;
+        }
+
+        .warning-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+            margin: 28px 0;
+        }
+
+        .warning-item {
+            background-color: var(--bg-block);
+            color: var(--accent-dark);
+            font-size: 0.78rem;
+            line-height: 1.6;
+            text-align: center;
+            padding: 9px 10px;
+            border-radius: 4px;
+        }
+
+        .category-map { padding-bottom: 120px; }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.35rem;
+            font-weight: 400;
+            color: var(--accent-dark);
+            letter-spacing: 0.14em;
+            margin-bottom: 70px;
+        }
+
+        .map-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 72px 56px;
+            align-items: stretch;
+        }
+
+        .map-group {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+
+        .group-header {
+            margin-bottom: 30px;
+            min-height: 166px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .group-label {
+            font-size: 0.86rem;
+            color: var(--accent-main);
+            letter-spacing: 0.22em;
+            margin-bottom: 14px;
+        }
+
+        .group-title {
+            font-size: 1.45rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            line-height: 1.7;
+            letter-spacing: 0.08em;
+            margin-bottom: 14px;
+        }
+
+        .group-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 2;
+            letter-spacing: 0.04em;
+        }
+
+        .article-list {
+            display: grid;
+            grid-template-rows: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            flex: 1;
+        }
+
+        .article-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--bg-block);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 190px;
+        }
+
+        .article-card:hover,
+        .article-card:focus-visible {
+            background-color: var(--accent-light);
+            border-color: var(--accent-main);
+            transform: translateY(-6px);
+            outline: none;
+        }
+
+        .article-card h3 {
+            font-size: 1.08rem;
+            font-weight: 500;
+            line-height: 1.85;
+            letter-spacing: 0.05em;
+            color: var(--text-primary);
+            margin-bottom: 18px;
+        }
+
+        .article-card p {
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            line-height: 2;
+            letter-spacing: 0.03em;
+            margin-bottom: 24px;
+        }
+
+        .read-more {
+            display: inline-block;
+            align-self: flex-start;
+            font-size: 0.78rem;
+            color: var(--accent-dark);
+            border-bottom: 1px solid var(--accent-main);
+            letter-spacing: 0.12em;
+            padding-bottom: 2px;
+        }
+
+        .closing {
+            padding: 90px 0 105px;
+            text-align: center;
+            border-top: 1px solid var(--bg-block);
+        }
+
+        .closing h2 {
+            font-size: 1.65rem;
+            font-weight: 400;
+            line-height: 1.8;
+            letter-spacing: 0.1em;
+            margin-bottom: 36px;
+        }
+
+        .closing p {
+            max-width: 620px;
+            margin: 0 auto;
+            font-size: 0.96rem;
+            color: var(--text-secondary);
+            line-height: 2.2;
+        }
+
+        .footer {
+            padding: 45px 0 70px;
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-block;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--text-secondary);
+            padding-bottom: 3px;
+        }
+
+        .back-link:hover { color: var(--accent-dark); border-color: var(--accent-main); }
+
+        @media (max-width: 820px) {
+            .navbar { padding: 24px 0; }
+            .nav-wrapper { align-items: flex-start; }
+            .nav-links { gap: 16px; font-size: 0.78rem; flex-wrap: wrap; justify-content: flex-end; }
+            .hero { padding: 86px 0 58px; }
+            .hero-title { font-size: 2rem; letter-spacing: 0.1em; }
+            .notice { margin-bottom: 78px; }
+            .notice-card { padding: 28px 24px; }
+            .warning-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .map-grid { grid-template-columns: 1fr; gap: 72px; }
+            .group-header { min-height: auto; }
+            .article-list { grid-template-rows: auto; }
+            .article-card { min-height: auto; }
+            .section-title { margin-bottom: 56px; }
+        }
     </style>
 </head>
-<body class="min-h-screen flex flex-col">
-
-    <!-- 導覽列 -->
-    <nav class="flex justify-between items-center px-8 py-6">
-        <div class="text-lg">
-            <div class="font-bold tracking-wider">代謝美學</div>
-            <div class="text-[10px] tracking-[0.2em]">METABOLIC ESTHETICS</div>
-        </div>
-        <div class="flex gap-6 text-sm">
-            <a href="index.html" class="hover:text-[#8F9779]">首頁</a>
-            <a href="gut_digestive_health.html" class="hover:text-[#8F9779]">腸胃與消化</a>
-            <a href="https://lin.ee/pzxDU3O" class="hover:text-[#8F9779]">預約諮詢</a>
+<body>
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <span class="logo-main">代謝美學</span>
+                <span class="logo-sub">METABOLIC ESTHETICS</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">首頁</a>
+                <a href="gut_digestive_health.html" class="nav-item active">腸胃與消化</a>
+                <a href="https://lin.ee/pzxDU3O" class="nav-item" target="_blank" rel="noopener noreferrer">預約諮詢</a>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero 區 -->
-    <header class="py-16 text-center">
-        <div class="text-[#8F9779] text-xs tracking-widest mb-4 uppercase">GUT & DIGESTION</div>
-        <h1 class="text-4xl mb-6 font-medium">為什麼吃東西，總是容易不舒服？</h1>
-        <p class="max-w-xl mx-auto leading-loose text-[#8C7D70]">
-            有些人的困擾是吃幾口就飽。有些人吃完幾個小時後開始脹氣。有些人總是胃食道逆流。也有人長期腹瀉、便秘或排便不順。理解身體訊號，往往比急著限制飲食更重要。
-        </p>
-    </header>
-
-    <!-- 醫療提醒區塊 -->
-    <section class="max-w-3xl mx-auto px-6 mb-16">
-        <div class="bg-[#F5F0EA] border-l-4 border-[#8F9779] p-8 md:p-10 rounded-r-lg">
-            <h2 class="text-xl mb-6 font-medium serif">先提醒：有些腸胃症狀，需要先排除結構性問題</h2>
-            <p class="text-[#8C7D70] leading-loose mb-8">
-                腸胃不舒服不一定都是嚴重問題，但如果症狀持續、越來越明顯，或合併以下警訊，建議先就醫評估，確認消化器官是否有發炎、潰瘍、阻塞、出血或其他結構性問題。
+    <main>
+        <header class="hero container">
+            <span class="hero-tag">GUT & DIGESTION</span>
+            <h1 class="hero-title">腸胃與消化</h1>
+            <p class="hero-subtitle">為什麼吃東西，總是容易不舒服？</p>
+            <p class="hero-description">
+                有些人的困擾是吃幾口就飽，有些人吃完一段時間後開始脹氣，有些人總是胃食道逆流，也有人長期腹瀉、便秘或排便不順。理解腸胃訊號，往往比急著限制飲食更重要。
             </p>
-            
-            <!-- 警訊標籤區 -->
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
-                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">體重明顯下降</div>
-                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">吞嚥困難、卡住</div>
-                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">持續嘔吐</div>
-                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">黑便或血便</div>
-                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">貧血</div>
-                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">夜間痛醒</div>
-                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">腹痛越來越明顯</div>
-                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">食慾明顯下降</div>
-                <div class="bg-[#EBE5DF] px-3 py-2 text-xs text-[#7B8365] rounded text-center">高齡新發症狀</div>
+            <div class="divider"></div>
+        </header>
+
+        <section class="notice container">
+            <div class="notice-card">
+                <h2>先提醒：有些腸胃症狀，需要先排除結構性問題</h2>
+                <p>
+                    腸胃不舒服不一定都是嚴重問題，但如果症狀持續、越來越明顯，或合併以下警訊，建議先就醫評估，確認消化器官是否有發炎、潰瘍、阻塞、出血或其他需要醫療處理的問題。
+                </p>
+                <div class="warning-grid">
+                    <div class="warning-item">體重明顯下降</div>
+                    <div class="warning-item">吞嚥困難、卡住</div>
+                    <div class="warning-item">持續嘔吐</div>
+                    <div class="warning-item">黑便或血便</div>
+                    <div class="warning-item">貧血</div>
+                    <div class="warning-item">夜間痛醒</div>
+                    <div class="warning-item">腹痛越來越明顯</div>
+                    <div class="warning-item">食慾明顯下降</div>
+                    <div class="warning-item">高齡新發症狀</div>
+                </div>
+                <p>
+                    如果檢查後比較偏向功能性消化不順，再回來看自己比較接近哪一種消化節奏。先排除需要醫療處理的問題，接下來才更適合討論功能性的腸胃節奏調整。
+                </p>
             </div>
+        </section>
 
-            <p class="text-[#8C7D70] leading-loose text-sm">
-                如果檢查後比較偏向功能性消化不順，再回來看自己比較接近哪一種消化節奏。先排除需要醫療處理的問題，接下來才更適合討論功能性的腸胃節奏調整。
+        <section class="category-map container">
+            <h2 class="section-title">從四個方向開始理解</h2>
+
+            <div class="map-grid">
+                <section class="map-group">
+                    <div class="group-header">
+                        <div class="group-label">01</div>
+                        <h3 class="group-title">吃進去就不舒服型</h3>
+                        <p class="group-desc">食物剛入口沒多久，就開始覺得胃悶、打嗝、容易飽或吃不下。重點不只是吃了多少，而是身體承接食物的能力正在發出訊號。</p>
+                    </div>
+                    <div class="article-list">
+                        <a href="gut_fullness.html" class="article-card">
+                            <div>
+                                <h3>為什麼明明沒吃多少，卻一直覺得很飽？</h3>
+                                <p>這不一定只是胃小，也可能和胃部承接、壓力與消化節奏有關。</p>
+                            </div>
+                            <span class="read-more">閱讀文章 →</span>
+                        </a>
+                        <a href="gut_burping.html" class="article-card">
+                            <div>
+                                <h3>為什麼吃飯常常胃悶、一直打嗝？</h3>
+                                <p>幫助你區分是吃太快、消化負擔，還是胃部節奏正在變慢。</p>
+                            </div>
+                            <span class="read-more">閱讀文章 →</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="map-group">
+                    <div class="group-header">
+                        <div class="group-label">02</div>
+                        <h3 class="group-title">吃完過一陣子才不舒服型</h3>
+                        <p class="group-desc">剛吃完可能還好，但過了一兩個小時後，開始覺得肚子脹、放屁變多，或下午晚上特別不舒服。</p>
+                    </div>
+                    <div class="article-list">
+                        <a href="gut_bloating.html" class="article-card">
+                            <div>
+                                <h3>為什麼肚子總是脹脹的？</h3>
+                                <p>脹氣不一定只是吃錯東西，也可能和消化能力、腸道發酵、排便節律與壓力狀態有關。</p>
+                            </div>
+                            <span class="read-more">閱讀文章 →</span>
+                        </a>
+                        <a href="gut_healthy_food_bloating.html" class="article-card">
+                            <div>
+                                <h3>為什麼吃得很健康，反而更容易脹氣？</h3>
+                                <p>討論豆漿、生菜、燕麥等健康食物，為什麼有時候反而讓腸胃更有負擔。</p>
+                            </div>
+                            <span class="read-more">閱讀文章 →</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="map-group">
+                    <div class="group-header">
+                        <div class="group-label">03</div>
+                        <h3 class="group-title">東西一直往上跑型</h3>
+                        <p class="group-desc">本來應該一路往下消化，但有些人卻常出現火燒心、逆流、喉嚨卡卡，或躺下更明顯的不舒服。</p>
+                    </div>
+                    <div class="article-list">
+                        <a href="gut_liquid_reflux.html" class="article-card">
+                            <div>
+                                <h3>為什麼喝流質反而容易逆流？</h3>
+                                <p>流質食物不一定比較好消化，反而可能增加胃部容量與逆流感。</p>
+                            </div>
+                            <span class="read-more">閱讀文章 →</span>
+                        </a>
+                        <a href="gut_reflux_small_meal.html" class="article-card">
+                            <div>
+                                <h3>為什麼吃得不多，還是會胃食道逆流？</h3>
+                                <p>從進食時間、姿勢、胃排空、腹壓與睡前飲食角度進行分析。</p>
+                            </div>
+                            <span class="read-more">閱讀文章 →</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="map-group">
+                    <div class="group-header">
+                        <div class="group-label">04</div>
+                        <h3 class="group-title">東西一直往下衝型</h3>
+                        <p class="group-desc">有些人的困擾不是吃不下，而是排便總是不穩定。可能常常腹瀉、排便次數太多，或排不乾淨。</p>
+                    </div>
+                    <div class="article-list">
+                        <a href="gut_bowel_movement.html" class="article-card">
+                            <div>
+                                <h3>每天都有上廁所，就代表排便正常嗎？</h3>
+                                <p>排便不只看有無每天上，也要看形狀、完整感、費力程度。</p>
+                            </div>
+                            <span class="read-more">閱讀文章 →</span>
+                        </a>
+                        <a href="gut_diarrhea.html" class="article-card">
+                            <div>
+                                <h3>為什麼總是在拉肚子？</h3>
+                                <p>理解反覆腹瀉、飯後急便、吃油就拉背後的腸胃節律問題。</p>
+                            </div>
+                            <span class="read-more">閱讀文章 →</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="closing container">
+            <h2>每一個腸胃訊號，<br>都在告訴我們一些事情。</h2>
+            <p>
+                有時候問題不一定出在食物本身，而是身體處理食物的能力、消化節奏、排便規律，甚至恢復狀態正在改變。當我們開始看懂腸胃訊號，就能不只是限制飲食，而是重新理解身體需要什麼樣的照顧。
             </p>
-        </div>
-    </section>
-
-    <!-- 分類內容區 -->
-    <main class="max-w-5xl mx-auto px-6 mb-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-            
-            <!-- 01 型 -->
-            <section class="flex flex-col h-full">
-                <h2 class="text-2xl mb-4 serif">01｜吃進去就不舒服型</h2>
-                <p class="text-[#8C7D70] mb-8">食物剛入口沒多久，就開始覺得胃悶、打嗝、容易飽或吃不下。這一型重點不是吃了多少，而是身體承接食物的能力正在發出訊號。</p>
-                <div class="flex flex-col gap-4 flex-grow">
-                    <div class="bg-[#EBE5DF] p-6 flex flex-col flex-1 hover:bg-[#E8E8D5] transition-colors">
-                        <h3 class="text-xl font-bold mb-3">為什麼明明沒吃多少，卻一直覺得很飽？</h3>
-                        <p class="text-sm mb-6 flex-grow">這不一定只是胃小，也可能和胃部承接、壓力與消化節奏有關。</p>
-                        <a href="gut_fullness.html" class="mt-auto text-[#7B8365] font-medium text-sm">閱讀更多 →</a>
-                    </div>
-                    <div class="bg-[#EBE5DF] p-6 flex flex-col flex-1 hover:bg-[#E8E8D5] transition-colors">
-                        <h3 class="text-xl font-bold mb-3">為什麼吃飯常常胃悶、一直打嗝？</h3>
-                        <p class="text-sm mb-6 flex-grow">幫助你區分是吃太快、消化負擔，還是胃部節奏正在變慢。</p>
-                        <a href="gut_burping.html" class="mt-auto text-[#7B8365] font-medium text-sm">閱讀更多 →</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 02 型 -->
-            <section class="flex flex-col h-full">
-                <h2 class="text-2xl mb-4 serif">02｜吃完過一陣子才不舒服型</h2>
-                <p class="text-[#8C7D70] mb-8">剛吃完可能還好，但過了一兩個小時後，開始覺得肚子脹、放屁變多，或下午晚上特別不舒服。</p>
-                <div class="flex flex-col gap-4 flex-grow">
-                    <div class="bg-[#EBE5DF] p-6 flex flex-col flex-1 hover:bg-[#E8E8D5] transition-colors">
-                        <h3 class="text-xl font-bold mb-3">為什麼肚子總是脹脹的？</h3>
-                        <p class="text-sm mb-6 flex-grow">脹氣不一定只是吃錯東西，也可能和消化能力、腸道發酵、排便節律與壓力狀態有關。</p>
-                        <a href="gut_bloating.html" class="mt-auto text-[#7B8365] font-medium text-sm">閱讀更多 →</a>
-                    </div>
-                    <div class="bg-[#EBE5DF] p-6 flex flex-col flex-1 hover:bg-[#E8E8D5] transition-colors">
-                        <h3 class="text-xl font-bold mb-3">為什麼吃得很健康，反而更容易脹氣？</h3>
-                        <p class="text-sm mb-6 flex-grow">討論豆漿、生菜、燕麥等健康食物，為什麼有時候反而讓腸胃更有負擔。</p>
-                        <a href="gut_healthy_food_bloating.html" class="mt-auto text-[#7B8365] font-medium text-sm">閱讀更多 →</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 03 型 -->
-            <section class="flex flex-col h-full">
-                <h2 class="text-2xl mb-4 serif">03｜東西一直往上跑型</h2>
-                <p class="text-[#8C7D70] mb-8">本來應該一路往下消化，但有些人卻常出現火燒心、逆流、喉嚨卡卡，或躺下更明顯的不舒服。</p>
-                <div class="flex flex-col gap-4 flex-grow">
-                    <div class="bg-[#EBE5DF] p-6 flex flex-col flex-1 hover:bg-[#E8E8D5] transition-colors">
-                        <h3 class="text-xl font-bold mb-3">為什麼喝流質反而容易逆流？</h3>
-                        <p class="text-sm mb-6 flex-grow">流質食物不一定比較好消化，反而可能增加胃部容量與逆流感。</p>
-                        <a href="gut_liquid_reflux.html" class="mt-auto text-[#7B8365] font-medium text-sm">閱讀更多 →</a>
-                    </div>
-                    <div class="bg-[#EBE5DF] p-6 flex flex-col flex-1 hover:bg-[#E8E8D5] transition-colors">
-                        <h3 class="text-xl font-bold mb-3">為什麼吃得不多，還是會胃食道逆流？</h3>
-                        <p class="text-sm mb-6 flex-grow">從進食時間、姿勢、胃排空、腹壓與睡前飲食角度進行分析。</p>
-                        <a href="gut_reflux_small_meal.html" class="mt-auto text-[#7B8365] font-medium text-sm">閱讀更多 →</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 04 型 -->
-            <section class="flex flex-col h-full">
-                <h2 class="text-2xl mb-4 serif">04｜東西一直往下衝型</h2>
-                <p class="text-[#8C7D70] mb-8">有些人的困擾不是吃不下，而是排便總是不穩定。可能常常腹瀉、排便次數太多，或排不乾淨。</p>
-                <div class="flex flex-col gap-4 flex-grow">
-                    <div class="bg-[#EBE5DF] p-6 flex flex-col flex-1 hover:bg-[#E8E8D5] transition-colors">
-                        <h3 class="text-xl font-bold mb-3">每天都有上廁所，就代表排便正常嗎？</h3>
-                        <p class="text-sm mb-6 flex-grow">排便不只看有無每天上，也要看形狀、完整感、費力程度。</p>
-                        <a href="gut_bowel_movement.html" class="mt-auto text-[#7B8365] font-medium text-sm">閱讀更多 →</a>
-                    </div>
-                    <div class="bg-[#EBE5DF] p-6 flex flex-col flex-1 hover:bg-[#E8E8D5] transition-colors">
-                        <h3 class="text-xl font-bold mb-3">為什麼總是在拉肚子？</h3>
-                        <p class="text-sm mb-6 flex-grow">理解反覆腹瀉、飯後急便、吃油就拉背後的腸胃節律問題。</p>
-                        <a href="gut_diarrhea.html" class="mt-auto text-[#7B8365] font-medium text-sm">閱讀更多 →</a>
-                    </div>
-                </div>
-            </section>
-
-        </div>
+        </section>
     </main>
 
-    <!-- 結尾 -->
-    <footer class="bg-[#F5F0EA] py-20 text-center px-6">
-        <h2 class="text-2xl mb-6 serif">每一個腸胃訊號，都在告訴我們一些事情</h2>
-        <p class="max-w-lg mx-auto leading-loose text-[#8C7D70] mb-12">
-            有時候問題不一定出在食物本身。而是身體處理食物的能力、消化節奏、排便規律，甚至恢復狀態正在改變。與其急著戒掉更多食物，不如先理解身體正在發出什麼訊號。
-        </p>
-        <a href="index.html" class="inline-block border border-[#8F9779] text-[#7B8365] px-8 py-3 hover:bg-[#7B8365] hover:text-white transition-colors">返回代謝美學首頁</a>
+    <footer class="footer container">
+        <a href="index.html" class="back-link">返回代謝美學首頁</a>
     </footer>
-
 </body>
 </html>
