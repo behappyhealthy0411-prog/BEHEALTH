@@ -6,7 +6,7 @@
     <title>體重與代謝｜代謝美學</title>
     <meta name="description" content="體重沒有下降，不一定代表你不夠努力。從斷食、低碳、高蛋白、運動與長期生活，重新理解適合自己的體重與代謝方法。">
     <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/weight_metabolism.html">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -19,8 +19,7 @@
             --accent-main: #B08A75;
             --accent-dark: #96705B;
             --accent-light: #EBDDD5;
-            --font-serif: "Noto Serif TC", "Georgia", serif;
-            --font-sans: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            --font-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             --transition-slow: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -30,8 +29,8 @@
             background-color: var(--bg-base);
             color: var(--text-primary);
             font-family: var(--font-sans);
-            line-height: 2.1;
-            letter-spacing: 0.08em;
+            line-height: 2;
+            letter-spacing: 0.04em;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
@@ -63,17 +62,17 @@
         .logo-main {
             font-family: var(--font-sans);
             font-size: 1.15rem;
-            font-weight: 500;
+            font-weight: 600;
             color: var(--text-primary);
-            letter-spacing: 0.15em;
+            letter-spacing: 0.14em;
         }
 
         .logo-sub {
-            font-family: var(--font-serif);
-            font-size: 0.72rem;
+            font-family: var(--font-sans);
+            font-size: 0.68rem;
             font-weight: 400;
             color: var(--text-secondary);
-            letter-spacing: 0.12em;
+            letter-spacing: 0.16em;
             margin-top: 2px;
         }
 
@@ -105,43 +104,45 @@
         .nav-item.active { color: var(--accent-dark); }
 
         .hero {
-            padding: 120px 0 80px 0;
+            padding: 118px 0 78px 0;
             text-align: center;
         }
 
         .hero-tag {
-            font-family: var(--font-serif);
-            font-size: 0.85rem;
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
             text-transform: uppercase;
             color: var(--accent-main);
-            letter-spacing: 0.3em;
+            letter-spacing: 0.22em;
             margin-bottom: 24px;
             display: block;
+            font-weight: 500;
         }
 
         .hero-title {
-            font-family: var(--font-serif);
-            font-size: 2.2rem;
-            font-weight: 400;
+            font-family: var(--font-sans);
+            font-size: 2.25rem;
+            font-weight: 500;
             color: var(--text-primary);
             margin-bottom: 45px;
-            letter-spacing: 0.18em;
+            letter-spacing: 0.12em;
         }
 
         .hero-subtitle {
             font-size: 1.05rem;
             color: var(--text-primary);
             margin-bottom: 34px;
-            line-height: 2.2;
+            line-height: 2.1;
             font-weight: 400;
         }
 
         .hero-description {
-            font-size: 0.92rem;
+            font-size: 0.94rem;
             color: var(--text-secondary);
             max-width: 650px;
             margin: 0 auto;
-            line-height: 2.2;
+            line-height: 2.1;
+            letter-spacing: 0.03em;
         }
 
         .divider {
@@ -155,11 +156,11 @@
 
         .section-title {
             text-align: center;
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 1.35rem;
-            font-weight: 400;
+            font-weight: 500;
             color: var(--accent-dark);
-            letter-spacing: 0.18em;
+            letter-spacing: 0.12em;
             margin-bottom: 70px;
         }
 
@@ -185,20 +186,21 @@
         }
 
         .group-label {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 0.86rem;
             color: var(--accent-main);
-            letter-spacing: 0.22em;
+            letter-spacing: 0.2em;
             margin-bottom: 14px;
+            font-weight: 500;
         }
 
         .group-title {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 1.45rem;
-            font-weight: 400;
+            font-weight: 500;
             color: var(--text-primary);
             line-height: 1.7;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.05em;
             margin-bottom: 14px;
         }
 
@@ -206,7 +208,7 @@
             font-size: 0.88rem;
             color: var(--text-secondary);
             line-height: 2;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.03em;
         }
 
         .article-list {
@@ -235,11 +237,11 @@
         }
 
         .article-card h3 {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 1.08rem;
             font-weight: 500;
             line-height: 1.85;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.04em;
             color: var(--text-primary);
             margin-bottom: 18px;
         }
@@ -248,7 +250,7 @@
             font-size: 0.84rem;
             color: var(--text-secondary);
             line-height: 2;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.02em;
             margin-bottom: 24px;
         }
 
@@ -258,7 +260,7 @@
             font-size: 0.78rem;
             color: var(--accent-dark);
             border-bottom: 1px solid var(--accent-main);
-            letter-spacing: 0.12em;
+            letter-spacing: 0.1em;
             padding-bottom: 2px;
         }
 
@@ -269,11 +271,11 @@
         }
 
         .closing h2 {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 1.65rem;
-            font-weight: 400;
+            font-weight: 500;
             line-height: 1.8;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.06em;
             margin-bottom: 36px;
         }
 
@@ -282,7 +284,8 @@
             margin: 0 auto;
             font-size: 0.96rem;
             color: var(--text-secondary);
-            line-height: 2.2;
+            line-height: 2.1;
+            letter-spacing: 0.03em;
         }
 
         .footer {
@@ -301,12 +304,12 @@
         .back-link:hover { color: var(--accent-dark); border-color: var(--accent-main); }
 
         @media (max-width: 820px) {
-            body { letter-spacing: 0.04em; }
+            body { letter-spacing: 0.03em; }
             .navbar { padding: 24px 0; }
             .nav-wrapper { align-items: flex-start; }
             .nav-links { gap: 16px; font-size: 0.78rem; flex-wrap: wrap; justify-content: flex-end; }
             .hero { padding: 86px 0 58px; }
-            .hero-title { font-size: 2rem; letter-spacing: 0.12em; }
+            .hero-title { font-size: 2rem; letter-spacing: 0.08em; }
             .map-grid { grid-template-columns: 1fr; gap: 72px; }
             .group-header { min-height: auto; }
             .article-list { grid-template-rows: auto; }
