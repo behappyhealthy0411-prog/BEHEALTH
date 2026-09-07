@@ -1,185 +1,585 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>早餐不餓，代表代謝比較好嗎？ | 代謝美學</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@300;400;600&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#C6B27A',
-                        deep: '#A69260',
-                        light: '#F1E8C8',
-                        bg: '#FAF8F5',
-                        textMain: '#2D2B29',
-                        textSec: '#8C7D70'
-                    },
-                    fontFamily: {
-                        sans: ['Noto Sans TC', 'sans-serif'],
-                        serif: ['Noto Serif TC', 'serif']
-                    }
-                }
-            }
-        }
-    </script>
+    <title>早餐不餓，代表代謝比較好嗎？｜代謝美學</title>
+    <meta name="description" content="早餐不餓不一定代表代謝比較好。從進食節律、晚餐時間、飢餓訊號、咖啡依賴與一整天的能量穩定度，重新理解身體正在提醒什麼。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/glucose_breakfast_not_hungry.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #FAF8F5; color: #2D2B29; }
-        .tracking-widest { letter-spacing: 0.15em; }
+        :root {
+            --font-sans: 'Noto Sans TC', sans-serif;
+            --bg-primary: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #8C7D70;
+            --text-soft: #A39A92;
+            --border-color: rgba(45, 43, 41, 0.10);
+            --accent-main: #C6B27A;
+            --accent-dark: #A69260;
+            --accent-light: #F1E8C8;
+            --accent-soft: rgba(241, 232, 200, 0.42);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.95;
+            letter-spacing: 0.03em;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .navbar {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--bg-block);
+            background-color: transparent;
+        }
+
+        .nav-wrapper {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo-main {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            line-height: 1.2;
+        }
+
+        .logo-sub {
+            margin-top: 4px;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+        }
+
+        .nav-item {
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.25s ease;
+        }
+
+        .nav-item:hover,
+        .nav-item.active { color: var(--accent-dark); }
+
+        .nav-item.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: var(--accent-main);
+        }
+
+        .article-hero {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 82px 24px 52px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            display: block;
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+        }
+
+        .hero-category {
+            margin-top: 10px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            letter-spacing: 0.14em;
+        }
+
+        .article-title {
+            margin: 34px 0 0;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+            font-weight: 500;
+        }
+
+        .hero-intro {
+            max-width: 620px;
+            margin: 30px auto 0;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.05;
+        }
+
+        .qa-section {
+            padding: 38px 0;
+            background-color: rgba(245, 240, 234, 0.58);
+            border-top: 1px solid rgba(45, 43, 41, 0.08);
+            border-bottom: 1px solid rgba(45, 43, 41, 0.08);
+        }
+
+        .qa-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-mini-title {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+        }
+
+        .qa-divider {
+            width: 32px;
+            height: 1px;
+            margin: 10px auto 24px;
+            background-color: rgba(198, 178, 122, 0.45);
+        }
+
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .qa-card {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-light);
+            padding: 22px 20px;
+            min-height: 112px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .qa-label {
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .qa-card p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 66px 24px 36px;
+        }
+
+        .article-content p {
+            margin: 0 0 22px;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+
+        .article-content h2 {
+            margin: 58px 0 22px;
+            font-size: 25px;
+            line-height: 1.55;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        .article-content h2::after {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 1px;
+            margin-top: 14px;
+            background-color: var(--accent-main);
+        }
+
+        .gentle-card,
+        .observation-item,
+        .summary-card {
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gentle-card {
+            background-color: rgba(241, 232, 200, 0.30);
+            border-color: rgba(198, 178, 122, 0.24);
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+
+        .gentle-card.cream-style {
+            background-color: var(--bg-secondary);
+            border-color: var(--border-color);
+        }
+
+        .gentle-card ul,
+        .summary-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .gentle-card li,
+        .summary-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+        }
+
+        .gentle-card li:last-child,
+        .summary-list li:last-child { margin-bottom: 0; }
+
+        .gentle-card li::before,
+        .summary-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-dark);
+            font-size: 13px;
+        }
+
+        .observation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 28px 0 8px;
+        }
+
+        .observation-item {
+            background-color: var(--bg-secondary);
+            padding: 24px;
+        }
+
+        .observation-item h3 {
+            margin: 0 0 10px;
+            color: var(--accent-dark);
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .observation-item p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .summary-card {
+            background-color: rgba(241, 232, 200, 0.38);
+            border-color: var(--accent-light);
+            padding: 32px;
+            margin: 56px 0 48px;
+        }
+
+        .summary-card h2 {
+            margin-top: 0;
+        }
+
+        .closing-note {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.1;
+            margin: 48px auto 8px;
+        }
+
+        .related-section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 58px 24px 28px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .related-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .related-card:hover {
+            background-color: var(--accent-light);
+            border-color: var(--accent-main);
+            transform: translateY(-5px);
+        }
+
+        .related-label {
+            color: var(--accent-dark);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .related-card h3 {
+            margin: 18px 0 12px;
+            font-size: 18px;
+            line-height: 1.55;
+            font-weight: 500;
+        }
+
+        .related-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            margin-top: 22px;
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .article-nav {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 36px 24px 64px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .text-link {
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-bottom: 1px solid rgba(140, 125, 112, 0.42);
+            padding-bottom: 3px;
+            transition: color 0.25s ease, border-color 0.25s ease;
+        }
+
+        .text-link:hover {
+            color: var(--accent-dark);
+            border-color: var(--accent-dark);
+        }
+
+        @media (max-width: 760px) {
+            .nav-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                gap: 14px;
+                font-size: 12px;
+            }
+
+            .article-hero { padding-top: 58px; }
+            .qa-grid,
+            .observation-grid,
+            .related-grid { grid-template-columns: 1fr; }
+            .article-content { padding-top: 52px; }
+            .related-card { min-height: auto; }
+        }
     </style>
 </head>
-<body class="font-sans antialiased text-textMain">
-
-    <nav class="flex justify-between items-center py-8 px-6 md:px-12 max-w-5xl mx-auto">
-        <div class="text-left">
-            <h1 class="text-sm font-serif leading-tight">代謝美學<br>METABOLIC ESTHETICS</h1>
-        </div>
-        <div class="flex gap-6 md:gap-8 text-sm font-medium tracking-wide">
-            <a href="index.html" class="hover:text-primary transition-colors">首頁</a>
-            <a href="glucose_appetite.html" class="hover:text-primary transition-colors border-b border-textMain">血糖與食慾</a>
-            <a href="https://lin.ee/pzxDU3O" class="text-primary hover:text-deep transition-colors">預約諮詢</a>
+<body>
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <a href="index.html" aria-label="返回代謝美學首頁">
+                <div class="logo-main">代謝美學</div>
+                <div class="logo-sub">METABOLIC ESTHETICS</div>
+            </a>
+            <div class="nav-links" aria-label="主要導覽">
+                <a class="nav-item" href="index.html">首頁</a>
+                <a class="nav-item active" href="glucose_appetite.html">血糖與食慾</a>
+                <a class="nav-item" href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener">預約諮詢</a>
+            </div>
         </div>
     </nav>
 
-    <header class="py-16 md:py-24 px-6 text-center">
-        <div class="max-w-3xl mx-auto">
-            <span class="text-[10px] tracking-widest text-textSec font-medium uppercase block mb-4">GLUCOSE & APPETITE</span>
-            <p class="text-xs text-textSec mb-6 tracking-wide">血糖與食慾 · 進食節律型</p>
-            <h1 class="font-sans font-semibold text-4xl md:text-5xl text-textMain mb-8 leading-tight">早餐不餓，代表代謝比較好嗎？</h1>
-            <p class="text-base md:text-lg text-textSec leading-relaxed max-w-xl mx-auto">
-                有些人起床就餓，有些人直到中午都不想吃東西。<br>
-                近年因為 168 斷食流行，<br>
-                許多人開始把：<br>
-                「早餐不餓」<br>
-                視為代謝變好的證明。<br>
-                但早餐不餓，<br>
-                真的代表身體狀態比較好嗎？<br>
-                <br>
-                讓我們從代謝的角度，<br>
-                重新理解這個訊號。
-            </p>
-        </div>
+    <header class="article-hero">
+        <span class="hero-tag">GLUCOSE & APPETITE</span>
+        <div class="hero-category">血糖與食慾 · 進食節律型</div>
+        <h1 class="article-title">早餐不餓，代表代謝比較好嗎？</h1>
+        <p class="hero-intro">
+            有些人起床就餓，有些人直到中午都不想吃東西。近年因為斷食流行，很多人開始把早餐不餓視為代謝變好的證明。但早餐不餓，真的代表身體狀態比較好嗎？
+        </p>
     </header>
 
-    <section class="py-12 bg-[#F1E8C8]/20 border-y border-[#F1E8C8]/50">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-8">
-                <span class="text-xs tracking-widest text-deep font-medium">這篇文章會帶你看懂</span>
-                <div class="w-8 h-[1px] bg-[#A69260]/40 mx-auto mt-2"></div>
-            </div>
-            <div class="grid gap-4 md:grid-cols-3">
-                <div class="bg-[#F1E8C8]/60 p-6 rounded-2xl border border-[#F1E8C8] flex flex-col justify-center min-h-[120px] transition-all hover:translate-y-[-2px] hover:shadow-sm">
-                    <span class="text-xs text-deep font-semibold mb-2 block">Q 1</span>
-                    <p class="text-[14px] text-textMain tracking-wide leading-relaxed font-medium">為什麼有些人早餐不餓？</p>
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="section-mini-title">這篇文章會帶你看懂</div>
+            <div class="qa-divider"></div>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <div class="qa-label">Q 1</div>
+                    <p>為什麼有些人早上起來完全不餓？</p>
                 </div>
-                <div class="bg-[#F1E8C8]/60 p-6 rounded-2xl border border-[#F1E8C8] flex flex-col justify-center min-h-[120px] transition-all hover:translate-y-[-2px] hover:shadow-sm">
-                    <span class="text-xs text-deep font-semibold mb-2 block">Q 2</span>
-                    <p class="text-[14px] text-textMain tracking-wide leading-relaxed font-medium">早餐不餓代表代謝比較好嗎？</p>
+                <div class="qa-card">
+                    <div class="qa-label">Q 2</div>
+                    <p>早餐不餓，真的代表代謝比較好嗎？</p>
                 </div>
-                <div class="bg-[#F1E8C8]/60 p-6 rounded-2xl border border-[#F1E8C8] flex flex-col justify-center min-h-[120px] transition-all hover:translate-y-[-2px] hover:shadow-sm">
-                    <span class="text-xs text-deep font-semibold mb-2 block">Q 3</span>
-                    <p class="text-[14px] text-textMain tracking-wide leading-relaxed font-medium">什麼情況值得進一步觀察？</p>
+                <div class="qa-card">
+                    <div class="qa-label">Q 3</div>
+                    <p>什麼情況下，早餐不餓反而值得觀察？</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <article class="max-w-2xl mx-auto px-6 py-16 text-textMain leading-relaxed space-y-8">
-        
-        <section>
-            <h2 class="text-xl font-serif font-semibold mb-4">早餐不餓其實很常見</h2>
-            <p>在門診中，我們常見許多人表示自己早上起床沒有食慾，直到中午才開始感到飢餓。這種「早餐不餓」的現象，尤其容易出現在幾類族群中：晚餐時間較晚、正在執行 168 斷食，或是長期以來習慣不吃早餐的人。</p>
-        </section>
+    <main class="article-content">
+        <p>早餐不餓其實很常見。有人是晚餐吃得比較晚，有人是長期習慣不吃早餐，也有人正在執行斷食，身體慢慢把第一餐的時間往後移。</p>
+        <p>所以，早餐不餓本身不一定是問題。真正值得看的，不是早上有沒有飢餓感，而是一整天的能量、食慾、精神和睡眠節律是不是穩定。</p>
 
-        <section>
-            <h2 class="text-xl font-serif font-semibold mb-4">飢餓感會受到習慣影響</h2>
-            <p>我們的身體會受到飢餓素（Ghrelin）的調節，但除了感受胃部是否排空，人體也會「學習」固定的進食時間。如果長期習慣在早上 8:00 不吃東西，直到中午 12:00 才進食，這種模式持續數月甚至數年，身體原本在早晨釋放的飢餓訊號可能會逐漸延後。</p>
-            <p class="italic text-textSec text-sm mt-4">因此，早餐不餓，有時候只是身體適應了目前的進食節奏，而不一定反映了代謝的本質變化。</p>
-        </section>
-
-        <section>
-            <h2 class="text-xl font-serif font-semibold mb-4">早餐不餓，不一定代表代謝比較好</h2>
-            <p>我們必須釐清一個觀念：早餐不餓，只能代表「飢餓訊號延後」，它不能直接與胰島素敏感度、恢復力、睡眠品質或是整體代謝健康劃上等號。</p>
-            <div class="grid md:grid-cols-3 gap-4 my-8">
-                <div class="bg-[#F1E8C8]/30 p-4 rounded-lg">
-                    <h4 class="font-semibold text-deep text-sm mb-2">晚餐真的太晚</h4>
-                    <p class="text-xs">例如晚間 20:30 才吃晚餐、睡前還有點心，隔天早上不餓是很合理的身體反應。</p>
-                </div>
-                <div class="bg-[#F1E8C8]/30 p-4 rounded-lg">
-                    <h4 class="font-semibold text-deep text-sm mb-2">長期習慣形成</h4>
-                    <p class="text-xs">長期不吃早餐後，身體逐漸將中午視為生理時鐘上的「第一餐」時間。</p>
-                </div>
-                <div class="bg-[#F1E8C8]/30 p-4 rounded-lg">
-                    <h4 class="font-semibold text-deep text-sm mb-2">值得進一步觀察</h4>
-                    <p class="text-xs">若不餓的同時，伴隨上午精神不穩、咖啡依賴、或晚上暴食，則需關注節律。</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="text-xl font-serif font-semibold mb-4">真正值得看的，是一整天的穩定度</h2>
-            <p>我們可以透過觀察一整天的能量狀態，來判斷身體是否真的處於「穩定」狀態：</p>
-            <div class="border-l-2 border-primary pl-6 my-6 space-y-4">
-                <div>
-                    <span class="font-semibold">狀態 A（通常問題不大）</span>
-                    <p class="text-sm">早餐不餓，精神穩定，下午不崩潰，晚上不暴食，睡眠品質良好。</p>
-                </div>
-                <div>
-                    <span class="font-semibold">狀態 B（值得進一步觀察）</span>
-                    <p class="text-sm">早餐不餓，但上午依賴咖啡、下午容易疲勞崩潰、晚上暴食，且睡眠不佳。</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-[#F1E8C8]/30 p-8 rounded-2xl my-12">
-            <h3 class="font-semibold mb-4 text-deep">重點整理</h3>
-            <ul class="list-disc list-inside space-y-2 text-sm">
-                <li>早餐不餓不一定是問題，也不一定代表代謝變好。</li>
-                <li>人體的飢餓感會受到進食習慣影響，長期不吃早餐會讓訊號自然延後。</li>
-                <li>真正值得觀察的是：一整天的精神是否穩定、食慾是否平衡、以及晚上是否會因為代償而暴食。</li>
-                <li>避免為了「看起來代謝好」而強迫自己不吃或硬吃，請回歸身體的真實感受。</li>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>早上不餓，但精神穩定、注意力清楚。</li>
+                <li>上午不需要一直靠咖啡硬撐。</li>
+                <li>下午不會明顯崩潰或特別想吃甜食。</li>
+                <li>晚上不會因為白天吃太少而失控進食。</li>
+                <li>睡眠品質穩定，隔天醒來有恢復感。</li>
             </ul>
-        </section>
-
-        <section class="border-t border-gray-200 pt-8 text-center">
-            <p>
-                早餐不餓，有時只是身體適應了你的生活節奏。<br>
-                有時則是在提醒你：<br>
-                整體能量與節律需要重新被看見。<br>
-                <br>
-                與其急著問：<br>
-                早餐到底該不該吃？<br>
-                不如先觀察：<br>
-                我這一整天過得穩定嗎？
-            </p>
-        </section>
-
-        <section class="py-8">
-            <h3 class="text-center text-xs tracking-widest text-textSec font-medium mb-6">延伸閱讀</h3>
-            <div class="grid md:grid-cols-3 gap-4">
-                <a href="glucose_craving_types.html" class="block bg-[#F1E8C8]/20 p-5 rounded-2xl border border-[#F1E8C8]/50 hover:bg-[#F1E8C8]/40 transition-all text-center">
-                    <p class="text-sm text-textMain font-medium leading-relaxed">嘴饞到底是餓了，<br>還是累了？</p>
-                </a>
-                <a href="glucose_full_but_hungry.html" class="block bg-[#F1E8C8]/20 p-5 rounded-2xl border border-[#F1E8C8]/50 hover:bg-[#F1E8C8]/40 transition-all text-center">
-                    <p class="text-sm text-textMain font-medium leading-relaxed">明明吃飽了，<br>為什麼還想吃？</p>
-                </a>
-                <a href="glucose_aftermeal_sleepy.html" class="block bg-[#F1E8C8]/20 p-5 rounded-2xl border border-[#F1E8C8]/50 hover:bg-[#F1E8C8]/40 transition-all text-center">
-                    <p class="text-sm text-textMain font-medium leading-relaxed">飯後昏沉，<br>是身體在提醒你什麼？</p>
-                </a>
-            </div>
-        </section>
-
-        <div class="text-center pt-4">
-            <a href="glucose_appetite.html" class="inline-block px-8 py-3 bg-primary text-white rounded-full hover:bg-deep transition-colors text-sm font-medium">返回血糖與食慾</a>
         </div>
-    </article>
 
-    <footer class="py-12 text-center text-textSec text-xs">
-        <p>© 2026 METABOLIC ESTHETICS. All rights reserved.</p>
-    </footer>
+        <h2>早餐不餓，有時只是身體適應了進食節奏</h2>
+        <p>身體會學習固定的進食時間。如果一個人長期早上不吃東西，中午才吃第一餐，身體的飢餓訊號就可能逐漸往後延。</p>
+        <p>這不代表代謝一定變好，也不代表身體一定變差。它比較像是身體順著目前的生活模式，重新安排「什麼時候該餓」的節奏。</p>
 
+        <h2>早餐不餓，不一定代表代謝比較好</h2>
+        <p>有些人早餐不餓，是因為晚餐太晚、睡前還有吃東西，或前一天消化工作一直延續到夜間。這時候早上不餓，可能只是胃和身體還沒真正清空、恢復與重新啟動。</p>
+        <p>也有些人早上不餓，但上午精神很差，只是靠咖啡、茶或忙碌撐過去。這種「不餓」，不一定是穩定，而可能是身體把飢餓感壓下去，直到下午或晚上才用更強的食慾反彈回來。</p>
+
+        <h2>早餐不餓，常見有三種狀況</h2>
+        <div class="observation-grid">
+            <div class="observation-item">
+                <h3>第一種：晚餐太晚型</h3>
+                <p>晚餐吃得晚、睡前有點心或大量飲品，隔天早上不餓很合理。這時候重點不是硬吃早餐，而是回頭看晚餐和睡眠之間的距離。</p>
+            </div>
+            <div class="observation-item">
+                <h3>第二種：節律延後型</h3>
+                <p>長期不吃早餐後，身體可能把中午視為一天真正開始進食的時間。這是身體適應習慣，不等於代謝一定比較好。</p>
+            </div>
+            <div class="observation-item">
+                <h3>第三種：硬撐代償型</h3>
+                <p>早上不餓，但上午腦霧、靠咖啡硬撐，下午想吃甜食，晚上特別餓，代表能量節奏可能並不穩定。</p>
+            </div>
+            <div class="observation-item">
+                <h3>第四種：壓力抑制型</h3>
+                <p>壓力大、睡不好、早上太趕時，有些人不是沒有能量需求，而是身體暫時不容易感覺到飢餓。等緊繃下降後，食慾才突然回來。</p>
+            </div>
+        </div>
+
+        <h2>真正值得看的，是一整天的穩定度</h2>
+        <p>與其急著判斷「早餐到底該不該吃」，更重要的是觀察：早餐不餓之後，整天是否仍然穩定。</p>
+        <div class="gentle-card">
+            <ul>
+                <li>上午精神是否清楚，還是一路硬撐？</li>
+                <li>午餐是否容易吃太快、吃太多？</li>
+                <li>下午是否容易昏沉、想吃甜食或喝含糖飲料？</li>
+                <li>晚餐後是否更容易失控進食？</li>
+                <li>睡眠是否穩定，隔天醒來是否有恢復感？</li>
+            </ul>
+        </div>
+
+        <h2>先不要把早餐變成新的規則壓力</h2>
+        <p>有人適合吃早餐，有人適合晚一點吃第一餐。真正重要的不是把早餐吃或不吃變成標準答案，而是看這個安排有沒有讓身體更穩。</p>
+        <p>如果早餐不餓，但整天穩定，那不需要因為規則而焦慮。如果早餐不餓後，伴隨下午崩潰、晚上暴食、睡眠變差或咖啡依賴增加，就值得重新調整一天的進食節奏。</p>
+
+        <div class="summary-card">
+            <h2>重點整理</h2>
+            <ul class="summary-list">
+                <li>早餐不餓不一定是問題，也不一定代表代謝比較好。</li>
+                <li>長期不吃早餐後，身體可能只是把飢餓訊號往後延。</li>
+                <li>真正值得觀察的是一整天的精神、食慾、咖啡依賴、晚間進食與睡眠。</li>
+                <li>早餐不是新的規則壓力，重點是找到身體與生活能穩定承接的節奏。</li>
+            </ul>
+        </div>
+
+        <p class="closing-note">
+            早餐不餓，有時只是身體適應了你的生活節奏。<br>
+            有時則是在提醒你：<br>
+            一整天的能量與進食節律，可能需要重新被看見。<br>
+            與其急著問早餐到底該不該吃，<br>
+            不如先觀察：我這一天，真的過得穩定嗎？
+        </p>
+    </main>
+
+    <section class="related-section">
+        <div class="section-mini-title">延伸閱讀</div>
+        <div class="qa-divider"></div>
+        <div class="related-grid">
+            <a class="related-card" href="glucose_afternoon_sweets.html">
+                <div>
+                    <div class="related-label">01｜如果下午特別想吃甜食</div>
+                    <h3>下午特別想吃甜食，是血糖不穩嗎？</h3>
+                    <p>下午想吃甜食，可能和血糖回落、午餐內容與身體恢復感有關。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
+            </a>
+            <a class="related-card" href="glucose_full_but_hungry.html">
+                <div>
+                    <div class="related-label">02｜如果明明吃飽還想吃</div>
+                    <h3>明明吃飽了，為什麼還想吃？</h3>
+                    <p>吃飽不等於滿足，食慾也可能反映睡眠、壓力與大腦獎賞系統。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
+            </a>
+            <a class="related-card" href="glucose_aftermeal_sleepy.html">
+                <div>
+                    <div class="related-label">03｜如果飯後容易昏沉</div>
+                    <h3>飯後昏沉，是身體在提醒你什麼？</h3>
+                    <p>飯後昏沉不只是吃太飽，也可能和血糖波動、恢復不足與消化承接有關。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
+            </a>
+        </div>
+    </section>
+
+    <div class="article-nav">
+        <a class="text-link" href="glucose_appetite.html">← 回到血糖與食慾</a>
+        <a class="text-link" href="index.html">返回代謝美學首頁</a>
+    </div>
 </body>
 </html>
