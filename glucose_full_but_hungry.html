@@ -1,182 +1,408 @@
-
-<html lang="zh-TW">
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>明明吃飽了，為什麼還想吃？ | 代謝美學</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>明明吃飽了，為什麼還想吃？｜代謝美學</title>
+    <meta name="description" content="明明吃飽了卻還想吃，不一定是意志力不好。從飽足感、血糖波動、蛋白質、睡眠與壓力，理解食慾背後的身體訊號。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/glucose_full_but_hungry.html">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
-        
-        body { font-family: 'Noto Sans TC', sans-serif; }
-       h1, h2, h3 { font-family: 'Noto Sans TC', sans-serif; }
-        
-        /* 血糖與食慾柔米黃系 */
-        .bg-custom-light { background-color: #F1E8C8; }
-        .text-custom-main { color: #C6B27A; }
-        .text-custom-dark { color: #A69260; }
-        .bg-custom-main { background-color: #C6B27A; }
-        
-        .prose p { margin-bottom: 1.5rem; }
+        :root {
+            --bg-base: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #8C7D70;
+            --border-color: #E2DCD5;
+            --accent-main: #C6B27A;
+            --accent-dark: #A69260;
+            --accent-light: #F1E8C8;
+            --accent-soft: rgba(241, 232, 200, 0.42);
+            --font-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            --transition-slow: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.95;
+            letter-spacing: 0.032em;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        a { color: inherit; text-decoration: none; transition: var(--transition-slow); }
+
+        .container { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+        .navbar { padding: 28px 0; border-bottom: 1px solid var(--bg-block); background-color: transparent; }
+
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+
+        .logo { display: flex; flex-direction: column; line-height: 1.3; }
+
+        .logo-main { font-size: 1.15rem; font-weight: 600; color: var(--text-primary); letter-spacing: 0.14em; }
+
+        .logo-sub { font-size: 0.68rem; font-weight: 400; color: var(--text-secondary); letter-spacing: 0.16em; margin-top: 2px; }
+
+        .nav-links { display: flex; gap: 28px; align-items: center; }
+
+        .nav-item { font-size: 0.82rem; color: var(--text-secondary); font-weight: 400; position: relative; white-space: nowrap; }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-main);
+            transform-origin: bottom right;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .nav-item:hover { color: var(--text-primary); }
+        .nav-item:hover::after, .nav-item.active::after { transform: scaleX(1); transform-origin: bottom left; }
+        .nav-item.active { color: var(--accent-dark); }
+
+        .article-hero { max-width: 760px; margin: 0 auto; padding: 82px 24px 52px; text-align: center; }
+
+        .hero-tag { display: block; font-size: 0.78rem; color: var(--accent-main); letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; margin-bottom: 12px; }
+
+        .hero-category { display: block; font-size: 0.86rem; color: var(--text-secondary); letter-spacing: 0.1em; margin-bottom: 24px; }
+
+        .article-title { font-size: 2.05rem; font-weight: 500; line-height: 1.5; color: var(--text-primary); letter-spacing: 0.055em; margin-bottom: 26px; }
+
+        .hero-intro { max-width: 580px; margin: 0 auto; font-size: 0.96rem; color: var(--text-secondary); line-height: 1.95; letter-spacing: 0.025em; }
+
+        .qa-section {
+            padding: 38px 0;
+            background-color: rgba(245, 240, 234, 0.58);
+            border-top: 1px solid rgba(45, 43, 41, 0.08);
+            border-bottom: 1px solid rgba(45, 43, 41, 0.08);
+        }
+
+        .qa-container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+        .qa-header { text-align: center; margin-bottom: 22px; }
+
+        .qa-title { font-size: 0.82rem; letter-spacing: 0.18em; color: var(--text-secondary); font-weight: 500; }
+
+        .qa-divider { width: 36px; height: 1px; background-color: rgba(198, 178, 122, 0.45); margin: 10px auto 0; }
+
+        .qa-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+
+        .qa-card {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-light);
+            padding: 22px 20px;
+            min-height: 112px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .qa-num { display: block; font-size: 0.74rem; color: var(--accent-dark); font-weight: 600; letter-spacing: 0.12em; margin-bottom: 8px; }
+
+        .qa-text { font-size: 0.9rem; color: var(--text-primary); line-height: 1.65; font-weight: 500; letter-spacing: 0.03em; }
+
+        .article-content { max-width: 720px; margin: 0 auto; padding: 58px 24px 28px; }
+
+        .article-section { margin-bottom: 46px; }
+
+        .section-heading {
+            font-size: 1.42rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin: 52px 0 22px;
+            letter-spacing: 0.05em;
+            line-height: 1.5;
+            position: relative;
+            padding-bottom: 9px;
+        }
+
+        .section-heading::after { content: ""; position: absolute; bottom: 0; left: 0; width: 28px; height: 1px; background-color: var(--accent-main); }
+
+        .article-p { font-size: 0.96rem; color: var(--text-secondary); line-height: 1.98; letter-spacing: 0.025em; margin-bottom: 20px; text-align: justify; }
+
+        .highlight-text { color: var(--text-primary); font-weight: 500; }
+
+        .gentle-card,
+        .observation-item,
+        .summary-card { border-radius: 4px; border: 1px solid var(--border-color); }
+
+        .gentle-card { background-color: rgba(241, 232, 200, 0.30); border-color: rgba(198, 178, 122, 0.24); padding: 24px 28px; margin: 24px 0; }
+
+        .gentle-card.cream-style { background-color: var(--bg-secondary); border-color: var(--border-color); }
+
+        .gentle-card ul,
+        .summary-list { list-style: none; }
+
+        .gentle-card li,
+        .summary-list li { position: relative; padding-left: 26px; margin-bottom: 12px; line-height: 1.8; }
+
+        .gentle-card li:last-child,
+        .summary-list li:last-child { margin-bottom: 0; }
+
+        .gentle-card li::before,
+        .summary-list li::before { content: "✦"; position: absolute; left: 0; color: var(--accent-main); font-size: 0.82rem; }
+
+        .gentle-card li { color: var(--text-primary); font-size: 0.94rem; }
+        .summary-list li { color: var(--text-primary); font-size: 0.94rem; }
+
+        .observation-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 28px 0; }
+
+        .observation-item { background-color: var(--bg-secondary); padding: 24px; }
+
+        .observation-title { font-size: 1rem; color: var(--text-primary); font-weight: 500; margin-bottom: 8px; }
+
+        .observation-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.78; }
+
+        .summary-card { background-color: rgba(241, 232, 200, 0.38); border-color: var(--accent-light); padding: 32px 32px; margin: 56px 0 48px; }
+
+        .summary-title { font-size: 1.12rem; font-weight: 500; color: var(--text-primary); margin-bottom: 18px; letter-spacing: 0.08em; }
+
+        .closing-text { text-align: center; font-size: 1.02rem; color: var(--text-secondary); line-height: 2.05; margin: 56px auto; max-width: 540px; letter-spacing: 0.035em; }
+
+        .related-section { max-width: 960px; margin: 0 auto; padding: 58px 24px 28px; border-top: 1px solid var(--border-color); }
+
+        .related-title { text-align: center; font-size: 1.28rem; font-weight: 500; color: var(--text-primary); letter-spacing: 0.08em; margin-bottom: 12px; }
+
+        .related-intro { text-align: center; max-width: 560px; margin: 0 auto 28px; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.85; }
+
+        .related-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+
+        .related-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .related-card:hover,
+        .related-card:focus-visible { background-color: var(--accent-light); border-color: var(--accent-main); transform: translateY(-5px); outline: none; }
+
+        .related-label { display: block; font-size: 0.76rem; color: var(--accent-dark); letter-spacing: 0.08em; line-height: 1.55; margin-bottom: 12px; font-weight: 500; }
+
+        .related-card h3 { font-size: 1.04rem; font-weight: 500; line-height: 1.65; letter-spacing: 0.04em; margin-bottom: 12px; color: var(--text-primary); }
+
+        .related-card p { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.78; letter-spacing: 0.02em; }
+
+        .read-more { display: inline-block; align-self: flex-start; font-size: 0.78rem; color: var(--accent-dark); border-bottom: 1px solid var(--accent-main); letter-spacing: 0.1em; padding-bottom: 2px; margin-top: 18px; }
+
+        .article-nav { max-width: 720px; margin: 0 auto; padding: 36px 24px 64px; text-align: center; display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
+
+        .text-link { display: inline-block; font-size: 0.82rem; color: var(--text-secondary); border-bottom: 1px solid var(--text-secondary); padding-bottom: 3px; }
+
+        .text-link:hover { color: var(--accent-dark); border-color: var(--accent-main); }
+
+        @media (max-width: 820px) {
+            body { letter-spacing: 0.025em; }
+            .navbar { padding: 24px 0; }
+            .nav-wrapper { align-items: flex-start; }
+            .nav-links { gap: 16px; font-size: 0.78rem; flex-wrap: wrap; justify-content: flex-end; }
+            .article-hero { padding: 64px 24px 42px; }
+            .article-title { font-size: 1.75rem; letter-spacing: 0.04em; }
+            .qa-section { padding: 32px 0; }
+            .qa-grid, .related-grid, .observation-grid { grid-template-columns: 1fr; }
+            .qa-card, .related-card { min-height: auto; }
+            .article-content { padding-top: 46px; }
+            .section-heading { margin-top: 44px; }
+            .article-section { margin-bottom: 38px; }
+        }
     </style>
 </head>
-<body class="bg-[#FCFAF8] text-[#2D2B29] selection:bg-[#C6B27A]/20">
+<body>
 
-    <!-- 導覽列 -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-200/50">
-        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex flex-col">
-                <span class="text-lg font-bold tracking-tight text-[#2D2B29]">代謝美學</span>
-                <span class="text-[10px] tracking-[0.2em] text-[#A69260]">METABOLIC ESTHETICS</span>
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <span class="logo-main">代謝美學</span>
+                <span class="logo-sub">METABOLIC ESTHETICS</span>
             </a>
-            <div class="flex items-center gap-4 md:gap-6">
-                <a href="index.html" class="text-sm text-[#5D5B59] hover:text-[#C6B27A] transition-colors">首頁</a>
-                <a href="glucose_appetite.html" class="text-sm text-[#5D5B59] hover:text-[#C6B27A] transition-colors">血糖與食慾</a>
-                <a href="https://lin.ee/pzxDU3O" class="text-sm bg-[#C6B27A] text-white px-4 py-1.5 rounded-full hover:bg-[#A69260] transition-all shadow-sm">預約諮詢</a>
-            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-item">首頁</a>
+                <a href="glucose_appetite.html" class="nav-item active">血糖與食慾</a>
+                <a href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener noreferrer" class="nav-item">預約諮詢</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero 區 -->
-<header class="pt-32 pb-24 px-6">
-    <div class="max-w-6xl mx-auto text-center">
-        <div class="text-[#A69260] text-xs tracking-[0.2em] font-medium mb-4 uppercase">
-            GLUCOSE & APPETITE
-        </div>
+    <main>
+        <section class="article-hero">
+            <span class="hero-tag">GLUCOSE & APPETITE</span>
+            <span class="hero-category">血糖與食慾 · 嘴饞與食慾型</span>
+            <h1 class="article-title">明明吃飽了，為什麼還想吃？</h1>
+            <p class="hero-intro">
+                有些時候，胃已經飽了，大腦卻還想吃。這不一定只是意志力不夠，而可能是血糖、壓力、睡眠與恢復狀態，正在影響身體的飽足訊號。
+            </p>
+        </section>
 
-        <div class="text-[#5D5B59] font-medium mb-8">
-            血糖與食慾 · 嘴饞與食慾型
-        </div>
-
-  <h1 class="article-title text-4xl md:text-5xl font-semibold text-[#2D2B29] mb-10 leading-[1.35] tracking-tight">
-    明明吃飽了，為什麼還想吃？
-</h1>
-
-        <p class="text-lg md:text-xl text-[#5D5B59] leading-[2] max-w-2xl mx-auto italic">
-            有些時候，胃已經飽了。<br>
-            但大腦卻還想吃。<br>
-            於是我們開始懷疑：是不是意志力不夠？<br>
-            但很多時候，問題並不在胃，<br>
-            而在身體的恢復與訊號系統。
-        </p>
-    </div>
-</header>
-
-    <!-- Q&A Section -->
-    <section class="py-12 bg-[#F1E8C8]/20 border-y border-stone-200/30 backdrop-blur-sm">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-8">
-                <span class="text-xs tracking-widest text-[#A69260] font-medium uppercase">這篇文章會帶你看懂</span>
-                <div class="w-8 h-[1px] bg-[#A69260]/40 mx-auto mt-2"></div>
-            </div>
-            <div class="grid gap-4 md:grid-cols-3">
-                <div class="bg-[#F1E8C8]/45 p-6 rounded-2xl border border-[#F1E8C8] flex flex-col justify-center min-h-[120px] transition-all hover:translate-y-[-2px] hover:shadow-sm">
-                    <span class="text-xs text-[#A69260] font-semibold mb-2 block">Q 1</span>
-                    <p class="text-[14px] text-[#2D2B29] tracking-wide leading-relaxed font-medium">為什麼吃飽了還是想吃？</p>
+        <section class="qa-section">
+            <div class="qa-container">
+                <div class="qa-header">
+                    <div class="qa-title">這篇文章會帶你看懂</div>
+                    <div class="qa-divider"></div>
                 </div>
-                <div class="bg-[#F1E8C8]/45 p-6 rounded-2xl border border-[#F1E8C8] flex flex-col justify-center min-h-[120px] transition-all hover:translate-y-[-2px] hover:shadow-sm">
-                    <span class="text-xs text-[#A69260] font-semibold mb-2 block">Q 2</span>
-                    <p class="text-[14px] text-[#2D2B29] tracking-wide leading-relaxed font-medium">飽足感是怎麼產生的？</p>
-                </div>
-                <div class="bg-[#F1E8C8]/45 p-6 rounded-2xl border border-[#F1E8C8] flex flex-col justify-center min-h-[120px] transition-all hover:translate-y-[-2px] hover:shadow-sm">
-                    <span class="text-xs text-[#A69260] font-semibold mb-2 block">Q 3</span>
-                    <p class="text-[14px] text-[#2D2B29] tracking-wide leading-relaxed font-medium">哪些因素會讓人特別沒有飽足感？</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 主內容區 -->
-    <main class="max-w-2xl mx-auto px-6 py-16">
-        
-        <article class="prose prose-stone prose-lg max-w-none text-[#2D2B29]">
-            
-            <div class="space-y-12">
-                <!-- 第一區塊 -->
-                <div class="mt-8">
-                    <h2 class="text-2xl font-bold text-[#A69260] mb-8 text-center">吃飽，不等於滿足</h2>
-                    <p>很多人以為：胃裝滿 = 飽足感。但實際上，這是兩件不同的事情。</p>
-                    <p>胃的容量，只是飽足感的一部分。真正的飽足感，還牽涉到：</p>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li>血糖穩定度</li>
-                        <li>蛋白質攝取</li>
-                        <li>睡眠品質</li>
-                        <li>壓力狀態</li>
-                        <li>大腦獎賞系統</li>
-                    </ul>
-                    <p>因此有些人明明吃很多，卻還是覺得：好像少了什麼。</p>
-                </div>
-
-                <!-- 第二區塊 -->
-                <div class="pt-12">
-                    <h2 class="text-2xl font-bold text-[#A69260] mb-8 text-center">身體有兩種飢餓</h2>
-                    <div class="bg-[#F1E8C8]/20 p-8 rounded-2xl border border-[#F1E8C8]/50">
-                        <h3 class="font-bold text-lg mb-4">第一種：能量型飢餓</h3>
-                        <p class="mb-6">這是身體真的需要燃料。通常會慢慢出現。給你正常正餐，大多願意吃。</p>
-                        <h3 class="font-bold text-lg mb-4">第二種：滿足型飢餓</h3>
-                        <p>胃其實不空，但大腦仍然想尋找甜食、點心、飲料或特定口感。這時候，身體未必缺熱量，而是在尋找舒服感。</p>
+                <div class="qa-grid">
+                    <div class="qa-card">
+                        <span class="qa-num">Q 1</span>
+                        <p class="qa-text">為什麼吃飽了，還是一直想找東西吃？</p>
+                    </div>
+                    <div class="qa-card">
+                        <span class="qa-num">Q 2</span>
+                        <p class="qa-text">飽足感除了胃容量，還受到哪些因素影響？</p>
+                    </div>
+                    <div class="qa-card">
+                        <span class="qa-num">Q 3</span>
+                        <p class="qa-text">睡眠、壓力和血糖，為什麼會讓食慾變得更難停下來？</p>
                     </div>
                 </div>
-
-                <!-- 第三區塊 -->
-                <div class="pt-12">
-                    <h2 class="text-2xl font-bold text-[#A69260] mb-8 text-center">為什麼飽足感有時候回不來？</h2>
-                    <p><strong>原因一：蛋白質不足</strong><br>有些餐看起來很多，例如麵包、麵食，熱量不低，但蛋白質不足，吃完很快又想找東西。</p>
-                    <p><strong>原因二：血糖波動太大</strong><br>如果一餐中精製澱粉比例高，蛋白質與纖維較少，飯後血糖快速上升再下降，大腦會誤以為「需要能量」，於是開始想吃。</p>
-                    <p><strong>原因三：睡眠不足</strong><br>睡不好的人，常常會出現食慾增加、飽足感下降、想吃甜食的狀態，因為身體在尋找快速能量。</p>
-                    <p><strong>原因四：壓力過高</strong><br>壓力大時，明明吃飽了但還是想吃，因為大腦正在尋找安全感、安撫感與恢復感。</p>
-                </div>
             </div>
+        </section>
+
+        <article class="article-content">
+            <section class="article-section">
+                <h2 class="section-heading">吃飽，不等於滿足</h2>
+                <p class="article-p">很多人以為，胃裝滿了，就應該不會想吃了。但實際上，<span class="highlight-text">吃飽</span>和<span class="highlight-text">滿足</span>是兩件不同的事。</p>
+                <p class="article-p">胃的容量，只是飽足感的一部分。真正的飽足感，還牽涉到血糖穩定度、蛋白質攝取、睡眠品質、壓力狀態，以及大腦的獎賞系統。</p>
+                <p class="article-p">因此，有些人明明吃了不少，卻還是覺得「好像少了什麼」；也有些人不是肚子空，而是很想要甜食、點心、飲料或某種特定口感。</p>
+            </section>
+
+            <section class="article-section">
+                <h2 class="section-heading">身體有兩種飢餓</h2>
+                <div class="observation-grid">
+                    <div class="observation-item">
+                        <h3 class="observation-title">1. 能量型飢餓</h3>
+                        <p class="observation-desc">這是身體真的需要燃料。通常會慢慢出現，吃正常正餐大多可以被安撫，吃完後也比較容易停下來。</p>
+                    </div>
+                    <div class="observation-item">
+                        <h3 class="observation-title">2. 滿足型飢餓</h3>
+                        <p class="observation-desc">胃其實不空，但大腦仍然想尋找甜食、點心、飲料或特定口感。這時候身體未必缺熱量，而是在尋找舒服感與安撫感。</p>
+                    </div>
+                </div>
+                <p class="article-p">當我們把這兩種飢餓混在一起，就容易只用「忍耐」處理食慾。但很多時候，身體要的不是更多食物，而是更穩定的能量、更好的恢復，或一點可以安定下來的空間。</p>
+            </section>
+
+            <section class="article-section">
+                <h2 class="section-heading">為什麼飽足感有時候回不來？</h2>
+                <div class="observation-grid">
+                    <div class="observation-item">
+                        <h3 class="observation-title">1. 蛋白質不足</h3>
+                        <p class="observation-desc">有些餐看起來很多，例如麵包、麵食或甜點，熱量不低，但蛋白質不足，吃完很快又想找東西。</p>
+                    </div>
+                    <div class="observation-item">
+                        <h3 class="observation-title">2. 血糖波動太大</h3>
+                        <p class="observation-desc">如果一餐中精緻澱粉比例高，蛋白質與纖維較少，飯後血糖快速上升又下降，大腦可能會誤以為需要更多能量。</p>
+                    </div>
+                    <div class="observation-item">
+                        <h3 class="observation-title">3. 睡眠不足</h3>
+                        <p class="observation-desc">睡不好時，食慾常會增加，飽足感也比較弱。身體會更想尋找快速能量，尤其是甜食或高油高糖的食物。</p>
+                    </div>
+                    <div class="observation-item">
+                        <h3 class="observation-title">4. 壓力過高</h3>
+                        <p class="observation-desc">壓力大時，吃東西不只是補能量，也可能是在尋找安全感、安撫感與恢復感，所以明明吃飽了，還是很想繼續吃。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="article-section">
+                <h2 class="section-heading">可以先觀察什麼？</h2>
+                <div class="gentle-card cream-style">
+                    <ul>
+                        <li>吃完正餐後，是真的肚子空，還是只想吃特定食物？</li>
+                        <li>特別想吃東西時，前一晚睡得好不好？壓力有沒有比較大？</li>
+                        <li>那一餐是否以澱粉為主，蛋白質、纖維和油脂都偏少？</li>
+                        <li>想吃的時間點是否固定，例如飯後一小時、下午、晚上或睡前？</li>
+                    </ul>
+                </div>
+                <p class="article-p">這些觀察可以幫助我們分辨：現在的食慾，是身體真的需要能量，還是身體正在透過食物，尋找一種暫時的恢復感。</p>
+            </section>
+
+            <section class="article-section">
+                <h2 class="section-heading">可以先做什麼？</h2>
+                <div class="observation-grid">
+                    <div class="observation-item">
+                        <h3 class="observation-title">讓正餐更有飽足結構</h3>
+                        <p class="observation-desc">不要只靠澱粉或甜食撐一餐。每餐先確認蛋白質，再搭配蔬菜、原型澱粉與適量油脂，飽足感通常會更穩。</p>
+                    </div>
+                    <div class="observation-item">
+                        <h3 class="observation-title">不要把嘴饞全部解讀成失控</h3>
+                        <p class="observation-desc">嘴饞常常是在提醒身體累了、緊繃了，或需要一點安撫。先看懂它，比單純責備自己更有幫助。</p>
+                    </div>
+                    <div class="observation-item">
+                        <h3 class="observation-title">把睡眠和壓力一起放進來看</h3>
+                        <p class="observation-desc">連續睡不好或壓力很大時，食慾本來就容易上升。這時候不要只問自己為什麼不能忍，也要問身體是不是太累了。</p>
+                    </div>
+                    <div class="observation-item">
+                        <h3 class="observation-title">用小幅調整取代過度壓抑</h3>
+                        <p class="observation-desc">可以先把甜食放在正餐後少量吃，或改成比較能延續飽足感的點心，而不是一路忍到晚上再爆發。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="summary-card">
+                <h2 class="summary-title">重點整理</h2>
+                <ul class="summary-list">
+                    <li>吃飽了還想吃，不一定代表意志力差。</li>
+                    <li>飽足感不只和胃容量有關，也和蛋白質、血糖穩定度、睡眠品質與壓力狀態有關。</li>
+                    <li>有些食慾不是能量型飢餓，而是身體在尋找舒服感、安撫感或恢復感。</li>
+                    <li>與其只靠忍耐，不如先看懂：身體到底缺的是食物、能量穩定，還是恢復。</li>
+                </ul>
+            </section>
+
+            <p class="closing-text">
+                有些時候，我們一直想吃，並不是因為不夠自律。<br>
+                而是身體正在透過食慾，告訴我們有些需求還沒有被滿足。
+            </p>
         </article>
 
-        <!-- 重點整理區 -->
-        <section class="bg-[#F1E8C8]/20 p-8 rounded-2xl border border-[#F1E8C8] mt-16">
-            <h2 class="text-xl font-bold text-[#A69260] mb-6">重點整理</h2>
-            <ul class="space-y-4">
-                <li class="flex gap-4">
-                    <span class="text-[#A69260]">●</span>
-                    <span>吃飽了還想吃，不一定代表意志力差。</span>
-                </li>
-                <li class="flex gap-4">
-                    <span class="text-[#A69260]">●</span>
-                    <span>飽足感的形成，除了胃容量，還和蛋白質攝取、血糖穩定度、睡眠品質、壓力狀態密切相關。</span>
-                </li>
-                <li class="flex gap-4">
-                    <span class="text-[#A69260]">●</span>
-                    <span>有時候，身體真正缺少的不是更多食物，而是更多恢復。</span>
-                </li>
-            </ul>
-        </section>
-
-        <!-- 延伸閱讀區 -->
-        <section class="mt-16">
-            <h3 class="text-lg font-medium text-[#2D2B29] mb-6">延伸閱讀</h3>
-            <div class="grid gap-4">
-                <a href="glucose_craving_types.html" class="block p-4 rounded-xl bg-[#F1E8C8]/10 hover:bg-[#F1E8C8]/30 transition-colors border border-[#F1E8C8]/30">
-                    <p class="font-medium text-sm">嘴饞到底是餓了，還是累了？</p>
+        <section class="related-section">
+            <h2 class="related-title">延伸閱讀</h2>
+            <p class="related-intro">從同一棵血糖與食慾樹，繼續理解嘴饞、昏沉與能量波動的身體訊號。</p>
+            <div class="related-grid">
+                <a href="glucose_craving_types.html" class="related-card">
+                    <div>
+                        <span class="related-label">嘴饞與食慾型</span>
+                        <h3>嘴饞到底是餓了，還是累了？</h3>
+                        <p>先分辨嘴饞背後，是能量需求、情緒安撫，還是身體正在疲累。</p>
+                    </div>
+                    <span class="read-more">閱讀文章 →</span>
                 </a>
-                <a href="glucose_night_craving.html" class="block p-4 rounded-xl bg-[#F1E8C8]/10 hover:bg-[#F1E8C8]/30 transition-colors border border-[#F1E8C8]/30">
-                    <p class="font-medium text-sm">晚上特別想吃東西，是意志力不好嗎？</p>
+                <a href="glucose_night_craving.html" class="related-card">
+                    <div>
+                        <span class="related-label">嘴饞與食慾型</span>
+                        <h3>晚上特別想吃東西，是意志力不好嗎？</h3>
+                        <p>從白天能量、壓力累積與夜間安撫感，看懂晚上食慾特別強的原因。</p>
+                    </div>
+                    <span class="read-more">閱讀文章 →</span>
                 </a>
-                <a href="glucose_aftermeal_sleepy.html" class="block p-4 rounded-xl bg-[#F1E8C8]/10 hover:bg-[#F1E8C8]/30 transition-colors border border-[#F1E8C8]/30">
-                    <p class="font-medium text-sm">飯後昏沉，是血糖在提醒你什麼？</p>
+                <a href="glucose_aftermeal_sleepy.html" class="related-card">
+                    <div>
+                        <span class="related-label">血糖波動型</span>
+                        <h3>飯後昏沉，是身體在提醒你什麼？</h3>
+                        <p>飯後想睡不一定只是吃太飽，也可能和血糖波動與恢復不足有關。</p>
+                    </div>
+                    <span class="read-more">閱讀文章 →</span>
                 </a>
             </div>
         </section>
 
-        <!-- 溫柔收尾與返回 -->
-        <div class="pt-16 text-center">
-            <p class="text-[#5D5B59] italic mb-8">有些時候，我們一直想吃，並不是因為不夠自律，而是身體正在透過食慾，告訴我們有些需求還沒有被滿足。當我們開始理解飽足感背後的訊號，食慾就不再只是控制與忍耐，而會變成認識自己的另一個入口。</p>
-            <a href="glucose_appetite.html" class="inline-flex items-center justify-center px-8 py-3 border border-[#C6B27A] text-[#A69260] hover:bg-[#C6B27A] hover:text-white rounded-full transition-all text-sm font-medium">
-                返回血糖與食慾
-            </a>
-        </div>
+        <nav class="article-nav">
+            <a href="glucose_appetite.html" class="text-link">← 回到血糖與食慾</a>
+            <a href="index.html" class="text-link">返回代謝美學首頁</a>
+        </nav>
     </main>
-
-    <!-- 頁尾 -->
-    <footer class="py-12 border-t border-stone-200/50 text-center">
-        <a href="index.html" class="text-sm text-[#A69260] hover:underline underline-offset-4">返回代謝美學首頁</a>
-    </footer>
 
 </body>
 </html>
