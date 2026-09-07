@@ -1,420 +1,681 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>胸悶夜醒，可能不只是心臟問題 ｜ 代謝美學 METABOLIC ESTHETICS</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Noto Serif TC & Noto Sans TC -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <title>胸悶夜醒，可能不只是心臟問題｜代謝美學</title>
+    <meta name="description" content="胸悶夜醒不一定只和心臟有關，也可能受到胃脹氣、胃食道逆流、橫膈膜壓力與夜間消化負荷影響。先認識需要就醫的警訊，也理解睡眠與腸胃干擾的關係。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/sleep_chest_pressure.html">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --bg-base: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #8C7D70;
+            --border-color: #E2DCD5;
+            --accent-main: #8F9779;
+            --accent-dark: #7B8365;
+            --accent-light: #E2E7D8;
+            --accent-soft: rgba(226, 231, 216, 0.42);
+            --font-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            --transition-slow: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
         body {
-            font-family: 'Noto Sans TC', sans-serif;
-            background-color: #FAF8F5;
-            color: #2D2B29;
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 2;
+            letter-spacing: 0.035em;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
-        .serif-title {
-            font-family: 'Noto Serif TC', serif;
+
+        a { color: inherit; text-decoration: none; transition: var(--transition-slow); }
+
+        .container {
+            width: 100%;
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
-        /* Kyoto slow-life breathing line-height */
-        .breathing-leading {
+
+        .navbar {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--bg-block);
+            background-color: transparent;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo { display: flex; flex-direction: column; line-height: 1.3; }
+
+        .logo-main {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.14em;
+        }
+
+        .logo-sub {
+            font-size: 0.68rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            letter-spacing: 0.16em;
+            margin-top: 2px;
+        }
+
+        .nav-links { display: flex; gap: 28px; align-items: center; }
+
+        .nav-item {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-main);
+            transform-origin: bottom right;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .nav-item:hover { color: var(--text-primary); }
+        .nav-item:hover::after, .nav-item.active::after { transform: scaleX(1); transform-origin: bottom left; }
+        .nav-item.active { color: var(--accent-dark); }
+
+        .article-hero {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 82px 24px 56px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            display: block;
+            font-size: 0.78rem;
+            color: var(--accent-main);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 14px;
+        }
+
+        .hero-category {
+            display: block;
+            font-size: 0.86rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.1em;
+            margin-bottom: 26px;
+        }
+
+        .article-title {
+            font-size: 2.05rem;
+            font-weight: 500;
+            line-height: 1.55;
+            color: var(--text-primary);
+            letter-spacing: 0.06em;
+            margin-bottom: 28px;
+        }
+
+        .hero-intro {
+            max-width: 580px;
+            margin: 0 auto;
+            font-size: 0.96rem;
+            color: var(--text-secondary);
+            line-height: 2.05;
+            letter-spacing: 0.03em;
+        }
+
+        .qa-section {
+            padding: 38px 0;
+            background-color: rgba(245, 240, 234, 0.58);
+            border-top: 1px solid rgba(45, 43, 41, 0.08);
+            border-bottom: 1px solid rgba(45, 43, 41, 0.08);
+        }
+
+        .qa-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .qa-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .qa-title {
+            font-size: 0.82rem;
+            letter-spacing: 0.18em;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .qa-divider {
+            width: 36px;
+            height: 1px;
+            background-color: rgba(143, 151, 121, 0.45);
+            margin: 10px auto 0;
+        }
+
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .qa-card {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-light);
+            padding: 22px;
+            min-height: 112px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .qa-num {
+            display: block;
+            font-size: 0.74rem;
+            color: var(--accent-dark);
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            margin-bottom: 8px;
+        }
+
+        .qa-text {
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+        }
+
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 58px 24px 28px;
+        }
+
+        .article-section { margin-bottom: 46px; }
+
+        .section-heading {
+            font-size: 1.42rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin: 52px 0 22px;
+            letter-spacing: 0.05em;
+            line-height: 1.55;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-heading::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 28px;
+            height: 1px;
+            background-color: var(--accent-main);
+        }
+
+        .article-p {
+            font-size: 0.96rem;
+            color: var(--text-secondary);
+            line-height: 2.05;
+            letter-spacing: 0.03em;
+            margin-bottom: 22px;
+            text-align: justify;
+        }
+
+        .highlight-text { color: var(--text-primary); font-weight: 500; }
+
+        .gentle-card,
+        .observation-item,
+        .summary-card,
+        .warning-card {
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gentle-card {
+            background-color: rgba(226, 231, 216, 0.27);
+            border-color: rgba(143, 151, 121, 0.22);
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+
+        .gentle-card.cream-style,
+        .warning-card { background-color: var(--bg-secondary); border-color: var(--border-color); }
+
+        .gentle-card ul,
+        .summary-list,
+        .warning-card ul { list-style: none; }
+
+        .gentle-card li,
+        .summary-list li,
+        .warning-card li {
+            position: relative;
+            padding-left: 26px;
+            margin-bottom: 13px;
             line-height: 1.85;
+        }
+
+        .gentle-card li:last-child,
+        .summary-list li:last-child,
+        .warning-card li:last-child { margin-bottom: 0; }
+
+        .gentle-card li::before,
+        .summary-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--accent-main);
+            font-size: 0.82rem;
+        }
+
+        .warning-card li::before {
+            content: "•";
+            position: absolute;
+            left: 2px;
+            color: var(--accent-dark);
+            font-size: 1rem;
+        }
+
+        .gentle-card li,
+        .summary-list li,
+        .warning-card li { color: var(--text-primary); font-size: 0.94rem; }
+
+        .warning-card {
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+
+        .warning-title {
+            display: block;
+            font-size: 0.82rem;
+            color: var(--accent-dark);
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            margin-bottom: 14px;
+        }
+
+        .observation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin: 28px 0;
+        }
+
+        .observation-item {
+            background-color: var(--bg-secondary);
+            padding: 24px;
+        }
+
+        .observation-title {
+            font-size: 1rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .observation-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.85;
+        }
+
+        .summary-card {
+            background-color: rgba(226, 231, 216, 0.38);
+            border-color: var(--accent-light);
+            padding: 34px 32px;
+            margin: 56px 0 48px;
+        }
+
+        .summary-title {
+            font-size: 1.12rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            letter-spacing: 0.08em;
+        }
+
+        .closing-text {
+            text-align: center;
+            font-size: 1.02rem;
+            color: var(--text-secondary);
+            line-height: 2.1;
+            margin: 56px auto;
+            max-width: 540px;
+            letter-spacing: 0.04em;
+        }
+
+        .related-section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 58px 24px 28px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-title {
+            text-align: center;
+            font-size: 1.28rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            letter-spacing: 0.08em;
+            margin-bottom: 14px;
+        }
+
+        .related-intro {
+            text-align: center;
+            max-width: 560px;
+            margin: 0 auto 32px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.9;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .related-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 26px;
+            min-height: 238px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .related-card:hover,
+        .related-card:focus-visible {
+            background-color: var(--accent-light);
+            border-color: var(--accent-main);
+            transform: translateY(-5px);
+            outline: none;
+        }
+
+        .related-label {
+            display: block;
+            font-size: 0.76rem;
+            color: var(--accent-dark);
+            letter-spacing: 0.08em;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .related-card h3 {
+            font-size: 1.04rem;
+            font-weight: 500;
+            line-height: 1.75;
+            letter-spacing: 0.04em;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .related-card p {
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            letter-spacing: 0.02em;
+        }
+
+        .read-more {
+            display: inline-block;
+            align-self: flex-start;
+            font-size: 0.78rem;
+            color: var(--accent-dark);
+            border-bottom: 1px solid var(--accent-main);
+            letter-spacing: 0.1em;
+            padding-bottom: 2px;
+            margin-top: 22px;
+        }
+
+        .article-nav {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 42px 24px 72px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .text-link {
+            display: inline-block;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--text-secondary);
+            padding-bottom: 3px;
+        }
+
+        .text-link:hover { color: var(--accent-dark); border-color: var(--accent-main); }
+
+        @media (max-width: 820px) {
+            body { letter-spacing: 0.025em; }
+            .navbar { padding: 24px 0; }
+            .nav-wrapper { align-items: flex-start; }
+            .nav-links { gap: 16px; font-size: 0.78rem; flex-wrap: wrap; justify-content: flex-end; }
+            .article-hero { padding: 72px 24px 48px; }
+            .article-title { font-size: 1.75rem; letter-spacing: 0.04em; }
+            .qa-grid, .related-grid, .observation-grid { grid-template-columns: 1fr; }
+            .qa-card, .related-card { min-height: auto; }
+            .article-content { padding-top: 50px; }
+            .section-heading { margin-top: 46px; }
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-[#E8E8D5] selection:text-[#7E7F55]">
-
-    <!-- 頂部導覽列 (Navigation) -->
-    <nav class="sticky top-0 z-50 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#EBE5DF]/40 py-5 px-6 md:px-12 transition-all duration-300">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <!-- 品牌名稱 (左上角固定) -->
-            <a href="index.html" class="flex flex-col items-start group">
-                <span class="text-sm md:text-base font-semibold tracking-widest text-[#2D2B29] transition-colors duration-300 group-hover:text-[#8C7D70]">代謝美學</span>
-                <span class="text-[9px] md:text-[10px] tracking-widest text-[#8C7D70] uppercase font-light mt-0.5">METABOLIC ESTHETICS</span>
+<body>
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <span class="logo-main">代謝美學</span>
+                <span class="logo-sub">METABOLIC ESTHETICS</span>
             </a>
-            
-            <!-- 右側導覽連結 (固定三個) -->
-            <div class="flex items-center space-x-6 md:space-x-8">
-                <a href="index.html" class="text-xs md:text-sm tracking-widest text-[#8C7D70] hover:text-[#2D2B29] transition-colors duration-300">首頁</a>
-                <a href="sleep_recovery.html" class="text-xs md:text-sm tracking-widest text-[#2D2B29] font-medium border-b border-[#8F9779]/60 pb-1">睡眠與恢復力</a>
-                <a href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-[#8F9779] text-[#FAF8F5] text-xs tracking-widest rounded-full hover:bg-[#7B8365] transition-all duration-300 shadow-sm">預約諮詢</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">首頁</a>
+                <a href="sleep_recovery.html" class="nav-item active">睡眠與恢復力</a>
+                <a href="https://lin.ee/pzxDU3O" class="nav-item" target="_blank" rel="noopener noreferrer">預約諮詢</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero 區 (大量留白與溫柔引言) -->
-    <header class="py-20 md:py-28 px-6 md:px-12 bg-gradient-to-b from-[#FAF8F5] to-[#F5F0EA]/30">
-        <div class="max-w-3xl mx-auto text-center">
-            <!-- 分類標籤 (無 Breadcrumb，頂部僅保留英文分類小標與中文分類 · 子分類名稱) -->
-            <span class="text-[10px] md:text-xs tracking-[0.25em] text-[#7E7F55] font-semibold uppercase block mb-3">
-                SLEEP & RECOVERY
-            </span>
-            <div class="text-xs md:text-sm tracking-widest text-[#8C7D70] font-light mb-8 flex justify-center items-center gap-2">
-                <span>睡眠與恢復力</span>
-                <span class="w-1 h-1 rounded-full bg-[#8C7D70]/40"></span>
-                <span>腸胃干擾型</span>
-            </div>
-            
-            <!-- 文章標題 -->
-            <h1 class="serif-title text-2xl md:text-4xl text-[#2D2B29] font-normal leading-snug md:leading-relaxed tracking-wider mb-10 max-w-2xl mx-auto">
-                胸悶夜醒，可能不只是心臟問題
-            </h1>
-            
-            <!-- 溫柔引言 (2-4行) -->
-            <p class="breathing-leading text-sm md:text-base text-[#8C7D70] font-light max-w-xl mx-auto px-4">
-                半夜突然胸口悶悶的醒來，很多人的第一個念頭是害怕。<br class="hidden md:inline">
-                但有時候，真正影響睡眠的，<br class="hidden md:inline">
-                未必來自心臟，而是來自胸口下方的消化系統。
-            </p>
-        </div>
+    <header class="article-hero">
+        <span class="hero-tag">SLEEP & RECOVERY</span>
+        <span class="hero-category">睡眠與恢復力 · 腸胃干擾型</span>
+        <h1 class="article-title">胸悶夜醒，可能不只是心臟問題</h1>
+        <p class="hero-intro">半夜突然胸口悶悶的醒來，很多人的第一個念頭是害怕。但有時候，真正影響睡眠的，未必來自心臟，而是來自胸口下方的消化系統。</p>
     </header>
 
-    <!-- 「這篇文章會帶你看懂」Q&A 三卡區 (採用核心主題：腸胃與消化色系) -->
-    <section class="py-12 bg-[#F5F0EA]/40 border-y border-[#EBE5DF]/30 backdrop-blur-sm">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-8">
-                <span class="text-xs tracking-[0.2em] text-[#8C7D70] font-medium block">
-                    這篇文章會帶你看懂
-                </span>
-                <div class="w-8 h-[1px] bg-[#9A9B6E]/40 mx-auto mt-2"></div>
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="qa-header">
+                <span class="qa-title">這篇文章會帶你看懂</span>
+                <div class="qa-divider"></div>
             </div>
-
-            <!-- Q&A 3張獨立小卡 -->
-            <div class="grid gap-5 md:grid-cols-3">
-                <!-- Q1 -->
-                <div class="bg-[#E8E8D5]/45 p-6 rounded-2xl border border-[#E8E8D5] flex flex-col justify-center min-h-[140px] transition-all hover:translate-y-[-2px] hover:shadow-sm">
-                    <span class="text-xs text-[#7E7F55] font-semibold mb-2 block">Q 1</span>
-                    <p class="text-[14px] text-[#2D2B29] tracking-wide leading-relaxed font-medium">
-                        半夜胸悶醒來，一定是心臟問題嗎？
-                    </p>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <span class="qa-num">Q 1</span>
+                    <p class="qa-text">半夜胸悶醒來，一定是心臟問題嗎？</p>
                 </div>
-
-                <!-- Q2 -->
-                <div class="bg-[#E8E8D5]/45 p-6 rounded-2xl border border-[#E8E8D5] flex flex-col justify-center min-h-[140px] transition-all hover:translate-y-[-2px] hover:shadow-sm">
-                    <span class="text-xs text-[#7E7F55] font-semibold mb-2 block">Q 2</span>
-                    <p class="text-[14px] text-[#2D2B29] tracking-wide leading-relaxed font-medium">
-                        胃脹氣和胃食道逆流為什麼會造成胸悶？
-                    </p>
+                <div class="qa-card">
+                    <span class="qa-num">Q 2</span>
+                    <p class="qa-text">胃脹氣和胃食道逆流為什麼會造成胸悶？</p>
                 </div>
-
-                <!-- Q3 -->
-                <div class="bg-[#E8E8D5]/45 p-6 rounded-2xl border border-[#E8E8D5] flex flex-col justify-center min-h-[140px] transition-all hover:translate-y-[-2px] hover:shadow-sm">
-                    <span class="text-xs text-[#7E7F55] font-semibold mb-2 block">Q 3</span>
-                    <p class="text-[14px] text-[#2D2B29] tracking-wide leading-relaxed font-medium">
-                        如何分辨消化干擾與真正需要就醫的警訊？
-                    </p>
+                <div class="qa-card">
+                    <span class="qa-num">Q 3</span>
+                    <p class="qa-text">哪些胸悶夜醒，需要先就醫評估？</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 主內容區 (Main Content) -->
-    <main class="py-16 md:py-24 px-6 md:px-12 flex-grow">
-        <article class="max-w-2xl mx-auto">
-            
-            <!-- 第一部分：胸悶，並不等於心臟病 -->
-            <section class="mb-14">
-                <h2 class="serif-title text-lg md:text-xl text-[#7E7F55] font-medium tracking-wider mb-6 flex items-center gap-3">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#9A9B6E]"></span>
-                    胸悶，並不等於心臟病
-                </h2>
-                <p class="breathing-leading text-sm md:text-base text-[#2D2B29] font-light mb-6">
-                    先說結論。如果出現以下任何一項症狀，仍然需要盡快就醫評估心臟與心血管狀況：
-                </p>
-                
-                <!-- 觀察與警訊卡片 (適度停頓，柔和色調) -->
-                <div class="bg-[#F5F0EA] p-6 md:p-8 rounded-2xl border border-[#EBE5DF]/80 mb-8">
-                    <span class="text-xs tracking-widest text-[#8C7D70] font-semibold block mb-4 uppercase">
-                        醫療指引 · 急迫警訊
-                    </span>
-                    <ul class="space-y-3">
-                        <li class="flex items-start text-sm text-[#2D2B29] font-light">
-                            <span class="w-1 h-1 rounded-full bg-[#7E7F55] mt-2 mr-3 flex-shrink-0"></span>
-                            <span>持續且壓迫性的劇烈胸痛</span>
-                        </li>
-                        <li class="flex items-start text-sm text-[#2D2B29] font-light">
-                            <span class="w-1 h-1 rounded-full bg-[#7E7F55] mt-2 mr-3 flex-shrink-0"></span>
-                            <span>伴隨不正常的冒冷汗</span>
-                        </li>
-                        <li class="flex items-start text-sm text-[#2D2B29] font-light">
-                            <span class="w-1 h-1 rounded-full bg-[#7E7F55] mt-2 mr-3 flex-shrink-0"></span>
-                            <span>明顯的呼吸困難或窒息感</span>
-                        </li>
-                        <li class="flex items-start text-sm text-[#2D2B29] font-light">
-                            <span class="w-1 h-1 rounded-full bg-[#7E7F55] mt-2 mr-3 flex-shrink-0"></span>
-                            <span>在活動、勞動時症狀明顯惡化</span>
-                        </li>
-                        <li class="flex items-start text-sm text-[#2D2B29] font-light">
-                            <span class="w-1 h-1 rounded-full bg-[#7E7F55] mt-2 mr-3 flex-shrink-0"></span>
-                            <span>疼痛放射到左肩、頸部或下巴</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <p class="breathing-leading text-sm md:text-base text-[#2D2B29] font-light">
-                    但在門診裡，還有另一種很常見的狀況：白天身體還好好的，一躺下沒多久，胸口就開始感到悶悶的；或者睡到一半突然驚醒，起來坐一陣子又稍微比較舒服。這種情況，問題往往來自你的消化系統。
-                </p>
-            </section>
-
-            <!-- 第二部分：為什麼胃的問題會跑到胸口？ -->
-            <section class="mb-14">
-                <h2 class="serif-title text-lg md:text-xl text-[#7E7F55] font-medium tracking-wider mb-6 flex items-center gap-3">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#9A9B6E]"></span>
-                    為什麼胃的問題會跑到胸口？
-                </h2>
-                <p class="breathing-leading text-sm md:text-base text-[#2D2B29] font-light mb-6">
-                    胃的位置其實就在橫膈膜的正下方。當我們體內出現：
-                </p>
-
-                <!-- 機轉圖式卡片 (知識整理色塊) -->
-                <div class="bg-[#E8E8D5]/30 p-6 rounded-2xl border-l-4 border-[#9A9B6E] mb-6">
-                    <p class="text-sm md:text-base text-[#2D2B29] font-light leading-relaxed">
-                        當出現<strong>胃脹氣、消化停滯、或是胃內容物過多</strong>時，胃部會向膨脹並往上推擠橫膈膜。而橫膈膜本身與我們的呼吸律動、胸腔壓力息息相關，一旦受到擠壓，便容易產生非典型的胸腔感受。
-                    </p>
-                </div>
-
-                <p class="breathing-leading text-sm md:text-base text-[#2D2B29] font-light">
-                    因此有些人此時感受到的，並不是傳統意義上的肚子痛或胃痛，而是更靠近上方的<strong>胸悶、吸不到氣、心口怪怪的、甚至有沉重的壓迫感</strong>，進而誤以為是自己的心臟功能出現了問題。
-                </p>
-            </section>
-
-            <!-- 第三部分：夜間為什麼特別容易發生？ -->
-            <section class="mb-14">
-                <h2 class="serif-title text-lg md:text-xl text-[#7E7F55] font-medium tracking-wider mb-6 flex items-center gap-3">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#9A9B6E]"></span>
-                    夜間為什麼特別容易發生？
-                </h2>
-                <p class="breathing-leading text-sm md:text-base text-[#2D2B29] font-light mb-6">
-                    這主要是因為一到了晚上，身體剛好同時具備了以下幾個干擾消化的環境條件：
-                </p>
-
-                <!-- 四大夜間干擾因子 Grid -->
-                <div class="grid gap-4 md:grid-cols-2 mb-4">
-                    <div class="bg-[#FAF8F5] p-5 rounded-xl border border-[#EBE5DF] flex flex-col justify-start">
-                        <span class="text-xs text-[#7E7F55] font-semibold mb-1 block">原因一</span>
-                        <h4 class="text-sm font-medium text-[#2D2B29] mb-1">平躺姿勢</h4>
-                        <p class="text-xs text-[#8C7D70] leading-relaxed">當身體躺平時，失去了地心引力的天然屏障，消化道內容物更容易向上。</p>
-                    </div>
-                    <div class="bg-[#FAF8F5] p-5 rounded-xl border border-[#EBE5DF] flex flex-col justify-start">
-                        <span class="text-xs text-[#7E7F55] font-semibold mb-1 block">原因二</span>
-                        <h4 class="text-sm font-medium text-[#2D2B29] mb-1">晚餐未消化完</h4>
-                        <p class="text-xs text-[#8C7D70] leading-relaxed">晚餐過飽或吃得太晚，夜間胃排空速度變慢，胃中仍殘留大量未消化食物。</p>
-                    </div>
-                    <div class="bg-[#FAF8F5] p-5 rounded-xl border border-[#EBE5DF] flex flex-col justify-start">
-                        <span class="text-xs text-[#7E7F55] font-semibold mb-1 block">原因三</span>
-                        <h4 class="text-sm font-medium text-[#2D2B29] mb-1">夜間逆流增加</h4>
-                        <p class="text-xs text-[#8C7D70] leading-relaxed">睡眠時胃酸分泌與胃氣體更容易積聚，並往食道與上消化道移動。</p>
-                    </div>
-                    <div class="bg-[#FAF8F5] p-5 rounded-xl border border-[#EBE5DF] flex flex-col justify-start">
-                        <span class="text-xs text-[#7E7F55] font-semibold mb-1 block">原因四</span>
-                        <h4 class="text-sm font-medium text-[#2D2B29] mb-1">大腦感官沉靜</h4>
-                        <p class="text-xs text-[#8C7D70] leading-relaxed">當入夜安靜下來，大腦不再被白天的忙碌雜訊遮蔽，體內的微小不適感會被放大呈現。</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 第四部分：有些胸悶其實是脹氣 -->
-            <section class="mb-14">
-                <h2 class="serif-title text-lg md:text-xl text-[#7E7F55] font-medium tracking-wider mb-6 flex items-center gap-3">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#9A9B6E]"></span>
-                    有些胸悶其實是脹氣
-                </h2>
-                <p class="breathing-leading text-sm md:text-base text-[#2D2B29] font-light mb-6">
-                    在排除急性心血管風險的前提下，許多人在經歷胸悶時，如果能仔細覺察，常會發現以下現象：
-                </p>
-                
-                <!-- 引言與情境觀察卡片 -->
-                <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-[#EBE5DF] mb-6 flex flex-col space-y-3">
-                    <div class="flex items-center text-sm font-light text-[#2D2B29]">
-                        <span class="w-1.5 h-1.5 bg-[#9A9B6E] rounded-full mr-3"></span>
-                        打嗝或站起來走動一下後，胸悶感大幅好轉
-                    </div>
-                    <div class="flex items-center text-sm font-light text-[#2D2B29]">
-                        <span class="w-1.5 h-1.5 bg-[#9A9B6E] rounded-full mr-3"></span>
-                        排氣（放屁）或排便後，胸腔的壓迫感跟著煙消雲散
-                    </div>
-                </div>
-
-                <p class="breathing-leading text-sm md:text-base text-[#2D2B29] font-light">
-                    這類的反應，在在證實了這是不折不扣由<strong>消化道內壓過大</strong>所引發的胸腔不適，而非典型的心臟冠狀動脈阻塞或缺氧病徵。
-                </p>
-            </section>
-
-            <!-- 第五部分：睡眠其實是消化能力的延伸 -->
-            <section class="mb-14">
-                <h2 class="serif-title text-lg md:text-xl text-[#7E7F55] font-medium tracking-wider mb-6 flex items-center gap-3">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#9A9B6E]"></span>
-                    睡眠其實是消化能力的延伸
-                </h2>
-                <p class="breathing-leading text-sm md:text-base text-[#2D2B29] font-light mb-6">
-                    多數人習慣將「睡眠問題」和「腸胃問題」分開看待，各自吃藥治療。然而，在代謝美學的世界觀中：
-                </p>
-
-                <!-- 精緻引用卡片 -->
-                <div class="bg-[#E8E8D5]/20 px-8 py-10 rounded-2xl border-y border-[#9A9B6E]/30 text-center my-8">
-                    <p class="serif-title text-base md:text-lg text-[#2D2B29] leading-relaxed font-light italic">
-                        「睡眠品質，與夜間的消化負擔高度相關。」
-                    </p>
-                    <p class="text-xs text-[#8C7D70] mt-3 tracking-widest uppercase">
-                        Metabolic Esthetics Perspective
-                    </p>
-                </div>
-
-                <p class="breathing-leading text-sm md:text-base text-[#2D2B29] font-light">
-                    當身體整晚都在忙著處理過量的食物、奮力對抗氣體與酸性逆流，副交感神經就無法主導運作，身體也自然無法進入深度放鬆的修復期。許多頻繁在半夜因胸悶而驚醒的人，真正需要調整的，或許不是睡眠藥物，而是調整晚餐的內容與消化節奏。
-                </p>
-            </section>
-
-            <!-- 第六部分：可以先觀察什麼？ -->
-            <section class="mb-6">
-                <h2 class="serif-title text-lg md:text-xl text-[#7E7F55] font-medium tracking-wider mb-6 flex items-center gap-3">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#9A9B6E]"></span>
-                    自主觀察指南
-                </h2>
-                <p class="breathing-leading text-sm md:text-base text-[#2D2B29] font-light mb-6">
-                    若你也有類似困擾，建議記錄並觀察以下四個核心面向：
-                </p>
-
-                <div class="space-y-4">
-                    <div class="flex items-start">
-                        <span class="w-6 h-6 rounded-full bg-[#E8E8D5] text-[#7E7F55] text-xs flex items-center justify-center font-semibold mt-1 mr-3 flex-shrink-0">1</span>
-                        <div>
-                            <h4 class="text-sm font-semibold text-[#2D2B29]">發作時間</h4>
-                            <p class="text-xs md:text-sm text-[#8C7D70] mt-0.5">是否高頻率在吃完晚餐後的數個小時內（通常是躺下後）發生？</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="w-6 h-6 rounded-full bg-[#E8E8D5] text-[#7E7F55] text-xs flex items-center justify-center font-semibold mt-1 mr-3 flex-shrink-0">2</span>
-                        <div>
-                            <h4 class="text-sm font-semibold text-[#2D2B29]">姿勢的關聯</h4>
-                            <p class="text-xs md:text-sm text-[#8C7D70] mt-0.5">維持坐姿時是否好轉，一旦平躺胸口就明顯悶脹？</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="w-6 h-6 rounded-full bg-[#E8E8D5] text-[#7E7F55] text-xs flex items-center justify-center font-semibold mt-1 mr-3 flex-shrink-0">3</span>
-                        <div>
-                            <h4 class="text-sm font-semibold text-[#2D2B29]">與排氣打嗝的關係</h4>
-                            <p class="text-xs md:text-sm text-[#8C7D70] mt-0.5">只要成功打嗝吐氣或是下消化道排氣後，胸腔的窒悶感是否隨之釋放？</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="w-6 h-6 rounded-full bg-[#E8E8D5] text-[#7E7F55] text-xs flex items-center justify-center font-semibold mt-1 mr-3 flex-shrink-0">4</span>
-                        <div>
-                            <h4 class="text-sm font-semibold text-[#2D2B29]">晚餐與作息習慣</h4>
-                            <p class="text-xs md:text-sm text-[#8C7D70] mt-0.5">晚餐是否習慣吃得較晚（距睡前小於 3 小時）、吃得過飽，或者有吃完便直接躺在沙發上的習慣？</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </article>
-    </main>
-
-    <!-- 重點整理區 (低透明度、低飽和核心主題色塊) -->
-    <section class="py-12 bg-[#F5F0EA] border-t border-[#EBE5DF]">
-        <div class="max-w-2xl mx-auto px-6">
-            <div class="bg-[#E8E8D5]/35 p-8 rounded-3xl border border-[#9A9B6E]/25">
-                <div class="flex items-center space-x-3 mb-6">
-                    <span class="text-[10px] tracking-[0.25em] text-[#7E7F55] font-semibold uppercase">FOCUS</span>
-                    <span class="text-sm font-medium text-[#2D2B29]">重點整理</span>
-                </div>
-                
-                <ul class="space-y-4">
-                    <li class="flex items-start text-sm text-[#2D2B29] leading-relaxed">
-                        <span class="w-1 h-1 rounded-full bg-[#7E7F55] mt-2 mr-3 flex-shrink-0"></span>
-                        <span><strong>不全然是心血管異常：</strong> 半夜胸悶醒來，排除急症後，往往是身體正在透過神經網絡反映消化系統的壓力。</span>
-                    </li>
-                    <li class="flex items-start text-sm text-[#2D2B29] leading-relaxed">
-                        <span class="w-1 h-1 rounded-full bg-[#7E7F55] mt-2 mr-3 flex-shrink-0"></span>
-                        <span><strong>腹壓推擠機制：</strong> 當胃部面臨脹氣、消化停滯與夜間逆流，會向上推擠橫膈膜，進而模擬出胸悶的體感。</span>
-                    </li>
-                    <li class="flex items-start text-sm text-[#2D2B29] leading-relaxed">
-                        <span class="w-1 h-1 rounded-full bg-[#7E7F55] mt-2 mr-3 flex-shrink-0"></span>
-                        <span><strong>同一套恢復系統：</strong> 睡眠與消化不是各自獨立的孤島。要治好夜醒，必須先減輕晚餐及夜間的腸胃消化負荷。</span>
-                    </li>
+    <article class="article-content">
+        <section class="article-section">
+            <h2 class="section-heading">胸悶，並不等於心臟病</h2>
+            <p class="article-p">先說結論。只要出現明顯胸悶或胸痛，尤其是第一次發生、症狀很強，或自己無法判斷時，都應該先以安全為優先，必要時就醫評估心臟與心血管狀況。</p>
+            <div class="warning-card">
+                <span class="warning-title">需要特別注意的警訊</span>
+                <ul>
+                    <li>持續且壓迫性的劇烈胸痛</li>
+                    <li>伴隨不正常的冒冷汗</li>
+                    <li>明顯呼吸困難或窒息感</li>
+                    <li>活動或勞動時症狀明顯惡化</li>
+                    <li>疼痛延伸到左肩、頸部、下巴或背部</li>
                 </ul>
             </div>
+            <p class="article-p">但在門診裡，也常看到另一種狀況：白天身體還好好的，一躺下沒多久，胸口就開始悶悶的；或者睡到一半突然驚醒，起來坐一陣子又稍微比較舒服。</p>
+            <p class="article-p">這種情況不一定是心臟本身出問題，有時候問題反而來自胸口下方的消化系統。</p>
+        </section>
+
+        <section class="article-section">
+            <h2 class="section-heading">為什麼胃的問題會跑到胸口？</h2>
+            <p class="article-p">胃的位置其實就在橫膈膜下方。當胃部脹氣、消化停滯，或胃內容物比較多時，上腹部的壓力會增加。</p>
+            <div class="gentle-card">
+                <ul>
+                    <li>胃脹氣讓橫膈膜被往上頂</li>
+                    <li>胃食道逆流刺激食道與咽喉</li>
+                    <li>夜間躺平讓內容物更容易往上跑</li>
+                    <li>胸腔壓力與呼吸律動因此被干擾</li>
+                </ul>
+            </div>
+            <p class="article-p">所以有些人感受到的不是典型胃痛，而是更靠近胸口的悶、堵、吸不到氣、心口怪怪的，甚至像有壓迫感。</p>
+            <p class="article-p">這也是為什麼有些人會很害怕：明明不覺得肚子痛，卻是在胸口不舒服。</p>
+        </section>
+
+        <section class="article-section">
+            <h2 class="section-heading">為什麼夜間特別容易發生？</h2>
+            <p class="article-p">白天站著或坐著時，重力比較能幫助胃內容物往下走。但到了晚上，身體躺平，胃與食道之間的壓力關係就會改變。</p>
+            <p class="article-p">如果晚餐太晚、吃得太油、吃太飽，或睡前還有進食，身體入睡後，消化系統可能還在加班。</p>
+            <div class="gentle-card cream-style">
+                <ul>
+                    <li>剛躺下胸口開始悶悶的</li>
+                    <li>睡到一半被胸悶、喉嚨卡或咳嗽叫醒</li>
+                    <li>坐起來、喝水或打嗝後稍微舒服</li>
+                    <li>隔天起床喉嚨乾、口苦或聲音沙啞</li>
+                </ul>
+            </div>
+            <p class="article-p">這些現象都在提醒我們：有些夜醒不是從睡眠開始，而是腸胃與呼吸之間的夜間干擾。</p>
+        </section>
+
+        <section class="article-section">
+            <h2 class="section-heading">胸悶夜醒背後，常見的幾種模式</h2>
+            <div class="observation-grid">
+                <div class="observation-item">
+                    <h3 class="observation-title">1. 胃脹氣型</h3>
+                    <p class="observation-desc">晚餐後覺得脹、打嗝多，躺下後胸口更悶，常常坐起來比較舒服。</p>
+                </div>
+                <div class="observation-item">
+                    <h3 class="observation-title">2. 逆流刺激型</h3>
+                    <p class="observation-desc">胸口灼熱、喉嚨卡卡、口苦、夜間咳嗽，或躺下後不舒服變明顯。</p>
+                </div>
+                <div class="observation-item">
+                    <h3 class="observation-title">3. 壓力警戒型</h3>
+                    <p class="observation-desc">胸悶同時伴隨心跳感、焦慮感，醒來後腦袋開始運轉，很難放鬆。</p>
+                </div>
+                <div class="observation-item">
+                    <h3 class="observation-title">4. 混合型</h3>
+                    <p class="observation-desc">腸胃負荷、壓力、自律神經與睡眠淺化同時出現，症狀就更容易反覆。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-section">
+            <h2 class="section-heading">可以先觀察什麼？</h2>
+            <p class="article-p">如果胸悶夜醒已經反覆出現，除了確認沒有急性警訊，也可以先記錄幾件事：</p>
+            <div class="gentle-card">
+                <ul>
+                    <li>晚餐時間、份量與油脂量</li>
+                    <li>睡前 2–3 小時是否還有進食</li>
+                    <li>躺下後是否更明顯，坐起來是否緩解</li>
+                    <li>是否同時有打嗝、脹氣、口苦、喉嚨卡或咳嗽</li>
+                    <li>最近壓力是否增加，身體是否一直處於緊繃狀態</li>
+                </ul>
+            </div>
+            <p class="article-p">很多時候，我們不是只要問「怎麼睡著」，而是要一起看見：晚上身體到底還在忙什麼。</p>
+        </section>
+
+        <section class="article-section">
+            <h2 class="section-heading">代謝美學怎麼看胸悶夜醒？</h2>
+            <p class="article-p">在代謝美學裡，我們會先把安全放在前面：該排除心臟與急性問題的時候，就不要拖。</p>
+            <p class="article-p">但如果相關危險狀況已經排除，症狀又常常和晚餐、躺平、脹氣、逆流、壓力有關，就很值得把腸胃與自律神經一起放進來看。</p>
+            <p class="article-p">因為睡眠不是獨立存在的。胃還在脹、食道還在被刺激、身體還在警戒時，夜裡就很難真正安穩地恢復。</p>
+        </section>
+
+        <div class="summary-card">
+            <h2 class="summary-title">重點整理</h2>
+            <ul class="summary-list">
+                <li>胸悶夜醒需要先留意心臟與急性警訊，不能一律當作胃的問題。</li>
+                <li>在沒有明顯危險訊號時，胃脹氣、逆流、消化負荷也可能造成胸口悶、堵或吸不到氣的感覺。</li>
+                <li>夜間躺平、晚餐太晚、吃太油或睡前進食，都可能讓消化干擾變得更明顯。</li>
+                <li>睡眠、腸胃與自律神經常常互相影響，需要放在同一個身體脈絡裡理解。</li>
+            </ul>
+        </div>
+
+        <p class="closing-text">胸悶夜醒，不一定只是一個睡眠問題。<br>它可能是身體提醒我們：夜裡還有某個系統沒有真正安定下來。</p>
+    </article>
+
+    <section class="related-section">
+        <h2 class="related-title">延伸閱讀</h2>
+        <p class="related-intro">從同一棵睡眠樹，繼續看夜間腸胃干擾與後半夜睡眠的關係。</p>
+        <div class="related-grid">
+            <a href="sleep_reflux_waking.html" class="related-card">
+                <div>
+                    <span class="related-label">01｜如果你也有逆流夜醒</span>
+                    <h3>逆流夜醒，身體其實在提醒什麼？</h3>
+                    <p>有些夜醒不是從睡眠開始，而是消化系統在夜間干擾了身體休息。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
+            <a href="sleep_2am.html" class="related-card">
+                <div>
+                    <span class="related-label">02｜如果你常在固定時間醒來</span>
+                    <h3>半夜 2–3 點醒，真的只是失眠嗎？</h3>
+                    <p>固定時間夜醒，可能不只是睡眠問題，而是身體恢復力正在透過夜晚發出訊號。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
+            <a href="gut_burping.html" class="related-card">
+                <div>
+                    <span class="related-label">03｜如果你也常打嗝脹氣</span>
+                    <h3>一直打嗝，是胃不好嗎？</h3>
+                    <p>打嗝與脹氣常常不只是表面症狀，而是消化節奏與上腹壓力正在改變。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
         </div>
     </section>
 
-    <!-- 延伸閱讀區 (延伸閱讀卡片風格與 Q&A 相似，但更低調) -->
-    <section class="py-16 bg-[#FAF8F5] border-t border-[#EBE5DF]/40">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-10">
-                <span class="text-xs tracking-[0.2em] text-[#8C7D70] font-medium block">
-                    延伸閱讀
-                </span>
-                <div class="w-8 h-[1px] bg-[#9A9B6E]/30 mx-auto mt-2"></div>
-            </div>
-
-            <div class="grid gap-4 md:grid-cols-3">
-                <!-- 延伸 1 -->
-                <a href="sleep_reflux_waking.html" class="bg-[#E8E8D5]/20 p-5 rounded-xl border border-[#E8E8D5]/50 flex flex-col justify-between min-h-[120px] transition-all hover:bg-[#E8E8D5]/35 hover:translate-y-[-2px]">
-                    <span class="text-[10px] tracking-widest text-[#7E7F55] uppercase font-semibold mb-2">Sleep & Digestion</span>
-                    <p class="text-xs text-[#2D2B29] font-medium leading-relaxed mb-4">
-                        逆流夜醒，身體其實在提醒什麼？
-                    </p>
-                    <span class="text-[9px] text-[#8C7D70] tracking-widest uppercase">閱讀更多 →</span>
-                </a>
-
-                <!-- 延伸 2 -->
-                <a href="sleep_2am.html" class="bg-[#E8E8D5]/20 p-5 rounded-xl border border-[#E8E8D5]/50 flex flex-col justify-between min-h-[120px] transition-all hover:bg-[#E8E8D5]/35 hover:translate-y-[-2px]">
-                    <span class="text-[10px] tracking-widest text-[#7E7F55] uppercase font-semibold mb-2">Sleep & Nervous</span>
-                    <p class="text-xs text-[#2D2B29] font-medium leading-relaxed mb-4">
-                        半夜2–3點醒，真的只是失眠嗎？
-                    </p>
-                    <span class="text-[9px] text-[#8C7D70] tracking-widest uppercase">閱讀更多 →</span>
-                </a>
-
-                <!-- 延伸 3 -->
-                <a href="sleep_light_sleep.html" class="bg-[#E8E8D5]/20 p-5 rounded-xl border border-[#E8E8D5]/50 flex flex-col justify-between min-h-[120px] transition-all hover:bg-[#E8E8D5]/35 hover:translate-y-[-2px]">
-                    <span class="text-[10px] tracking-widest text-[#7E7F55] uppercase font-semibold mb-2">Sleep Rhythm</span>
-                    <p class="text-xs text-[#2D2B29] font-medium leading-relaxed mb-4">
-                        為什麼後半夜越睡越淺？
-                    </p>
-                    <span class="text-[9px] text-[#8C7D70] tracking-widest uppercase">閱讀更多 →</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 溫柔收尾段落 -->
-    <section class="py-12 bg-[#F5F0EA]/50">
-        <div class="max-w-xl mx-auto text-center px-6">
-            <div class="w-10 h-[1px] bg-[#9A9B6E]/30 mx-auto mb-6"></div>
-            <p class="breathing-leading text-sm text-[#8C7D70] font-light">
-                有時候，胸口的不舒服，不一定是在警告你心臟。<br>
-                它也可能只是提醒你：今天的消化系統，還沒有真正休息。<br>
-                當身體能夠安心消化，也才有機會安心睡眠。
-            </p>
-            <div class="w-10 h-[1px] bg-[#9A9B6E]/30 mx-auto mt-6"></div>
-        </div>
-    </section>
-
-    <!-- 返回分類頁按鈕 (統一保留睡眠苔綠色) -->
-    <div class="py-12 text-center bg-[#FAF8F5]">
-        <a href="sleep_recovery.html" class="inline-flex items-center space-x-2 text-xs tracking-widest text-[#7B8365] hover:text-[#2D2B29] transition-colors duration-300">
-            <span>← 返回 睡眠與恢復力</span>
-        </a>
-    </div>
-
-    <!-- 頁尾 (Footer) -->
-    <footer class="bg-[#F5F0EA] border-t border-[#EBE5DF] py-12 px-6 md:px-12 mt-auto">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 text-center md:text-left">
-            <div class="flex flex-col items-center md:items-start">
-                <span class="text-sm font-semibold tracking-widest text-[#2D2B29]">代謝美學</span>
-                <span class="text-[10px] tracking-widest text-[#8C7D70] uppercase font-light mt-0.5">METABOLIC ESTHETICS</span>
-            </div>
-            <p class="text-[11px] text-[#8C7D70] tracking-wider">
-                © 2026 METABOLIC ESTHETICS. All rights reserved. 京之慢感 · 身體知識花園
-            </p>
-        </div>
-    </footer>
-
+    <nav class="article-nav" aria-label="文章導覽">
+        <a href="sleep_recovery.html" class="text-link">← 回到睡眠與恢復力</a>
+        <a href="index.html" class="text-link">返回代謝美學首頁</a>
+    </nav>
 </body>
 </html>
