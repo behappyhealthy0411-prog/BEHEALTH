@@ -4,150 +4,590 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>晚上特別想吃東西，是意志力不好嗎？｜代謝美學</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        bg: '#FAF8F5',
-                        primary: '#C6B27A',
-                        primaryDark: '#A69260',
-                        primaryLight: '#F1E8C8',
-                        textMain: '#2D2B29',
-                        textSub: '#8C7D70',
-                    }
-                }
-            }
-        }
-    </script>
+    <meta name="description" content="晚上特別想吃東西，不一定是意志力不好。從白天能量不足、壓力放鬆、習慣啟動與進食節律，理解夜間食慾正在提醒什麼。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/glucose_night_craving.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400;600&display=swap');
-        body { font-family: 'Noto Sans TC', sans-serif; color: #2D2B29; }
-        h1 { font-family: 'Noto Sans TC', sans-serif; }
-        h2, h3 { font-family: 'Noto Serif TC', serif; }
+        :root {
+            --font-sans: 'Noto Sans TC', sans-serif;
+            --bg-primary: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #8C7D70;
+            --text-soft: #A39A92;
+            --border-color: rgba(45, 43, 41, 0.10);
+            --accent-main: #C6B27A;
+            --accent-dark: #A69260;
+            --accent-light: #F1E8C8;
+            --accent-soft: rgba(241, 232, 200, 0.42);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.95;
+            letter-spacing: 0.03em;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .navbar {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--bg-block);
+            background-color: transparent;
+        }
+
+        .nav-wrapper {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo-main {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            line-height: 1.2;
+        }
+
+        .logo-sub {
+            margin-top: 4px;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+        }
+
+        .nav-item {
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.25s ease;
+        }
+
+        .nav-item:hover,
+        .nav-item.active { color: var(--accent-dark); }
+
+        .nav-item.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: var(--accent-main);
+        }
+
+        .article-hero {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 82px 24px 52px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            display: block;
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+        }
+
+        .hero-category {
+            margin-top: 10px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            letter-spacing: 0.14em;
+        }
+
+        .article-title {
+            margin: 34px 0 0;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+            font-weight: 500;
+        }
+
+        .hero-intro {
+            max-width: 620px;
+            margin: 30px auto 0;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.05;
+        }
+
+        .qa-section {
+            padding: 38px 0;
+            background-color: rgba(245, 240, 234, 0.58);
+            border-top: 1px solid rgba(45, 43, 41, 0.08);
+            border-bottom: 1px solid rgba(45, 43, 41, 0.08);
+        }
+
+        .qa-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-mini-title {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+        }
+
+        .qa-divider {
+            width: 32px;
+            height: 1px;
+            margin: 10px auto 24px;
+            background-color: rgba(198, 178, 122, 0.45);
+        }
+
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .qa-card {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-light);
+            padding: 22px 20px;
+            min-height: 112px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .qa-label {
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .qa-card p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 66px 24px 36px;
+        }
+
+        .article-content p {
+            margin: 0 0 22px;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+
+        .article-content h2 {
+            margin: 58px 0 22px;
+            font-size: 25px;
+            line-height: 1.55;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        .article-content h2::after {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 1px;
+            margin-top: 14px;
+            background-color: var(--accent-main);
+        }
+
+        .gentle-card,
+        .observation-item,
+        .summary-card {
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gentle-card {
+            background-color: rgba(241, 232, 200, 0.30);
+            border-color: rgba(198, 178, 122, 0.24);
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+
+        .gentle-card.cream-style {
+            background-color: var(--bg-secondary);
+            border-color: var(--border-color);
+        }
+
+        .gentle-card ul,
+        .summary-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .gentle-card li,
+        .summary-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+        }
+
+        .gentle-card li:last-child,
+        .summary-list li:last-child { margin-bottom: 0; }
+
+        .gentle-card li::before,
+        .summary-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-dark);
+            font-size: 13px;
+        }
+
+        .observation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 28px 0 8px;
+        }
+
+        .observation-item {
+            background-color: var(--bg-secondary);
+            padding: 24px;
+        }
+
+        .observation-item h3 {
+            margin: 0 0 10px;
+            color: var(--accent-dark);
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .observation-item p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .summary-card {
+            background-color: rgba(241, 232, 200, 0.38);
+            border-color: var(--accent-light);
+            padding: 32px;
+            margin: 56px 0 48px;
+        }
+
+        .summary-card h2 {
+            margin-top: 0;
+        }
+
+        .closing-note {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.1;
+            margin: 48px auto 8px;
+        }
+
+        .related-section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 58px 24px 28px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .related-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .related-card:hover {
+            background-color: var(--accent-light);
+            border-color: var(--accent-main);
+            transform: translateY(-5px);
+        }
+
+        .related-label {
+            color: var(--accent-dark);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .related-card h3 {
+            margin: 18px 0 12px;
+            font-size: 18px;
+            line-height: 1.55;
+            font-weight: 500;
+        }
+
+        .related-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            margin-top: 22px;
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .article-nav {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 36px 24px 64px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .text-link {
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-bottom: 1px solid rgba(140, 125, 112, 0.42);
+            padding-bottom: 3px;
+            transition: color 0.25s ease, border-color 0.25s ease;
+        }
+
+        .text-link:hover {
+            color: var(--accent-dark);
+            border-color: var(--accent-dark);
+        }
+
+        @media (max-width: 760px) {
+            .nav-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                gap: 14px;
+                font-size: 12px;
+            }
+
+            .article-hero { padding-top: 58px; }
+            .qa-grid,
+            .observation-grid,
+            .related-grid { grid-template-columns: 1fr; }
+            .article-content { padding-top: 52px; }
+            .related-card { min-height: auto; }
+        }
     </style>
 </head>
-<body class="bg-[#FAF8F5] text-[#2D2B29] leading-relaxed">
-
-    <!-- 導覽列 -->
-    <nav class="max-w-4xl mx-auto px-6 py-8 flex justify-between items-center text-sm tracking-widest uppercase">
-        <a href="index.html" class="font-medium">代謝美學<br><span class="text-[10px]">METABOLIC ESTHETICS</span></a>
-        <div class="space-x-8">
-            <a href="index.html" class="hover:text-primary transition">首頁</a>
-            <a href="glucose_appetite.html" class="hover:text-primary transition">血糖與食慾</a>
-            <a href="https://lin.ee/pzxDU3O" class="bg-[#C6B27A] text-white px-4 py-2 rounded-full hover:bg-[#A69260] transition">預約諮詢</a>
+<body>
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <a href="index.html" aria-label="返回代謝美學首頁">
+                <div class="logo-main">代謝美學</div>
+                <div class="logo-sub">METABOLIC ESTHETICS</div>
+            </a>
+            <div class="nav-links" aria-label="主要導覽">
+                <a class="nav-item" href="index.html">首頁</a>
+                <a class="nav-item active" href="glucose_appetite.html">血糖與食慾</a>
+                <a class="nav-item" href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener">預約諮詢</a>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero 區 -->
-    <header class="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
-        <span class="text-xs tracking-widest text-[#8C7D70] uppercase">GLUCOSE & APPETITE</span>
-        <h2 class="mt-4 text-sm tracking-widest text-[#8C7D70]">血糖與食慾 · 進食節律型</h2>
-        <h1 class="mt-6 text-4xl md:text-5xl font-semibold text-[#2D2B29] leading-normal">
-            晚上特別想吃東西，是意志力不好嗎？
-        </h1>
-        <p class="mt-8 text-lg text-[#2D2B29] max-w-xl mx-auto">
-            有些人白天不太餓，甚至早餐不吃也沒感覺；但到了晚上，卻開始想找零食、甜食、宵夜。很多人第一個念頭是：是不是自己意志力太差？但有時候，晚上的食慾，其實是在提醒我們一些白天沒有被看見的需求。
+    <header class="article-hero">
+        <span class="hero-tag">GLUCOSE & APPETITE</span>
+        <div class="hero-category">血糖與食慾 · 進食節律型</div>
+        <h1 class="article-title">晚上特別想吃東西，是意志力不好嗎？</h1>
+        <p class="hero-intro">
+            有些人白天不太餓，甚至早餐不吃也沒感覺；但到了晚上，卻開始想找零食、甜食或宵夜。很多人第一個念頭是：是不是自己意志力太差？但有時候，晚上的食慾，其實是在提醒白天沒有被看見的需求。
         </p>
     </header>
 
-    <!-- Q&A 區塊 -->
-    <section class="py-12 bg-[#F1E8C8]/20 border-y border-[#F1E8C8]/50">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-8">
-                <span class="text-xs tracking-widest text-[#8C7D70] font-medium">這篇文章會帶你看懂</span>
-                <div class="w-8 h-[1px] bg-[#C6B27A]/40 mx-auto mt-2"></div>
-            </div>
-            <div class="grid gap-4 md:grid-cols-3">
-                <div class="bg-white/40 p-6 rounded-2xl border border-[#F1E8C8] flex flex-col justify-center min-h-[140px]">
-                    <span class="text-xs text-[#A69260] font-semibold mb-2 block">Q 1</span>
-                    <p class="text-[14px] leading-relaxed font-medium">為什麼食慾常常在晚上特別明顯？</p>
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="section-mini-title">這篇文章會帶你看懂</div>
+            <div class="qa-divider"></div>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <div class="qa-label">Q 1</div>
+                    <p>為什麼食慾常常在晚上特別明顯？</p>
                 </div>
-                <div class="bg-white/40 p-6 rounded-2xl border border-[#F1E8C8] flex flex-col justify-center min-h-[140px]">
-                    <span class="text-xs text-[#A69260] font-semibold mb-2 block">Q 2</span>
-                    <p class="text-[14px] leading-relaxed font-medium">晚上想吃東西一定是意志力不好嗎？</p>
+                <div class="qa-card">
+                    <div class="qa-label">Q 2</div>
+                    <p>晚上想吃東西，一定是意志力不好嗎？</p>
                 </div>
-                <div class="bg-white/40 p-6 rounded-2xl border border-[#F1E8C8] flex flex-col justify-center min-h-[140px]">
-                    <span class="text-xs text-[#A69260] font-semibold mb-2 block">Q 3</span>
-                    <p class="text-[14px] leading-relaxed font-medium">身體到底是在餓，還是在找別的東西？</p>
+                <div class="qa-card">
+                    <div class="qa-label">Q 3</div>
+                    <p>身體到底是真的餓，還是在找放鬆？</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 主內容區 -->
-    <main class="max-w-2xl mx-auto px-6 py-16 space-y-12">
-        
-        <article class="space-y-8">
-            <h3 class="text-2xl font-serif">第一種｜真的餓了：身體在補回白天沒拿到的能量</h3>
-            <p>有些人白天忙碌，早餐不吃、午餐隨便解決，下午僅靠咖啡支撐。這種飢餓累積到了晚上，身體開始誠實地「討債」。這時候的食慾是生理需求的訊號。</p>
-            
-            <div class="bg-[#F1E8C8]/30 p-8 rounded-2xl border border-[#F1E8C8]">
-                <p class="font-bold mb-4">雞腿便當測試</p>
-                <p>如果現在給你雞腿便當、牛肉麵或水餃，你都願意吃，那很可能是真的餓了。這時候需要的不是控制，而是補足能量。</p>
-            </div>
+    <main class="article-content">
+        <p>晚上特別想吃東西，是很多人很熟悉、也很容易自責的經驗。尤其白天明明控制得很好，到了晚上卻開始想吃甜食、鹹食、零食或宵夜，常常會讓人覺得自己是不是又失控了。</p>
+        <p>但在代謝美學裡，我們會先把夜間食慾看成一個訊號。它不一定代表你不夠自律，也不一定只是嘴饞。它可能在提醒：白天吃得太少、壓力太高、恢復不足，或某個習慣迴路被固定啟動了。</p>
 
-            <h3 class="text-2xl font-serif">第二種｜想放鬆了：有時候想吃的不是食物，而是喘口氣</h3>
-            <p>白天長期處於壓力下，晚上終於停下來時，真正吸引我們的往往不是正餐，而是能帶來安慰感與獎勵感的甜食或洋芋片。</p>
-            
-            <div class="bg-[#F1E8C8]/30 p-8 rounded-2xl border border-[#F1E8C8]">
-                <p class="font-bold mb-4">雞腿便當測試</p>
-                <p>如果雞腿便當你不想吃，但珍奶、巧克力或冰淇淋卻很有吸引力，那可能不是餓，而是在尋找放鬆。</p>
-            </div>
-
-            <h3 class="text-2xl font-serif">第三種｜習慣被啟動了：有些嘴饞，其實只是固定劇本</h3>
-            <p>當「追劇」、「滑手機」或「坐上沙發」這類行為與進食長期連結，大腦會自動啟動吃東西的渴望，即便身體並不餓。</p>
-
-            <div class="bg-[#F1E8C8]/30 p-8 rounded-2xl border border-[#F1E8C8]">
-                <p class="font-bold mb-4">習慣觀察卡</p>
-                <p>如果其實不餓，但每次追劇都想吃東西，那值得觀察的可能不是食慾，而是被習慣啟動的反應。</p>
-            </div>
-        </article>
-
-        <!-- 知識整理色塊 -->
-        <div class="bg-[#F1E8C8]/40 p-8 rounded-2xl border border-[#F1E8C8]">
-            <h3 class="text-xl font-bold mb-6 text-center">晚上想吃東西，不一定是意志力不好</h3>
-            <p class="mb-4">先問自己：如果現在給我一個雞腿便當，我願意吃嗎？</p>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>願意：可能是真的餓了。</li>
-                <li>不願意：可能是在找放鬆，或只是習慣被啟動。</li>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>白天很忙，早餐或午餐吃得不完整。</li>
+                <li>下午靠咖啡、茶或意志力硬撐。</li>
+                <li>晚上終於停下來，才突然感覺很餓。</li>
+                <li>明明不想吃正餐，卻很想吃甜食、餅乾、洋芋片或宵夜。</li>
+                <li>追劇、滑手機、坐上沙發時，食慾就像自動被打開。</li>
             </ul>
-            <p class="mt-6 font-semibold">可以先觀察什麼？</p>
-            <ol class="list-decimal pl-5 space-y-2">
-                <li>今天有正常吃飯嗎？</li>
-                <li>今天蛋白質足夠嗎？</li>
-                <li>最近是不是特別累？</li>
-                <li>這個嘴饞是不是總在固定情境出現？</li>
-            </ol>
         </div>
 
+        <h2>晚上的食慾，常見有三種狀況</h2>
+        <div class="observation-grid">
+            <div class="observation-item">
+                <h3>第一種：真的餓了</h3>
+                <p>白天能量吃得太少，早餐不吃、午餐隨便解決，下午又一路硬撐。到了晚上，身體開始補回白天沒拿到的能量，這時候的食慾是生理需求，不是單純意志力問題。</p>
+            </div>
+            <div class="observation-item">
+                <h3>第二種：想放鬆了</h3>
+                <p>白天一直在工作、照顧別人或處理壓力，晚上停下來時，大腦會想找一個快速的安撫感。這時候吸引人的常常不是正餐，而是甜食、鹹食或特定口感。</p>
+            </div>
+            <div class="observation-item">
+                <h3>第三種：習慣被啟動了</h3>
+                <p>有些食慾不是從身體餓開始，而是從情境開始。像是追劇、滑手機、坐上沙發、準備放空，這些情境如果長期和吃東西綁在一起，大腦就會自動啟動想吃的劇本。</p>
+            </div>
+        </div>
+
+        <h2>可以用「正餐測試」先分辨一下</h2>
+        <p>當晚上突然想吃東西，可以先問自己：如果現在給我一份正常正餐，我願意吃嗎？這個問題不是要評分，而是幫身體訊號分類。</p>
+        <div class="gentle-card">
+            <ul>
+                <li>如果雞腿便當、飯菜、湯麵或水餃也願意吃，可能是真的餓了。</li>
+                <li>如果正餐完全不想吃，但只想吃珍奶、巧克力、餅乾或冰淇淋，可能是在找放鬆、安撫或獎賞感。</li>
+                <li>如果只有在固定情境會想吃，例如追劇、滑手機或坐上沙發，可能是習慣迴路被啟動。</li>
+            </ul>
+        </div>
+
+        <h2>先不要急著把晚上食慾壓下去</h2>
+        <p>很多人一發現晚上想吃，就立刻用更嚴格的方式要求自己不要吃。但如果白天能量真的不足，晚上硬壓食慾，反而可能讓身體更緊繃，隔天又進入同樣循環。</p>
+        <p>比較值得做的，是回頭看白天有沒有把基本能量和蛋白質吃夠，下午是否已經很累，晚上是不是終於有一點自己的時間。夜間食慾常常不是單一問題，而是一整天節奏的結果。</p>
+
+        <h2>可以先觀察什麼？</h2>
+        <div class="observation-grid">
+            <div class="observation-item">
+                <h3>今天有正常吃飯嗎？</h3>
+                <p>早餐、午餐是否太少，蛋白質是否不足，或白天是不是只靠咖啡撐過去。</p>
+            </div>
+            <div class="observation-item">
+                <h3>嘴饞前有沒有先累？</h3>
+                <p>如果先出現疲倦、煩躁、腦袋鈍，食慾可能是身體在尋找快速恢復感。</p>
+            </div>
+            <div class="observation-item">
+                <h3>想吃的是正餐還是特定食物？</h3>
+                <p>願意吃正餐比較像真的餓；只想吃特定甜食或零食，可能更接近安撫需求。</p>
+            </div>
+            <div class="observation-item">
+                <h3>是不是固定情境發生？</h3>
+                <p>每次追劇、滑手機、下班坐下來就想吃，代表身體也可能被習慣劇本牽動。</p>
+            </div>
+        </div>
+
+        <div class="summary-card">
+            <h2>重點整理</h2>
+            <ul class="summary-list">
+                <li>晚上特別想吃東西，不一定是意志力不好。</li>
+                <li>常見原因包括白天能量不足、壓力後想放鬆，或固定習慣被啟動。</li>
+                <li>可以用「正餐測試」先分辨是真的餓，還是在找安撫感。</li>
+                <li>真正重要的不是壓抑食慾，而是理解身體現在缺的是什麼。</li>
+            </ul>
+        </div>
+
+        <p class="closing-note">
+            有時候，晚上的食慾，<br>
+            不是身體在搗亂。<br>
+            而是它正在提醒你：<br>
+            今天有些需求還沒有被照顧。<br>
+            當我們開始理解這些訊號，<br>
+            食慾就不再只是敵人，<br>
+            而會成為認識自己的入口。
+        </p>
     </main>
 
-    <!-- 重點整理區 -->
-    <section class="max-w-3xl mx-auto px-6 py-12">
-        <div class="bg-[#F1E8C8]/20 p-8 rounded-2xl border border-[#F1E8C8]">
-            <h3 class="text-xl font-bold mb-4">重點整理</h3>
-            <p>晚上特別想吃東西，不一定是意志力不好。常見原因包括能量不足、想放鬆，或習慣被啟動。真正重要的，不是壓抑食慾，而是理解身體現在缺的是什麼？</p>
+    <section class="related-section">
+        <div class="section-mini-title">延伸閱讀</div>
+        <div class="qa-divider"></div>
+        <div class="related-grid">
+            <a class="related-card" href="glucose_breakfast_not_hungry.html">
+                <div>
+                    <div class="related-label">01｜同一類型</div>
+                    <h3>早餐不餓，代表代謝比較好嗎？</h3>
+                    <p>早餐不餓不一定代表代謝好，重點是一整天能量與食慾是否穩定。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
+            </a>
+            <a class="related-card" href="glucose_craving_types.html">
+                <div>
+                    <div class="related-label">02｜如果也常嘴饞</div>
+                    <h3>嘴饞到底是餓了，還是累了？</h3>
+                    <p>嘴饞可能不是單純想吃，而是身體在反映疲勞、壓力或能量需求。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
+            </a>
+            <a class="related-card" href="glucose_full_but_hungry.html">
+                <div>
+                    <div class="related-label">03｜如果吃飽還想吃</div>
+                    <h3>明明吃飽了，為什麼還想吃？</h3>
+                    <p>吃飽不等於滿足，飽足感也和睡眠、壓力與大腦獎賞系統有關。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
+            </a>
         </div>
     </section>
 
-    <!-- 延伸閱讀 -->
-    <section class="max-w-3xl mx-auto px-6 py-12">
-        <h3 class="text-xl font-serif mb-6">延伸閱讀</h3>
-        <div class="grid gap-4 md:grid-cols-2">
-            <a href="glucose_breakfast_not_hungry.html" class="block p-4 border border-[#F1E8C8]/50 rounded-xl hover:bg-[#F1E8C8]/20 transition">早餐不餓，代表代謝比較好嗎？</a>
-            <a href="glucose_craving_types.html" class="block p-4 border border-[#F1E8C8]/50 rounded-xl hover:bg-[#F1E8C8]/20 transition">嘴饞到底是餓了，還是累了？</a>
-            <a href="glucose_full_but_hungry.html" class="block p-4 border border-[#F1E8C8]/50 rounded-xl hover:bg-[#F1E8C8]/20 transition">明明吃飽了，為什麼還想吃？</a>
-            <a href="glucose_afternoon_sweets.html" class="block p-4 border border-[#F1E8C8]/50 rounded-xl hover:bg-[#F1E8C8]/20 transition">下午特別想吃甜食，是血糖不穩嗎？</a>
-        </div>
-    </section>
-
-    <!-- 收尾 -->
-    <footer class="max-w-2xl mx-auto px-6 py-16 text-center space-y-8">
-        <p class="text-textSub italic">有時候，晚上的食慾，不是身體在搗亂。而是它正在提醒你：今天有些需求還沒有被照顧。當我們開始理解這些訊號，食慾就不再只是敵人，而會成為認識自己的入口。</p>
-        <a href="glucose_appetite.html" class="inline-block px-6 py-3 border border-[#C6B27A] text-[#C6B27A] rounded-full hover:bg-[#C6B27A] hover:text-white transition">返回血糖與食慾</a>
-    </footer>
-
+    <div class="article-nav">
+        <a class="text-link" href="glucose_appetite.html">← 回到血糖與食慾</a>
+        <a class="text-link" href="index.html">返回代謝美學首頁</a>
+    </div>
 </body>
 </html>
