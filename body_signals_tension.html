@@ -4,166 +4,581 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>為什麼身體總是緊繃，像壓力留在身體？｜身體訊號｜代謝美學</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Noto Sans TC', 'sans-serif'],
-                        serif: ['Noto Serif TC', 'serif'],
-                    },
-                    colors: {
-                        wood: { 500: '#8C7D70', 600: '#74675B' },
-                        stone: { 200: '#EBE5DF' },
-                        cream: { 100: '#FAF8F5' }
-                    }
-                }
-            }
-        }
-    </script>
+    <meta name="description" content="身體總是緊繃，不一定只是肌肉問題。從壓力、呼吸、睡眠、情緒與恢復力，理解身體為什麼像一直撐住。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/body_signals_tension.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #FAF8F5; color: #4A4540; }
-        .serif { font-family: 'Noto Serif TC', serif; }
-        /* 標題調整為黑色 */
-        h3 { font-weight: 700 !important; font-size: 1.5rem !important; margin-top: 2.5rem !important; margin-bottom: 1.25rem !important; color: #4A4540 !important; }
+        :root {
+            --font-sans: 'Noto Sans TC', sans-serif;
+            --bg-primary: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #8C7D70;
+            --text-soft: #A39A92;
+            --border-color: rgba(45, 43, 41, 0.10);
+            --accent-main: #8E8493;
+            --accent-dark: #6F6675;
+            --accent-light: #ECE6EF;
+            --accent-soft: rgba(236, 230, 239, 0.42);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.95;
+            letter-spacing: 0.03em;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .navbar {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--bg-block);
+            background-color: transparent;
+        }
+
+        .nav-wrapper {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo-main {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            line-height: 1.2;
+        }
+
+        .logo-sub {
+            margin-top: 4px;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+        }
+
+        .nav-item {
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.25s ease;
+        }
+
+        .nav-item:hover,
+        .nav-item.active { color: var(--accent-dark); }
+
+        .nav-item.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: var(--accent-main);
+        }
+
+        .article-hero {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 82px 24px 52px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            display: block;
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+        }
+
+        .hero-category {
+            margin-top: 10px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            letter-spacing: 0.14em;
+        }
+
+        .article-title {
+            margin: 34px 0 0;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+            font-weight: 500;
+        }
+
+        .hero-intro {
+            max-width: 620px;
+            margin: 30px auto 0;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.05;
+        }
+
+        .qa-section {
+            padding: 38px 0;
+            background-color: rgba(245, 240, 234, 0.58);
+            border-top: 1px solid rgba(45, 43, 41, 0.08);
+            border-bottom: 1px solid rgba(45, 43, 41, 0.08);
+        }
+
+        .qa-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-mini-title {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+        }
+
+        .qa-divider {
+            width: 32px;
+            height: 1px;
+            margin: 10px auto 24px;
+            background-color: rgba(142, 132, 147, 0.45);
+        }
+
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .qa-card {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-light);
+            padding: 22px 20px;
+            min-height: 112px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .qa-label {
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .qa-card p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 66px 24px 36px;
+        }
+
+        .article-content p {
+            margin: 0 0 22px;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+
+        .article-content h2 {
+            margin: 58px 0 22px;
+            font-size: 25px;
+            line-height: 1.55;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        .article-content h2::after {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 1px;
+            margin-top: 14px;
+            background-color: var(--accent-main);
+        }
+
+        .gentle-card,
+        .observation-item,
+        .summary-card {
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gentle-card {
+            background-color: rgba(236, 230, 239, 0.30);
+            border-color: rgba(142, 132, 147, 0.24);
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+
+        .gentle-card.cream-style {
+            background-color: var(--bg-secondary);
+            border-color: var(--border-color);
+        }
+
+        .gentle-card ul,
+        .summary-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .gentle-card li,
+        .summary-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+        }
+
+        .gentle-card li:last-child,
+        .summary-list li:last-child { margin-bottom: 0; }
+
+        .gentle-card li::before,
+        .summary-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-dark);
+            font-size: 13px;
+        }
+
+        .observation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 28px 0 8px;
+        }
+
+        .observation-item {
+            background-color: var(--bg-secondary);
+            padding: 24px;
+        }
+
+        .observation-item h3 {
+            margin: 0 0 10px;
+            color: var(--accent-dark);
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .observation-item p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .summary-card {
+            background-color: rgba(236, 230, 239, 0.38);
+            border-color: var(--accent-light);
+            padding: 32px;
+            margin: 56px 0 48px;
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .closing-note {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.1;
+            margin: 48px auto 8px;
+        }
+
+        .related-section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 58px 24px 28px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .related-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .related-card:hover {
+            background-color: var(--accent-light);
+            border-color: var(--accent-main);
+            transform: translateY(-5px);
+        }
+
+        .related-label {
+            color: var(--accent-dark);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .related-card h3 {
+            margin: 18px 0 12px;
+            font-size: 18px;
+            line-height: 1.55;
+            font-weight: 500;
+        }
+
+        .related-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            margin-top: 22px;
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .article-nav {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 36px 24px 64px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .text-link {
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-bottom: 1px solid rgba(140, 125, 112, 0.42);
+            padding-bottom: 3px;
+            transition: color 0.25s ease, border-color 0.25s ease;
+        }
+
+        .text-link:hover {
+            color: var(--accent-dark);
+            border-color: var(--accent-dark);
+        }
+
+        @media (max-width: 760px) {
+            .nav-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                gap: 14px;
+                font-size: 12px;
+            }
+
+            .article-hero { padding-top: 58px; }
+            .qa-grid,
+            .observation-grid,
+            .related-grid { grid-template-columns: 1fr; }
+            .article-content { padding-top: 52px; }
+            .related-card { min-height: auto; }
+        }
     </style>
 </head>
-<body class="font-sans leading-relaxed">
-
-    <nav class="flex justify-between items-center px-6 py-8 md:px-12 border-b border-[#EBE5DF]">
-        <a href="index.html" class="text-lg font-medium tracking-tighter text-[#8C7D70]">
-            代謝美學<br><span class="text-[10px] tracking-[0.2em]">METABOLIC ESTHETICS</span>
-        </a>
-        <div class="flex items-center gap-6 text-sm">
-            <a href="index.html" class="hover:text-[#74675B] transition">首頁</a>
-            <a href="body_signals.html" class="hover:text-[#74675B] transition border-b border-[#8C7D70]">身體訊號</a>
-            <a href="https://lin.ee/pzxDU3O" class="bg-[#8C7D70] text-white px-4 py-2 rounded-full hover:bg-[#74675B] transition">預約諮詢</a>
+<body>
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <a href="index.html" aria-label="返回代謝美學首頁">
+                <div class="logo-main">代謝美學</div>
+                <div class="logo-sub">METABOLIC ESTHETICS</div>
+            </a>
+            <div class="nav-links" aria-label="主要導覽">
+                <a class="nav-item" href="index.html">首頁</a>
+                <a class="nav-item active" href="body_signals.html">身體訊號</a>
+                <a class="nav-item" href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener">預約諮詢</a>
+            </div>
         </div>
     </nav>
 
-    <section class="px-6 py-16 md:py-24 text-center">
-        <span class="text-[10px] tracking-[0.3em] text-[#8C7D70] font-medium">BODY SIGNALS</span>
-        <h2 class="text-sm text-[#8C7D70] mt-2 mb-6 font-medium">身體訊號 · 緊繃與撐住</h2>
-        <h1 class="text-4xl md:text-5xl font-semibold serif text-[#4A4540] mb-8">為什麼身體總是緊繃，<br>像壓力留在身體？</h1>
-        <p class="max-w-xl mx-auto text-[#666] leading-loose">有些緊繃，不只是肌肉問題，<br>而是壓力還留在身體裡。</p>
-    </section>
+    <header class="article-hero">
+        <span class="hero-tag">BODY SIGNALS</span>
+        <div class="hero-category">身體訊號 · 緊繃與撐住</div>
+        <h1 class="article-title">為什麼身體總是緊繃，<br>像壓力留在身體？</h1>
+        <p class="hero-intro">
+            有些緊繃，不只是肌肉問題。也可能是壓力還留在身體裡，讓肩頸、下巴、胸口、胃部或睡眠，都還維持在「需要撐住」的狀態。
+        </p>
+    </header>
 
-    <section class="py-12 bg-[#EBE5DF]/30 border-y border-[#EBE5DF]">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-8">
-                <span class="text-xs tracking-widest text-[#8C7D70] font-medium">這篇文章想陪你理解</span>
-                <div class="w-8 h-[1px] bg-[#8C7D70]/40 mx-auto mt-2"></div>
-            </div>
-            <div class="grid gap-4 md:grid-cols-3">
-                <div class="bg-[#EBE5DF] p-6 rounded-2xl flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-[#8C7D70] font-semibold mb-2 block">Q 1</span>
-                    <p class="text-[14px] text-[#4A4540] leading-relaxed">為什麼事情結束了，身體還是很緊？</p>
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="section-mini-title">這篇文章會帶你看懂</div>
+            <div class="qa-divider"></div>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <div class="qa-label">Q 1</div>
+                    <p>為什麼事情結束了，身體還是很緊？</p>
                 </div>
-                <div class="bg-[#EBE5DF] p-6 rounded-2xl flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-[#8C7D70] font-semibold mb-2 block">Q 2</span>
-                    <p class="text-[14px] text-[#4A4540] leading-relaxed">按摩與伸展，為什麼只能暫時舒服？</p>
+                <div class="qa-card">
+                    <div class="qa-label">Q 2</div>
+                    <p>按摩與伸展，為什麼有時只能暫時舒服？</p>
                 </div>
-                <div class="bg-[#EBE5DF] p-6 rounded-2xl flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-[#8C7D70] font-semibold mb-2 block">Q 3</span>
-                    <p class="text-[14px] text-[#4A4540] leading-relaxed">如何建立屬於自己的恢復力工具箱？</p>
+                <div class="qa-card">
+                    <div class="qa-label">Q 3</div>
+                    <p>怎麼讓身體慢慢收到「可以不用撐住」的訊息？</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <main class="max-w-2xl mx-auto px-6 py-16">
-        <article class="prose prose-stone prose-lg max-w-none text-[#4A4540]">
-            
-            <p>有些人雖然人坐下來了，肩膀卻仍聳著；躺在床上，下巴依然緊咬。這種緊繃，往往不只是肌肉太硬，而是壓力還留在身體裡，它還沒收到「現在可以不用撐住了」的訊息。</p>
+    <main class="article-content">
+        <p>有些人雖然人坐下來了，肩膀卻仍然聳著；明明躺在床上，下巴卻還是緊咬；事情已經處理完了，胸口、胃部或背部卻像還沒有真正放下。</p>
+        <p>這種緊繃，往往不只是肌肉太硬。它比較像是身體還停留在壓力模式裡，還沒收到「現在可以不用再應付了」的訊息。</p>
 
-            <h3>先確認安全：有些緊繃，不要只當成壓力</h3>
-            <p class="text-lg font-medium text-[#666]">在往壓力與恢復力方向理解前，請先確認安全。若伴隨以下症狀，請先由醫師評估：</p>
-            <ul class="text-sm bg-[#EBE5DF]/50 p-6 rounded-xl list-none space-y-2">
-                <li>• 胸痛、胸悶合併呼吸困難、痛感延伸至左手或背部</li>
-                <li>• 突然單側無力、麻木、說話不清或視力改變</li>
-                <li>• 此生最嚴重的頭痛或頸部僵硬合併發燒</li>
-                <li>• 走路不穩、大小便異常或外傷後出現神經症狀</li>
+        <h2>先確認安全：有些緊繃，不要只當成壓力</h2>
+        <p>在往壓力與恢復力方向理解前，需要先確認安全。若緊繃感合併明顯疼痛、神經症狀或急性變化，請先由醫師評估。</p>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>胸痛、胸悶合併呼吸困難，或疼痛延伸到左手、背部。</li>
+                <li>突然單側無力、麻木、說話不清或視力改變。</li>
+                <li>此生最嚴重的頭痛，或頸部僵硬合併發燒。</li>
+                <li>走路不穩、大小便異常，或外傷後出現新的神經症狀。</li>
             </ul>
-            <p class="text-sm text-[#8C7D70] italic mt-4">先排除需要處理的疾病，身體照顧才會更安心。</p>
+        </div>
+        <p>先排除需要處理的疾病，後續把身體緊繃放回壓力與恢復力脈絡裡看，才會更安心。</p>
 
-            <h3>壓力不只在腦袋裡，也會留在身體裡</h3>
-            <p>壓力會透過肩頸緊、胃部縮緊、睡醒身體硬梆梆等方式呈現。這些反應不是「身體壞掉」，而是它仍在用保護機制告訴你：「我還在撐，還沒下班。」</p>
+        <h2>壓力不只在腦袋裡，也會留在身體裡</h2>
+        <p>壓力不一定只表現在情緒上。它也可能透過肩頸緊、背部僵硬、下巴咬緊、胸口悶、胃部縮緊、睡醒身體硬梆梆等方式呈現。</p>
+        <p>對身體來說，「事情完成」不一定等於「壓力解除」。身體習慣了待命、應付和撐住，就可能在外在事情結束後，仍然維持比較高的張力。</p>
 
-            <blockquote class="border-l-4 border-[#8C7D70] pl-6 py-2 my-8 text-lg font-medium text-[#8C7D70] italic bg-[#EBE5DF]/40 rounded-r-lg">
-                對身體來說，「事情完成」不一定等於「壓力解除」。身體習慣了待命與撐住，它還在等下一個需求出現。
-            </blockquote>
+        <h2>身體緊繃，常見有四種狀況</h2>
+        <div class="observation-grid">
+            <div class="observation-item">
+                <h3>第一種：肌肉持續待命型</h3>
+                <p>肩頸、背部、下巴或手臂一直用力，好像隨時準備應付下一件事。這時候的緊繃，是身體還沒有真正下班。</p>
+            </div>
+            <div class="observation-item">
+                <h3>第二種：呼吸沒有回穩型</h3>
+                <p>壓力大時容易憋氣、吸不深或胸口悶。呼吸還在急促或淺層時，身體也比較難相信現在已經安全。</p>
+            </div>
+            <div class="observation-item">
+                <h3>第三種：情緒沒有出口型</h3>
+                <p>白天一直忍住、撐住、先把事情做完，情緒沒有被消化時，身體可能用緊繃替那些壓下來的感受承擔。</p>
+            </div>
+            <div class="observation-item">
+                <h3>第四種：缺少轉場訊號型</h3>
+                <p>從工作、照顧、應付直接切到休息，身體不一定跟得上。沒有明確轉場時，身體可能還停在上一個角色裡。</p>
+            </div>
+        </div>
 
-            <h3>如果壓力留在身體裡，單靠一種方式不夠</h3>
-            <p>每個人壓力留下來的位置不一樣，恢復也需要不同的入口：</p>
-            <ul class="text-sm space-y-2 list-disc list-inside bg-[#EBE5DF]/30 p-6 rounded-xl">
-                <li><strong>肌肉：</strong>肩頸緊、背緊、下巴咬緊。</li>
-                <li><strong>呼吸：</strong>胸口悶、吸不深、常常憋氣。</li>
-                <li><strong>腸胃：</strong>胃脹、逆流、便祕或腹瀉。</li>
-                <li><strong>睡眠：</strong>入睡困難、半夜醒、多夢、睡醒不清爽。</li>
-                <li><strong>食慾：</strong>晚上特別想吃、想吃甜、脆、鹹或重口味。</li>
+        <h2>單靠一種方式，有時只能暫時舒服</h2>
+        <p>按摩、伸展、熱敷都可能有幫助，但如果壓力留在身體裡的方式很多，單一方法就容易只處理到其中一層。</p>
+        <p>例如肌肉放鬆了，但呼吸仍然很淺；肩頸鬆一點了，但晚上還是一直滑手機、腦袋停不下來。這時候不是方法沒用，而是身體可能需要更多入口一起協助它回來。</p>
+
+        <div class="gentle-card">
+            <ul>
+                <li>肌肉緊繃時，可以從熱敷、伸展、泡腳或降低身體用力開始。</li>
+                <li>胸口悶或呼吸淺時，可以練習讓吐氣比吸氣長一點。</li>
+                <li>感官太滿時，可以調暗燈光、遠離手機，讓刺激慢慢下降。</li>
+                <li>情緒壓住時，可以用書寫、說出「我累了」或找人訴說，讓身體不用代替情緒承擔。</li>
+                <li>角色切換困難時，可以設計一個回家後或睡前的小轉場。</li>
             </ul>
-            <p class="mt-4">因為壓力表現位置不同，恢復也需要建立「多入口」的工具箱。</p>
+        </div>
 
-            <h3>恢復力工具箱：針對部位的恢復策略</h3>
-            <div class="bg-[#8C7D70]/10 p-8 rounded-2xl my-10">
-                <p class="text-lg font-bold text-[#8C7D70] mb-4">觀察一下：做完這件事，身體是更有電還是更累？</p>
-                <ul class="space-y-3 text-sm">
-                    <li><strong>肌肉卸載：</strong>熱敷、泡腳，練習「我可以少用力一點」。</li>
-                    <li><strong>呼吸回穩：</strong>練習吐氣長於吸氣，傳達「不用再應付」的訊息。</li>
-                    <li><strong>感官安定：</strong>調暗燈光、遠離手機，提供基本的安全感。</li>
-                    <li><strong>情緒出口：</strong>說出「我累了」、找人訴說，避免情緒繼續由身體代為承擔。</li>
-                    <li><strong>節奏轉場：</strong>回家後換上輕鬆衣物、睡前寫下待辦事項，完成明確的切換。</li>
-                </ul>
-            </div>
+        <h2>真正要練習的，是讓身體經驗到不用一直撐住</h2>
+        <p>身體緊繃時，先別急著消滅它。可以先觀察：壓力最常停在哪裡？是肩頸、胸口、胃、下巴、睡眠，還是晚上的食慾？</p>
+        <p>當我們找到壓力留下來的位置，就比較能選擇對應的小工具，而不是只用意志力要求自己放鬆。</p>
 
-            <p class="text-lg font-medium text-[#666]">身體緊繃時，先別急著消滅它。試著觀察壓力停留在哪裡？我可以從哪一個小入口，讓身體慢慢回來？</p>
+        <div class="summary-card">
+            <h2>重點整理</h2>
+            <ul class="summary-list">
+                <li>身體緊繃不一定只是肌肉問題，也可能是壓力留下的身體訊號。</li>
+                <li>事情完成不代表壓力解除，身體有時需要明確的轉場訊號。</li>
+                <li>緊繃可能出現在肌肉、呼吸、情緒出口與角色切換之間。</li>
+                <li>按摩與伸展可以幫忙，但真正的恢復常常需要多個入口一起支持。</li>
+                <li>與其命令自己放鬆，不如讓身體一次一次經驗到：現在可以不用一直撐住。</li>
+            </ul>
+        </div>
 
-            <h3>重點整理</h3>
-            <div class="bg-[#EBE5DF]/60 p-8 rounded-2xl text-sm space-y-4 text-[#4A4540]">
-                <p>• 緊繃不一定是肌肉問題，可能是壓力留下的殘影。</p>
-                <p>• 事情完成不代表壓力解除，身體需要明確的「轉場」訊號。</p>
-                <p>• 根據壓力停滯的位置（肌肉、呼吸、情緒等），選擇對應的恢復工具。</p>
-                <p>• 真正的恢復是做完後感到「有電」，而非僅是轉移注意力的麻痺。</p>
-                <p>• 與其急著消除緊繃，不如先理解身體為何需要持續「撐住」。</p>
-            </div>
-
-            <div class="text-center mt-16 text-[#8C7D70] font-medium px-4">
-                <p>真正的放鬆，不是命令自己放鬆，而是一次一次讓身體經驗到：現在不用一直撐住，我有別的方式可以回來。當身體開始收到這些訊息，緊繃才有機會慢慢鬆開。</p>
-            </div>
-
-        </article>
+        <p class="closing-note">
+            真正的放鬆，<br>
+            不是命令自己立刻放鬆。<br>
+            而是一次一次讓身體知道：<br>
+            現在不用一直撐住，<br>
+            我有別的方式可以慢慢回來。
+        </p>
     </main>
 
-    <section class="max-w-4xl mx-auto px-6 py-12 border-t border-[#EBE5DF]">
-        <h3 class="text-center text-sm tracking-widest text-[#8C7D70] mb-8">延伸閱讀</h3>
-        <div class="grid md:grid-cols-2 gap-6">
-            <a href="stress_tired_after_rest.html" class="block p-6 bg-white border border-[#EBE5DF] rounded-2xl hover:border-[#8C7D70]/50 transition">
-                <span class="text-xs text-[#8C7D70]">身體訊號 · 恢復力</span>
-                <p class="font-medium mt-2">為什麼休息了還是累？</p>
+    <section class="related-section">
+        <div class="section-mini-title">延伸閱讀</div>
+        <div class="qa-divider"></div>
+        <div class="related-grid">
+            <a class="related-card" href="body_signals_fatigue.html">
+                <div>
+                    <div class="related-label">01｜如果你也常覺得累</div>
+                    <h3>為什麼明明沒做什麼，身體卻覺得很累？</h3>
+                    <p>疲倦不一定只是睡不夠，也可能是身體長期處在消耗與恢復不足之間。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
             </a>
-            <a href="body_signals_low_motivation.html" class="block p-6 bg-white border border-[#EBE5DF] rounded-2xl hover:border-[#8C7D70]/50 transition">
-                <span class="text-xs text-[#8C7D70]">身體訊號 · 動能</span>
-                <p class="font-medium mt-2">為什麼明明沒有生病，卻總是提不起勁？</p>
+            <a class="related-card" href="body_signals_low_motivation.html">
+                <div>
+                    <div class="related-label">02｜如果也提不起勁</div>
+                    <h3>為什麼明明沒有生病，卻總是提不起勁？</h3>
+                    <p>提不起勁不是懶，有時是身體能量、壓力與恢復力正在下降的訊號。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
             </a>
-            <a href="body_signals_more_sensitive.html" class="block p-6 bg-white border border-[#EBE5DF] rounded-2xl hover:border-[#8C7D70]/50 transition">
-                <span class="text-xs text-[#8C7D70]">身體訊號 · 覺察</span>
-                <p class="font-medium mt-2">變敏感一定是退步嗎？</p>
+            <a class="related-card" href="stress_daily_recovery_tools.html">
+                <div>
+                    <div class="related-label">03｜如果想建立恢復工具</div>
+                    <h3>為什麼明明知道該休息，卻還是做不到？</h3>
+                    <p>恢復不只是休息，而是把能讓身體回來的小工具放回日常生活。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
             </a>
-            <a href="body_signals_normal_tests.html" class="block p-6 bg-white border border-[#EBE5DF] rounded-2xl hover:border-[#8C7D70]/50 transition">
-                <span class="text-xs text-[#8C7D70]">身體訊號 · 檢查</span>
-                <p class="font-medium mt-2">為什麼檢查正常，還是覺得不舒服？</p>
-            </a>
-        </div>
-        <div class="mt-12 text-center">
-            <a href="body_signals.html" class="inline-block px-8 py-3 bg-[#8C7D70] text-white font-medium rounded-full hover:bg-[#74675B] transition">回到身體訊號</a>
         </div>
     </section>
 
-    <footer class="py-16 text-center text-sm text-[#8C7D70]/60">
-        <p>© 2026 代謝美學 METABOLIC ESTHETICS</p>
-    </footer>
-
+    <div class="article-nav">
+        <a class="text-link" href="body_signals.html">← 回到身體訊號</a>
+        <a class="text-link" href="index.html">返回代謝美學首頁</a>
+    </div>
 </body>
 </html>
