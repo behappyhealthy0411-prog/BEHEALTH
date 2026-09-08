@@ -182,16 +182,17 @@
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 18px;
+            align-items: stretch;
         }
 
         .qa-card {
             background-color: var(--accent-soft);
             border: 1px solid var(--accent-light);
             padding: 24px 22px;
-            min-height: 116px;
+            min-height: 150px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
         .qa-num {
@@ -209,6 +210,7 @@
             line-height: 1.7;
             font-weight: 500;
             letter-spacing: 0.03em;
+            min-height: calc(1.8em * 3);
         }
 
         .article-content {
@@ -470,6 +472,7 @@
             .article-title { font-size: 1.75rem; letter-spacing: 0.04em; }
             .qa-grid, .related-grid, .observation-grid { grid-template-columns: 1fr; }
             .qa-card, .related-card { min-height: auto; }
+            .qa-text, .qa-card p { min-height: auto; }
             .article-content { padding-top: 50px; }
             .section-heading { margin-top: 48px; }
         }
