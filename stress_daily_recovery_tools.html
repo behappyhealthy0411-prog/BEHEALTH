@@ -1,158 +1,598 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>為什麼明明知道該休息，卻還是做不到？ | 代謝美學</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        background: '#FAF8F5',
-                        wood: { 500: '#8C7D70' },
-                        moss: { 500: '#7B8365' },
-                        stone: { 200: '#EBE5DF' },
-                        stress: {
-                            main: '#8E9E9B',
-                            dark: '#6F7F7C',
-                            light: '#DDE8E6'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <title>為什麼明明知道該休息，卻還是做不到？｜壓力與自律神經｜代謝美學</title>
+    <meta name="description" content="明明知道該休息，卻總是做不到，不一定是意志力不足。從恢復門檻、過往充電經驗、日常小工具與生活錨點，理解如何把恢復放回生活裡。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/stress_daily_recovery_tools.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600&display=swap');
-        body { font-family: 'Noto Sans TC', sans-serif; background-color: #FAF8F5; color: #2D2B29; }
+        :root {
+            --font-sans: 'Noto Sans TC', sans-serif;
+            --bg-primary: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #8C7D70;
+            --text-soft: #A39A92;
+            --border-color: rgba(45, 43, 41, 0.10);
+            --accent-main: #8E9E9B;
+            --accent-dark: #6F7F7C;
+            --accent-light: #DDE8E6;
+            --accent-soft: rgba(221, 232, 230, 0.42);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.95;
+            letter-spacing: 0.03em;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .navbar {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--bg-block);
+            background-color: transparent;
+        }
+
+        .nav-wrapper {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo-main {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            line-height: 1.2;
+        }
+
+        .logo-sub {
+            margin-top: 4px;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+        }
+
+        .nav-item {
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.25s ease;
+        }
+
+        .nav-item:hover,
+        .nav-item.active { color: var(--accent-dark); }
+
+        .nav-item.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: var(--accent-main);
+        }
+
+        .article-hero {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 82px 24px 52px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            display: block;
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+        }
+
+        .hero-category {
+            margin-top: 10px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            letter-spacing: 0.14em;
+        }
+
+        .article-title {
+            margin: 34px 0 0;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+            font-weight: 500;
+        }
+
+        .hero-intro {
+            max-width: 620px;
+            margin: 30px auto 0;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.05;
+        }
+
+        .qa-section {
+            padding: 38px 0;
+            background-color: rgba(245, 240, 234, 0.58);
+            border-top: 1px solid rgba(45, 43, 41, 0.08);
+            border-bottom: 1px solid rgba(45, 43, 41, 0.08);
+        }
+
+        .qa-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-mini-title {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+        }
+
+        .qa-divider {
+            width: 32px;
+            height: 1px;
+            margin: 10px auto 24px;
+            background-color: rgba(142, 158, 155, 0.45);
+        }
+
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        .qa-card {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-light);
+            padding: 26px 22px;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .qa-label {
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            letter-spacing: 0.08em;
+        }
+
+        .qa-card p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.8;
+            font-weight: 400;
+            min-height: calc(1.8em * 3);
+        }
+
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 66px 24px 36px;
+        }
+
+        .article-content p {
+            margin: 0 0 22px;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+
+        .article-content h2 {
+            margin: 58px 0 22px;
+            font-size: 25px;
+            line-height: 1.55;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        .article-content h2::after {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 1px;
+            margin-top: 14px;
+            background-color: var(--accent-main);
+        }
+
+        .gentle-card,
+        .observation-item,
+        .summary-card {
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gentle-card {
+            background-color: rgba(221, 232, 230, 0.30);
+            border-color: rgba(142, 158, 155, 0.24);
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+
+        .gentle-card.cream-style {
+            background-color: var(--bg-secondary);
+            border-color: var(--border-color);
+        }
+
+        .gentle-card ul,
+        .summary-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .gentle-card li,
+        .summary-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .gentle-card li:last-child,
+        .summary-list li:last-child { margin-bottom: 0; }
+
+        .gentle-card li::before,
+        .summary-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-dark);
+            font-size: 13px;
+        }
+
+        .observation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 28px 0 8px;
+        }
+
+        .observation-item {
+            background-color: var(--bg-secondary);
+            padding: 24px;
+        }
+
+        .observation-item h3 {
+            margin: 0 0 10px;
+            color: var(--accent-dark);
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .observation-item p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .summary-card {
+            background-color: rgba(221, 232, 230, 0.38);
+            border-color: var(--accent-light);
+            padding: 32px;
+            margin: 56px 0 48px;
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .closing-note {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.1;
+            margin: 48px auto 8px;
+        }
+
+        .related-section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 58px 24px 28px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .related-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .related-card:hover {
+            background-color: var(--accent-light);
+            border-color: var(--accent-main);
+            transform: translateY(-5px);
+        }
+
+        .related-label {
+            color: var(--accent-dark);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .related-card h3 {
+            margin: 18px 0 12px;
+            font-size: 18px;
+            line-height: 1.55;
+            font-weight: 500;
+        }
+
+        .related-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            margin-top: 22px;
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .article-nav {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 36px 24px 64px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .text-link {
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-bottom: 1px solid rgba(140, 125, 112, 0.42);
+            padding-bottom: 3px;
+            transition: color 0.25s ease, border-color 0.25s ease;
+        }
+
+        .text-link:hover {
+            color: var(--accent-dark);
+            border-color: var(--accent-dark);
+        }
+
+        @media (max-width: 760px) {
+            .nav-wrapper { flex-direction: column; align-items: flex-start; }
+            .nav-links { width: 100%; justify-content: space-between; gap: 14px; font-size: 12px; }
+            .article-hero { padding-top: 58px; }
+            .qa-grid,
+            .observation-grid,
+            .related-grid { grid-template-columns: 1fr; }
+            .qa-card,
+            .related-card { min-height: auto; }
+            .qa-card p { min-height: auto; }
+            .article-title { font-size: 32px; }
+            .hero-intro { font-size: 16px; }
+            .article-content { padding-top: 52px; }
+            .article-content h2 { font-size: 22px; }
+        }
     </style>
 </head>
 <body>
-
-    <!-- Nav -->
-    <nav class="max-w-5xl mx-auto px-6 py-8 flex justify-between items-center">
-        <div class="text-center">
-            <div class="text-lg font-semibold tracking-widest">代謝美學</div>
-            <div class="text-[10px] tracking-[0.2em] uppercase text-wood-500">METABOLIC ESTHETICS</div>
-        </div>
-        <div class="flex gap-6 text-sm items-center">
-            <a href="index.html" class="hover:text-moss-500 transition-colors">首頁</a>
-            <a href="stress_recovery.html" class="hover:text-moss-500 transition-colors">壓力與自律神經</a>
-            <a href="https://lin.ee/pzxDU3O" class="bg-[#7B8365] text-white px-4 py-2 rounded-full hover:bg-[#6a7558] transition-colors">預約諮詢</a>
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <a href="index.html" aria-label="返回代謝美學首頁">
+                <div class="logo-main">代謝美學</div>
+                <div class="logo-sub">METABOLIC ESTHETICS</div>
+            </a>
+            <div class="nav-links" aria-label="主選單">
+                <a class="nav-item" href="index.html">首頁</a>
+                <a class="nav-item active" href="stress_recovery.html">壓力與自律神經</a>
+                <a class="nav-item" href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener">預約諮詢</a>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header class="max-w-3xl mx-auto px-6 py-20 text-center">
-        <span class="text-xs tracking-widest text-[#8E9E9B] font-semibold uppercase">STRESS & RECOVERY</span>
-        <div class="text-sm text-wood-500 mt-2 tracking-wide uppercase">壓力與自律神經 · 恢復建立型</div>
-        <h1 class="text-4xl md:text-5xl font-semibold text-[#2D2B29] mt-6 leading-tight">為什麼明明知道該休息，卻還是做不到？</h1>
-        <p class="mt-8 text-lg text-wood-500 leading-relaxed max-w-xl mx-auto">
-            我們總以為恢復需要宏大的儀式感，卻忽略了生活裡那些微小、穩定且能反覆經驗的碎片，才是滋養身體的真正養分。
-        </p>
+    <header class="article-hero">
+        <span class="hero-tag">STRESS & RECOVERY</span>
+        <div class="hero-category">壓力與自律神經 · 恢復建立型</div>
+        <h1 class="article-title">為什麼明明知道該休息，<br>卻還是做不到？</h1>
+        <p class="hero-intro">我們總以為恢復需要宏大的儀式感，卻忽略了生活裡那些微小、穩定且能反覆經驗的碎片，才是滋養身體的真正養分。</p>
     </header>
 
-    <!-- Q&A Section -->
-    <section class="py-12 bg-stress-light/40 border-y border-stone-200/30 backdrop-blur-sm">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-8">
-                <span class="text-xs tracking-widest text-wood-500 font-medium">這篇文章會帶你看懂</span>
-                <div class="w-8 h-[1px] bg-stress-main/40 mx-auto mt-2"></div>
-            </div>
-            <div class="grid gap-4 md:grid-cols-3">
-                <div class="bg-stress-light/60 p-6 rounded-2xl border border-stress-light flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-stress-dark font-semibold mb-2 block">Q 1</span>
-                    <p class="text-[14px] text-[#2D2B29] leading-relaxed">為什麼理智上知道需要休息，身體卻總是無法執行？</p>
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="section-mini-title">這篇文章會帶你看懂</div>
+            <div class="qa-divider"></div>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <span class="qa-label">Q 1</span>
+                    <p>為什麼理智上知道需要休息，身體卻總是無法執行？</p>
                 </div>
-                <div class="bg-stress-light/60 p-6 rounded-2xl border border-stress-light flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-stress-dark font-semibold mb-2 block">Q 2</span>
-                    <p class="text-[14px] text-[#2D2B29] leading-relaxed">如何從過往的充電經驗中，拆解出真正的恢復元素？</p>
+                <div class="qa-card">
+                    <span class="qa-label">Q 2</span>
+                    <p>如何從過往的充電經驗中，拆解出真正的恢復元素？</p>
                 </div>
-                <div class="bg-stress-light/60 p-6 rounded-2xl border border-stress-light flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-stress-dark font-semibold mb-2 block">Q 3</span>
-                    <p class="text-[14px] text-[#2D2B29] leading-relaxed">日常中該如何建立「錨點」，將微型恢復放入生活？</p>
+                <div class="qa-card">
+                    <span class="qa-label">Q 3</span>
+                    <p>日常中該如何建立「錨點」，將微型恢復放入生活？</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <article class="max-w-2xl mx-auto px-6 py-16 space-y-12">
-        <p class="text-lg leading-relaxed text-[#2D2B29]">很多人其實知道自己需要休息。知道壓力太大了，知道睡眠不夠穩，知道身體一直緊繃，也知道自己最近容易煩躁，靠著食物或追劇來支撐。</p>
-        
-        <!-- Insight Card -->
-        <div class="bg-[#E2E7D8]/30 p-8 rounded-2xl border border-[#E2E7D8]">
-            <h2 class="text-xl font-semibold text-[#7B8365] mb-4">為什麼我們會把恢復想得太難？</h2>
-            <p class="text-[#2D2B29] leading-relaxed">我們常有一種迷思，認為一定要出國、去山上、按摩或泡溫泉，才叫真正放鬆。但在現實生活中，完整且空白的時間很少出現。如果恢復一直被放在「未來」，身體的消耗卻是每天都在累積的。</p>
+    <main class="article-content">
+        <p>很多人其實知道自己需要休息。知道壓力太大了，知道睡眠不夠穩，知道身體一直緊繃，也知道自己最近容易煩躁，靠著食物或追劇來支撐。</p>
+        <p>可是知道是一回事，做得到是另一回事。很多時候，不是你不重視恢復，而是你把恢復想得太大、太完整、太需要空檔。於是只要生活沒有剛好空下來，恢復就一直被放到以後。</p>
+
+        <div class="gentle-card cream-style">
+            <p><strong>恢復做不到，常常不是意志力不足，而是恢復的門檻被設定得太高。</strong></p>
+            <p>當恢復一定要等到有完整時間、完整心情、完整空間才開始，身體每天累積的消耗，就很難被即時接住。</p>
         </div>
 
-        <section>
-            <h3 class="text-xl font-semibold mb-6 text-moss-500">拆解你的「充電經驗」</h3>
-            <p class="leading-relaxed mb-6">恢復工具不一定是憑空想出來的，它藏在那些曾經讓你覺得充電的經驗裡。試著將大的經驗拆解，提取其中的元素：</p>
-            <div class="grid md:grid-cols-2 gap-4">
-                <div class="bg-stone-200/50 p-5 rounded-xl text-sm">溪頭三天兩夜 → 轉化為「看樹十分鐘」或「綠意步行」。</div>
-                <div class="bg-stone-200/50 p-5 rounded-xl text-sm">音樂廳沉浸感 → 轉化為「午休時的一首純音樂」。</div>
+        <h2>為什麼我們會把恢復想得太難？</h2>
+        <p>我們常有一種迷思，認為一定要出國、去山上、按摩或泡溫泉，才叫真正放鬆。但在現實生活中，完整且空白的時間很少出現。如果恢復一直被放在「未來」，身體的消耗卻是每天都在累積的。</p>
+        <p>所以，恢復不一定要從很大的計畫開始。很多時候，真正能放進生活的，是比較小、比較穩、比較容易重複的版本。</p>
+
+        <h2>知道該休息卻做不到，常見有四種狀況</h2>
+        <div class="observation-grid">
+            <div class="observation-item">
+                <h3>一｜門檻太高型</h3>
+                <p>把恢復想成需要很多時間、很安靜的環境或完整儀式，結果現實生活一忙，就很難開始。</p>
             </div>
-        </section>
-
-        <!-- Tool Value Card -->
-        <div class="bg-stone-200/20 p-8 rounded-2xl">
-            <h3 class="text-xl font-semibold mb-4">日常小工具的價值</h3>
-            <p class="leading-relaxed text-[#5D5753]">有些人會覺得，小工具好像太小了：走十分鐘、聽一首歌、喝一杯茶，真的有用嗎？這些懷疑很正常。小工具的價值不在於一次完全恢復，而在於它<strong>比較容易開始、比較容易重複</strong>，讓身體透過反覆體驗來累積穩定感。</p>
+            <div class="observation-item">
+                <h3>二｜經驗太大型</h3>
+                <p>過去曾經被旅行、森林、音樂或泡湯充電，但不知道怎麼把這些經驗拆成日常可執行的小版本。</p>
+            </div>
+            <div class="observation-item">
+                <h3>三｜身體不信任型</h3>
+                <p>身體長期習慣撐著，即使理智知道要休息，也很難立刻感覺安全，需要靠反覆的小經驗慢慢建立。</p>
+            </div>
+            <div class="observation-item">
+                <h3>四｜沒有錨點型</h3>
+                <p>恢復如果只停留在「有空再做」，很容易被生活擠掉。需要接在固定時間、場景或既有行為後面。</p>
+            </div>
         </div>
 
-        <section>
-            <h3 class="text-xl font-semibold mb-6 text-moss-500">刻意練習與身體經驗</h3>
-            <p class="leading-relaxed">我們不是只要「知道」休息的好處，而是需要讓身體「體驗」。透過錨點（如：刷牙後、回到家後）觸發恢復動作，讓身體慢慢感覺到：「做了這個，我的胃比較舒服」、「聽完這首歌，我的情緒比較穩」。當身體累積這些穩定經驗，恢復才會自然發生。</p>
-        </section>
-    </article>
-
-    <!-- Summary Section -->
-    <section class="max-w-3xl mx-auto px-6 py-12">
-        <div class="bg-[#EBE5DF]/40 p-8 rounded-2xl border border-stone-200/50">
-            <h2 class="text-xl font-semibold mb-4 text-[#2D2B29]">重點整理</h2>
-            <ul class="space-y-3 text-sm text-[#5D5753]">
-                <li>• 恢復做不到，往往是因為「門檻」設得太高，而非意志力不足。</li>
-                <li>• 回想過去覺得充電的時刻，拆解其中的元素（音樂、自然、安靜）。</li>
-                <li>• 將這些元素轉化為 5-10 分鐘的小版本，放入日常空隙。</li>
-                <li>• 善用「錨點」：將恢復動作接在洗澡、吃飯、下班等既定行為之後。</li>
-                <li>• 恢復需要重複練習，讓身體透過「反覆體驗穩定」來建立信任感。</li>
+        <h2>拆解你的「充電經驗」</h2>
+        <p>恢復工具不一定是憑空想出來的，它常常藏在那些曾經讓你覺得充電的經驗裡。重點不是把整個經驗搬回生活，而是拆出其中真正讓你回穩的元素。</p>
+        <div class="gentle-card">
+            <ul>
+                <li>溪頭三天兩夜，也許可以拆成「看樹十分鐘」或「綠意步行」。</li>
+                <li>音樂廳的沉浸感，也許可以拆成「午休時的一首純音樂」。</li>
+                <li>旅行時不用做決定，也許可以拆成「今晚先不安排太多選項」。</li>
+                <li>泡湯後身體放鬆，也許可以拆成「睡前熱敷或泡腳十分鐘」。</li>
             </ul>
         </div>
-    </section>
 
-    <!-- Gentle Ending -->
-    <section class="max-w-2xl mx-auto px-6 py-16 text-center">
-        <p class="text-[#5D5753] leading-loose italic">
+        <h2>日常小工具的價值，不在於一次完全恢復</h2>
+        <p>有些人會覺得，小工具好像太小了：走十分鐘、聽一首歌、喝一杯茶，真的有用嗎？這些懷疑很正常。</p>
+        <p>小工具的價值不在於一次完全恢復，而在於它比較容易開始、比較容易重複，讓身體透過反覆體驗來累積穩定感。</p>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>不是一次走十分鐘，就要把所有疲累清空。</li>
+                <li>而是讓身體反覆體驗：我可以慢慢降速。</li>
+                <li>不是一次聽音樂，就要解決所有壓力。</li>
+                <li>而是讓神經系統反覆收到：我有一個可以回來的小地方。</li>
+            </ul>
+        </div>
+
+        <h2>刻意練習與身體經驗</h2>
+        <p>我們不是只要「知道」休息的好處，而是需要讓身體「體驗」。透過錨點，例如刷牙後、回到家後、晚餐後，觸發一個很小的恢復動作。</p>
+        <p>當身體慢慢感覺到：「做了這個，我的胃比較舒服」、「聽完這首歌，我的情緒比較穩」、「走完十分鐘，我比較回得來」，恢復才會從知識，慢慢變成身體願意相信的經驗。</p>
+
+        <h2>把微型恢復放進生活錨點</h2>
+        <p>恢復如果只是寫在腦中，很容易被忘記。可以先選一個小錨點，讓恢復接在已經存在的生活行為後面。</p>
+        <div class="gentle-card">
+            <ul>
+                <li>刷牙後，把手機放遠一點，讓燈光暗下來。</li>
+                <li>晚餐後，不急著坐回螢幕前，先慢慢走十分鐘。</li>
+                <li>回到家後，先喝幾口水，感受身體的重量。</li>
+                <li>工作中間，給自己三分鐘，停止所有訊息回覆。</li>
+                <li>忙碌的一天裡，先吃一餐比較穩定的食物。</li>
+            </ul>
+        </div>
+        <p>重點不是完美執行，而是讓身體在日常裡反覆經驗：我不是只有累壞了，才會被照顧。</p>
+
+        <section class="summary-card">
+            <h2>重點整理</h2>
+            <ul class="summary-list">
+                <li>恢復做不到，往往是因為門檻設得太高，而不是意志力不足。</li>
+                <li>回想過去覺得充電的時刻，可以拆解其中的元素，例如音樂、自然、安靜或不用做決定。</li>
+                <li>將這些元素轉化為 5 到 10 分鐘的小版本，才比較容易放進日常空隙。</li>
+                <li>善用錨點，將恢復動作接在洗澡、吃飯、下班、刷牙等既定行為之後。</li>
+                <li>恢復需要重複練習，讓身體透過反覆體驗穩定，慢慢建立信任感。</li>
+            </ul>
+        </section>
+
+        <p class="closing-note">
             很多恢復工具，其實藏在你曾經覺得充電的經驗裡。<br>
             也許是綠樹。也許是音樂。也許是安靜。也許是慢慢走路。<br>
-            你不需要一次把整個經驗搬回生活。<br>
-            只要先拆下一小塊。讓它在日常裡出現幾次。讓身體慢慢體驗。<br>
-            讓自己感覺到：原來這樣做，我真的比較穩。
+            你不需要一次把整個經驗搬回生活，<br>
+            只要先拆下一小塊，讓它在日常裡出現幾次。<br>
+            讓身體慢慢體驗：原來這樣做，我真的比較穩。
         </p>
-    </section>
+    </main>
 
-    <!-- Extended Reading -->
-    <section class="max-w-3xl mx-auto px-6 py-12 border-t border-stone-200">
-        <h3 class="text-lg font-semibold mb-6 text-center">延伸閱讀</h3>
-        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <a href="stress_painkiller_or_recovery.html" class="block p-4 border border-stone-200 rounded-xl hover:bg-stone-100 transition-all text-sm text-center">你的紓壓方式，是止痛藥還是恢復藥？</a>
-            <a href="stress_compensatory_rest.html" class="block p-4 border border-stone-200 rounded-xl hover:bg-stone-100 transition-all text-sm text-center">為什麼放假、旅行、按摩後，還是沒有真正恢復？</a>
-            <a href="stress_schedule_recovery.html" class="block p-4 border border-stone-200 rounded-xl hover:bg-stone-100 transition-all text-sm text-center">為什麼恢復總是被排到最後？</a>
-            <a href="stress_signs_of_recovery.html" class="block p-4 border border-stone-200 rounded-xl hover:bg-stone-100 transition-all text-sm text-center">怎麼知道自己的恢復力正在變好？</a>
+    <section class="related-section">
+        <div class="section-mini-title">延伸閱讀</div>
+        <div class="qa-divider"></div>
+        <div class="related-grid">
+            <a class="related-card" href="stress_painkiller_or_recovery.html">
+                <div>
+                    <span class="related-label">01｜放鬆辨識型</span>
+                    <h3>你的紓壓方式，是止痛藥，還是恢復藥？</h3>
+                    <p>分辨當下舒服與真正回穩，是建立恢復力的開始。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
+            <a class="related-card" href="stress_compensatory_rest.html">
+                <div>
+                    <span class="related-label">02｜消耗辨識型</span>
+                    <h3>為什麼放假、旅行、按摩之後，還是沒有真正恢復？</h3>
+                    <p>當恢復只留到累壞以後，身體可能已經撐了太久。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
+            <a class="related-card" href="stress_schedule_recovery.html">
+                <div>
+                    <span class="related-label">03｜恢復建立型</span>
+                    <h3>為什麼恢復總是被排到最後？</h3>
+                    <p>恢復不是不重要，而是如果沒有位置，就會一直被生活擠掉。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <div class="max-w-2xl mx-auto px-6 py-16 flex justify-center gap-4">
-        <a href="stress_recovery.html" class="px-6 py-3 border border-stone-200 rounded-full text-sm hover:bg-stone-200 transition-colors">返回壓力與恢復</a>
-    </div>
-
-    <footer class="text-center py-12 text-wood-500 text-xs tracking-widest">
-        © METABOLIC ESTHETICS
-    </footer>
-
+    <nav class="article-nav" aria-label="文章底部導覽">
+        <a class="text-link" href="stress_recovery.html">← 回到壓力與自律神經</a>
+        <a class="text-link" href="index.html">返回代謝美學首頁</a>
+    </nav>
 </body>
 </html>
