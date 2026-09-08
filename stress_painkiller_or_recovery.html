@@ -174,18 +174,19 @@
 
         .qa-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 16px;
+            align-items: stretch;
         }
 
         .qa-card {
             background-color: var(--accent-soft);
             border: 1px solid var(--accent-light);
             padding: 22px 20px;
-            min-height: 112px;
+            min-height: 150px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
         .qa-label {
@@ -200,6 +201,7 @@
             font-size: 14px;
             line-height: 1.7;
             font-weight: 400;
+            min-height: calc(1.7em * 3);
         }
 
         .article-content {
@@ -415,6 +417,9 @@
             .qa-grid,
             .observation-grid,
             .related-grid { grid-template-columns: 1fr; }
+            .qa-card,
+            .related-card { min-height: auto; }
+            .qa-card p { min-height: auto; }
             .article-title { font-size: 32px; }
             .hero-intro { font-size: 16px; }
             .article-content { padding-top: 52px; }
