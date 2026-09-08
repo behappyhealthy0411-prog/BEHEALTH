@@ -169,18 +169,19 @@
 
         .qa-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 16px;
+            align-items: stretch;
         }
 
         .qa-card {
             background-color: var(--accent-soft);
             border: 1px solid var(--accent-light);
             padding: 22px 20px;
-            min-height: 112px;
+            min-height: 150px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
         .qa-label {
@@ -195,6 +196,7 @@
             font-size: 14px;
             line-height: 1.7;
             font-weight: 400;
+            min-height: calc(1.7em * 3);
         }
 
         .article-content {
@@ -408,6 +410,8 @@
             .nav-links { width: 100%; justify-content: space-between; gap: 14px; font-size: 12px; }
             .article-hero { padding-top: 58px; }
             .qa-grid, .observation-grid, .related-grid { grid-template-columns: 1fr; }
+            .qa-card, .related-card { min-height: auto; }
+            .qa-card p { min-height: auto; }
             .article-content { padding-top: 52px; }
             .article-content h2 { font-size: 22px; }
         }
