@@ -60,10 +60,40 @@
         .qa-container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
         .section-mini-title { text-align: center; color: var(--text-secondary); font-size: 12px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; }
         .qa-divider { width: 32px; height: 1px; margin: 10px auto 24px; background-color: rgba(142, 158, 155, 0.45); }
-        .qa-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-        .qa-card { background-color: var(--accent-soft); border: 1px solid var(--accent-light); padding: 22px 20px; min-height: 112px; display: flex; flex-direction: column; justify-content: center; }
-        .qa-label { color: var(--accent-dark); font-size: 12px; font-weight: 600; margin-bottom: 6px; }
-        .qa-card p { margin: 0; font-size: 14px; line-height: 1.7; font-weight: 400; }
+
+        /* QA 卡片等高規則：所有文章頁固定使用。三張卡片等高，題目文字區預留三行高度，避免因換行數不同而視覺不齊。 */
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        .qa-card {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-light);
+            padding: 26px 22px;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .qa-label {
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            letter-spacing: 0.08em;
+        }
+
+        .qa-card p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.8;
+            font-weight: 400;
+            min-height: calc(1.8em * 3);
+        }
 
         .article-content { max-width: 720px; margin: 0 auto; padding: 66px 24px 36px; }
         .article-content p { margin: 0 0 22px; color: var(--text-primary); font-size: 16px; }
@@ -105,6 +135,7 @@
             .nav-links { width: 100%; justify-content: space-between; gap: 14px; font-size: 12px; }
             .article-hero { padding-top: 58px; }
             .qa-grid, .observation-grid, .related-grid { grid-template-columns: 1fr; }
+            .qa-card p { min-height: auto; }
             .article-title { font-size: 32px; }
             .article-content h2 { font-size: 22px; }
         }
@@ -166,96 +197,97 @@
         <div class="observation-grid">
             <div class="observation-item">
                 <h3>一｜壓力變複雜型</h3>
-                <p>以前的壓力可能比較單一，睡一覺就能回來。現在同時有工作、家庭、照顧責任、健康焦慮與經濟壓力，原本的方法可能已經不夠承接。</p>
+                <p>以前的壓力可能比較單一，睡一覺就能回來。現在同時有工作、家庭、照顧責任、健康焦慮與資訊干擾，原本的方法自然比較不夠用。</p>
             </div>
             <div class="observation-item">
-                <h3>二｜恢復速度變慢型</h3>
-                <p>身體長期累積睡眠不足、血糖波動、腸胃負擔或發炎狀態時，就算休息或娛樂了，恢復速度也可能變慢。</p>
+                <h3>二｜刺激耐受型</h3>
+                <p>壓力越大，大腦越想找快速、明確、有感的安慰。可是越靠刺激型放鬆，身體可能越需要更強的刺激，才有短暫的舒服。</p>
             </div>
             <div class="observation-item">
-                <h3>三｜刺激越用越重型</h3>
-                <p>壓力越大，大腦越容易想找快速、有感、熟悉的刺激。當刺激只能短暫止痛，下一次就可能需要更強的刺激才有感。</p>
+                <h3>三｜恢復不足型</h3>
+                <p>有些方法能讓當下好過，卻沒有讓睡眠、食慾、情緒或身體張力真正回穩。久了以後，就會覺得做完還是累。</p>
             </div>
             <div class="observation-item">
-                <h3>四｜工具太單一型</h3>
-                <p>如果生活裡只剩吃東西、滑手機、追劇這幾種紓壓方式，一旦壓力來源變多，身體就容易反覆回到同一條路，卻仍然回不穩。</p>
+                <h3>四｜工具太少型</h3>
+                <p>如果生活裡只有吃東西、滑手機、追劇幾種方法，壓力一來，身體就只能反覆走向同樣的出口，恢復選擇會越來越窄。</p>
             </div>
         </div>
 
-        <h2>為什麼壓力越大，越想要更刺激的放鬆？</h2>
-        <p>身體長期疲勞時，大腦會更想尋找快速、明確、有感的安慰。這不是你變貪心，也不只是自制力不好，而是疲累的大腦會自然偏向比較省力、比較立即的出口。</p>
+        <h2>為什麼壓力越大，越容易需要更刺激的放鬆？</h2>
+        <p>身體長期疲勞時，大腦會更想尋找快速、明確、有感的安慰。這不代表你變貪心或沒自制力，而是對疲勞的大腦來說，這些方式比較省力。</p>
         <div class="gentle-card">
             <ul>
-                <li>更快得到舒服感，例如滑手機、追短影音。</li>
-                <li>更明確刺激味覺，例如甜食、飲料、重口味。</li>
-                <li>更容易暫時逃離壓力，例如追劇、購物、遊戲。</li>
-                <li>更熟悉也更省力，不需要再思考要怎麼照顧自己。</li>
+                <li>更快的：立刻有感，不需要等待。</li>
+                <li>更甜的：快速帶來安慰與補償感。</li>
+                <li>更刺激的：暫時蓋過疲憊、煩躁或空掉的感覺。</li>
+                <li>更熟悉的：不用重新思考，身體自動就會走過去。</li>
             </ul>
         </div>
-        <p>這些方式不一定不好，它們有時候真的能讓人先撐過去。只是如果每次壓力來，都只能走向同一種刺激，身體就可能陷入「舒服一下，之後更累」的循環。</p>
+        <p>這種「累了找刺激、舒服一下、舒服過後更累、又更想找刺激」的循環，代表你需要處理的可能不是自制力，而是恢復工具太少了。</p>
 
-        <h2>不是把舊方法丟掉，而是增加新的路</h2>
-        <p>我們不需要把追劇、滑手機、吃喜歡的東西全部歸類成錯誤。真正需要看的，是生活裡是不是只剩這些方法。</p>
-        <p>止痛藥型的紓壓可以讓當下好過一點，但恢復藥型的工具，才比較能讓身體慢慢回穩。當原本的方法越來越沒用，不一定是要更用力控制自己，而是需要擴充工具箱。</p>
-
-        <h2>恢復力工具箱，可以從小方法開始</h2>
-        <p>恢復力工具不一定要很厲害，也不一定要花很多錢。重點是做完以後，身體會不會比較穩一點。</p>
+        <h2>做完之後比較穩，還是只是當下比較舒服？</h2>
+        <p>判斷一個紓壓方式比較像止痛藥，還是比較像恢復藥，不是看它當下快不快樂，而是看做完之後，身體有沒有更穩。</p>
         <div class="gentle-card cream-style">
             <ul>
-                <li>散步十分鐘，讓身體從腦袋裡回到腳步裡。</li>
-                <li>曬太陽、喝茶、泡腳，給身體一個轉場訊號。</li>
-                <li>整理一小塊空間，讓外在環境也變得比較可承接。</li>
-                <li>和信任的人說話，把壓力從身體裡移出來一點。</li>
-                <li>安靜獨處、伸展、呼吸，讓神經系統慢慢降速。</li>
+                <li>做完之後，我的睡眠是更穩，還是更晚睡？</li>
+                <li>做完之後，我的食慾是更平衡，還是更想繼續吃？</li>
+                <li>做完之後，我的情緒是比較安定，還是更空、更煩？</li>
+                <li>做完之後，我的身體是比較鬆，還是肩頸更緊、腦袋更停不下來？</li>
+                <li>隔天醒來，我有比較回來，還是更難啟動？</li>
             </ul>
         </div>
 
-        <h2>可以先從一個問題開始</h2>
-        <p>如果你發現以前有效的紓壓方式，現在越來越沒用，不需要立刻責備自己，也不需要馬上制定一套新的規則。</p>
-        <p>可以先觀察一件事：</p>
+        <h2>不是否定舊方法，而是更新恢復力工具箱</h2>
+        <p>以前有效的方式不需要被責備。它們曾經在某些時候幫你撐過來。只是當生活負荷變了，身體也變了，原本的工具箱可能需要增加新的工具。</p>
+        <p>恢復力工具箱指的是能幫助你回到穩定狀態的方法。不一定要花很多錢，也不一定要做很大的改變，而是慢慢累積那些做完之後，身體真的比較回得來的選項。</p>
         <div class="gentle-card">
-            <p><strong>做完這件事之後，我是只有當下比較舒服，還是接下來真的比較穩？</strong></p>
-            <p>這個問題能幫你慢慢分辨：哪些是短暫止痛，哪些是真的有幫助身體恢復。</p>
+            <ul>
+                <li>散步、曬太陽，讓身體重新接上白天節律。</li>
+                <li>閱讀、喝茶、安靜獨處，讓神經系統有機會降速。</li>
+                <li>整理空間，把外在混亂降低一點。</li>
+                <li>和信任的人說話，讓壓力不用全部留在身體裡。</li>
+                <li>伸展、泡澡、溫和活動，讓身體從緊繃回到流動。</li>
+            </ul>
         </div>
 
         <section class="summary-card">
             <h2>重點整理</h2>
             <ul class="summary-list">
-                <li>以前有效的紓壓方式，現在失效，不一定是你變脆弱了。</li>
-                <li>壓力變複雜、恢復速度變慢、刺激越用越重，都可能讓舊方法變得不夠用。</li>
-                <li>刺激型放鬆不一定不好，但如果生活裡只剩這一種路，身體就比較難真正回穩。</li>
-                <li>恢復力工具箱的重點，不是完美自律，而是多幾個可以讓自己回來的方法。</li>
-                <li>可以先從觀察「做完之後比較穩，還是只是當下比較舒服」開始。</li>
+                <li>以前有效的紓壓方式現在失效，不一定是你變脆弱了，而是壓力與生活型態變複雜了。</li>
+                <li>壓力越大，大腦越容易渴望快速、明確、有刺激感的放鬆。</li>
+                <li>當一個方法只讓當下舒服，卻沒有讓睡眠、情緒、食慾與身體張力回穩，就可能比較像短暫止痛。</li>
+                <li>恢復力需要工具箱，不是只靠一兩種熟悉的方法撐過所有壓力。</li>
+                <li>可以從觀察「做完之後我有沒有比較穩」開始，慢慢更新自己的恢復方式。</li>
             </ul>
         </section>
 
-        <p class="closing-note">恢復力不是要你變成一個永遠不會累的人，<br>而是當原本的方法不夠用時，<br>你還願意溫柔地替自己，準備新的路。</p>
+        <p class="closing-note">恢復力不是要你變成一個永遠不會累的人。<br>而是當原本的方法不夠用時，<br>你還願意溫柔地替自己，準備新的路。</p>
     </main>
 
     <section class="related-section">
         <div class="section-mini-title">延伸閱讀</div>
         <div class="related-grid">
-            <a class="related-card" href="stress_painkiller_or_recovery.html">
+            <a class="related-card" href="stress_recovery_not_rest.html">
                 <div>
-                    <span class="related-label">01｜放鬆辨識型</span>
-                    <h3>你的紓壓方式，是止痛藥，還是恢復藥？</h3>
-                    <p>分辨哪些方法只是暫時止痛，哪些方法真的讓身體回穩。</p>
+                    <span class="related-label">01｜恢復不足型</span>
+                    <h3>為什麼休息了，卻還是很累？</h3>
+                    <p>有些休息只是停止消耗，不一定讓身體真正回穩。</p>
                 </div>
                 <span class="read-more">閱讀文章 →</span>
             </a>
-            <a class="related-card" href="stress_recovery_not_rest.html">
+            <a class="related-card" href="stress_painkiller_or_recovery.html">
                 <div>
-                    <span class="related-label">02｜恢復不足型</span>
-                    <h3>為什麼休息了，卻還是很累？</h3>
-                    <p>休息不等於恢復，身體需要的是重新回到穩定。</p>
+                    <span class="related-label">02｜放鬆辨識型</span>
+                    <h3>你的紓壓方式，是止痛藥，還是恢復藥？</h3>
+                    <p>分辨當下舒服與真正回穩，是建立恢復力的開始。</p>
                 </div>
                 <span class="read-more">閱讀文章 →</span>
             </a>
             <a class="related-card" href="stress_personalized_recovery.html">
                 <div>
-                    <span class="related-label">03｜恢復辨識型</span>
+                    <span class="related-label">03｜個人化恢復</span>
                     <h3>為什麼恢復沒有標準答案？</h3>
-                    <p>每個人的壓力停留位置不同，恢復入口也會不一樣。</p>
+                    <p>每個人的壓力來源、身體節律與恢復需求都不一樣。</p>
                 </div>
                 <span class="read-more">閱讀文章 →</span>
             </a>
