@@ -76,13 +76,13 @@
 
         .qa-divider { width: 32px; height: 1px; margin: 10px auto 24px; background-color: rgba(142, 132, 147, 0.45); }
 
-        .qa-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .qa-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
 
-        .qa-card { background-color: var(--accent-soft); border: 1px solid var(--accent-light); padding: 22px 20px; min-height: 112px; display: flex; flex-direction: column; justify-content: center; }
+        .qa-card { background-color: var(--accent-soft); border: 1px solid var(--accent-light); padding: 22px 20px; min-height: 150px; display: flex; flex-direction: column; justify-content: flex-start; }
 
         .qa-label { color: var(--accent-dark); font-size: 12px; font-weight: 600; margin-bottom: 6px; }
 
-        .qa-card p { margin: 0; font-size: 14px; line-height: 1.7; font-weight: 400; }
+        .qa-card p { margin: 0; font-size: 14px; line-height: 1.7; font-weight: 400; min-height: calc(1.7em * 3); }
 
         .article-content { max-width: 720px; margin: 0 auto; padding: 66px 24px 36px; }
 
@@ -150,6 +150,8 @@
             .nav-links { width: 100%; justify-content: space-between; gap: 14px; font-size: 12px; }
             .article-hero { padding-top: 58px; }
             .qa-grid, .observation-grid, .related-grid { grid-template-columns: 1fr; }
+            .qa-card, .related-card { min-height: auto; }
+            .qa-card p { min-height: auto; }
             .article-title { font-size: 32px; }
         }
     </style>
