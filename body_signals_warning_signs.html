@@ -8,17 +8,18 @@
     <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/body_signals_warning_signs.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --font-sans: 'Noto Sans TC', sans-serif;
             --bg-primary: #FAF8F5;
             --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
             --bg-card: #FFFFFF;
             --text-primary: #2D2B29;
-            --text-secondary: #5F5A55;
-            --text-muted: #8C8680;
-            --border-color: rgba(45, 43, 41, 0.12);
+            --text-secondary: #8C7D70;
+            --text-soft: #A39A92;
+            --border-color: rgba(45, 43, 41, 0.10);
             --accent-main: #8E8493;
             --accent-dark: #6F6675;
             --accent-light: #ECE6EF;
@@ -29,28 +30,29 @@
 
         body {
             margin: 0;
-            font-family: var(--font-sans);
-            color: var(--text-primary);
             background-color: var(--bg-primary);
-            letter-spacing: 0.03em;
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-weight: 300;
             line-height: 1.95;
+            letter-spacing: 0.03em;
         }
 
         a { color: inherit; text-decoration: none; }
 
         .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 
-        .navbar { padding: 28px 0; border-bottom: 1px solid var(--bg-secondary); background-color: transparent; }
+        .navbar { padding: 28px 0; border-bottom: 1px solid var(--bg-block); background-color: transparent; }
 
         .nav-wrapper { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
 
-        .logo-main { display: block; font-size: 18px; font-weight: 700; letter-spacing: 0.02em; line-height: 1.25; }
+        .logo-main { display: block; font-size: 14px; font-weight: 500; letter-spacing: 0.22em; line-height: 1.2; }
 
-        .logo-sub { display: block; margin-top: 2px; font-size: 10px; letter-spacing: 0.22em; color: var(--text-muted); text-transform: uppercase; }
+        .logo-sub { display: block; margin-top: 4px; font-size: 10px; letter-spacing: 0.2em; color: var(--text-secondary); text-transform: uppercase; }
 
-        .nav-links { display: flex; gap: 28px; align-items: center; font-size: 14px; color: var(--text-secondary); }
+        .nav-links { display: flex; gap: 28px; align-items: center; font-size: 13px; color: var(--text-secondary); letter-spacing: 0.08em; }
 
-        .nav-item { position: relative; padding-bottom: 4px; transition: color .2s ease; }
+        .nav-item { position: relative; padding-bottom: 4px; transition: color 0.25s ease; }
 
         .nav-item:hover, .nav-item.active { color: var(--accent-dark); }
 
@@ -58,41 +60,41 @@
 
         .article-hero { max-width: 760px; margin: 0 auto; padding: 82px 24px 52px; text-align: center; }
 
-        .hero-tag { display: block; font-size: 11px; letter-spacing: 0.3em; color: var(--accent-main); font-weight: 700; text-transform: uppercase; }
+        .hero-tag { display: block; color: var(--accent-dark); font-size: 12px; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; }
 
-        .hero-category { margin-top: 12px; font-size: 13px; color: var(--text-muted); letter-spacing: 0.18em; font-weight: 500; }
+        .hero-category { margin-top: 10px; color: var(--text-secondary); font-size: 14px; letter-spacing: 0.14em; }
 
-        .article-title { margin: 24px 0 0; font-size: clamp(34px, 5vw, 48px); line-height: 1.45; font-weight: 600; letter-spacing: 0.04em; }
+        .article-title { margin: 34px 0 0; font-size: clamp(32px, 5vw, 48px); line-height: 1.35; letter-spacing: 0.02em; font-weight: 500; }
 
-        .hero-intro { margin: 28px auto 0; max-width: 640px; color: var(--text-secondary); font-size: 18px; line-height: 2; }
+        .hero-intro { max-width: 620px; margin: 30px auto 0; color: var(--text-secondary); font-size: 17px; line-height: 2.05; }
 
-        .qa-section { padding: 38px 0; background-color: rgba(245, 240, 234, .58); border-top: 1px solid rgba(45, 43, 41, .08); border-bottom: 1px solid rgba(45, 43, 41, .08); }
+        .qa-section { padding: 38px 0; background-color: rgba(245, 240, 234, 0.58); border-top: 1px solid rgba(45, 43, 41, 0.08); border-bottom: 1px solid rgba(45, 43, 41, 0.08); }
 
         .qa-container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 
-        .qa-title { text-align: center; color: var(--accent-dark); font-size: 13px; letter-spacing: 0.18em; font-weight: 600; margin-bottom: 26px; }
+        .section-mini-title { text-align: center; color: var(--text-secondary); font-size: 12px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; }
 
-        .qa-divider { width: 36px; height: 1px; background-color: rgba(142, 132, 147, .45); margin: 8px auto 0; }
+        .qa-divider { width: 32px; height: 1px; margin: 10px auto 24px; background-color: rgba(142, 132, 147, 0.45); }
 
         .qa-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 
         .qa-card { background-color: var(--accent-soft); border: 1px solid var(--accent-light); padding: 22px 20px; min-height: 112px; display: flex; flex-direction: column; justify-content: center; }
 
-        .qa-number { display: block; color: var(--accent-dark); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+        .qa-label { color: var(--accent-dark); font-size: 12px; font-weight: 600; margin-bottom: 6px; }
 
-        .qa-card p { margin: 0; font-size: 14px; line-height: 1.75; font-weight: 500; }
+        .qa-card p { margin: 0; font-size: 14px; line-height: 1.7; font-weight: 400; }
 
-        .article-content { max-width: 720px; margin: 0 auto; padding: 64px 24px 0; }
+        .article-content { max-width: 720px; margin: 0 auto; padding: 66px 24px 36px; }
 
-        .article-content p { margin: 0 0 26px; color: var(--text-primary); font-size: 17px; line-height: 2; }
+        .article-content p { margin: 0 0 22px; color: var(--text-primary); font-size: 16px; }
 
-        .article-content h2 { position: relative; margin: 58px 0 24px; font-size: 25px; line-height: 1.55; font-weight: 700; letter-spacing: 0.04em; }
+        .article-content h2 { margin: 58px 0 22px; font-size: 25px; line-height: 1.55; font-weight: 500; letter-spacing: 0.04em; }
 
-        .article-content h2::after { content: ""; display: block; width: 44px; height: 2px; margin-top: 12px; background-color: var(--accent-main); }
+        .article-content h2::after { content: ""; display: block; width: 42px; height: 1px; margin-top: 14px; background-color: var(--accent-main); }
 
         .gentle-card, .observation-item, .summary-card { border-radius: 4px; border: 1px solid var(--border-color); }
 
-        .gentle-card { background-color: rgba(236, 230, 239, .30); border-color: rgba(142, 132, 147, .24); padding: 24px 28px; margin: 24px 0; }
+        .gentle-card { background-color: rgba(236, 230, 239, 0.30); border-color: rgba(142, 132, 147, 0.24); padding: 24px 28px; margin: 24px 0; }
 
         .gentle-card.cream-style { background-color: var(--bg-secondary); border-color: var(--border-color); }
 
@@ -101,61 +103,54 @@
 
         .gentle-card ul, .summary-list { list-style: none; padding: 0; margin: 0; }
 
-        .gentle-card li, .summary-list li { position: relative; padding-left: 24px; margin-bottom: 12px; color: var(--text-secondary); font-size: 16px; line-height: 1.9; }
+        .gentle-card li, .summary-list li { position: relative; padding-left: 24px; margin-bottom: 10px; color: var(--text-secondary); font-size: 16px; line-height: 1.9; }
 
         .gentle-card li:last-child, .summary-list li:last-child { margin-bottom: 0; }
 
-        .gentle-card li::before, .summary-list li::before { content: "✦"; position: absolute; left: 0; color: var(--accent-dark); font-size: 13px; top: 2px; }
+        .gentle-card li::before, .summary-list li::before { content: "✦"; position: absolute; left: 0; top: 0; color: var(--accent-dark); font-size: 13px; }
 
-        .observation-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin: 28px 0 30px; }
+        .observation-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 28px 0 8px; }
 
         .observation-item { background-color: var(--bg-secondary); padding: 24px; }
 
-        .observation-item h3 { margin: 0 0 10px; color: var(--accent-dark); font-size: 18px; line-height: 1.5; }
+        .observation-item h3 { margin: 0 0 10px; color: var(--accent-dark); font-size: 17px; font-weight: 500; line-height: 1.6; }
 
-        .observation-item p { margin: 0; color: var(--text-secondary); font-size: 15px; line-height: 1.9; }
+        .observation-item p { margin: 0; color: var(--text-secondary); font-size: 15px; line-height: 1.85; }
 
-        .summary-card { background-color: rgba(236, 230, 239, .38); border-color: var(--accent-light); padding: 32px; margin: 56px 0 48px; }
+        .summary-card { background-color: rgba(236, 230, 239, 0.38); border-color: var(--accent-light); padding: 32px; margin: 56px 0 48px; }
 
         .summary-card h2 { margin-top: 0; }
-        .summary-card h2::after { background-color: var(--accent-dark); }
 
-        .closing-note { margin: 0 auto 58px; max-width: 660px; text-align: center; color: var(--text-secondary); font-size: 17px; line-height: 2.05; }
+        .closing-note { text-align: center; color: var(--text-secondary); font-size: 17px; line-height: 2.1; margin: 48px auto 8px; }
 
         .related-section { max-width: 960px; margin: 0 auto; padding: 58px 24px 28px; border-top: 1px solid var(--border-color); }
 
-        .related-title { text-align: center; margin: 0 0 30px; color: var(--accent-dark); font-size: 14px; letter-spacing: 0.2em; font-weight: 600; }
+        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
 
-        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-
-        .related-card { background-color: var(--bg-card); border: 1px solid var(--border-color); padding: 24px; min-height: 220px; display: flex; flex-direction: column; justify-content: space-between; transition: background-color .2s ease, border-color .2s ease, transform .2s ease; }
+        .related-card { background-color: var(--bg-card); border: 1px solid var(--border-color); padding: 24px; min-height: 220px; display: flex; flex-direction: column; justify-content: space-between; transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease; }
 
         .related-card:hover { background-color: var(--accent-light); border-color: var(--accent-main); transform: translateY(-5px); }
 
-        .related-label { color: var(--accent-dark); font-size: 12px; letter-spacing: 0.12em; font-weight: 600; }
+        .related-label { color: var(--accent-dark); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
 
-        .related-card h3 { margin: 16px 0 12px; font-size: 19px; line-height: 1.55; }
+        .related-card h3 { margin: 18px 0 12px; font-size: 18px; line-height: 1.55; font-weight: 500; }
 
         .related-card p { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.8; }
 
-        .read-more { margin-top: 20px; color: var(--accent-dark); font-size: 14px; font-weight: 600; }
+        .read-more { margin-top: 22px; color: var(--accent-dark); font-size: 13px; font-weight: 400; }
 
         .article-nav { max-width: 720px; margin: 0 auto; padding: 36px 24px 64px; text-align: center; display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
 
-        .text-link { color: var(--text-secondary); border-bottom: 1px solid rgba(95, 90, 85, .32); padding-bottom: 2px; font-size: 14px; transition: color .2s ease, border-color .2s ease; }
+        .text-link { color: var(--text-secondary); font-size: 14px; border-bottom: 1px solid rgba(140, 125, 112, 0.42); padding-bottom: 3px; transition: color 0.25s ease, border-color 0.25s ease; }
 
         .text-link:hover { color: var(--accent-dark); border-color: var(--accent-dark); }
 
         @media (max-width: 760px) {
-            .navbar { padding: 22px 0; }
-            .nav-wrapper { align-items: flex-start; flex-direction: column; }
-            .nav-links { width: 100%; justify-content: space-between; gap: 12px; font-size: 13px; }
-            .article-hero { padding: 62px 22px 42px; }
-            .article-title { font-size: 32px; }
-            .hero-intro { font-size: 16px; }
+            .nav-wrapper { flex-direction: column; align-items: flex-start; }
+            .nav-links { width: 100%; justify-content: space-between; gap: 14px; font-size: 12px; }
+            .article-hero { padding-top: 58px; }
             .qa-grid, .observation-grid, .related-grid { grid-template-columns: 1fr; }
-            .article-content { padding-top: 52px; }
-            .article-content h2 { font-size: 22px; }
+            .article-title { font-size: 32px; }
         }
     </style>
 </head>
@@ -186,21 +181,21 @@
 
     <section class="qa-section">
         <div class="qa-container">
-            <div class="qa-title">
+            <div class="section-mini-title">
                 這篇文章會帶你看懂
                 <div class="qa-divider"></div>
             </div>
             <div class="qa-grid">
                 <div class="qa-card">
-                    <span class="qa-number">Q 1</span>
+                    <span class="qa-label">Q 1</span>
                     <p>一次的不舒服，和反覆出現的模式，有什麼不同？</p>
                 </div>
                 <div class="qa-card">
-                    <span class="qa-number">Q 2</span>
+                    <span class="qa-label">Q 2</span>
                     <p>怎麼分辨是可以先觀察，還是不適合再忍耐？</p>
                 </div>
                 <div class="qa-card">
-                    <span class="qa-number">Q 3</span>
+                    <span class="qa-label">Q 3</span>
                     <p>為什麼「忍得住」不代表身體真的沒事？</p>
                 </div>
             </div>
@@ -304,7 +299,7 @@
     </main>
 
     <section class="related-section">
-        <h2 class="related-title">延伸閱讀</h2>
+        <h2 class="section-mini-title">延伸閱讀</h2>
         <div class="related-grid">
             <a class="related-card" href="body_signals_normal_tests.html">
                 <div>
