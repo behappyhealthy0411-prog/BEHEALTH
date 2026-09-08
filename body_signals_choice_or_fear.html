@@ -1,182 +1,145 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>變敏感後，是更會選擇，還是更害怕生活？｜身體訊號｜代謝美學</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="身體變敏感後，不一定要走向更多限制。從身體訊號、飲食恐懼、生活選擇與安全感，重新理解如何把反應變成選擇的線索。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/body_signals_choice_or_fear.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
-        body { font-family: 'Noto Sans TC', sans-serif; background-color: #FAF8F5; color: #2D2B29; }
-        .text-wood { color: #8C7D70; }
-        .bg-wood { background-color: #8C7D70; }
-        .border-wood { border-color: #8C7D70; }
-        .text-moss { color: #7B8365; }
-        .bg-moss { background-color: #7B8365; }
-        .border-moss { border-color: #7B8365; }
+        :root { --font-sans: 'Noto Sans TC', sans-serif; --bg-primary: #FAF8F5; --bg-secondary: #F5F0EA; --bg-block: #EBE5DF; --bg-card: #FFFFFF; --text-primary: #2D2B29; --text-secondary: #8C7D70; --text-soft: #A39A92; --border-color: rgba(45,43,41,.10); --accent-main: #8E8493; --accent-dark: #6F6675; --accent-light: #ECE6EF; --accent-soft: rgba(236,230,239,.42); }
+        * { box-sizing: border-box; }
+        body { margin:0; background:var(--bg-primary); color:var(--text-primary); font-family:var(--font-sans); font-weight:300; line-height:1.95; letter-spacing:.03em; }
+        a { color:inherit; text-decoration:none; }
+        .navbar { padding:28px 0; border-bottom:1px solid var(--bg-block); background:transparent; }
+        .nav-wrapper { max-width:1080px; margin:0 auto; padding:0 24px; display:flex; justify-content:space-between; align-items:center; gap:24px; }
+        .logo-main { font-size:14px; font-weight:500; letter-spacing:.22em; line-height:1.2; }
+        .logo-sub { margin-top:4px; font-size:10px; letter-spacing:.2em; color:var(--text-secondary); text-transform:uppercase; }
+        .nav-links { display:flex; gap:28px; align-items:center; font-size:13px; color:var(--text-secondary); letter-spacing:.08em; }
+        .nav-item { position:relative; padding-bottom:4px; transition:color .25s ease; }
+        .nav-item:hover,.nav-item.active { color:var(--accent-dark); }
+        .nav-item.active::after { content:""; position:absolute; left:0; right:0; bottom:0; height:1px; background:var(--accent-main); }
+        .article-hero { max-width:760px; margin:0 auto; padding:82px 24px 52px; text-align:center; }
+        .hero-tag { display:block; color:var(--accent-dark); font-size:12px; font-weight:500; letter-spacing:.32em; text-transform:uppercase; }
+        .hero-category { margin-top:10px; color:var(--text-secondary); font-size:14px; letter-spacing:.14em; }
+        .article-title { margin:34px 0 0; font-size:clamp(32px,5vw,48px); line-height:1.35; letter-spacing:.02em; font-weight:500; }
+        .hero-intro { max-width:620px; margin:30px auto 0; color:var(--text-secondary); font-size:17px; line-height:2.05; }
+        .qa-section { padding:38px 0; background:rgba(245,240,234,.58); border-top:1px solid rgba(45,43,41,.08); border-bottom:1px solid rgba(45,43,41,.08); }
+        .qa-container { max-width:900px; margin:0 auto; padding:0 24px; }
+        .section-mini-title { text-align:center; color:var(--text-secondary); font-size:12px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; }
+        .qa-divider { width:32px; height:1px; margin:10px auto 24px; background:rgba(142,132,147,.45); }
+        .qa-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+        .qa-card { background:var(--accent-soft); border:1px solid var(--accent-light); padding:22px 20px; min-height:112px; display:flex; flex-direction:column; justify-content:center; }
+        .qa-label { color:var(--accent-dark); font-size:12px; font-weight:600; margin-bottom:6px; }
+        .qa-card p { margin:0; font-size:14px; line-height:1.7; font-weight:400; }
+        .article-content { max-width:720px; margin:0 auto; padding:66px 24px 36px; }
+        .article-content p { margin:0 0 22px; color:var(--text-primary); font-size:16px; }
+        .article-content h2 { margin:58px 0 22px; font-size:25px; line-height:1.55; font-weight:500; letter-spacing:.04em; }
+        .article-content h2::after { content:""; display:block; width:42px; height:1px; margin-top:14px; background:var(--accent-main); }
+        .gentle-card,.observation-item,.summary-card { border-radius:4px; border:1px solid var(--border-color); }
+        .gentle-card { background:rgba(236,230,239,.30); border-color:rgba(142,132,147,.24); padding:24px 28px; margin:24px 0; }
+        .gentle-card.cream-style { background:var(--bg-secondary); border-color:var(--border-color); }
+        .gentle-card ul,.summary-list { list-style:none; padding:0; margin:0; }
+        .gentle-card li,.summary-list li { position:relative; padding-left:24px; margin-bottom:10px; }
+        .gentle-card li:last-child,.summary-list li:last-child { margin-bottom:0; }
+        .gentle-card li::before,.summary-list li::before { content:"✦"; position:absolute; left:0; top:0; color:var(--accent-dark); font-size:13px; }
+        .observation-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin:28px 0 8px; }
+        .observation-item { background:var(--bg-secondary); padding:24px; }
+        .observation-item h3 { margin:0 0 10px; color:var(--accent-dark); font-size:17px; font-weight:500; line-height:1.6; }
+        .observation-item p { margin:0; color:var(--text-secondary); font-size:15px; line-height:1.85; }
+        .summary-card { background:rgba(236,230,239,.38); border-color:var(--accent-light); padding:32px; margin:56px 0 48px; }
+        .summary-card h2 { margin-top:0; }
+        .closing-note { text-align:center; color:var(--text-secondary); font-size:17px; line-height:2.1; margin:48px auto 8px; }
+        .related-section { max-width:960px; margin:0 auto; padding:58px 24px 28px; border-top:1px solid var(--border-color); }
+        .related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:28px; }
+        .related-card { background:var(--bg-card); border:1px solid var(--border-color); padding:24px; min-height:220px; display:flex; flex-direction:column; justify-content:space-between; transition:background-color .25s ease,border-color .25s ease,transform .25s ease; }
+        .related-card:hover { background:var(--accent-light); border-color:var(--accent-main); transform:translateY(-5px); }
+        .related-label { color:var(--accent-dark); font-size:11px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; }
+        .related-card h3 { margin:18px 0 12px; font-size:18px; line-height:1.55; font-weight:500; }
+        .related-card p { margin:0; color:var(--text-secondary); font-size:14px; line-height:1.8; }
+        .read-more { margin-top:22px; color:var(--accent-dark); font-size:13px; font-weight:400; }
+        .article-nav { max-width:720px; margin:0 auto; padding:36px 24px 64px; text-align:center; display:flex; justify-content:center; gap:28px; flex-wrap:wrap; }
+        .text-link { color:var(--text-secondary); font-size:14px; border-bottom:1px solid rgba(140,125,112,.42); padding-bottom:3px; transition:color .25s ease,border-color .25s ease; }
+        .text-link:hover { color:var(--accent-dark); border-color:var(--accent-dark); }
+        @media (max-width:760px) { .nav-wrapper{flex-direction:column;align-items:flex-start;} .nav-links{width:100%;justify-content:space-between;gap:14px;font-size:12px;} .article-hero{padding-top:58px;} .qa-grid,.observation-grid,.related-grid{grid-template-columns:1fr;} .article-content{padding-top:52px;} .related-card{min-height:auto;} }
     </style>
 </head>
-<body class="leading-relaxed text-[#2D2B29]">
-
-    <!-- 導覽列 -->
-    <nav class="bg-[#FAF8F5]/80 backdrop-blur-md border-b border-stone-200/50 p-6 sticky top-0 z-50">
-        <div class="max-w-3xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="flex flex-col">
-                <span class="text-xl font-bold tracking-widest text-[#2D2B29]">代謝美學</span>
-                <span class="text-[10px] tracking-[0.2em] text-[#8C7D70]">METABOLIC ESTHETICS</span>
-            </a>
-            <div class="flex items-center gap-6">
-                <a href="index.html" class="text-sm text-[#8C7D70] hover:text-[#2D2B29] transition">首頁</a>
-                <a href="body_signals.html" class="text-sm text-[#8C7D70] hover:text-[#2D2B29] transition">身體訊號</a>
-                <a href="https://lin.ee/pzxDU3O" class="text-sm bg-[#7B8365] text-white px-4 py-2 rounded-full hover:bg-[#6a7558] transition">預約諮詢</a>
-            </div>
+<body>
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <a href="index.html" aria-label="返回代謝美學首頁"><div class="logo-main">代謝美學</div><div class="logo-sub">METABOLIC ESTHETICS</div></a>
+            <div class="nav-links" aria-label="主要導覽"><a class="nav-item" href="index.html">首頁</a><a class="nav-item active" href="body_signals.html">身體訊號</a><a class="nav-item" href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener">預約諮詢</a></div>
         </div>
     </nav>
 
-    <!-- Hero 區 -->
-    <header class="max-w-2xl mx-auto px-6 py-20 text-center">
-        <div class="text-[10px] tracking-[0.3em] text-[#8C7D70] font-medium mb-4 uppercase">BODY SIGNALS</div>
-        <div class="text-sm text-[#8C7D70] mb-6 tracking-widest">身體訊號 · 敏感與身體界線</div>
-        <h1 class="text-4xl md:text-5xl font-bold text-[#2D2B29] mb-8 leading-tight">變敏感後，是更會選擇，還是更害怕生活？</h1>
-        <p class="text-lg text-[#8C7D70] max-w-lg mx-auto leading-loose">身體訊號不是新的禁令，而是幫助我們更清楚地選擇。</p>
+    <header class="article-hero">
+        <span class="hero-tag">BODY SIGNALS</span>
+        <div class="hero-category">身體訊號 · 敏感與身體界線</div>
+        <h1 class="article-title">變敏感後，是更會選擇，還是更害怕生活？</h1>
+        <p class="hero-intro">當身體訊號變得清楚，有些人會開始更懂得照顧自己；也有些人會越來越害怕食物、外食、咖啡或生活裡的各種刺激。身體變敏感，不一定是要把生活縮小，而是邀請我們學習：怎麼用訊號做選擇，而不是用恐懼限制自己。</p>
     </header>
 
-    <!-- Q&A Section -->
-    <section class="py-12 bg-[#F5F0EA]/40 border-y border-stone-200/30 backdrop-blur-sm">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-10">
-                <span class="text-xs tracking-widest text-[#8C7D70] font-medium">這篇文章會帶你看懂</span>
-                <div class="w-8 h-[1px] bg-[#8C7D70]/40 mx-auto mt-3"></div>
-            </div>
-            <div class="grid gap-4 md:grid-cols-3">
-                <div class="bg-[#EBE5DF]/60 p-6 rounded-2xl border border-[#EBE5DF] flex flex-col justify-center min-h-[140px]">
-                    <span class="text-xs text-[#8C7D70] font-semibold mb-3 block">Q 1</span>
-                    <p class="text-[14px] text-[#2D2B29] leading-relaxed font-medium">為什麼身體變敏感後，有些人會開始覺得生活被限制？</p>
-                </div>
-                <div class="bg-[#EBE5DF]/60 p-6 rounded-2xl border border-[#EBE5DF] flex flex-col justify-center min-h-[140px]">
-                    <span class="text-xs text-[#8C7D70] font-semibold mb-3 block">Q 2</span>
-                    <p class="text-[14px] text-[#2D2B29] leading-relaxed font-medium">身體訊號和飲食禁令有什麼不同？</p>
-                </div>
-                <div class="bg-[#EBE5DF]/60 p-6 rounded-2xl border border-[#EBE5DF] flex flex-col justify-center min-h-[140px]">
-                    <span class="text-xs text-[#8C7D70] font-semibold mb-3 block">Q 3</span>
-                    <p class="text-[14px] text-[#2D2B29] leading-relaxed font-medium">怎麼把「我不能」慢慢改成「我可以怎麼選，身體會比較舒服」？</p>
-                </div>
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="section-mini-title">這篇文章會帶你看懂</div><div class="qa-divider"></div>
+            <div class="qa-grid">
+                <div class="qa-card"><div class="qa-label">Q 1</div><p>為什麼身體變敏感後，有些人反而更害怕生活？</p></div>
+                <div class="qa-card"><div class="qa-label">Q 2</div><p>身體訊號和新的飲食禁令，有什麼不同？</p></div>
+                <div class="qa-card"><div class="qa-label">Q 3</div><p>怎麼把「我不能」慢慢換回「我可以怎麼選」？</p></div>
             </div>
         </div>
     </section>
 
-    <!-- 主內容區 -->
-    <main class="max-w-2xl mx-auto px-6 py-16 text-[#2D2B29] text-lg">
-        <article class="space-y-8">
-            <p>身體變敏感後，很多人會開始更清楚地知道：</p>
-            <div class="bg-white p-6 rounded-2xl border border-stone-100 shadow-sm text-[#8C7D70] italic">
-                咖啡喝多了，晚上會睡不好。<br>
-                甜食空腹吃，下午會更想睡。<br>
-                炸物吃太多，胃會悶、身體會沉。<br>
-                太晚睡，隔天食慾和情緒都容易亂。<br>
-                連續幾天太忙，身體會開始緊、脹、累。
-            </div>
-            <p>這些身體經驗，本來可以幫助我們更認識自己。可是有時候，它也會慢慢變成另一種壓力。</p>
-            <p>開始覺得這個不能吃，那個不能碰。聚餐前先緊張。喝咖啡前先擔心。看到甜食就有罪惡感。外食變得很麻煩。生活好像到處都是地雷。</p>
-            <p>於是，身體訊號明明是想幫助我們，卻不小心變成新的限制。在代謝美學裡，我們會想問的是：<strong>身體訊號，是讓你更會選擇，還是讓你更害怕生活？</strong></p>
+    <main class="article-content">
+        <p>身體變敏感後，很多人會開始更清楚地知道：咖啡喝多了，晚上會睡不好；甜食空腹吃，下午會更想睡；炸物吃太多，胃會悶、身體會沉；太晚睡，隔天食慾和情緒都容易亂。</p>
+        <p>這些身體經驗，本來可以幫助我們更認識自己。可是有時候，它也會慢慢變成另一種壓力：這個不能吃、那個不能碰，聚餐前先緊張，外食變得很麻煩，生活好像到處都是地雷。</p>
+        <div class="gentle-card cream-style"><ul><li>身體訊號本來是提醒，不是判決。</li><li>反應變清楚，不代表生活必須越來越小。</li><li>真正重要的不是變得更嚴格，而是更會選擇。</li></ul></div>
 
-            <h2 class="text-2xl font-bold pt-8">先確認安全：如果恐懼已經影響飲食和生活，需要被支持</h2>
-            <p>身體訊號可以幫助我們調整生活。但如果對食物、外食、聚餐或身體反應的擔心，已經明顯影響日常生活，就不只是一般的身體觀察。如果出現以下情況，建議尋求醫師、營養師或心理專業協助：</p>
-            <div class="bg-[#F5F0EA] p-6 rounded-2xl text-[16px]">
-                <ul class="list-disc pl-5 space-y-2">
-                    <li>因為害怕不舒服，飲食種類快速變少</li>
-                    <li>明明很餓，卻不敢吃許多食物</li>
-                    <li>對食物產生強烈焦慮或罪惡感</li>
-                    <li>外食、聚餐或旅行變得非常困難</li>
-                    <li>體重明顯下降、月經改變或體力明顯下降</li>
-                    <li>花大量時間查詢、計算或反覆確認食物是否安全</li>
-                    <li>吃了某些食物後，情緒上非常自責或恐慌</li>
-                    <li>身體反應合併明顯胸悶、呼吸困難、暈厥、嚴重腹痛、血便或快速惡化的症狀</li>
-                </ul>
-            </div>
-            <p>代謝美學重視身體訊號，但不希望身體訊號變成新的恐懼。如果生活開始被恐懼推著走，需要的不只是更嚴格的控制，而是更穩定的支持與整理。</p>
+        <h2>先確認安全：如果恐懼已經影響飲食和生活，需要被支持</h2>
+        <p>身體訊號可以幫助我們調整生活。但如果對食物、外食、聚餐或身體反應的擔心，已經明顯影響日常生活，就不只是一般的身體觀察。</p>
+        <div class="gentle-card"><ul><li>因為害怕不舒服，飲食種類快速變少。</li><li>明明很餓，卻不敢吃許多食物。</li><li>對食物產生強烈焦慮或罪惡感。</li><li>外食、聚餐或旅行變得非常困難。</li><li>花大量時間查詢、計算或反覆確認食物是否安全。</li><li>吃了某些食物後，情緒上非常自責或恐慌。</li><li>身體反應合併明顯胸悶、呼吸困難、暈厥、嚴重腹痛、血便或快速惡化的症狀。</li></ul></div>
+        <p>代謝美學重視身體訊號，但不希望身體訊號變成新的恐懼。如果生活開始被恐懼推著走，需要的不只是更嚴格的控制，而是更穩定的支持與整理。</p>
 
-            <h2 class="text-2xl font-bold pt-8">身體訊號，不等於新的禁令</h2>
-            <p>當身體反應變清楚，很容易把經驗整理成一句話：「我不能喝咖啡、我不能吃甜食、我不能外食……」。但身體訊號通常不是這麼絕對。它可能是在說：這個時間點不適合、這個份量太多、或是現在壓力大的時候，這個刺激會被放大。</p>
-            
-            <div class="my-10 p-8 border border-[#EBE5DF] bg-[#F5F0EA] rounded-2xl italic text-[#8C7D70] text-center font-bold">
-                「我不能」聽起來像一道牆，但身體訊號更像是一個提醒：<br>你可以換一種方式，讓身體比較舒服。
-            </div>
+        <h2>身體訊號，不等於新的禁令</h2>
+        <p>當身體反應變清楚，很容易把經驗整理成一句話：「我不能喝咖啡、我不能吃甜食、我不能外食。」但身體訊號通常不是這麼絕對。</p>
+        <p>它可能是在說：這個時間點不適合、這個份量太多、現在壓力大的時候這個刺激會被放大，或是身體還沒有足夠餘裕承接它。</p>
 
-            <h2 class="text-2xl font-bold pt-8">「不能吃」和「怎麼吃比較舒服」並不一樣</h2>
-            <p>同樣是咖啡、甜食或聚餐，身體訊號可能不是說你永遠不能做，而是在提醒你調整份量、時間、搭配方式或是前後的恢復空間。如果只用「不能」來理解，選擇會越來越少；若改問「我怎麼做，身體比較舒服？」，選擇就會開始變多。</p>
+        <h2>變敏感後，常見有四種狀況</h2>
+        <div class="observation-grid">
+            <div class="observation-item"><h3>第一種：訊號變清楚型</h3><p>身體開始能分辨什麼讓自己舒服、什麼會讓自己不穩。這不是退步，而是辨識度變高。</p></div>
+            <div class="observation-item"><h3>第二種：恐懼放大型</h3><p>身體一有反應，就立刻解讀成危險或失敗，選擇越來越少，生活也越來越緊。</p></div>
+            <div class="observation-item"><h3>第三種：禁令累積型</h3><p>原本只是某一次不舒服，慢慢變成很多「我不能」。身體訊號被整理成地雷清單，而不是選擇線索。</p></div>
+            <div class="observation-item"><h3>第四種：選擇回來型</h3><p>開始能問自己：這次我要怎麼吃、怎麼喝、怎麼安排，身體會比較舒服，也比較能承接生活。</p></div>
+        </div>
 
-            <h2 class="text-2xl font-bold pt-8">被剝奪感，常常不是來自少吃，而是失去選擇權</h2>
-            <p>很多人痛苦的不是少吃，而是覺得自己被禁令管住了。代謝美學想練習的是：<strong>不是用恐懼控制自己，而是用身體經驗幫助自己做選擇。</strong>當選擇權回到自己身上，被剝奪感才會慢慢下降。</p>
+        <h2>「不能吃」和「怎麼吃比較舒服」並不一樣</h2>
+        <p>同樣是咖啡、甜食或聚餐，身體訊號可能不是說你永遠不能做，而是在提醒你調整份量、時間、搭配方式，或是前後的恢復空間。</p>
+        <div class="gentle-card cream-style"><ul><li>不是「我不能喝咖啡」，而是「我比較適合上午喝，且不要空腹喝」。</li><li>不是「我不能吃甜食」，而是「我比較適合吃完正餐後，少量享受」。</li><li>不是「我不能外食」，而是「我可以選擇讓蛋白質、蔬菜和主食更平衡的搭配」。</li><li>不是「我不能晚睡」，而是「我知道晚睡後需要安排恢復空間」。</li></ul></div>
 
-            <h2 class="text-2xl font-bold pt-8">身體有反應，不代表你做錯了</h2>
-            <p>如果把每一次反應都當成失敗，身體訊號就會變成壓力；若將它當作回饋，它就能成為理解自己的線索。它幫助你調整份量、時間或搭配，而不是責怪那一口食物。</p>
+        <h2>不只記得不舒服，也要記得什麼讓身體舒服</h2>
+        <p>如果只記得不舒服，身體訊號就容易變成一張地雷清單。我們也需要刻意感受什麼做法讓身體穩定、舒服。</p>
+        <p>因為下一次要做選擇時，真正能幫助你的，不只是「不要再吃什麼」，更是「我知道怎麼吃、怎麼安排，身體會比較舒服」。</p>
 
-            <h2 class="text-2xl font-bold pt-8">不只記得不舒服，也要記得什麼讓身體舒服</h2>
-            <p>如果只記得不舒服，身體訊號就容易變成一張地雷清單。我們也需要刻意感受什麼做法讓身體穩定、舒服。因為下一次要做選擇時，真正能幫助你的，不只是「不要再吃什麼」，更是「我知道怎麼吃，身體會比較舒服」。</p>
+        <h2>怎麼把恐懼，慢慢換回選擇？</h2>
+        <p>若發現自己開始被身體反應嚇到，可以先不用急著把生活縮得更小，而是回到幾個溫柔的問題。</p>
+        <div class="gentle-card"><ul><li>這是永遠不能，還是現在不適合？</li><li>是這個食物本身不適合，還是份量、時間、搭配方式需要調整？</li><li>這次反應，是身體真的承接不了，還是最近睡眠、壓力和恢復本來就比較少？</li><li>有沒有一個比較小、比較穩的版本，可以讓我保留生活的彈性？</li></ul></div>
 
-            <div class="my-8 p-6 border-l-4 border-moss bg-[#E2E7D8]/20 rounded-r-2xl italic text-[#7B8365]">
-                舒服或不舒服，都是下一次選擇的線索。
-            </div>
-
-            <h2 class="text-2xl font-bold pt-8">怎麼把恐懼，慢慢換回選擇？</h2>
-            <p>若發現自己開始被身體反應嚇到，試著從三個小問題開始：</p>
-            <ol class="list-decimal pl-5 space-y-4">
-                <li><strong>這是永遠不能，還是現在不適合？</strong> 把「永遠不能」改成「現在不適合」，心裡會多一點空間。</li>
-                <li><strong>我可以調整哪一個條件？</strong> 試著調整份量、時間、慢一點吃或改變搭配，找回選擇感。</li>
-                <li><strong>這次的身體感受，可以怎麼幫助下一次選擇？</strong> 將舒適與不適都視為身體提供的回饋，幫助下一次做更好的安排。</li>
-            </ol>
-        </article>
-
-        <!-- 重點整理 -->
-        <section class="mt-16 bg-[#EBE5DF]/40 p-8 rounded-2xl border border-[#EBE5DF]">
-            <h3 class="text-xl font-bold mb-6 text-[#2D2B29]">重點整理</h3>
-            <ul class="space-y-4 text-[#2D2B29]">
-                <li class="flex items-start"><span>•</span><span class="ml-3">身體訊號不是新的禁令，而是新的選擇依據。</span></li>
-                <li class="flex items-start"><span>•</span><span class="ml-3">「我不能吃」和「我怎麼吃比較舒服」是不一樣的。</span></li>
-                <li class="flex items-start"><span>•</span><span class="ml-3">被剝奪感常常不是來自少吃，而是覺得自己失去選擇權。</span></li>
-                <li class="flex items-start"><span>•</span><span class="ml-3">身體有反應，不代表你做錯了；它可以是一份幫助下一次調整的回饋。</span></li>
-                <li class="flex items-start"><span>•</span><span class="ml-3">不只記得什麼讓身體不舒服，也要刻意感受和記得什麼讓身體舒服；舒服或不舒服，都是下一次選擇的線索。</span></li>
-            </ul>
-        </section>
-
-        <!-- 溫柔結尾 -->
-        <section class="mt-12 text-center text-[#8C7D70]">
-            <p>身體變敏感後，不一定要走向更害怕，也可以走向更清楚。</p>
-            <p>你不是被限制，你是在更懂得怎麼照顧自己。</p>
-        </section>
-
-        <!-- 延伸閱讀 -->
-        <section class="mt-20 pt-12 border-t border-[#EBE5DF]">
-            <h3 class="text-xl font-bold mb-8 text-[#2D2B29] text-center">延伸閱讀</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <a href="body_signals_more_sensitive.html" class="block p-6 bg-white border border-[#EBE5DF] rounded-2xl hover:border-[#8C7D70] transition">
-                    <h4 class="font-bold mb-2 text-[#2D2B29]">變敏感一定是退步嗎？</h4>
-                    <p class="text-sm text-[#8C7D70]">有些敏感不是變差，而是身體終於不再假裝什麼都沒事。</p>
-                </a>
-                <a href="body_signals_everything_feels_hard.html" class="block p-6 bg-white border border-[#EBE5DF] rounded-2xl hover:border-[#8C7D70] transition">
-                    <h4 class="font-bold mb-2 text-[#2D2B29]">為什麼以前做得到的事，現在覺得很費力？</h4>
-                    <p class="text-sm text-[#8C7D70]">先找到做完以後還回得來的節奏。</p>
-                </a>
-                <a href="body_signals_normal_tests.html" class="block p-6 bg-white border border-[#EBE5DF] rounded-2xl hover:border-[#8C7D70] transition">
-                    <h4 class="font-bold mb-2 text-[#2D2B29]">為什麼檢查都正常，還是覺得不舒服？</h4>
-                    <p class="text-sm text-[#8C7D70]">檢查正常是一件好事，但不代表身體已經沒有需要被照顧的地方。</p>
-                </a>
-                <a href="body_signals_warning_signs.html" class="block p-6 bg-white border border-[#EBE5DF] rounded-2xl hover:border-[#8C7D70] transition">
-                    <h4 class="font-bold mb-2 text-[#2D2B29]">身體的小警訊，為什麼不該只靠忍耐？</h4>
-                    <p class="text-sm text-[#8C7D70]">反覆出現的訊號值得被好好聽見。</p>
-                </a>
-            </div>
-            <div class="mt-16 text-center">
-                <a href="body_signals.html" class="text-[#8C7D70] hover:text-[#2D2B29] underline underline-offset-8 transition">返回身體訊號樹</a>
-            </div>
-        </section>
+        <div class="summary-card"><h2>重點整理</h2><ul class="summary-list"><li>身體變敏感，不一定是退步，也可能是訊號變清楚。</li><li>身體訊號是提醒，不是新的禁令。</li><li>若訊號讓生活越來越害怕、越來越受限，就需要更多支持與整理。</li><li>真正重要的不是把所有不舒服都變成「我不能」，而是練習問「我可以怎麼選，身體會比較舒服」。</li></ul></div>
+        <p class="closing-note">身體訊號不是要把生活關小，<br>而是幫助我們更清楚地回到自己身上。<br>當你能從「我不能」慢慢回到「我可以怎麼選」，<br>敏感就不只是限制，<br>也可能成為重新拿回生活選擇權的開始。</p>
     </main>
 
-    <!-- 頁尾 -->
-    <footer class="py-12 text-center text-[#8C7D70] text-sm">
-        &copy; 2026 代謝美學
-    </footer>
+    <section class="related-section">
+        <div class="section-mini-title">延伸閱讀</div><div class="qa-divider"></div>
+        <div class="related-grid">
+            <a class="related-card" href="body_signals_more_sensitive.html"><div><div class="related-label">01｜敏感與身體界線</div><h3>變敏感一定是退步嗎？</h3><p>有些敏感不是變差，而是身體終於不再假裝什麼都沒事。</p></div><div class="read-more">閱讀文章 →</div></a>
+            <a class="related-card" href="body_signals_normal_tests.html"><div><div class="related-label">02｜檢查正常仍不舒服</div><h3>為什麼檢查都正常，還是覺得不舒服？</h3><p>檢查正常是一件好事，但不代表身體已經沒有需要被照顧的地方。</p></div><div class="read-more">閱讀文章 →</div></a>
+            <a class="related-card" href="body_signals_tension.html"><div><div class="related-label">03｜緊繃與撐住</div><h3>為什麼身體總是緊繃，像壓力留在身體？</h3><p>有些緊繃，不只是肌肉問題，而是壓力還留在身體裡。</p></div><div class="read-more">閱讀文章 →</div></a>
+        </div>
+    </section>
 
+    <div class="article-nav"><a class="text-link" href="body_signals.html">← 回到身體訊號</a><a class="text-link" href="index.html">返回代謝美學首頁</a></div>
 </body>
 </html>
