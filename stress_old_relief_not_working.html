@@ -1,162 +1,270 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>為什麼以前有效的紓壓方式，現在越來越沒用？｜代謝美學</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        cream: '#FAF8F5',
-                        milk: '#F5F0EA',
-                        stone: '#EBE5DF',
-                        ink: '#2D2B29',
-                        wood: '#8C7D70',
-                        moss: '#8F9779',
-                        deepmoss: '#7B8365',
-                        lightmoss: '#E2E7D8',
-                        stress: '#8E9E9B',
-                        stressDeep: '#6F7F7C',
-                        stressLight: '#DDE8E6'
-                    }
-                }
-            }
-        }
-    </script>
+    <meta name="description" content="以前有效的紓壓方式，現在越來越沒用，不一定是你變脆弱了。從壓力複雜度、刺激型放鬆、恢復工具箱與身體回穩能力，看懂為什麼需要更新自己的紓壓方式。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/stress_old_relief_not_working.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap');
-        body { font-family: 'Noto Sans TC', sans-serif; background-color: #FAF8F5; color: #2D2B29; }
-        h1, h2, h3 { font-family: 'Noto Sans TC', sans-serif; }
+        :root {
+            --font-sans: 'Noto Sans TC', sans-serif;
+            --bg-primary: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #5F5A55;
+            --text-muted: #8C8680;
+            --border-color: rgba(45, 43, 41, 0.10);
+            --accent-main: #8E9E9B;
+            --accent-dark: #6F7F7C;
+            --accent-light: #DDE8E6;
+            --accent-soft: rgba(221, 232, 230, 0.42);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.95;
+            letter-spacing: 0.03em;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+        .navbar { padding: 28px 0; border-bottom: 1px solid var(--bg-block); background-color: transparent; }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+        .logo-main { display: block; font-size: 14px; font-weight: 500; letter-spacing: 0.22em; line-height: 1.2; }
+        .logo-sub { display: block; margin-top: 4px; font-size: 10px; letter-spacing: 0.2em; color: var(--text-secondary); text-transform: uppercase; }
+        .nav-links { display: flex; gap: 28px; align-items: center; font-size: 13px; color: var(--text-secondary); letter-spacing: 0.08em; }
+        .nav-item { position: relative; padding-bottom: 4px; transition: color 0.25s ease; }
+        .nav-item:hover, .nav-item.active { color: var(--accent-dark); }
+        .nav-item.active::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background-color: var(--accent-main); }
+
+        .article-hero { max-width: 760px; margin: 0 auto; padding: 82px 24px 52px; text-align: center; }
+        .hero-tag { display: block; color: var(--accent-dark); font-size: 12px; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; }
+        .hero-category { margin-top: 10px; color: var(--text-secondary); font-size: 14px; letter-spacing: 0.14em; }
+        .article-title { margin: 34px 0 0; font-size: clamp(32px, 5vw, 48px); line-height: 1.35; letter-spacing: 0.02em; font-weight: 500; }
+        .hero-intro { max-width: 620px; margin: 30px auto 0; color: var(--text-secondary); font-size: 17px; line-height: 2.05; }
+
+        .qa-section { padding: 38px 0; background-color: rgba(245, 240, 234, 0.58); border-top: 1px solid rgba(45, 43, 41, 0.08); border-bottom: 1px solid rgba(45, 43, 41, 0.08); }
+        .qa-container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+        .section-mini-title { text-align: center; color: var(--text-secondary); font-size: 12px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; }
+        .qa-divider { width: 32px; height: 1px; margin: 10px auto 24px; background-color: rgba(142, 158, 155, 0.45); }
+        .qa-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .qa-card { background-color: var(--accent-soft); border: 1px solid var(--accent-light); padding: 22px 20px; min-height: 112px; display: flex; flex-direction: column; justify-content: center; }
+        .qa-label { color: var(--accent-dark); font-size: 12px; font-weight: 600; margin-bottom: 6px; }
+        .qa-card p { margin: 0; font-size: 14px; line-height: 1.7; font-weight: 400; }
+
+        .article-content { max-width: 720px; margin: 0 auto; padding: 66px 24px 36px; }
+        .article-content p { margin: 0 0 22px; color: var(--text-primary); font-size: 16px; }
+        .article-content h2 { margin: 58px 0 22px; font-size: 25px; line-height: 1.55; font-weight: 500; letter-spacing: 0.04em; }
+        .article-content h2::after { content: ""; display: block; width: 42px; height: 1px; margin-top: 14px; background-color: var(--accent-main); }
+
+        .gentle-card, .observation-item, .summary-card { border-radius: 4px; border: 1px solid var(--border-color); }
+        .gentle-card { background-color: rgba(221, 232, 230, 0.30); border-color: rgba(142, 158, 155, 0.24); padding: 24px 28px; margin: 24px 0; }
+        .gentle-card.cream-style { background-color: var(--bg-secondary); border-color: var(--border-color); }
+        .gentle-card ul, .summary-list { list-style: none; padding: 0; margin: 0; }
+        .gentle-card li, .summary-list li { position: relative; padding-left: 24px; margin-bottom: 10px; color: var(--text-secondary); font-size: 16px; line-height: 1.9; }
+        .gentle-card li:last-child, .summary-list li:last-child { margin-bottom: 0; }
+        .gentle-card li::before, .summary-list li::before { content: "✦"; position: absolute; left: 0; top: 0; color: var(--accent-dark); font-size: 13px; }
+
+        .observation-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 28px 0 8px; }
+        .observation-item { background-color: var(--bg-secondary); padding: 24px; }
+        .observation-item h3 { margin: 0 0 10px; color: var(--accent-dark); font-size: 17px; font-weight: 500; line-height: 1.6; }
+        .observation-item p { margin: 0; color: var(--text-secondary); font-size: 15px; line-height: 1.85; }
+
+        .summary-card { background-color: rgba(221, 232, 230, 0.38); border-color: var(--accent-light); padding: 32px; margin: 56px 0 48px; }
+        .summary-card h2 { margin-top: 0; }
+        .closing-note { text-align: center; color: var(--text-secondary); font-size: 17px; line-height: 2.1; margin: 48px auto 8px; }
+
+        .related-section { max-width: 960px; margin: 0 auto; padding: 58px 24px 28px; border-top: 1px solid var(--border-color); }
+        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
+        .related-card { background-color: var(--bg-card); border: 1px solid var(--border-color); padding: 24px; min-height: 220px; display: flex; flex-direction: column; justify-content: space-between; transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease; }
+        .related-card:hover { background-color: var(--accent-light); border-color: var(--accent-main); transform: translateY(-5px); }
+        .related-label { color: var(--accent-dark); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
+        .related-card h3 { margin: 18px 0 12px; font-size: 18px; line-height: 1.55; font-weight: 500; }
+        .related-card p { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.8; }
+        .read-more { margin-top: 22px; color: var(--accent-dark); font-size: 13px; font-weight: 400; }
+
+        .article-nav { max-width: 720px; margin: 0 auto; padding: 36px 24px 64px; text-align: center; display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
+        .text-link { color: var(--text-secondary); font-size: 14px; border-bottom: 1px solid rgba(140, 125, 112, 0.42); padding-bottom: 3px; transition: color 0.25s ease, border-color 0.25s ease; }
+        .text-link:hover { color: var(--accent-dark); border-color: var(--accent-dark); }
+
+        @media (max-width: 760px) {
+            .nav-wrapper { flex-direction: column; align-items: flex-start; }
+            .nav-links { width: 100%; justify-content: space-between; gap: 14px; font-size: 12px; }
+            .article-hero { padding-top: 58px; }
+            .qa-grid, .observation-grid, .related-grid { grid-template-columns: 1fr; }
+            .article-title { font-size: 32px; }
+            .article-content h2 { font-size: 22px; }
+        }
     </style>
 </head>
-<body class="text-ink">
-
-    <!-- Nav -->
-    <nav class="flex justify-between items-center px-8 py-6 max-w-5xl mx-auto">
-        <div class="text-ink">
-            <h1 class="text-lg font-semibold tracking-tight">代謝美學</h1>
-            <p class="text-[10px] tracking-[0.2em]">METABOLIC ESTHETICS</p>
-        </div>
-        <div class="flex gap-8 items-center text-sm text-wood font-medium">
-            <a href="index.html" class="hover:text-deepmoss transition">首頁</a>
-            <a href="stress_recovery.html" class="hover:text-deepmoss transition">壓力與自律神經</a>
-            <a href="https://lin.ee/pzxDU3O" class="bg-deepmoss text-white px-5 py-2.5 rounded-full hover:opacity-90 transition shadow-sm">預約諮詢</a>
+<body>
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" aria-label="返回代謝美學首頁">
+                <span class="logo-main">代謝美學</span>
+                <span class="logo-sub">METABOLIC ESTHETICS</span>
+            </a>
+            <div class="nav-links" aria-label="主選單">
+                <a class="nav-item" href="index.html">首頁</a>
+                <a class="nav-item active" href="stress_recovery.html">壓力與自律神經</a>
+                <a class="nav-item" href="https://lin.ee/pzxDU3O">預約諮詢</a>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header class="py-20 text-center">
-        <span class="text-[10px] tracking-[0.3em] text-stress">STRESS & AUTONOMIC NERVOUS SYSTEM</span>
-        <h2 class="text-sm text-wood mt-2 mb-6 tracking-wide">壓力與自律神經 · 放鬆辨識型</h2>
-      <h1 class="text-4xl md:text-5xl font-medium tracking-widest text-ink-900 leading-[1.35] text-center">
-    <span class="block">為什麼以前有效的紓壓方式，</span>
-    <span class="block mt-3 md:mt-5">現在越來越沒用？</span>
-</h1>
-        <p class="mt-4 text-wood/80 leading-relaxed max-w-lg mx-auto">不是你變脆弱了，而是現在的人生比以前更複雜，<br>原本的恢復工具可能已經不夠用了。</p>
+    <header class="article-hero">
+        <span class="hero-tag">STRESS & RECOVERY</span>
+        <div class="hero-category">壓力與自律神經 · 放鬆辨識型</div>
+        <h1 class="article-title">為什麼以前有效的紓壓方式，<br>現在越來越沒用？</h1>
+        <p class="hero-intro">不是你變脆弱了，而是現在的人生比以前更複雜，原本的恢復工具可能已經不夠用了。</p>
     </header>
 
-    <!-- Q&A Section -->
-    <section class="py-12 bg-stressLight/30 border-y border-stone-200/30">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-8">
-                <span class="text-xs tracking-widest text-wood font-medium">這篇文章會帶你看懂</span>
-                <div class="w-8 h-[1px] bg-stress/40 mx-auto mt-2"></div>
-            </div>
-            <div class="grid gap-4 md:grid-cols-3">
-                <div class="bg-stressLight/60 p-6 rounded-2xl border border-stressLight flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-stressDeep font-semibold mb-2 block">Q 1</span>
-                    <p class="text-[14px] text-ink tracking-wide leading-relaxed font-medium">為什麼以前有效的紓壓方式，現在失效了？</p>
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="section-mini-title">這篇文章會帶你看懂</div>
+            <div class="qa-divider"></div>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <span class="qa-label">Q 1</span>
+                    <p>為什麼以前有效的紓壓方式，現在好像失效了？</p>
                 </div>
-                <div class="bg-stressLight/60 p-6 rounded-2xl border border-stressLight flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-stressDeep font-semibold mb-2 block">Q 2</span>
-                    <p class="text-[14px] text-ink tracking-wide leading-relaxed font-medium">為什麼壓力越大，越渴望刺激的放鬆？</p>
+                <div class="qa-card">
+                    <span class="qa-label">Q 2</span>
+                    <p>為什麼壓力越大，越渴望刺激型的放鬆？</p>
                 </div>
-                <div class="bg-stressLight/60 p-6 rounded-2xl border border-stressLight flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-stressDeep font-semibold mb-2 block">Q 3</span>
-                    <p class="text-[14px] text-ink tracking-wide leading-relaxed font-medium">該如何更新自己的恢復力工具箱？</p>
+                <div class="qa-card">
+                    <span class="qa-label">Q 3</span>
+                    <p>怎麼更新自己的恢復力工具箱？</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Content -->
-    <article class="max-w-2xl mx-auto px-6 py-16 space-y-10 leading-relaxed text-ink/90 text-[15px]">
-        <section>
-            <h3 class="text-2xl font-semibold mb-6 text-ink">為什麼以前有效的紓壓方式，現在越來越沒用？</h3>
-            <p class="mb-4">因為現在的你，可能已經不是以前那個你。以前需要承接的事情比較少，恢復的速度比較快，睡一覺身體就回來了，壓力也相對單純。</p>
-            <p class="mb-4">但現在的生活，可能同時面臨：</p>
-            <ul class="list-disc pl-5 space-y-1 mb-4 text-wood">
-                <li>工作壓力</li>
-                <li>家庭責任</li>
-                <li>孩子或長輩照顧</li>
-                <li>經濟壓力</li>
-                <li>健康焦慮、睡眠不足</li>
-                <li>訊息被打斷，生活節奏混亂</li>
-            </ul>
-            <p>這就像一個工具箱，以前一把螺絲起子就能解決小問題，但現在挑戰變多了，原有的恢復工具已跟不上現在的生活壓力。</p>
-        </section>
+    <main class="article-content">
+        <p>很多人都有一些熟悉的紓壓方式。以前累的時候，追劇一下就好了；心情不好時，吃點甜的就能緩過來；壓力大時，睡一覺就能重新開始。</p>
+        <p>可是到了某一個階段，你可能會發現：同樣的方法好像越來越沒用。追劇追完，身體沒有比較輕鬆；吃完東西，心情只好一下下；滑完手機，腦袋反而更亂；睡了很久，醒來還是累。</p>
 
-        <section>
-            <h3 class="text-2xl font-semibold mb-6 text-ink">為什麼壓力越大，越容易需要更刺激的放鬆？</h3>
-            <p class="mb-4">身體長期疲勞時，大腦會更想尋找快速、明確、有感的安慰。這不代表你變貪心或沒自制力，而是對疲勞的大腦來說，這些方式比較省力：</p>
-            <div class="grid grid-cols-2 gap-4 mb-4">
-                <div class="bg-milk p-4 rounded-lg text-sm text-center">更快的</div>
-                <div class="bg-milk p-4 rounded-lg text-sm text-center">更甜的</div>
-                <div class="bg-milk p-4 rounded-lg text-sm text-center">更刺激的</div>
-                <div class="bg-milk p-4 rounded-lg text-sm text-center">更熟悉的</div>
+        <div class="gentle-card cream-style">
+            <p><strong>這不一定是你變脆弱了，而是現在的壓力型態、身體狀態和生活責任，可能都已經和以前不一樣。</strong></p>
+            <p>以前有效的方法，不代表永遠都要有效。當人生的負荷改變，恢復工具也需要被重新整理。</p>
+        </div>
+
+        <h2>以前有效，現在失效，常見有四種狀況</h2>
+        <div class="observation-grid">
+            <div class="observation-item">
+                <h3>一｜壓力變複雜型</h3>
+                <p>以前的壓力可能比較單一，睡一覺就能回來。現在同時有工作、家庭、照顧責任、健康焦慮與經濟壓力，原本的方法可能已經不夠承接。</p>
             </div>
-            <p>這種「累了找刺激 -> 舒服一下 -> 舒服過後更累 -> 更想找刺激」的循環，代表你需要處理的不是自制力問題，而是你的恢復工具太少了。</p>
-        </section>
+            <div class="observation-item">
+                <h3>二｜恢復速度變慢型</h3>
+                <p>身體長期累積睡眠不足、血糖波動、腸胃負擔或發炎狀態時，就算休息或娛樂了，恢復速度也可能變慢。</p>
+            </div>
+            <div class="observation-item">
+                <h3>三｜刺激越用越重型</h3>
+                <p>壓力越大，大腦越容易想找快速、有感、熟悉的刺激。當刺激只能短暫止痛，下一次就可能需要更強的刺激才有感。</p>
+            </div>
+            <div class="observation-item">
+                <h3>四｜工具太單一型</h3>
+                <p>如果生活裡只剩吃東西、滑手機、追劇這幾種紓壓方式，一旦壓力來源變多，身體就容易反覆回到同一條路，卻仍然回不穩。</p>
+            </div>
+        </div>
 
-        <section>
-            <h3 class="text-2xl font-semibold mb-6 text-ink">為什麼只靠一兩種紓壓方式，會越來越辛苦？</h3>
-            <p class="mb-4">如果生活裡的恢復方法只有「吃東西」、「滑手機」、「追劇」，一旦壓力來襲，身體自然會一直往這些方向走。但每一種消耗（疲憊、孤單、煩躁）所需的補給不同，若只依賴同一種工具，身體就無法真正回穩。</p>
-        </section>
-
-        <section>
-            <h3 class="text-2xl font-semibold mb-6 text-ink">什麼是恢復力工具箱？</h3>
-            <p class="mb-4">恢復力工具箱指的是能幫助你回到穩定狀態的方法。不需要花大錢，你可以試著累積自己的清單：</p>
-            <ul class="grid grid-cols-2 gap-2 text-wood">
-                <li>• 散步、曬太陽</li>
-                <li>• 閱讀、喝茶</li>
-                <li>• 整理空間</li>
-                <li>• 和信任的人說話</li>
-                <li>• 運動、泡澡、伸展</li>
-                <li>• 安靜獨處</li>
+        <h2>為什麼壓力越大，越想要更刺激的放鬆？</h2>
+        <p>身體長期疲勞時，大腦會更想尋找快速、明確、有感的安慰。這不是你變貪心，也不只是自制力不好，而是疲累的大腦會自然偏向比較省力、比較立即的出口。</p>
+        <div class="gentle-card">
+            <ul>
+                <li>更快得到舒服感，例如滑手機、追短影音。</li>
+                <li>更明確刺激味覺，例如甜食、飲料、重口味。</li>
+                <li>更容易暫時逃離壓力，例如追劇、購物、遊戲。</li>
+                <li>更熟悉也更省力，不需要再思考要怎麼照顧自己。</li>
             </ul>
-        </section>
+        </div>
+        <p>這些方式不一定不好，它們有時候真的能讓人先撐過去。只是如果每次壓力來，都只能走向同一種刺激，身體就可能陷入「舒服一下，之後更累」的循環。</p>
 
-        <div class="bg-stressLight/20 p-8 rounded-xl border border-stressLight/40">
-            <h4 class="font-semibold text-stressDeep mb-4 text-lg">重點整理</h4>
-            <ul class="list-disc pl-5 space-y-2 text-sm text-ink/80">
-                <li>壓力變複雜，原有的恢復工具已不夠用。</li>
-                <li>別責備自己，身體渴望刺激是因為「累太久了」。</li>
-                <li>恢復力需要「工具箱」，嘗試多元的方法，而非僅依賴單一刺激。</li>
-                <li>從觀察「做完哪件事之後我比較穩」開始，擴充你的恢復清單。</li>
+        <h2>不是把舊方法丟掉，而是增加新的路</h2>
+        <p>我們不需要把追劇、滑手機、吃喜歡的東西全部歸類成錯誤。真正需要看的，是生活裡是不是只剩這些方法。</p>
+        <p>止痛藥型的紓壓可以讓當下好過一點，但恢復藥型的工具，才比較能讓身體慢慢回穩。當原本的方法越來越沒用，不一定是要更用力控制自己，而是需要擴充工具箱。</p>
+
+        <h2>恢復力工具箱，可以從小方法開始</h2>
+        <p>恢復力工具不一定要很厲害，也不一定要花很多錢。重點是做完以後，身體會不會比較穩一點。</p>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>散步十分鐘，讓身體從腦袋裡回到腳步裡。</li>
+                <li>曬太陽、喝茶、泡腳，給身體一個轉場訊號。</li>
+                <li>整理一小塊空間，讓外在環境也變得比較可承接。</li>
+                <li>和信任的人說話，把壓力從身體裡移出來一點。</li>
+                <li>安靜獨處、伸展、呼吸，讓神經系統慢慢降速。</li>
             </ul>
         </div>
 
-        <section>
-            <h3 class="text-2xl font-semibold mb-6 text-ink">延伸閱讀</h3>
-            <div class="grid gap-4">
-                <a href="stress_recovery_not_rest.html" class="block p-4 bg-white border border-stone-100 rounded-lg shadow-sm hover:border-moss/30 transition text-sm text-ink">為什麼休息了，卻還是很累？</a>
-                <a href="stress_painkiller_or_recovery.html" class="block p-4 bg-white border border-stone-100 rounded-lg shadow-sm hover:border-moss/30 transition text-sm text-ink">你的紓壓方式，是止痛藥，還是恢復藥？</a>
-                <a href="stress_personalized_recovery.html" class="block p-4 bg-white border border-stone-100 rounded-lg shadow-sm hover:border-moss/30 transition text-sm text-ink">為什麼恢復沒有標準答案？</a>
-                <a href="stress_schedule_recovery.html" class="block p-4 bg-white border border-stone-100 rounded-lg shadow-sm hover:border-moss/30 transition text-sm text-ink">為什麼恢復總是被排到最後？</a>
-            </div>
+        <h2>可以先從一個問題開始</h2>
+        <p>如果你發現以前有效的紓壓方式，現在越來越沒用，不需要立刻責備自己，也不需要馬上制定一套新的規則。</p>
+        <p>可以先觀察一件事：</p>
+        <div class="gentle-card">
+            <p><strong>做完這件事之後，我是只有當下比較舒服，還是接下來真的比較穩？</strong></p>
+            <p>這個問題能幫你慢慢分辨：哪些是短暫止痛，哪些是真的有幫助身體恢復。</p>
+        </div>
+
+        <section class="summary-card">
+            <h2>重點整理</h2>
+            <ul class="summary-list">
+                <li>以前有效的紓壓方式，現在失效，不一定是你變脆弱了。</li>
+                <li>壓力變複雜、恢復速度變慢、刺激越用越重，都可能讓舊方法變得不夠用。</li>
+                <li>刺激型放鬆不一定不好，但如果生活裡只剩這一種路，身體就比較難真正回穩。</li>
+                <li>恢復力工具箱的重點，不是完美自律，而是多幾個可以讓自己回來的方法。</li>
+                <li>可以先從觀察「做完之後比較穩，還是只是當下比較舒服」開始。</li>
+            </ul>
         </section>
 
-        <p class="pt-8 italic text-wood">恢復力不是要你變成一個永遠不會累的人。而是當原本的方法不夠用時，你還願意溫柔地替自己，準備新的路。</p>
-    </article>
+        <p class="closing-note">恢復力不是要你變成一個永遠不會累的人，<br>而是當原本的方法不夠用時，<br>你還願意溫柔地替自己，準備新的路。</p>
+    </main>
 
-    <!-- Footer -->
-    <footer class="py-16 text-center border-t border-stone-200">
-        <a href="stress_recovery.html" class="text-wood hover:text-deepmoss transition text-sm underline underline-offset-4 mb-8 block">返回 壓力與自律神經</a>
-        <p class="text-[10px] text-wood/60 tracking-widest uppercase">METABOLIC ESTHETICS © 2026</p>
-    </footer>
+    <section class="related-section">
+        <div class="section-mini-title">延伸閱讀</div>
+        <div class="related-grid">
+            <a class="related-card" href="stress_painkiller_or_recovery.html">
+                <div>
+                    <span class="related-label">01｜放鬆辨識型</span>
+                    <h3>你的紓壓方式，是止痛藥，還是恢復藥？</h3>
+                    <p>分辨哪些方法只是暫時止痛，哪些方法真的讓身體回穩。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
+            <a class="related-card" href="stress_recovery_not_rest.html">
+                <div>
+                    <span class="related-label">02｜恢復不足型</span>
+                    <h3>為什麼休息了，卻還是很累？</h3>
+                    <p>休息不等於恢復，身體需要的是重新回到穩定。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
+            <a class="related-card" href="stress_personalized_recovery.html">
+                <div>
+                    <span class="related-label">03｜恢復辨識型</span>
+                    <h3>為什麼恢復沒有標準答案？</h3>
+                    <p>每個人的壓力停留位置不同，恢復入口也會不一樣。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
+        </div>
+    </section>
 
+    <nav class="article-nav" aria-label="文章底部導覽">
+        <a class="text-link" href="stress_recovery.html">← 回到壓力與自律神經</a>
+        <a class="text-link" href="index.html">返回代謝美學首頁</a>
+    </nav>
 </body>
 </html>
