@@ -3,135 +3,590 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>為什麼累的時候，特別容易想吃東西？｜代謝美學</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>為什麼累的時候，特別容易想吃東西？｜壓力與自律神經｜代謝美學</title>
+    <meta name="description" content="累的時候想吃東西，不一定只是嘴饞或意志力不足。從能量、睡眠、血糖、壓力安撫與自律神經，看懂身體為什麼用食物尋求回穩。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/stress_tired_and_craving.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap');
-        
-        body {
-            font-family: 'Noto Sans TC', sans-serif;
-            background-color: #FAF8F5;
-            color: #2D2B29;
+        :root {
+            --font-sans: 'Noto Sans TC', sans-serif;
+            --bg-primary: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #5F5A55;
+            --text-soft: #8C8680;
+            --border-color: rgba(45, 43, 41, 0.10);
+            --accent-main: #8E9E9B;
+            --accent-dark: #6F7F7C;
+            --accent-light: #DDE8E6;
+            --accent-soft: rgba(221, 232, 230, 0.42);
         }
-        h1, h2, h3, h4 {
-            font-family: 'Noto Sans TC', sans-serif;
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.95;
+            letter-spacing: 0.03em;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .navbar {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--bg-block);
+            background-color: transparent;
+        }
+
+        .nav-wrapper {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo-main {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            line-height: 1.2;
+        }
+
+        .logo-sub {
+            margin-top: 4px;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+        }
+
+        .nav-item {
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.25s ease;
+        }
+
+        .nav-item:hover,
+        .nav-item.active { color: var(--accent-dark); }
+
+        .nav-item.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: var(--accent-main);
+        }
+
+        .article-hero {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 82px 24px 52px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            display: block;
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+        }
+
+        .hero-category {
+            margin-top: 10px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            letter-spacing: 0.14em;
+        }
+
+        .article-title {
+            margin: 34px 0 0;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+            font-weight: 500;
+        }
+
+        .hero-intro {
+            max-width: 620px;
+            margin: 30px auto 0;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.05;
+        }
+
+        .qa-section {
+            padding: 38px 0;
+            background-color: rgba(245, 240, 234, 0.58);
+            border-top: 1px solid rgba(45, 43, 41, 0.08);
+            border-bottom: 1px solid rgba(45, 43, 41, 0.08);
+        }
+
+        .qa-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-mini-title {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+        }
+
+        .qa-divider {
+            width: 32px;
+            height: 1px;
+            margin: 10px auto 24px;
+            background-color: rgba(142, 158, 155, 0.45);
+        }
+
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            align-items: stretch;
+        }
+
+        .qa-card {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-light);
+            padding: 22px 20px;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .qa-label {
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .qa-card p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.7;
+            font-weight: 400;
+            min-height: calc(1.7em * 3);
+        }
+
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 66px 24px 36px;
+        }
+
+        .article-content p {
+            margin: 0 0 22px;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+
+        .article-content h2 {
+            margin: 58px 0 22px;
+            font-size: 25px;
+            line-height: 1.55;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        .article-content h2::after {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 1px;
+            margin-top: 14px;
+            background-color: var(--accent-main);
+        }
+
+        .gentle-card,
+        .observation-item,
+        .summary-card {
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gentle-card {
+            background-color: rgba(221, 232, 230, 0.30);
+            border-color: rgba(142, 158, 155, 0.24);
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+
+        .gentle-card.cream-style {
+            background-color: var(--bg-secondary);
+            border-color: var(--border-color);
+        }
+
+        .gentle-card ul,
+        .summary-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .gentle-card li,
+        .summary-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .gentle-card li:last-child,
+        .summary-list li:last-child { margin-bottom: 0; }
+
+        .gentle-card li::before,
+        .summary-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-dark);
+            font-size: 13px;
+        }
+
+        .observation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 28px 0 8px;
+        }
+
+        .observation-item {
+            background-color: var(--bg-secondary);
+            padding: 24px;
+        }
+
+        .observation-item h3 {
+            margin: 0 0 10px;
+            color: var(--accent-dark);
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .observation-item p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .summary-card {
+            background-color: rgba(221, 232, 230, 0.38);
+            border-color: var(--accent-light);
+            padding: 32px;
+            margin: 56px 0 48px;
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .closing-note {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.1;
+            margin: 48px auto 8px;
+        }
+
+        .related-section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 58px 24px 28px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .related-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .related-card:hover {
+            background-color: var(--accent-light);
+            border-color: var(--accent-main);
+            transform: translateY(-5px);
+        }
+
+        .related-label {
+            color: var(--accent-dark);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .related-card h3 {
+            margin: 18px 0 12px;
+            font-size: 18px;
+            line-height: 1.55;
+            font-weight: 500;
+        }
+
+        .related-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            margin-top: 22px;
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .article-nav {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 36px 24px 64px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .text-link {
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-bottom: 1px solid rgba(140, 125, 112, 0.42);
+            padding-bottom: 3px;
+            transition: color 0.25s ease, border-color 0.25s ease;
+        }
+
+        .text-link:hover {
+            color: var(--accent-dark);
+            border-color: var(--accent-dark);
+        }
+
+        @media (max-width: 760px) {
+            .nav-wrapper { flex-direction: column; align-items: flex-start; }
+            .nav-links { width: 100%; justify-content: space-between; gap: 14px; font-size: 12px; }
+            .article-hero { padding-top: 58px; }
+            .qa-grid,
+            .observation-grid,
+            .related-grid { grid-template-columns: 1fr; }
+            .qa-card,
+            .related-card { min-height: auto; }
+            .qa-card p { min-height: auto; }
+            .article-title { font-size: 32px; }
+            .article-content { padding-top: 52px; }
+            .article-content h2 { font-size: 22px; }
         }
     </style>
 </head>
-<body class="leading-relaxed">
-
-    <!-- 導覽列 -->
-    <nav class="flex justify-between items-center py-6 px-8 md:px-12">
-        <div class="text-sm tracking-widest">
-            <span class="block font-medium">代謝美學</span>
-            <span class="block text-[10px] text-gray-500">METABOLIC ESTHETICS</span>
-        </div>
-        <div class="flex items-center gap-6 text-sm text-stone-600 font-medium">
-            <a href="index.html" class="hover:text-[#7B8365] transition-colors">首頁</a>
-            <a href="stress_recovery.html" class="hover:text-[#7B8365] transition-colors">壓力與自律神經</a>
-            <a href="https://lin.ee/pzxDU3O" class="bg-[#7B8365] text-white px-4 py-2 rounded-full hover:bg-[#6A725A] transition-colors">預約諮詢</a>
+<body>
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <a href="index.html" aria-label="返回代謝美學首頁">
+                <div class="logo-main">代謝美學</div>
+                <div class="logo-sub">METABOLIC ESTHETICS</div>
+            </a>
+            <div class="nav-links" aria-label="主選單">
+                <a class="nav-item" href="index.html">首頁</a>
+                <a class="nav-item active" href="stress_recovery.html">壓力與自律神經</a>
+                <a class="nav-item" href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener">預約諮詢</a>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero 區 -->
-    <header class="py-16 md:py-24 px-6 text-center">
-        <span class="text-[10px] tracking-[0.3em] text-[#8E9E9B] font-semibold mb-4 block">STRESS & RECOVERY</span>
-        <h2 class="text-sm font-medium tracking-widest text-[#6F7F7C] mb-6">壓力與自律神經 · 身體訊號型</h2>
-        <h1 class="text-4xl md:text-5xl font-semibold text-[#2D2B29] mb-8">為什麼累的時候，特別容易想吃東西？</h1>
-        <p class="max-w-xl mx-auto text-[#8C7D70] leading-loose">
-            想吃不一定只是嘴饞；有時候是身體在提醒你：能量、睡眠、壓力或安撫需求，可能有一個地方沒有被接住。
-        </p>
+    <header class="article-hero">
+        <span class="hero-tag">STRESS & RECOVERY</span>
+        <div class="hero-category">壓力與自律神經 · 身體訊號型</div>
+        <h1 class="article-title">為什麼累的時候，<br>特別容易想吃東西？</h1>
+        <p class="hero-intro">想吃不一定只是嘴饞；有時候是身體在提醒你：能量、睡眠、壓力或安撫需求，可能有一個地方沒有被接住。</p>
     </header>
 
-    <!-- Q&A 區塊 -->
-    <section class="py-12 bg-[#F5F0EA]/40 border-y border-stone-200/30 backdrop-blur-sm">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-8">
-                <span class="text-xs tracking-widest text-[#8C7D70] font-medium">這篇文章會帶你看懂</span>
-                <div class="w-8 h-[1px] bg-[#8E9E9B]/40 mx-auto mt-2"></div>
-            </div>
-            <div class="grid gap-4 md:grid-cols-3">
-                <div class="bg-[#DDE8E6]/45 p-6 rounded-2xl border border-[#DDE8E6] flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-[#6F7F7C] font-semibold mb-2 block">Q 1</span>
-                    <p class="text-[14px] text-[#2D2B29] tracking-wide leading-relaxed font-medium">為什麼累的時候，特別容易想吃東西？</p>
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="section-mini-title">這篇文章會帶你看懂</div>
+            <div class="qa-divider"></div>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <span class="qa-label">Q 1</span>
+                    <p>為什麼累的時候，特別容易想吃東西？</p>
                 </div>
-                <div class="bg-[#DDE8E6]/45 p-6 rounded-2xl border border-[#DDE8E6] flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-[#6F7F7C] font-semibold mb-2 block">Q 2</span>
-                    <p class="text-[14px] text-[#2D2B29] tracking-wide leading-relaxed font-medium">想吃東西，可能代表身體哪一種訊號？</p>
+                <div class="qa-card">
+                    <span class="qa-label">Q 2</span>
+                    <p>想吃東西，可能代表身體哪一種訊號？</p>
                 </div>
-                <div class="bg-[#DDE8E6]/45 p-6 rounded-2xl border border-[#DDE8E6] flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-[#6F7F7C] font-semibold mb-2 block">Q 3</span>
-                    <p class="text-[14px] text-[#2D2B29] tracking-wide leading-relaxed font-medium">怎麼先解讀身體訊號，再決定要不要吃、怎麼吃？</p>
+                <div class="qa-card">
+                    <span class="qa-label">Q 3</span>
+                    <p>怎麼先解讀身體訊號，再決定要不要吃、怎麼吃？</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 主內容區 -->
-    <article class="max-w-2xl mx-auto px-6 py-16 text-[#2D2B29] space-y-8">
-        <p>很多人都有類似的經驗。明明晚餐吃過了，還是想再吃一點東西；明明不是真的餓，卻很想吃甜的、鹹的、脆的、香的。這時候，很多人第一個反應是責怪自己意志力太差，但從壓力與自律神經的角度來看，事情並不只是嘴饞。累的時候想吃東西，有時候是身體在尋求平衡的訊號。</p>
-        
-        <h3 class="text-2xl font-semibold pt-4">為什麼累的時候，特別容易想吃東西？</h3>
-        <p>因為身體累的時候，會想找最快能讓自己好過一點的方法。食物，就是其中一種很快有感的方式。甜的能讓大腦有愉悅感，脆的能抓住注意力，油脂和香氣則能撫平緊繃的神經。</p>
+    <main class="article-content">
+        <p>很多人都有類似的經驗。明明晚餐吃過了，還是想再吃一點東西；明明不是真的餓，卻很想吃甜的、鹹的、脆的、香的。</p>
+        <p>這時候，很多人第一個反應是責怪自己意志力太差。但從壓力與自律神經的角度來看，事情並不只是嘴饞。累的時候想吃東西，有時候是身體在尋求平衡的訊號。</p>
 
-        <div class="bg-[#EBE5DF] p-8 rounded-2xl">
-            <h4 class="font-bold mb-4">身體想吃東西的三種訊號：</h4>
-            <ul class="space-y-3 list-disc pl-5 text-sm">
-                <li><strong>能量匱乏：</strong>白天吃太少、餐距太長，身體真正需要補充燃料。</li>
-                <li><strong>恢復不足：</strong>睡眠不足導致飢餓素與飽足荷爾蒙失調，引發代償性渴望。</li>
-                <li><strong>壓力出口：</strong>高適口性食物（高糖高脂）能快速降低皮質醇帶來的焦慮感。</li>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>想吃東西，不一定是失控，也可能是身體正在求救。</li>
+                <li>身體累的時候，會想找最快有感、最容易取得的安撫方式。</li>
+                <li>真正重要的不是立刻責備，而是先看懂：這一次身體想要的是什麼。</li>
             </ul>
         </div>
 
-        <h3 class="text-2xl font-semibold pt-4">如果是真的餓，就好好吃</h3>
-        <p>如果你發現自己是真的餓，請不要用意志力硬撐。這時候真正需要的不是忍耐，而是讓餐食變得更穩定。請優先選擇蛋白質、原型澱粉與纖維，以這些營養均衡的組合讓身體獲得真正飽足，避免僅僅依賴零食進行短暫安撫。</p>
+        <h2>先確認安全：想吃很多，也可能需要先看身體狀態</h2>
+        <p>多數嘴饞和壓力進食，和生活節奏、睡眠、血糖與情緒安撫有關。但如果食慾或進食狀態突然明顯改變，也需要先留意安全邊界。</p>
+        <div class="gentle-card">
+            <ul>
+                <li>短時間內食慾大幅增加或減少，且伴隨體重明顯變化。</li>
+                <li>反覆暴食後強烈自責、催吐、使用瀉藥，或過度補償性運動。</li>
+                <li>吃東西變成主要的情緒出口，已明顯影響生活功能。</li>
+                <li>合併明顯口渴、多尿、疲倦、視力模糊或血糖異常。</li>
+                <li>持續情緒低落、焦慮、失眠，或出現傷害自己的念頭。</li>
+            </ul>
+        </div>
+        <p>代謝美學重視身體訊號，但不會把所有進食困擾都只解釋成意志力或生活習慣。需要醫療或心理支持時，先把安全接住。</p>
 
-        <h3 class="text-2xl font-semibold pt-4">如果不是餓，就先接住那個訊號</h3>
-        <p>如果你發現自己不是胃餓，而是累、煩、空、緊繃，那也不用責備自己。試著做一個小動作，例如先洗澡、喝一杯溫水、到外面走五分鐘、或是把工作訊息關掉，給身體一個轉換的出口。重點不是禁止吃，而是讓身體知道，你聽見了它的需要。</p>
+        <h2>累的時候，身體會想找最快有感的安撫</h2>
+        <p>身體累的時候，會自然想找最快能讓自己好過一點的方法。食物，就是其中一種很快有感的方式。甜的能讓大腦有愉悅感，脆的能抓住注意力，油脂和香氣則能撫平緊繃的神經。</p>
+        <p>所以，累的時候想吃東西，不一定代表你沒有自制力。它常常代表身體正在說：我需要能量、我需要安定、我需要被安撫，或我已經撐太久了。</p>
 
-        <h3 class="text-2xl font-semibold pt-4">不是禁止自己吃，而是學會讀懂身體</h3>
+        <h2>累了想吃，常見有四種狀況</h2>
+        <div class="observation-grid">
+            <div class="observation-item">
+                <h3>一｜能量匱乏型</h3>
+                <p>白天吃太少、蛋白質不足、餐距太長，或忙到一直延後進食。這時候想吃，可能是真的需要補充燃料。</p>
+            </div>
+            <div class="observation-item">
+                <h3>二｜血糖波動型</h3>
+                <p>上一餐太精緻、太少蛋白質，或空腹時間太長，可能讓下午或晚上更想吃甜食、澱粉與高熱量食物。</p>
+            </div>
+            <div class="observation-item">
+                <h3>三｜恢復不足型</h3>
+                <p>睡眠不足、長期疲勞或壓力累積，會讓身體更想尋找快速安撫，也比較難感覺到真正的飽足。</p>
+            </div>
+            <div class="observation-item">
+                <h3>四｜壓力出口型</h3>
+                <p>當情緒太緊、太煩、太空，食物會變成很容易取得的出口。這不代表食物不好，而是身體需要更多安撫方式。</p>
+            </div>
+        </div>
+
+        <h2>如果是真的餓，就好好吃</h2>
+        <p>如果你發現自己是真的餓，請不要用意志力硬撐。這時候真正需要的不是忍耐，而是讓餐食變得更穩定。</p>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>先補蛋白質，例如蛋、豆魚肉、豆腐或無糖優格。</li>
+                <li>搭配原型澱粉，例如飯、地瓜、燕麥或南瓜。</li>
+                <li>加上蔬菜與纖維，讓飽足感更穩。</li>
+                <li>不要只用零食搪塞真正的飢餓，否則身體很快又會想繼續找東西吃。</li>
+            </ul>
+        </div>
+
+        <h2>如果不是餓，就先接住那個訊號</h2>
+        <p>如果你發現自己不是胃餓，而是累、煩、空、緊繃，那也不用責備自己。試著先問：我現在想吃，是想補能量，還是想要一個出口？</p>
+        <div class="gentle-card">
+            <ul>
+                <li>先洗澡，讓身體從工作模式切換出來。</li>
+                <li>喝一杯溫水或熱茶，給身體一個溫和的停頓。</li>
+                <li>到外面走五分鐘，讓壓力從腦袋回到身體。</li>
+                <li>把工作訊息關掉一下，降低刺激來源。</li>
+                <li>真的想吃時，也可以選擇小份量、坐下來、慢慢吃，而不是邊滑手機邊補償。</li>
+            </ul>
+        </div>
+
+        <h2>不是禁止自己吃，而是學會讀懂身體</h2>
         <p>代謝美學更想做的是：先理解身體為什麼想吃。當你看懂訊號，食物就不再只是失控的開始，它會變成一個提醒：你有一個地方，需要被接住。</p>
-    </article>
+        <p>有時候，答案是好好吃一餐。有時候，答案是睡覺、散步、洗澡、放下手機，或承認自己今天真的很累。當身體的需求被看懂，選擇才會慢慢變得比較自由。</p>
 
-    <!-- 重點整理區 -->
-    <section class="max-w-2xl mx-auto px-6 mb-8">
-        <div class="bg-[#DDE8E6]/30 p-8 rounded-2xl border border-[#DDE8E6]/50">
-            <h4 class="text-lg font-bold mb-4 text-[#6F7F7C]">重點整理</h4>
-            <ul class="space-y-4 text-sm leading-relaxed">
-                <li>● 累的時候想吃，不一定是意志力問題，而是身體在發出能量、睡眠或安撫需求的訊號。</li>
-                <li>● 若是真餓，請務必攝取蛋白質與原型食物，而非用零食搪塞。</li>
-                <li>● 若是壓力需求，試著先用「小動作」取代食物：洗澡、喝溫水、遠離手機。</li>
-                <li>● 真正的目標不是禁止進食，而是透過讀懂訊號，選擇更溫柔的回應方式。</li>
+        <section class="summary-card">
+            <h2>重點整理</h2>
+            <ul class="summary-list">
+                <li>累的時候想吃，不一定是意志力問題，而是身體在發出能量、血糖、睡眠或安撫需求的訊號。</li>
+                <li>如果是真的餓，請好好補充蛋白質、原型澱粉與纖維，而不是只用零食搪塞。</li>
+                <li>如果不是胃餓，可以先用洗澡、喝溫水、散步或離開手機，接住壓力訊號。</li>
+                <li>真正的目標不是禁止進食，而是先讀懂訊號，再選擇更溫柔、更穩定的回應方式。</li>
             </ul>
+        </section>
+
+        <p class="closing-note">想吃東西的時候，先不要急著責備自己。<br>先停下來看看：我今天有沒有好好吃？最近有沒有好好睡？<br>是不是太久沒有真正休息？是不是有一個地方，還沒有被照顧到？<br>當你開始讀懂這些訊號，就能慢慢用更溫柔、更穩定的方式回應自己。</p>
+    </main>
+
+    <section class="related-section">
+        <div class="section-mini-title">延伸閱讀</div>
+        <div class="qa-divider"></div>
+        <div class="related-grid">
+            <a class="related-card" href="stress_painkiller_or_recovery.html">
+                <div>
+                    <span class="related-label">01｜放鬆辨識型</span>
+                    <h3>你的紓壓方式，是止痛藥，還是恢復藥？</h3>
+                    <p>有些方法只是讓當下好過，有些方法則能讓身體慢慢回穩。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
+            <a class="related-card" href="stress_daily_recovery_tools.html">
+                <div>
+                    <span class="related-label">02｜恢復建立型</span>
+                    <h3>為什麼明明知道該休息，卻還是做不到？</h3>
+                    <p>恢復不是等到有空才開始，而是需要被放進日常的小錨點。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
+            <a class="related-card" href="stress_signs_of_recovery.html">
+                <div>
+                    <span class="related-label">03｜身體訊號型</span>
+                    <h3>怎麼知道自己的恢復力正在變好？</h3>
+                    <p>恢復力變好，常常會先出現在睡眠、情緒、食慾與身體餘裕裡。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
         </div>
     </section>
 
-    <!-- 溫柔收尾 -->
-    <footer class="text-center py-8 px-6">
-        <p class="text-[#8C7D70] mb-8">
-            想吃東西的時候先不要急著責備自己。<br>
-            先停下來看看：<br>
-            我今天有沒有好好吃？我最近有沒有好好睡？<br>
-            我是不是太久沒有真正休息？我是不是有一個地方，還沒有被照顧到？<br><br>
-            當你開始讀懂這些訊號，就能慢慢用更溫柔、更穩定的方式回應自己。<br>
-            不是立刻拿走食物，不是逼自己忍住，而是讓身體知道：<br>
-            我聽見了，我會慢慢把你需要的東西，接回來。
-        </p>
-    </footer>
-
-    <!-- 延伸閱讀 -->
-    <section class="max-w-2xl mx-auto px-6 mb-16 pt-8 border-t border-stone-200">
-        <h4 class="text-sm font-semibold text-[#8C7D70] mb-6 tracking-widest uppercase text-center">延伸閱讀</h4>
-        <div class="grid gap-4">
-            <a href="stress_painkiller_or_recovery.html" class="block p-4 border border-stone-200 rounded-xl hover:bg-stone-100 transition-all text-sm">你的紓壓方式，是止痛藥還是恢復藥？</a>
-            <a href="stress_daily_recovery_tools.html" class="block p-4 border border-stone-200 rounded-xl hover:bg-stone-100 transition-all text-sm">為什麼明明知道該休息，卻還是做不到？</a>
-            <a href="stress_recovery_not_rest.html" class="block p-4 border border-stone-200 rounded-xl hover:bg-stone-100 transition-all text-sm">為什麼休息了，卻還是很累？</a>
-            <a href="stress_signs_of_recovery.html" class="block p-4 border border-stone-200 rounded-xl hover:bg-stone-100 transition-all text-sm">怎麼知道自己的恢復力正在變好？</a>
-        </div>
-        <div class="text-center mt-12">
-            <a href="stress_recovery.html" class="inline-block text-sm text-[#7B8365] border-b border-[#7B8365] pb-1 hover:opacity-70 transition-opacity">返回壓力與自律神經頁</a>
-        </div>
-    </section>
-
+    <nav class="article-nav" aria-label="文章底部導覽">
+        <a class="text-link" href="stress_recovery.html">← 回到壓力與自律神經</a>
+        <a class="text-link" href="index.html">返回代謝美學首頁</a>
+    </nav>
 </body>
 </html>
