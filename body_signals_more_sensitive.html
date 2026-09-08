@@ -45,10 +45,10 @@
         .qa-container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
         .section-mini-title { text-align: center; color: var(--text-secondary); font-size: 12px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; }
         .qa-divider { width: 32px; height: 1px; margin: 10px auto 24px; background-color: rgba(142, 132, 147, 0.45); }
-        .qa-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-        .qa-card { background-color: var(--accent-soft); border: 1px solid var(--accent-light); padding: 22px 20px; min-height: 112px; display: flex; flex-direction: column; justify-content: center; }
+        .qa-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+        .qa-card { background-color: var(--accent-soft); border: 1px solid var(--accent-light); padding: 22px 20px; min-height: 150px; display: flex; flex-direction: column; justify-content: flex-start; }
         .qa-label { color: var(--accent-dark); font-size: 12px; font-weight: 600; margin-bottom: 6px; }
-        .qa-card p { margin: 0; font-size: 14px; line-height: 1.7; font-weight: 400; }
+        .qa-card p { margin: 0; font-size: 14px; line-height: 1.7; font-weight: 400; min-height: calc(1.7em * 3); }
         .article-content { max-width: 720px; margin: 0 auto; padding: 66px 24px 36px; }
         .article-content p { margin: 0 0 22px; color: var(--text-primary); font-size: 16px; }
         .article-content h2 { margin: 58px 0 22px; font-size: 25px; line-height: 1.55; font-weight: 500; letter-spacing: 0.04em; }
@@ -84,7 +84,8 @@
             .article-hero { padding-top: 58px; }
             .qa-grid, .observation-grid, .related-grid { grid-template-columns: 1fr; }
             .article-content { padding-top: 52px; }
-            .related-card { min-height: auto; }
+            .qa-card, .related-card { min-height: auto; }
+            .qa-card p { min-height: auto; }
         }
     </style>
 </head>
