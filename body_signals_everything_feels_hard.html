@@ -1,178 +1,610 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>為什麼以前做得到的事，現在覺得很費力？｜身體訊號｜代謝美學</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        wood: { 500: '#8C7D70', 600: '#74675B' },
-                        stone: { 50: '#FAF8F5', 100: '#F5F0EA', 200: '#EBE5DF', 800: '#2D2B29' },
-                    }
-                }
-            }
-        }
-    </script>
+    <meta name="description" content="以前做得到的事，現在變得很費力，不一定是退步或變脆弱。從恢復速度、生活配速、睡眠、壓力與身體承接力，理解身體正在提醒什麼。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/body_signals_everything_feels_hard.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
-        body { font-family: 'Noto Sans TC', sans-serif; color: #2D2B29; }
+        :root {
+            --font-sans: 'Noto Sans TC', sans-serif;
+            --bg-primary: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #8C7D70;
+            --text-soft: #A39A92;
+            --border-color: rgba(45, 43, 41, 0.10);
+            --accent-main: #8E8493;
+            --accent-dark: #6F6675;
+            --accent-light: #ECE6EF;
+            --accent-soft: rgba(236, 230, 239, 0.42);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.95;
+            letter-spacing: 0.03em;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .navbar {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--bg-block);
+            background-color: transparent;
+        }
+
+        .nav-wrapper {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo-main {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            line-height: 1.2;
+        }
+
+        .logo-sub {
+            margin-top: 4px;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+        }
+
+        .nav-item {
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.25s ease;
+        }
+
+        .nav-item:hover,
+        .nav-item.active { color: var(--accent-dark); }
+
+        .nav-item.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: var(--accent-main);
+        }
+
+        .article-hero {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 82px 24px 52px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            display: block;
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+        }
+
+        .hero-category {
+            margin-top: 10px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            letter-spacing: 0.14em;
+        }
+
+        .article-title {
+            margin: 34px 0 0;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+            font-weight: 500;
+        }
+
+        .hero-intro {
+            max-width: 620px;
+            margin: 30px auto 0;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.05;
+        }
+
+        .qa-section {
+            padding: 38px 0;
+            background-color: rgba(245, 240, 234, 0.58);
+            border-top: 1px solid rgba(45, 43, 41, 0.08);
+            border-bottom: 1px solid rgba(45, 43, 41, 0.08);
+        }
+
+        .qa-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-mini-title {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+        }
+
+        .qa-divider {
+            width: 32px;
+            height: 1px;
+            margin: 10px auto 24px;
+            background-color: rgba(142, 132, 147, 0.45);
+        }
+
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .qa-card {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-light);
+            padding: 22px 20px;
+            min-height: 112px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .qa-label {
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .qa-card p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 66px 24px 36px;
+        }
+
+        .article-content p {
+            margin: 0 0 22px;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+
+        .article-content h2 {
+            margin: 58px 0 22px;
+            font-size: 25px;
+            line-height: 1.55;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        .article-content h2::after {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 1px;
+            margin-top: 14px;
+            background-color: var(--accent-main);
+        }
+
+        .gentle-card,
+        .observation-item,
+        .summary-card {
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gentle-card {
+            background-color: rgba(236, 230, 239, 0.30);
+            border-color: rgba(142, 132, 147, 0.24);
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+
+        .gentle-card.cream-style {
+            background-color: var(--bg-secondary);
+            border-color: var(--border-color);
+        }
+
+        .gentle-card ul,
+        .summary-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .gentle-card li,
+        .summary-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+        }
+
+        .gentle-card li:last-child,
+        .summary-list li:last-child { margin-bottom: 0; }
+
+        .gentle-card li::before,
+        .summary-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-dark);
+            font-size: 13px;
+        }
+
+        .observation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 28px 0 8px;
+        }
+
+        .observation-item {
+            background-color: var(--bg-secondary);
+            padding: 24px;
+        }
+
+        .observation-item h3 {
+            margin: 0 0 10px;
+            color: var(--accent-dark);
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .observation-item p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .summary-card {
+            background-color: rgba(236, 230, 239, 0.38);
+            border-color: var(--accent-light);
+            padding: 32px;
+            margin: 56px 0 48px;
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .closing-note {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.1;
+            margin: 48px auto 8px;
+        }
+
+        .related-section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 58px 24px 28px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .related-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .related-card:hover {
+            background-color: var(--accent-light);
+            border-color: var(--accent-main);
+            transform: translateY(-5px);
+        }
+
+        .related-label {
+            color: var(--accent-dark);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .related-card h3 {
+            margin: 18px 0 12px;
+            font-size: 18px;
+            line-height: 1.55;
+            font-weight: 500;
+        }
+
+        .related-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            margin-top: 22px;
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .article-nav {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 36px 24px 64px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .text-link {
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-bottom: 1px solid rgba(140, 125, 112, 0.42);
+            padding-bottom: 3px;
+            transition: color 0.25s ease, border-color 0.25s ease;
+        }
+
+        .text-link:hover {
+            color: var(--accent-dark);
+            border-color: var(--accent-dark);
+        }
+
+        @media (max-width: 760px) {
+            .nav-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                gap: 14px;
+                font-size: 12px;
+            }
+
+            .article-hero { padding-top: 58px; }
+            .qa-grid,
+            .observation-grid,
+            .related-grid { grid-template-columns: 1fr; }
+            .article-content { padding-top: 52px; }
+            .related-card { min-height: auto; }
+        }
     </style>
 </head>
-<body class="bg-stone-50 leading-relaxed">
-
-    <!-- Navbar -->
-    <nav class="bg-white border-b border-stone-200 py-4 px-6 sticky top-0 z-50">
-        <div class="max-w-4xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold tracking-tight">代謝美學<span class="block text-[10px] tracking-[0.2em] font-medium text-stone-400">METABOLIC ESTHETICS</span></a>
-            <div class="flex items-center gap-6">
-                <a href="index.html" class="text-stone-500 hover:text-wood-500 text-sm">首頁</a>
-                <a href="body_signals.html" class="text-stone-500 hover:text-wood-500 text-sm">身體訊號</a>
-                <a href="https://lin.ee/pzxDU3O" class="bg-wood-500 text-white px-4 py-2 rounded-full text-sm hover:bg-wood-600 transition">預約諮詢</a>
+<body>
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <a href="index.html" aria-label="返回代謝美學首頁">
+                <div class="logo-main">代謝美學</div>
+                <div class="logo-sub">METABOLIC ESTHETICS</div>
+            </a>
+            <div class="nav-links" aria-label="主要導覽">
+                <a class="nav-item" href="index.html">首頁</a>
+                <a class="nav-item active" href="body_signals.html">身體訊號</a>
+                <a class="nav-item" href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener">預約諮詢</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <main class="max-w-3xl mx-auto px-6 py-16">
-        <header class="mb-16 text-center">
-            <div class="text-[10px] tracking-[0.2em] text-wood-500 font-medium mb-3 uppercase">BODY SIGNALS</div>
-            <div class="text-sm text-stone-500 mb-6 uppercase tracking-wider">身體訊號 · 提不起勁與沒電感</div>
-            <h1 class="text-4xl md:text-5xl font-semibold text-stone-800 mb-8 leading-loose">為什麼以前做得到的事，<br>現在覺得很費力？</h1>
-            <p class="text-stone-600 max-w-lg mx-auto italic">有些費力，不是因為你做不到。<br>而是身體正在提醒你：先找到做完以後還回得來的節奏。</p>
-        </header>
+    <header class="article-hero">
+        <span class="hero-tag">BODY SIGNALS</span>
+        <div class="hero-category">身體訊號 · 提不起勁與沒電感</div>
+        <h1 class="article-title">為什麼以前做得到的事，<br>現在覺得很費力？</h1>
+        <p class="hero-intro">
+            有些費力，不是因為你做不到，也不一定代表你退步了。而是身體正在提醒你：現在的節奏，也許需要重新看見消耗與恢復之間的關係。
+        </p>
+    </header>
 
-        <!-- Q&A Section -->
-        <section class="py-12 mb-16 bg-stone-100/50 rounded-3xl border border-stone-200/50">
-            <div class="text-center mb-10">
-                <span class="text-xs tracking-widest text-wood-500 font-medium">這篇文章會帶你看懂</span>
-                <div class="w-8 h-[1px] bg-wood-500/30 mx-auto mt-3"></div>
-            </div>
-            <div class="grid gap-4 md:grid-cols-3 px-6">
-                <div class="bg-white/60 p-6 rounded-2xl border border-stone-200 shadow-sm">
-                    <span class="text-[10px] text-wood-500 font-bold mb-2 block">Q 1</span>
-                    <p class="text-sm font-medium leading-relaxed">為什麼以前的負荷，現在做完更難恢復？</p>
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="section-mini-title">這篇文章會帶你看懂</div>
+            <div class="qa-divider"></div>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <div class="qa-label">Q 1</div>
+                    <p>為什麼以前的負荷，現在做完更難恢復？</p>
                 </div>
-                <div class="bg-white/60 p-6 rounded-2xl border border-stone-200 shadow-sm">
-                    <span class="text-[10px] text-wood-500 font-bold mb-2 block">Q 2</span>
-                    <p class="text-sm font-medium leading-relaxed">怎麼看出節奏已超過身體承接範圍？</p>
+                <div class="qa-card">
+                    <div class="qa-label">Q 2</div>
+                    <p>怎麼看出節奏已超過身體承接範圍？</p>
                 </div>
-                <div class="bg-white/60 p-6 rounded-2xl border border-stone-200 shadow-sm">
-                    <span class="text-[10px] text-wood-500 font-bold mb-2 block">Q 3</span>
-                    <p class="text-sm font-medium leading-relaxed">如果不適合舊節奏，該怎麼調整？</p>
+                <div class="qa-card">
+                    <div class="qa-label">Q 3</div>
+                    <p>如果不適合舊節奏，該怎麼慢慢調整？</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Article -->
-        <article class="prose prose-stone max-w-none text-stone-800">
-            <p>以前下班後還可以運動，現在下班後只想安靜坐著。以前聚餐、聊天、出門一整天，睡一覺就好了。現在出門一趟，隔天還覺得身體沉沉的。以前晚睡一天，補個眠就恢復。現在只要睡晚一點，可能連續好幾天都覺得累。以前工作忙一點、行程滿一點，好像也撐得過去。現在只是多安排一件事，就覺得整個人被抽乾。</p>
+    <main class="article-content">
+        <p>以前下班後還可以運動，現在下班後只想安靜坐著。以前聚餐、聊天、出門一整天，睡一覺就好了。現在出門一趟，隔天還覺得身體沉沉的。</p>
+        <p>以前晚睡一天，補個眠就恢復。現在只要睡晚一點，可能連續好幾天都覺得累。以前工作忙一點、行程滿一點，好像也撐得過去。現在只是多安排一件事，就覺得整個人被抽乾。</p>
 
-            <div class="my-10 p-8 bg-[#EBE5DF] rounded-2xl border-l-4 border-wood-500">
-                <p class="italic text-stone-700">這時候很多人會開始懷疑自己：是不是年紀到了？是不是體力變差？是不是我變脆弱？是不是我抗壓性變低？</p>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>不是事情突然變得比較難。</li>
+                <li>也不一定是你變得比較脆弱。</li>
+                <li>而是現在的身體，可能不像以前那樣有足夠餘裕。</li>
+                <li>真正要看的，不只是能不能完成，而是做完以後回不回得來。</li>
+            </ul>
+        </div>
+
+        <h2>先確認安全：活動後明顯惡化，不要只當成累</h2>
+        <p>在往生活配速、恢復力與身體承接度理解之前，有些狀況需要先確認安全。代謝美學重視身體訊號，但不會把所有變累都解釋成壓力、年紀或生活習慣。</p>
+        <div class="gentle-card">
+            <ul>
+                <li>明顯喘、胸悶、胸痛或心悸。</li>
+                <li>頭暈、快昏倒、臉色蒼白。</li>
+                <li>發燒、夜間盜汗、不明原因體重下降。</li>
+                <li>短時間內疲倦快速惡化，或和平常明顯不同。</li>
+                <li>活動後不只是累，而是明顯惡化，且需要很久才能回來。</li>
+            </ul>
+        </div>
+        <p>先排除需要醫療處理的原因，後面的調整才會更安心。</p>
+
+        <h2>問題不一定是不能做，而是做完回不來</h2>
+        <p>很多人會用以前的自己當標準。以前可以熬夜、一直忙、照顧家人、處理很多事，就以為現在也應該照樣可以。</p>
+        <p>可是以前做得到，不代表身體沒有付出代價。當睡眠不足、壓力累積、營養不足、血糖不穩、腸胃負擔或活動量下降慢慢疊加，身體的餘裕會變少。同樣的生活方式，就會開始變得吃力。</p>
+        <p>這時候真正要問的不是：「我為什麼不像以前那麼強？」而是：「現在的節奏，身體做完以後還回得來嗎？」</p>
+
+        <h2>覺得很費力，常見有四種狀況</h2>
+        <div class="observation-grid">
+            <div class="observation-item">
+                <h3>第一種：恢復速度變慢型</h3>
+                <p>當睡眠、壓力、營養與身體修復沒有跟上，原本一天可以恢復的消耗，可能需要兩三天才回得來。</p>
             </div>
-
-            <p>但在代謝美學裡，我們會想多看一層。有時候，身體的確不像以前那麼有餘裕。體力可能下降了，恢復速度可能變慢了，能承接的負荷也可能變少了。但這不只是「我退步了」這麼簡單。它更像是身體在提醒你：現在的狀態，需要被重新理解。</p>
-            <p>不是只看自己能不能撐過去，也要看做完以後，身體回不回得來。以前做得到，不代表現在還適合同樣的節奏。當身體開始變得比較回不來，就代表我們需要重新調整消耗與恢復的安排。</p>
-
-            <h3 class="text-2xl font-semibold mt-12 mb-6">先確認安全：活動後明顯惡化，不要只當成累</h3>
-            <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm mb-6">
-                <p class="text-sm font-bold text-stone-700 mb-4">若費力感伴隨以下情況，請先由醫師評估：</p>
-                <ul class="text-sm space-y-2 list-disc pl-4 text-stone-600">
-                    <li>明顯喘、胸悶、胸痛、心悸</li>
-                    <li>頭暈、快昏倒、臉色蒼白</li>
-                    <li>發燒、夜間盜汗、不明原因體重下降</li>
-                    <li>短時間內疲倦快速惡化，或和平常明顯不同</li>
-                    <li>活動後不只是累，而是明顯惡化，且需要很久才能回來</li>
-                </ul>
+            <div class="observation-item">
+                <h3>第二種：負荷疊太密型</h3>
+                <p>工作、社交、家務、運動與照顧責任單獨看都還好，但全部排在一起，身體就沒有足夠空間回補。</p>
             </div>
-            <p>代謝美學重視身體訊號，但不會把所有變累都解釋成壓力、年紀或生活習慣。先確認沒有需要醫療處理的原因，後面的調整才會更安心。</p>
-
-            <h3 class="text-2xl font-semibold mt-12 mb-6">問題不一定是「不能做」，而是「做完回不來」</h3>
-            <p>很多人會用「以前的自己」當標準。以前我可以熬夜、一直忙、照顧家人處理很多事。可是以前做得到，不代表身體沒有付出代價。當睡眠不足、壓力累積、營養不足、血糖不穩、腸胃負擔、發炎反應或活動量下降慢慢累積，身體的餘裕會變少。這時候，同樣的生活方式就會開始變得吃力。</p>
-            <p>不是事情突然變難，而是現在的身體，可能需要用新的方式來承接生活。</p>
-
-            <div class="bg-stone-100 p-6 rounded-xl border border-stone-200 my-8">
-                <p class="text-stone-700 italic">身體狀態好的時候，不是不會累。而是累了以後，休息一下能回來。但當身體回到穩定的速度變慢，就會出現另一種感覺：可以出門，但回來要躺很久；可以工作，但下班後什麼都不想說；可以運動，但運動後反而累好幾天；可以聚餐，但隔天身體沉、腦袋慢、食慾亂。</p>
+            <div class="observation-item">
+                <h3>第三種：舊標準硬撐型</h3>
+                <p>一直用以前的體力要求現在的自己，容易忽略身體已經在提醒：目前需要新的配速。</p>
             </div>
-            <p>這時候，真正要問的不是：「我為什麼不像以前那麼強？」而是：「現在的節奏，身體做完以後還回得來嗎？」</p>
-
-            <h3 class="text-2xl font-semibold mt-12 mb-6">生活配速，是看懂身體現在承接得住多少</h3>
-            <p>生活配速，不是什麼都不做，也不是叫你以後越做越少。它指的是：你怎麼安排工作、運動、社交、家務、照顧責任與休息，讓身體在消耗後還有機會回到穩定。</p>
-            <p>很多人不是沒有休息，而是消耗排得太密，回補排得太少。這些事情單獨看，不一定有問題。但當它們一直疊在一起，身體就會來不及回來。</p>
-            <p>所以有些費力，不是單一事件造成的，而是整個生活節奏太密，身體一直沒有真正補回來。</p>
-
-            <h3 class="text-2xl font-semibold mt-12 mb-6">不要只看當下能不能完成，也要看 24 到 48 小時後的反應</h3>
-            <p>很多人判斷一件事能不能做，只看當下能不能完成。但身體訊號常常不是只在當下出現。更重要的是：做完以後的 24 到 48 小時。</p>
-            <p>你可以觀察：隔天是否特別疲倦、睡眠是否變差、食慾是否變亂、身體是否浮腫或沉重、腸胃是否變不舒服、肩頸是否更緊、情緒是否更容易煩躁或低落、原本簡單的事情是否變得更難開始、需要多久才覺得身體回到穩定。</p>
-            <p>如果一件事當下做得到，但做完以後要拖好幾天才回來，代表它對現在的身體來說，可能已經超過現在能承接的節奏。這不是說你永遠不能做，而是現在需要調整做法、強度、頻率，或前後的恢復安排。</p>
-
-            <h3 class="text-2xl font-semibold mt-12 mb-6">配速不是越做越少，而是做完以後還回得來</h3>
-            <p>真正需要找的，是一個中間點：不是完全不消耗，也不是每次都耗到回不來，而是讓身體經驗一種「可恢復的挑戰」。可恢復的挑戰，不是永遠低強度，也不是避免所有壓力。</p>
-
-            <h3 class="text-2xl font-semibold mt-12 mb-6">怎麼一點一點把承接力養回來？</h3>
-            <p>當身體已經容易回不來，最重要的不是立刻回到以前。而是找到現在身體承接得住的版本。如果以前可以跑三十分鐘，現在可能先從快走十分鐘開始；如果以前可以聚餐到很晚，現在可以先保留聚餐，但提早離開；如果以前週末可以排滿行程，現在可以先留半天空白；如果以前工作後還能運動，現在可以先把運動放在比較有餘裕的時段。</p>
-            <p>這是在幫身體重新建立「做得到，也回得來」的經驗。多走五分鐘、多做一組肌力、多安排一個低強度活動、多承接一點點生活、多一點點身體真的收得到的挑戰。承接力不是靠硬撐長回來的，承接力是靠一次一次可恢復的累積，慢慢養回來的。</p>
-
-            <h3 class="text-2xl font-semibold mt-12 mb-6">不用照別人的標準，也不用照以前的自己硬撐</h3>
-            <p>每個人的身體狀態不一樣。別人下班後可以高強度運動，不代表你現在也適合。別人週末可以排滿活動，不代表你也需要這樣安排。以前的你可以晚睡、趕行程、連續社交，也不代表現在還要用同樣的方式證明自己。</p>
-            <p>身體訊號不是要告訴你：你變差了。它比較像是在提醒你：現在的身體，需要被重新理解。不是照別人的標準安排生活。也不是照以前的自己硬撐。而是從現在的身體開始，觀察什麼事情做完會透支，什麼事情做完還回得來。</p>
-            <p>當你開始看懂這些訊號，就不是一直勉強身體跟上外面的節奏。而是慢慢帶著身體，重新建立可以承接更多的力量。</p>
-
-            <!-- Key Summary -->
-            <div class="bg-wood-500/10 p-8 rounded-2xl my-10 border border-wood-500/20">
-                <h4 class="font-bold mb-4 text-stone-800">重點整理</h4>
-                <ul class="space-y-3 text-sm text-stone-700">
-                    <li>• 以前做得到，不代表現在還適合同樣的生活節奏。</li>
-                    <li>• 身體的確可能不像以前那麼有餘裕，體力可能下降，恢復速度也可能變慢；但這不只是「我退步了」這麼簡單。</li>
-                    <li>• 有些費力，是身體正在提醒你：先找到做完以後還回得來的節奏。</li>
-                    <li>• 真正需要留意的，不只是「我還能不能做」，而是「做完以後，我多久回得來」。</li>
-                    <li>• 活動後 24 到 48 小時的身體反應，是很重要的回饋。</li>
-                    <li>• 生活配速不是什麼都不做，而是重新安排工作、運動、社交、家務與休息的距離。</li>
-                    <li>• 重新配速不是越做越少，而是讓身體做完以後還能回來。</li>
-                    <li>• 可恢復的挑戰，指的是做完會有一點累，但身體可以在合理時間內回到穩定。</li>
-                </ul>
+            <div class="observation-item">
+                <h3>第四種：活動後回不來型</h3>
+                <p>當下可以完成，但隔天明顯疲倦、腦袋慢、身體沉、食慾亂或睡眠變差，代表身體承接度可能已經被超過。</p>
             </div>
+        </div>
 
-            <div class="text-center italic mt-12 mb-12 text-stone-700">
-                <p>真正的恢復，不是永遠不累。</p>
-                <p>而是累了以後，身體有機會回來。</p>
-                <p>當身體一次一次經驗到「我做得到，也回得來」，很多原本覺得很費力的事，才有機會慢慢重新變得比較輕。</p>
-            </div>
-        </article>
+        <h2>生活配速，是看懂身體現在承接得住多少</h2>
+        <p>生活配速，不是什麼都不做，也不是叫你以後越做越少。它指的是：你怎麼安排工作、運動、社交、家務、照顧責任與休息，讓身體在消耗後還有機會回到穩定。</p>
+        <p>很多人不是沒有休息，而是消耗排得太密，回補排得太少。這些事情單獨看不一定有問題，但當它們一直疊在一起，身體就會來不及回來。</p>
 
-        <!-- Extended Reading -->
-        <section class="mt-20 pt-12 border-t border-stone-200">
-            <h3 class="text-lg font-bold mb-8 text-center text-stone-700">延伸閱讀</h3>
-            <div class="grid md:grid-cols-2 gap-4">
-                <a href="body_signals_tension.html" class="p-6 bg-white border border-stone-200 rounded-xl hover:bg-stone-100 transition">
-                    <h4 class="font-bold text-sm mb-2">為什麼身體總是緊繃，像壓力留在身體？</h4>
-                    <p class="text-xs text-stone-500">有些緊繃，不只是肌肉問題，而是壓力還留在身體裡。</p>
-                </a>
-                <a href="body_signals_low_motivation.html" class="p-6 bg-white border border-stone-200 rounded-xl hover:bg-stone-100 transition">
-                    <h4 class="font-bold text-sm mb-2">為什麼明明沒有生病，卻總是提不起勁？</h4>
-                    <p class="text-xs text-stone-500">提不起勁不一定是懶，也可能是身體的啟動能力下降。</p>
-                </a>
-                <a href="body_signals_more_sensitive.html" class="p-6 bg-white border border-stone-200 rounded-xl hover:bg-stone-100 transition">
-                    <h4 class="font-bold text-sm mb-2">變敏感一定是退步嗎？</h4>
-                    <p class="text-xs text-stone-500">有些敏感不是變差，而是身體終於不再假裝什麼都沒事。</p>
-                </a>
-                <a href="body_signals_normal_tests.html" class="p-6 bg-white border border-stone-200 rounded-xl hover:bg-stone-100 transition">
-                    <h4 class="font-bold text-sm mb-2">為什麼檢查都正常，還是覺得不舒服？</h4>
-                    <p class="text-xs text-stone-500">檢查正常是一件好事，但不代表身體已經沒有需要被照顧的地方。</p>
-                </a>
-            </div>
-            <div class="mt-16 text-center">
-                <a href="body_signals.html" class="text-stone-500 hover:text-wood-500 text-sm border-b border-stone-300 pb-1">返回身體訊號樹</a>
-            </div>
-        </section>
+        <h2>不要只看當下能不能完成，也要看 24 到 48 小時後</h2>
+        <p>很多人判斷一件事能不能做，只看當下能不能完成。但身體訊號常常不是只在當下出現，而是延後出現在隔天或後天。</p>
+        <div class="gentle-card">
+            <ul>
+                <li>隔天是否特別疲倦，或需要很久才恢復？</li>
+                <li>睡眠是否變差，或醒來更沒有恢復感？</li>
+                <li>食慾是否變亂，特別想吃甜食、重口味或宵夜？</li>
+                <li>身體是否更沉重、浮腫、肩頸更緊？</li>
+                <li>原本簡單的事情，是否變得更難開始？</li>
+            </ul>
+        </div>
+        <p>如果一件事當下做得到，但做完以後要拖好幾天才回來，代表它對現在的身體來說，可能已經超過目前能承接的節奏。</p>
+
+        <h2>配速不是越做越少，而是做完以後還回得來</h2>
+        <p>真正需要找的，是一個中間點：不是完全不消耗，也不是每次都耗到回不來，而是讓身體經驗一種「可恢復的挑戰」。</p>
+        <p>可恢復的挑戰，不是永遠低強度，也不是避免所有壓力。它是讓身體在被使用之後，仍然有機會慢慢回到穩定。</p>
+
+        <h2>可以怎麼一點一點把承接力養回來？</h2>
+        <p>當身體已經容易回不來，最重要的不是立刻回到以前，而是找到現在身體承接得住的版本。</p>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>以前可以跑三十分鐘，現在可以先從快走十分鐘開始。</li>
+                <li>以前可以聚餐到很晚，現在可以保留聚餐，但提早離開。</li>
+                <li>以前一天塞滿行程，現在可以在大行程前後留下緩衝。</li>
+                <li>以前靠意志力硬撐，現在開始練習安排真正的回補。</li>
+            </ul>
+        </div>
+        <p>這不是退步，而是重新建立身體和生活之間的合作方式。</p>
+
+        <div class="summary-card">
+            <h2>重點整理</h2>
+            <ul class="summary-list">
+                <li>以前做得到，不代表現在仍適合同樣的節奏。</li>
+                <li>覺得很費力時，要看的不只是當下能不能完成，也要看做完後身體回不回得來。</li>
+                <li>常見原因包括恢復速度變慢、負荷排太密、舊標準硬撐，以及活動後回不來。</li>
+                <li>生活配速不是越做越少，而是讓身體在消耗後仍有機會回到穩定。</li>
+                <li>真正的承接力，是從可恢復的小挑戰慢慢養回來。</li>
+            </ul>
+        </div>
+
+        <p class="closing-note">
+            有些費力，不是身體在退步，<br>
+            而是它正在提醒你：<br>
+            現在需要新的節奏。<br>
+            當我們不再只用以前的自己要求現在，<br>
+            就有機會慢慢找回一種做完以後還回得來的生活方式。
+        </p>
     </main>
 
-    <footer class="text-center py-12 text-stone-400 text-xs border-t border-stone-100 mt-10">
-        © 代謝美學 Body Aesthetics. All rights reserved.
-    </footer>
+    <section class="related-section">
+        <div class="section-mini-title">延伸閱讀</div>
+        <div class="qa-divider"></div>
+        <div class="related-grid">
+            <a class="related-card" href="body_signals_low_motivation.html">
+                <div>
+                    <div class="related-label">01｜如果總是提不起勁</div>
+                    <h3>為什麼明明沒有生病，卻總是提不起勁？</h3>
+                    <p>提不起勁不一定是懶，也可能是身體啟動所需的資源不足。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
+            </a>
+            <a class="related-card" href="body_signals_tension.html">
+                <div>
+                    <div class="related-label">02｜如果身體總是緊繃</div>
+                    <h3>為什麼身體總是緊繃，像壓力留在身體？</h3>
+                    <p>有些緊繃不只是肌肉問題，而是壓力還留在身體裡。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
+            </a>
+            <a class="related-card" href="body_signals_more_sensitive.html">
+                <div>
+                    <div class="related-label">03｜如果身體變得更敏感</div>
+                    <h3>變敏感一定是退步嗎？</h3>
+                    <p>有些敏感不是變差，而是身體終於不再假裝什麼都沒事。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
+            </a>
+        </div>
+    </section>
+
+    <div class="article-nav">
+        <a class="text-link" href="body_signals.html">← 回到身體訊號</a>
+        <a class="text-link" href="index.html">返回代謝美學首頁</a>
+    </div>
 </body>
 </html>
