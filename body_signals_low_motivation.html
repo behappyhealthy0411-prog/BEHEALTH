@@ -1,204 +1,607 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>為什麼明明沒有生病，卻總是提不起勁？ · 代謝美學</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>為什麼明明沒有生病，卻總是提不起勁？｜身體訊號｜代謝美學</title>
+    <meta name="description" content="明明沒有生病卻總是提不起勁，不一定只是懶或意志力不足。從睡眠、血糖、營養、壓力與身體啟動能力，重新理解沒電感背後的身體訊號。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/body_signals_low_motivation.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        cream: '#FAF8F5',
-                        'cream-100': '#F5F0EA',
-                        // Body Signals Palette: Wood Brown
-                        wood: {
-                            500: '#8C7D70',
-                            600: '#74675B',
-                            100: '#EBE5DF',
-                        },
-                        stone: { 800: '#2D2B29', 600: '#8C7D70', 700: '#5A544F' }
-                    },
-                    fontFamily: {
-                        sans: ['Noto Sans TC', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #FAF8F5; color: #2D2B29; }
-        .tracking-widest-lg { letter-spacing: 0.15em; }
+        :root {
+            --font-sans: 'Noto Sans TC', sans-serif;
+            --bg-primary: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #8C7D70;
+            --text-soft: #A39A92;
+            --border-color: rgba(45, 43, 41, 0.10);
+            --accent-main: #8E8493;
+            --accent-dark: #6F6675;
+            --accent-light: #ECE6EF;
+            --accent-soft: rgba(236, 230, 239, 0.42);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.95;
+            letter-spacing: 0.03em;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .navbar {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--bg-block);
+            background-color: transparent;
+        }
+
+        .nav-wrapper {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo-main {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            line-height: 1.2;
+        }
+
+        .logo-sub {
+            margin-top: 4px;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+        }
+
+        .nav-item {
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.25s ease;
+        }
+
+        .nav-item:hover,
+        .nav-item.active { color: var(--accent-dark); }
+
+        .nav-item.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: var(--accent-main);
+        }
+
+        .article-hero {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 82px 24px 52px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            display: block;
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+        }
+
+        .hero-category {
+            margin-top: 10px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            letter-spacing: 0.14em;
+        }
+
+        .article-title {
+            margin: 34px 0 0;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+            font-weight: 500;
+        }
+
+        .hero-intro {
+            max-width: 620px;
+            margin: 30px auto 0;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.05;
+        }
+
+        .qa-section {
+            padding: 38px 0;
+            background-color: rgba(245, 240, 234, 0.58);
+            border-top: 1px solid rgba(45, 43, 41, 0.08);
+            border-bottom: 1px solid rgba(45, 43, 41, 0.08);
+        }
+
+        .qa-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-mini-title {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+        }
+
+        .qa-divider {
+            width: 32px;
+            height: 1px;
+            margin: 10px auto 24px;
+            background-color: rgba(142, 132, 147, 0.45);
+        }
+
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .qa-card {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-light);
+            padding: 22px 20px;
+            min-height: 112px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .qa-label {
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .qa-card p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 66px 24px 36px;
+        }
+
+        .article-content p {
+            margin: 0 0 22px;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+
+        .article-content h2 {
+            margin: 58px 0 22px;
+            font-size: 25px;
+            line-height: 1.55;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        .article-content h2::after {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 1px;
+            margin-top: 14px;
+            background-color: var(--accent-main);
+        }
+
+        .gentle-card,
+        .observation-item,
+        .summary-card {
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gentle-card {
+            background-color: rgba(236, 230, 239, 0.30);
+            border-color: rgba(142, 132, 147, 0.24);
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+
+        .gentle-card.cream-style {
+            background-color: var(--bg-secondary);
+            border-color: var(--border-color);
+        }
+
+        .gentle-card ul,
+        .summary-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .gentle-card li,
+        .summary-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+        }
+
+        .gentle-card li:last-child,
+        .summary-list li:last-child { margin-bottom: 0; }
+
+        .gentle-card li::before,
+        .summary-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-dark);
+            font-size: 13px;
+        }
+
+        .observation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 28px 0 8px;
+        }
+
+        .observation-item {
+            background-color: var(--bg-secondary);
+            padding: 24px;
+        }
+
+        .observation-item h3 {
+            margin: 0 0 10px;
+            color: var(--accent-dark);
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .observation-item p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .summary-card {
+            background-color: rgba(236, 230, 239, 0.38);
+            border-color: var(--accent-light);
+            padding: 32px;
+            margin: 56px 0 48px;
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .closing-note {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.1;
+            margin: 48px auto 8px;
+        }
+
+        .related-section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 58px 24px 28px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .related-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .related-card:hover {
+            background-color: var(--accent-light);
+            border-color: var(--accent-main);
+            transform: translateY(-5px);
+        }
+
+        .related-label {
+            color: var(--accent-dark);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .related-card h3 {
+            margin: 18px 0 12px;
+            font-size: 18px;
+            line-height: 1.55;
+            font-weight: 500;
+        }
+
+        .related-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            margin-top: 22px;
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .article-nav {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 36px 24px 64px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .text-link {
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-bottom: 1px solid rgba(140, 125, 112, 0.42);
+            padding-bottom: 3px;
+            transition: color 0.25s ease, border-color 0.25s ease;
+        }
+
+        .text-link:hover {
+            color: var(--accent-dark);
+            border-color: var(--accent-dark);
+        }
+
+        @media (max-width: 760px) {
+            .nav-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                gap: 14px;
+                font-size: 12px;
+            }
+
+            .article-hero { padding-top: 58px; }
+            .qa-grid,
+            .observation-grid,
+            .related-grid { grid-template-columns: 1fr; }
+            .article-content { padding-top: 52px; }
+            .related-card { min-height: auto; }
+        }
     </style>
 </head>
-<body class="font-sans">
-
-    <nav class="fixed w-full z-50 bg-[#FAF8F5]/80 backdrop-blur-md border-b border-stone-200/20">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex flex-col">
-                <span class="text-stone-800 font-bold text-lg leading-tight">代謝美學</span>
-                <span class="text-[10px] tracking-[0.2em] text-stone-600 uppercase">METABOLIC ESTHETICS</span>
-            </div>
-            <div class="flex items-center gap-6 text-sm font-medium text-stone-600">
-                <a href="index.html" class="hover:text-wood-600 transition-colors">首頁</a>
-                <a href="body_signals.html" class="hover:text-wood-600 transition-colors">身體訊號</a>
-                <a href="https://lin.ee/pzxDU3O" class="bg-[#8C7D70] text-white px-4 py-2 rounded-full hover:bg-wood-600 transition-colors">預約諮詢</a>
+<body>
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <a href="index.html" aria-label="返回代謝美學首頁">
+                <div class="logo-main">代謝美學</div>
+                <div class="logo-sub">METABOLIC ESTHETICS</div>
+            </a>
+            <div class="nav-links" aria-label="主要導覽">
+                <a class="nav-item" href="index.html">首頁</a>
+                <a class="nav-item active" href="body_signals.html">身體訊號</a>
+                <a class="nav-item" href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener">預約諮詢</a>
             </div>
         </div>
     </nav>
 
-    <header class="pt-32 pb-20 px-6 text-center">
-        <div class="max-w-3xl mx-auto">
-            <span class="text-xs tracking-widest-lg text-wood-500 uppercase font-medium">BODY SIGNAL</span>
-            <div class="mt-4 flex justify-center items-center gap-2 text-stone-600 text-sm font-medium">
-                <span>身體訊號 · 提不起勁與沒電感</span>
-            </div>
-            <h1 class="text-4xl md:text-5xl font-semibold text-stone-800 mt-6 leading-relaxed">
-                為什麼明明沒有生病，<br>卻總是提不起勁？
-            </h1>
-            <p class="mt-8 text-lg text-stone-600 font-light leading-relaxed max-w-xl mx-auto">
-                有些提不起勁，不是懶。<br>
-                也不是單純意志力不夠。
-            </p>
-        </div>
+    <header class="article-hero">
+        <span class="hero-tag">BODY SIGNALS</span>
+        <div class="hero-category">身體訊號 · 提不起勁與沒電感</div>
+        <h1 class="article-title">為什麼明明沒有生病，卻總是提不起勁？</h1>
+        <p class="hero-intro">
+            有些提不起勁，不是懶，也不一定只是意志力不夠。明明沒有發燒、沒有明顯疼痛，檢查也不一定有大問題，但身體就是很難啟動。這時候，也許需要看的不是你夠不夠努力，而是身體有沒有足夠的資源可以開始。
+        </p>
     </header>
 
-    <section class="py-12 bg-wood-100/40 border-y border-stone-200/30 backdrop-blur-sm">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-8">
-                <span class="text-xs tracking-widest text-wood-500 font-medium">這篇文章會帶你看懂</span>
-                <div class="w-8 h-[1px] bg-wood-500/40 mx-auto mt-2"></div>
-            </div>
-            <div class="grid gap-4 md:grid-cols-3">
-                <div class="bg-[#EBE5DF]/60 p-6 rounded-2xl border border-wood-100 flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-wood-600 font-semibold mb-2 block">Q 1</span>
-                    <p class="text-[14px] text-[#2D2B29] tracking-wide leading-relaxed font-medium">提不起勁，真的只是因為自己太懶或不夠努力嗎？</p>
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="section-mini-title">這篇文章會帶你看懂</div>
+            <div class="qa-divider"></div>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <div class="qa-label">Q 1</div>
+                    <p>提不起勁，真的只是太懶或不夠努力嗎？</p>
                 </div>
-                <div class="bg-[#EBE5DF]/60 p-6 rounded-2xl border border-wood-100 flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-wood-600 font-semibold mb-2 block">Q 2</span>
-                    <p class="text-[14px] text-[#2D2B29] tracking-wide leading-relaxed font-medium">為什麼明明檢查都正常，身體卻還是像開了省電模式？</p>
+                <div class="qa-card">
+                    <div class="qa-label">Q 2</div>
+                    <p>為什麼檢查正常，身體卻像開了省電模式？</p>
                 </div>
-                <div class="bg-[#EBE5DF]/60 p-6 rounded-2xl border border-wood-100 flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-wood-600 font-semibold mb-2 block">Q 3</span>
-                    <p class="text-[14px] text-[#2D2B29] tracking-wide leading-relaxed font-medium">遇到這種狀態，應該要強迫自己更有紀律，還是該休息？</p>
+                <div class="qa-card">
+                    <div class="qa-label">Q 3</div>
+                    <p>這種沒電感，可以從哪些身體條件開始整理？</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <article class="py-16 px-6 max-w-2xl mx-auto text-stone-800 leading-loose text-base">
-        <p class="mb-8">你可能沒有發燒，沒有明顯疼痛，檢查也不一定有什麼大問題。可是每天就是覺得很難啟動。早上醒來，身體像還沒開機。工作可以做，但需要花很多力氣推自己。明明知道該運動，卻就是動不起來。想煮一點健康的東西，卻覺得很麻煩。連回訊息、整理房間、出門買東西，都比以前更費力。這種狀態，不一定只是心理問題。在代謝美學裡，我們會把它看成一種身體訊號：</p>
-        
-        <div class="bg-wood-100 p-8 rounded-2xl mb-12 border border-stone-200/50">
-            <h3 class="text-lg text-stone-800 mb-4 font-bold">提不起勁，不只是精神問題，而是身體的啟動能力下降。</h3>
-            <p class="text-stone-700 font-medium text-sm leading-relaxed">身體要啟動，需要很多條件一起配合：睡眠要修復得夠、血糖要夠穩、營養材料要足夠、壓力不能長期超過恢復能力。所以我們不問你是不是太懶，我們更需要問：<strong>身體現在是不是缺少啟動所需要的資源？</strong></p>
-        </div>
+    <main class="article-content">
+        <p>你可能沒有生病，卻每天都覺得很難啟動。早上醒來，身體像還沒開機；工作可以做，但需要花很多力氣推自己；明明知道該運動、該整理、該好好吃飯，卻總是覺得很費力。</p>
+        <p>這種狀態不一定只是心理問題。在代謝美學裡，我們會把它看成一種身體訊號：身體的啟動能力下降了。</p>
 
-        <h2 class="text-xl font-bold text-stone-800 mt-12 mb-6 border-l-4 border-wood-500 pl-4">先確認安全：提不起勁，也可能需要醫療評估</h2>
-        <p class="mb-6 text-stone-600">在往生活節律、壓力、營養與代謝方向理解之前，有些狀況要先確認安全。如果提不起勁伴隨以下情況，建議先由醫師評估：</p>
-        <ul class="list-disc list-inside space-y-2 text-stone-600 mb-8 pl-2 text-sm">
-            <li>明顯喘、胸悶、胸痛、心悸</li>
-            <li>頭暈、快昏倒、臉色蒼白</li>
-            <li>發燒、夜間盜汗、不明原因體重下降</li>
-            <li>黑便、血便，或月經量明顯過多</li>
-            <li>持續情緒低落、失去興趣、明顯絕望感</li>
-            <li>出現不想活、想傷害自己的念頭</li>
-            <li>嗜睡到影響日常功能，或意識變得混亂</li>
-            <li>肌肉無力、走路不穩、單側麻木或無力</li>
-            <li>疲倦快速惡化，或和過去明顯不同</li>
-        </ul>
-
-        <h2 class="text-xl font-bold text-stone-800 mt-12 mb-6">身體不是靠意志力啟動，而是靠一整套生理條件</h2>
-        <p class="mb-8">很多人會把行動力想成意志力，當自己起不來、動不了時，會開始責備自己。但若生理條件長期不足，身體不是「不想做」，而是<strong>「沒有足夠資源把自己推進行動狀態」</strong>。</p>
-
-        <h3 class="text-lg mt-10 mb-4 text-stone-800 font-bold border-b border-wood-100 pb-2">睡眠與晝夜節律：大腦醒了，身體不一定醒了</h3>
-        <p class="mb-6">提不起勁，第一個要看的不是白天有多努力，而是晚上有沒有真的恢復。睡眠不只是休息，也和荷爾蒙節律、血糖穩定、食慾調節、發炎修復與神經系統恢復有關。如果睡眠沒有真正修復，隔天就容易出現起床困難、腦袋慢、身體沉、情緒低等現象。</p>
-
-        <h3 class="text-lg mt-10 mb-4 text-stone-800 font-bold border-b border-wood-100 pb-2">血糖與胰島素：燃料供應不穩，行動力也會忽高忽低</h3>
-        <p class="mb-6">血糖波動太大，人就可能在某些時段特別斷電。這也是為什麼有些人努力少吃，卻更沒力；吃得清淡，飯後卻更昏。提不起勁時，身體往往需要的是更穩定的燃料供應。</p>
-
-        <h3 class="text-lg mt-10 mb-4 text-stone-800 font-bold border-b border-wood-100 pb-2">鐵蛋白、B12與葉酸：血紅素正常，不代表材料一定足夠</h3>
-        <p class="mb-6">很多人只看有沒有貧血，但在代謝美學裡，我們會再多看一步：身體有沒有足夠的儲備材料？這些材料不足，雖然不一定變成嚴重疾病，卻可能讓身體的啟動能力持續下降。</p>
-
-        <h3 class="text-lg mt-10 mb-4 text-stone-800 font-bold border-b border-wood-100 pb-2">甲狀腺：代謝訊號偏低端，身體會像開省電模式</h3>
-        <p class="mb-6">如果甲狀腺功能偏低，或雖然還在參考值內但整體狀態偏低端，有些人會覺得身體像開了省電模式。若合併怕冷、便祕、水腫、體重卡住、落髮或月經改變，就不應只看一句「TSH 正常」就結束。</p>
-
-        <h3 class="text-lg mt-10 mb-4 text-stone-800 font-bold border-b border-wood-100 pb-2">蛋白質與總熱量：吃得乾淨，不一定代表吃得足夠</h3>
-        <p class="mb-6">有些人吃得很少、少油少糖、晚餐不吃，這些看起來很自律，但身體不一定覺得安全。總熱量長期不足，身體也可能降低消耗、降低活動意願。<strong>吃得乾淨，不一定代表吃得足夠。</strong></p>
-
-        <h3 class="text-lg mt-10 mb-4 text-stone-800 font-bold border-b border-wood-100 pb-2">維生素D、鎂、鋅：身體小材料，也會影響整體狀態</h3>
-        <p class="mb-6 text-stone-700">有些營養素不會像血糖一樣立刻讓人有感，卻會影響身體整體調節。例如維生素D和免疫、肌肉功能、發炎調節有關；鎂和神經肌肉放鬆、睡眠品質、壓力調節、血糖代謝有關；鋅和免疫、腸胃、皮膚、味覺、荷爾蒙與修復有關。這些不是「吃了就立刻有精神」的提神品，但長期不足，身體就像少了很多細小零件，運作起來會比較不順。</p>
-
-        <h3 class="text-lg mt-10 mb-4 text-stone-800 font-bold border-b border-wood-100 pb-2">長期壓力：從撐住，變成推不動</h3>
-        <p class="mb-6">壓力一開始常常讓人撐起來，但如果狀態持續太久，身體會從「太緊繃」變成「推不動」。<strong>這不是突然變懶，而是恢復跟不上消耗。</strong></p>
-
-        <h3 class="text-lg mt-10 mb-4 text-stone-800 font-bold border-b border-wood-100 pb-2">發炎與身體負荷：身體忙著處理內部問題，外在行動就變難</h3>
-        <p class="mb-6 text-stone-700">有時候提不起勁，不是肌肉沒力，而是整個身體都覺得沉。可能睡不好、腸胃負擔大、壓力高，或吃了太多加工食物，導致身體忙於處理發炎，能拿來啟動生活的資源就變少了。這是一種鈍鈍的、懶懶的感覺，提醒你內部負荷已過重。</p>
-
-        <h3 class="text-lg mt-10 mb-4 text-stone-800 font-bold border-b border-wood-100 pb-2">肌肉量與活動基礎：身體本身也需要啟動引擎</h3>
-        <p class="mb-6 text-stone-700">肌肉不僅是體態問題，更是血糖儲存與代謝彈性的基礎。長期久坐、活動量太低或肌肉量不足，會讓人一動就累。反之，運動過量若未伴隨恢復，也會讓人更不想動。重點不在是否要運動，而是詢問身體：<strong>現在需要的是啟動、訓練，還是恢復？</strong></p>
-
-        <h2 class="text-xl font-bold text-stone-800 mt-12 mb-6">提不起勁時，不一定要先逼自己更自律</h2>
-        <p class="mb-8">但如果身體缺的是資源，再多自律也只是更用力消耗。這時候，不是再加一套規則，而是先分辨：<strong>身體現在缺的是推力，還是資源？</strong>如果缺的是推力，適度行動會有幫助；如果缺的是資源，就需要先補睡眠、補營養、降低壓力負荷。</p>
-
-        <h2 class="text-xl font-bold text-stone-800 mt-12 mb-6">提不起勁時，可以觀察「做完以後身體有沒有比較穩」</h2>
-        <p class="mb-8">有些事情做完會更累，有些事情做完會比較穩。提不起勁時，可以不用只問「我今天有沒有做到」，也可以問「做完這件事以後，我是比較有電，還是更耗？」我們追求的不是做更多事，而是找回身體真正能承接的啟動方式。</p>
-    </article>
-
-    <section class="max-w-2xl mx-auto px-6 mb-16">
-        <div class="bg-wood-100/60 p-8 rounded-2xl border border-stone-200/50">
-            <h3 class="text-base text-stone-800 mb-4 font-bold">重點整理</h3>
-            <ul class="space-y-3 text-sm text-stone-700 leading-relaxed list-none">
-                <li class="flex gap-2"><span>·</span> 提不起勁不一定是懶，也不一定只是意志力不足，它是一種「啟動能力下降」的身體訊號。</li>
-                <li class="flex gap-2"><span>·</span> 身體啟動需要睡眠、血糖、營養、甲狀腺、鐵蛋白、B12、維生素D、壓力節律與肌肉基礎共同支持。</li>
-                <li class="flex gap-2"><span>·</span> 吃得乾淨不代表足夠，長期低熱量與蛋白質不足，會讓身體更難啟動。</li>
-                <li class="flex gap-2"><span>·</span> 壓力撐太久，身體會從「緊繃」變成「推不動」。</li>
-                <li class="flex gap-2"><span>·</span> 提不起勁時，不是再加一套自律，而是先分辨：身體缺的是推力，還是資源。</li>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>提不起勁，不一定代表你不夠自律。</li>
+                <li>身體要啟動，需要睡眠、燃料、營養與壓力調節一起配合。</li>
+                <li>與其責備自己，不如先問：身體現在是不是缺少啟動所需要的資源？</li>
             </ul>
         </div>
-    </section>
 
-    <section class="max-w-2xl mx-auto px-6 mb-16">
-        <p class="text-wood-600 font-medium leading-relaxed text-center">
-            當身體的啟動條件一個一個被整理好，行動力才比較不是硬撐出來的。你不需要一下子變回以前那個很有效率的人，可以先從一個小到身體願意接受的開始，慢慢把資源補回來，慢慢讓身體重新知道：我可以不用硬撐，我也可以重新啟動。
+        <h2>先確認安全：提不起勁，也可能需要醫療評估</h2>
+        <p>在往生活節律、壓力、營養與代謝方向理解之前，有些狀況要先確認安全。如果提不起勁伴隨以下情況，建議先由醫師評估。</p>
+        <div class="gentle-card">
+            <ul>
+                <li>明顯喘、胸悶、胸痛、心悸，或頭暈快昏倒。</li>
+                <li>發燒、夜間盜汗、不明原因體重下降，或疲倦快速惡化。</li>
+                <li>黑便、血便、月經量明顯過多，或臉色蒼白。</li>
+                <li>肌肉無力、走路不穩、單側麻木無力，或意識混亂。</li>
+                <li>持續情緒低落、明顯絕望感，或出現不想活、想傷害自己的念頭。</li>
+            </ul>
+        </div>
+
+        <h2>身體不是靠意志力啟動，而是靠一整套生理條件</h2>
+        <p>很多人會把行動力想成意志力。當自己起不來、動不了時，就開始責備自己。但如果生理條件長期不足，身體不是不想做，而是沒有足夠資源把自己推進行動狀態。</p>
+        <p>這也是為什麼有些人明明很努力，卻越努力越覺得沒電。真正需要整理的，可能不是再加一套規則，而是回頭檢查身體的啟動條件。</p>
+
+        <h2>提不起勁，常見有六種狀況</h2>
+        <div class="observation-grid">
+            <div class="observation-item">
+                <h3>第一種：睡眠恢復不足型</h3>
+                <p>大腦醒了，身體不一定醒了。若睡眠沒有真正修復，隔天就容易起床困難、腦袋慢、身體沉，連簡單的事情都變得很費力。</p>
+            </div>
+            <div class="observation-item">
+                <h3>第二種：燃料供應不穩型</h3>
+                <p>血糖波動太大、吃得太少，或餐點組成不穩，都可能讓身體在某些時段突然斷電。提不起勁時，身體往往需要更穩定的燃料供應。</p>
+            </div>
+            <div class="observation-item">
+                <h3>第三種：營養材料不足型</h3>
+                <p>血紅素正常，不代表儲備材料一定足夠。鐵蛋白、B12、葉酸、維生素 D、鎂、鋅等不足，都可能讓身體的啟動能力下降。</p>
+            </div>
+            <div class="observation-item">
+                <h3>第四種：甲狀腺省電型</h3>
+                <p>若合併怕冷、便祕、水腫、體重卡住、落髮或月經改變，就不能只用「參考值內」簡單結束，而要放回整體狀態一起看。</p>
+            </div>
+            <div class="observation-item">
+                <h3>第五種：長期壓力消耗型</h3>
+                <p>壓力長期超過恢復能力時，身體會把能量優先拿去應付與撐住。表面上沒有生病，但日常啟動力會慢慢變低。</p>
+            </div>
+            <div class="observation-item">
+                <h3>第六種：吃得乾淨但不夠型</h3>
+                <p>少油、少糖、晚餐不吃，看起來很自律，但身體不一定覺得安全。吃得乾淨，不一定代表吃得足夠。</p>
+            </div>
+        </div>
+
+        <h2>可以先從哪些地方觀察？</h2>
+        <p>提不起勁時，先不要急著把自己推回高效率。可以先用比較溫和的方式，看看身體是哪一個啟動條件不足。</p>
+        <div class="gentle-card">
+            <ul>
+                <li>醒來時是清醒，還是像沒充飽電？</li>
+                <li>上午是否需要咖啡、茶或忙碌感才能撐住？</li>
+                <li>飯後是否容易昏沉，或下午特別斷電？</li>
+                <li>最近是否吃得很少、很乾淨，卻越來越沒力？</li>
+                <li>是否合併怕冷、便祕、落髮、水腫、心悸或頭暈？</li>
+                <li>壓力解除後，身體是否仍然緊繃、疲憊，沒有真正回來？</li>
+            </ul>
+        </div>
+
+        <h2>先做一個小到身體願意接受的開始</h2>
+        <p>當身體沒電時，最怕的是再用更大的規則壓自己。真正有幫助的開始，常常不是一次做到很多，而是讓身體重新感覺到「我做得到，而且做完沒有更累」。</p>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>先補一餐穩定的蛋白質與澱粉，而不是只喝咖啡硬撐。</li>
+                <li>先走五到十分鐘，而不是要求自己立刻恢復完整運動。</li>
+                <li>先整理睡前半小時的轉場，而不是只責備自己太晚睡。</li>
+                <li>先把疲倦當成訊號，而不是把提不起勁當成失敗。</li>
+            </ul>
+        </div>
+
+        <div class="summary-card">
+            <h2>重點整理</h2>
+            <ul class="summary-list">
+                <li>提不起勁不一定是懶，也可能是身體啟動能力下降。</li>
+                <li>啟動能力和睡眠、血糖、營養材料、甲狀腺、壓力與總熱量都有關。</li>
+                <li>檢查正常是一件好事，但不代表身體沒有需要被照顧的地方。</li>
+                <li>沒電時，不是先加更多自律，而是先分辨身體缺的是推力，還是資源。</li>
+                <li>真正的恢復，是讓行動力不再完全靠硬撐，而能慢慢從身體裡長回來。</li>
+            </ul>
+        </div>
+
+        <p class="closing-note">
+            當身體的啟動條件一個一個被整理好，<br>
+            行動力才比較不是硬撐出來的。<br>
+            你不需要一下子變回以前那個很有效率的人，<br>
+            可以先從一個小到身體願意接受的開始，<br>
+            慢慢把資源補回來，<br>
+            慢慢讓身體重新知道：我可以不用硬撐，我也可以重新啟動。
         </p>
-    </section>
+    </main>
 
-    <section class="max-w-4xl mx-auto px-6 py-12">
-        <h3 class="text-lg text-stone-800 mb-8 text-center font-bold">延伸閱讀</h3>
-        <div class="grid md:grid-cols-2 gap-4">
-            <a href="body_signals_tension.html" class="bg-white p-6 rounded-2xl border border-stone-200/50 hover:border-wood-500/30 transition-all">
-                <h4 class="font-medium text-stone-800 mb-2">為什麼身體總是緊繃，像壓力留在身體？</h4>
-                <p class="text-xs text-stone-500">有些緊繃，不只是肌肉問題，而是壓力還留在身體裡。</p>
+    <section class="related-section">
+        <div class="section-mini-title">延伸閱讀</div>
+        <div class="qa-divider"></div>
+        <div class="related-grid">
+            <a class="related-card" href="body_signals_tension.html">
+                <div>
+                    <div class="related-label">01｜緊繃與撐住</div>
+                    <h3>為什麼身體總是緊繃，像壓力留在身體？</h3>
+                    <p>有些緊繃不只是肌肉問題，而是身體還沒有收到可以放下的訊號。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
             </a>
-            <a href="body_signals_everything_feels_hard.html" class="bg-white p-6 rounded-2xl border border-stone-200/50 hover:border-wood-500/30 transition-all">
-                <h4 class="font-medium text-stone-800 mb-2">為什麼以前做得到的事，現在覺得很費力？</h4>
-                <p class="text-xs text-stone-500">當身體的恢復資源變少，原本普通的日常，也可能變得很費力。</p>
+            <a class="related-card" href="body_signals_everything_feels_hard.html">
+                <div>
+                    <div class="related-label">02｜日常變費力</div>
+                    <h3>為什麼以前做得到的事，現在覺得很費力？</h3>
+                    <p>當恢復資源變少，原本普通的日常，也可能變得需要很用力。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
             </a>
-            <a href="body_signals_more_sensitive.html" class="bg-white p-6 rounded-2xl border border-stone-200/50 hover:border-wood-500/30 transition-all">
-                <h4 class="font-medium text-stone-800 mb-2">變敏感一定是退步嗎？</h4>
-                <p class="text-xs text-stone-500">有些敏感不是變差，而是身體終於不再假裝什麼都沒事。</p>
-            </a>
-            <a href="body_signals_normal_tests.html" class="bg-white p-6 rounded-2xl border border-stone-200/50 hover:border-wood-500/30 transition-all">
-                <h4 class="font-medium text-stone-800 mb-2">為什麼檢查都正常，還是覺得不舒服？</h4>
-                <p class="text-xs text-stone-500">檢查正常是一件好事，但不代表身體已經沒有需要被照顧的地方。</p>
+            <a class="related-card" href="body_signals_normal_tests.html">
+                <div>
+                    <div class="related-label">03｜檢查正常但不舒服</div>
+                    <h3>為什麼檢查都正常，還是覺得不舒服？</h3>
+                    <p>檢查正常是一件好事，但身體感受仍然值得被理解與整理。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
             </a>
         </div>
-        
-        <div class="text-center mt-12">
-            <a href="body_signals.html" class="text-stone-600 hover:text-wood-600 transition-colors text-sm font-medium border-b border-stone-300">
-                返回身體訊號樹
-            </a>
-        </div>
     </section>
 
-    <footer class="py-16 text-center text-stone-500 text-xs">
-        <p>© 2026 METABOLIC ESTHETICS. All rights reserved.</p>
-    </footer>
-
+    <div class="article-nav">
+        <a class="text-link" href="body_signals.html">← 回到身體訊號</a>
+        <a class="text-link" href="index.html">返回代謝美學首頁</a>
+    </div>
 </body>
 </html>
