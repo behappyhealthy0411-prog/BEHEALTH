@@ -3,144 +3,594 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你的紓壓方式，是止痛藥，還是恢復藥？ | 代謝美學</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>你的紓壓方式，是止痛藥，還是恢復藥？｜壓力與自律神經｜代謝美學</title>
+    <meta name="description" content="有些紓壓方式讓人當下好過一點，有些則能讓身體慢慢回穩。從止痛藥型與恢復藥型紓壓，看懂壓力來時如何多一條回來的路。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/stress_painkiller_or_recovery.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap');
-        body { font-family: 'Noto Sans TC', sans-serif; background-color: #FAF8F5; color: #2D2B29; }
-        h1, h2, h3, h4 { font-family: 'Noto Sans TC', sans-serif; }
-        .tracking-widest { letter-spacing: 0.15em; }
+        :root {
+            --font-sans: 'Noto Sans TC', sans-serif;
+            --bg-primary: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #5F5A55;
+            --text-soft: #8C8680;
+            --border-color: rgba(45, 43, 41, 0.10);
+            --accent-main: #8E9E9B;
+            --accent-dark: #6F7F7C;
+            --accent-light: #DDE8E6;
+            --accent-soft: rgba(221, 232, 230, 0.42);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.95;
+            letter-spacing: 0.03em;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .navbar {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--bg-block);
+            background-color: transparent;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo-main {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            line-height: 1.2;
+        }
+
+        .logo-sub {
+            display: block;
+            margin-top: 4px;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+        }
+
+        .nav-item {
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.25s ease;
+        }
+
+        .nav-item:hover,
+        .nav-item.active { color: var(--accent-dark); }
+
+        .nav-item.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: var(--accent-main);
+        }
+
+        .article-hero {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 82px 24px 52px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            display: block;
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+        }
+
+        .hero-category {
+            margin-top: 10px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            letter-spacing: 0.14em;
+        }
+
+        .article-title {
+            margin: 34px 0 0;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+            font-weight: 500;
+        }
+
+        .hero-intro {
+            max-width: 620px;
+            margin: 30px auto 0;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.05;
+        }
+
+        .qa-section {
+            padding: 38px 0;
+            background-color: rgba(245, 240, 234, 0.58);
+            border-top: 1px solid rgba(45, 43, 41, 0.08);
+            border-bottom: 1px solid rgba(45, 43, 41, 0.08);
+        }
+
+        .qa-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-mini-title {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+        }
+
+        .qa-divider {
+            width: 32px;
+            height: 1px;
+            margin: 10px auto 24px;
+            background-color: rgba(142, 158, 155, 0.45);
+        }
+
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .qa-card {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-light);
+            padding: 22px 20px;
+            min-height: 112px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .qa-label {
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .qa-card p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 66px 24px 36px;
+        }
+
+        .article-content p {
+            margin: 0 0 22px;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+
+        .article-content h2 {
+            margin: 58px 0 22px;
+            font-size: 25px;
+            line-height: 1.55;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        .article-content h2::after {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 1px;
+            margin-top: 14px;
+            background-color: var(--accent-main);
+        }
+
+        .gentle-card,
+        .observation-item,
+        .summary-card {
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gentle-card {
+            background-color: rgba(221, 232, 230, 0.30);
+            border-color: rgba(142, 158, 155, 0.24);
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+
+        .gentle-card.cream-style {
+            background-color: var(--bg-secondary);
+            border-color: var(--border-color);
+        }
+
+        .gentle-card ul,
+        .summary-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .gentle-card li,
+        .summary-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .gentle-card li:last-child,
+        .summary-list li:last-child { margin-bottom: 0; }
+
+        .gentle-card li::before,
+        .summary-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-dark);
+            font-size: 13px;
+        }
+
+        .observation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 28px 0 8px;
+        }
+
+        .observation-item {
+            background-color: var(--bg-secondary);
+            padding: 24px;
+        }
+
+        .observation-item h3 {
+            margin: 0 0 10px;
+            color: var(--accent-dark);
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .observation-item p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .summary-card {
+            background-color: rgba(221, 232, 230, 0.38);
+            border-color: var(--accent-light);
+            padding: 32px;
+            margin: 56px 0 48px;
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .closing-note {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.1;
+            margin: 48px auto 8px;
+        }
+
+        .related-section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 58px 24px 28px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .related-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .related-card:hover {
+            background-color: var(--accent-light);
+            border-color: var(--accent-main);
+            transform: translateY(-5px);
+        }
+
+        .related-label {
+            color: var(--accent-dark);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .related-card h3 {
+            margin: 18px 0 12px;
+            font-size: 18px;
+            line-height: 1.55;
+            font-weight: 500;
+        }
+
+        .related-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            margin-top: 22px;
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .article-nav {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 36px 24px 64px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .text-link {
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-bottom: 1px solid rgba(140, 125, 112, 0.42);
+            padding-bottom: 3px;
+            transition: color 0.25s ease, border-color 0.25s ease;
+        }
+
+        .text-link:hover {
+            color: var(--accent-dark);
+            border-color: var(--accent-dark);
+        }
+
+        @media (max-width: 760px) {
+            .nav-wrapper { flex-direction: column; align-items: flex-start; }
+            .nav-links { width: 100%; justify-content: space-between; gap: 14px; font-size: 12px; }
+            .article-hero { padding-top: 58px; }
+            .qa-grid,
+            .observation-grid,
+            .related-grid { grid-template-columns: 1fr; }
+            .article-title { font-size: 32px; }
+            .hero-intro { font-size: 16px; }
+            .article-content { padding-top: 52px; }
+            .article-content h2 { font-size: 22px; }
+        }
     </style>
 </head>
 <body>
-
-    <nav class="flex justify-between items-center px-8 py-6">
-        <div class="text-sm font-semibold tracking-widest uppercase">
-            <a href="index.html">代謝美學<br>METABOLIC ESTHETICS</a>
-        </div>
-        <div class="space-x-8 text-sm text-[#8C7D70]">
-            <a href="index.html">首頁</a>
-            <a href="stress_recovery.html">壓力與自律神經</a>
-            <a href="https://lin.ee/pzxDU3O" class="bg-[#8F9779] text-white px-4 py-2 rounded-full">預約諮詢</a>
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" aria-label="返回代謝美學首頁">
+                <span class="logo-main">代謝美學</span>
+                <span class="logo-sub">METABOLIC ESTHETICS</span>
+            </a>
+            <div class="nav-links" aria-label="主選單">
+                <a class="nav-item" href="index.html">首頁</a>
+                <a class="nav-item active" href="stress_recovery.html">壓力與自律神經</a>
+                <a class="nav-item" href="https://lin.ee/pzxDU3O">預約諮詢</a>
+            </div>
         </div>
     </nav>
 
-    <header class="py-20 px-6 text-center">
-        <span class="text-xs tracking-widest text-[#8E9E9B] font-medium">STRESS & RECOVERY</span>
-        <h2 class="text-sm text-[#8C7D70] mt-2 tracking-wide">壓力與自律神經 · 放鬆辨識型</h2>
-        <h1 class="text-4xl md:text-5xl font-semibold mt-6 text-[#2D2B29]">你的紓壓方式，是止痛藥，還是恢復藥？</h1>
-        <p class="mt-8 text-[#8C7D70] max-w-lg mx-auto leading-relaxed">有些方法讓你當下好過一點，有些方法讓身體慢慢回穩。兩者都重要，但不能只剩止痛藥。</p>
+    <header class="article-hero">
+        <span class="hero-tag">STRESS & RECOVERY</span>
+        <div class="hero-category">壓力與自律神經 · 放鬆辨識型</div>
+        <h1 class="article-title">你的紓壓方式，<br>是止痛藥，還是恢復藥？</h1>
+        <p class="hero-intro">
+            有些方法讓你當下好過一點，<br>
+            有些方法讓身體慢慢回穩。<br>
+            兩者都重要，但生活裡不能只剩止痛藥。
+        </p>
     </header>
 
-    <section class="py-12 bg-[#DDE8E6]/20 border-y border-[#8E9E9B]/10">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-8">
-                <span class="text-xs tracking-widest text-[#8C7D70] font-medium uppercase">這篇文章會帶你看懂</span>
-                <div class="w-8 h-[1px] bg-[#8E9E9B]/40 mx-auto mt-2"></div>
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="section-mini-title">
+                這篇文章會帶你看懂
+                <div class="qa-divider"></div>
             </div>
-            <div class="grid gap-4 md:grid-cols-3">
-                <div class="bg-[#DDE8E6]/40 p-6 rounded-2xl border border-[#DDE8E6] flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-[#6F7F7C] font-semibold mb-2 block">Q 1</span>
-                    <p class="text-[14px] text-[#2D2B29] leading-relaxed font-medium">什麼是止痛藥型的紓壓方式？</p>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <span class="qa-label">Q 1</span>
+                    <p>什麼是止痛藥型的紓壓方式？</p>
                 </div>
-                <div class="bg-[#DDE8E6]/40 p-6 rounded-2xl border border-[#DDE8E6] flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-[#6F7F7C] font-semibold mb-2 block">Q 2</span>
-                    <p class="text-[14px] text-[#2D2B29] leading-relaxed font-medium">什麼是恢復藥型的紓壓方式？</p>
+                <div class="qa-card">
+                    <span class="qa-label">Q 2</span>
+                    <p>什麼是恢復藥型的紓壓方式？</p>
                 </div>
-                <div class="bg-[#DDE8E6]/40 p-6 rounded-2xl border border-[#DDE8E6] flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-[#6F7F7C] font-semibold mb-2 block">Q 3</span>
-                    <p class="text-[14px] text-[#2D2B29] leading-relaxed font-medium">怎麼開始增加自己的恢復藥？</p>
+                <div class="qa-card">
+                    <span class="qa-label">Q 3</span>
+                    <p>怎麼讓生活裡慢慢多一點恢復藥？</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <article class="max-w-2xl mx-auto px-6 py-16 leading-relaxed text-[#2D2B29]">
-        <h3 class="text-2xl font-semibold mb-6">當壓力成為日常的背景音</h3>
-        <p class="mb-6">工作很累的時候，我們都會有一些讓自己撐下去的方法：追劇、滑手機、吃零食、喝飲料、購物、打遊戲，或是想喝一點酒。這些事情沒有不好。很多時候，它們真的有幫助。但在喘口氣之後呢？如果吃完零食後，還是一直想吃；如果追完劇後，睡得更晚、更累；如果滑完手機後，腦袋更停不下來。那麼這些方式，可能比較像是「止痛藥」。</p>
+    <main class="article-content">
+        <p>工作很累的時候，我們都會有一些讓自己撐下去的方法。追劇、滑手機、吃零食、喝飲料、購物、打遊戲，或是想喝一點酒。這些事情不一定不好，很多時候，它們真的有幫助。</p>
+        <p>但如果每次壓力來了，只剩同一種方式可以讓自己撐過去，身體也可能慢慢發現：我只是暫時不那麼難受，卻沒有真的回穩。</p>
+        <div class="gentle-card cream-style">
+            <p><strong>有些紓壓像止痛藥，讓當下比較好過；有些紓壓像恢復藥，讓身體慢慢回到穩定。</strong></p>
+            <p>止痛藥不是錯。只是如果生活裡只剩止痛藥，壓力的根本負荷沒有被接住，身體就容易一次又一次回到疲倦、嘴饞、失眠與煩躁的循環裡。</p>
+        </div>
 
-        <h3 class="text-2xl font-semibold mb-6">什麼是止痛藥型的紓壓方式？</h3>
-        <p class="mb-4">止痛藥型的紓壓方式，通常有幾個特徵：當下有效、很快舒服、容易取得、不需要太多力氣。這些事情不一定不好，它是大腦在能量很低時，替自己找到的快速出口。但它的限制在於：通常只能讓人短暫好過，未必能讓身體真正回穩。</p>
-
-        <h3 class="text-2xl font-semibold mb-6">什麼是恢復藥型的紓壓方式？</h3>
-        <p class="mb-4">恢復藥型的紓壓方式，不一定當下最爽，但做完之後，身體會有明顯的穩定感。重點不在於當下的娛樂，而在於做完之後，睡眠、情緒與身體狀態有沒有變好。</p>
-        
-        <div class="grid md:grid-cols-2 gap-4 mb-10">
-            <div class="bg-[#F5F0EA] p-6 rounded-2xl border border-[#EBE5DF]">
-                <h4 class="font-semibold text-[#8C7D70] mb-3">止痛藥循環的代價</h4>
-                <ul class="text-sm space-y-2 text-[#2D2B29]">
-                    <li>累了，就滑手機。</li>
-                    <li>煩了，就吃東西。</li>
-                    <li>空了，就追劇。</li>
-                    <li>壓力大了，就熬夜。</li>
-                </ul>
+        <h2>止痛藥型紓壓，常見有四種狀況</h2>
+        <div class="observation-grid">
+            <div class="observation-item">
+                <h3>一｜快速轉移型</h3>
+                <p>累了就滑手機、煩了就追劇，注意力暫時被帶走，當下比較不用面對壓力，但做完後身體不一定更穩。</p>
             </div>
-            <div class="bg-[#EBE5DF] p-6 rounded-2xl border border-[#E2E7D8]">
-                <h4 class="font-semibold text-[#8C7D70] mb-3">常見的恢復藥物清單</h4>
-                <ul class="text-sm space-y-2 text-[#2D2B29]">
-                    <li>公園散步十分鐘。</li>
-                    <li>安靜喝杯茶。</li>
-                    <li>陪寵物玩。</li>
-                    <li>簡單的伸展運動。</li>
-                    <li>專心聽一首歌。</li>
-                </ul>
+            <div class="observation-item">
+                <h3>二｜味覺安撫型</h3>
+                <p>壓力大時特別想吃甜、脆、鹹或重口味。食物帶來短暫安慰，但若吃完更累、更脹或更自責，可能沒有真正恢復。</p>
+            </div>
+            <div class="observation-item">
+                <h3>三｜延後感受型</h3>
+                <p>讓自己忙到沒空感覺、撐到很晚才停下來。看起來事情都做完了，但身體其實沒有收到可以休息的訊號。</p>
+            </div>
+            <div class="observation-item">
+                <h3>四｜越用越無感型</h3>
+                <p>同樣的方法以前很有效，現在卻需要更久、更強或更多刺激才覺得放鬆。這可能表示身體需要新的恢復入口。</p>
             </div>
         </div>
 
-        <h3 class="text-2xl font-semibold mb-6">不是立刻改掉習慣，而是多一個選擇</h3>
-        <p class="mb-6">很多人一聽到「止痛藥」這個比喻，會開始擔心：是不是不能追劇、不能吃零食、不能滑手機了？或是連放鬆都做錯了？其實不是。止痛藥有它存在的意義，在很痛、很累、很緊繃的時候，它能幫你先撐過去，所以我們不需要急著把它拿掉。</p>
-        
-        <div class="my-10 p-8 border-l-4 border-[#8F9779] bg-[#F9F7F4]">
-            <p class="text-2xl md:text-3xl font-bold text-[#8F9779] leading-tight italic">
-                更重要的是：慢慢讓生活裡不只剩下這一種方法。
-            </p>
-        </div>
-
-        <p class="mb-6">當你累的時候，除了滑手機，也許還可以泡一杯茶；當你煩的時候，除了吃零食，也許還可以出門走五分鐘；當你壓力很大時，除了繼續撐著，也許還可以先讓身體停下來。恢復力不是變成一個永遠不需要止痛藥的人，而是當壓力來的時候，身體還有其他路可以走。</p>
-
-        <h3 class="text-2xl font-semibold mb-8">重點整理</h3>
-        <div class="p-8 rounded-2xl bg-[#E2E7D8]/30 border border-[#E2E7D8] mb-12">
-            <ul class="text-[#2D2B29] space-y-4">
-                <li class="flex items-start">
-                    <span class="mr-3 text-[#7B8365]">●</span>
-                    <span>止痛藥型紓壓提供當下的快速出口，處理表面的煩躁，但無法真正修復身體的疲憊。</span>
-                </li>
-                <li class="flex items-start">
-                    <span class="mr-3 text-[#7B8365]">●</span>
-                    <span>恢復藥型紓壓的重點，在於做完後能讓睡眠、情緒與食慾變穩，是真正讓身體回穩的關鍵。</span>
-                </li>
-                <li class="flex items-start">
-                    <span class="mr-3 text-[#7B8365]">●</span>
-                    <span>生活裡不能只剩止痛藥，若恢復工具太少，身體就容易一直回到最熟悉、最快有感的方法。</span>
-                </li>
-                <li class="flex items-start">
-                    <span class="mr-3 text-[#7B8365]">●</span>
-                    <span>代謝美學不是要拿走你的止痛藥，而是陪你慢慢找到更多屬於自己的恢復藥。</span>
-                </li>
+        <h2>什麼是止痛藥型的紓壓方式？</h2>
+        <p>止痛藥型的紓壓方式，通常有幾個特徵：當下有效、很快舒服、容易取得、不需要太多力氣。它像大腦在能量很低時，替自己找到的快速出口。</p>
+        <p>這些方法不需要被責備。人在很累、很痛、很緊繃的時候，本來就會想要先讓自己好過一點。只是它的限制在於：它可以讓表面的痛感下降，卻未必能讓身體真正回穩。</p>
+        <div class="gentle-card">
+            <ul>
+                <li>追劇、滑手機，讓腦袋暫時離開壓力。</li>
+                <li>甜食、零食、飲料，讓情緒短暫被安撫。</li>
+                <li>購物、打遊戲、熬夜，讓人有一點掌控感或逃離感。</li>
+                <li>一直忙、一直撐，讓自己暫時不用感覺累。</li>
             </ul>
         </div>
 
-        <div class="text-center py-10 px-6 text-[#A89F95] leading-relaxed">
-            <p class="mb-4">如果你發現自己最近常常靠追劇、滑手機、吃東西來撐過壓力，不一定代表你做錯了。</p>
-            <p class="mb-4">恢復力不是一下子改掉所有習慣，而是慢慢讓自己多一條回來的路。</p>
-            <p>可以先從一個很小的問題開始：除了那些讓我暫時舒服的方法之外，還有沒有什麼事情，能讓我慢慢回穩？</p>
+        <h2>什麼是恢復藥型的紓壓方式？</h2>
+        <p>恢復藥型的紓壓方式，不一定當下最刺激，也不一定最爽。它的重點不是讓你立刻忘記壓力，而是做完之後，身體比較有機會回到穩定。</p>
+        <p>判斷一件事情是不是恢復藥，可以不只看當下舒不舒服，也看做完後的幾個小線索：睡眠有沒有比較穩、呼吸有沒有變順、肩頸有沒有比較放、食慾有沒有比較不亂、情緒有沒有比較能承接。</p>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>公園散步十分鐘，讓身體慢慢降速。</li>
+                <li>安靜喝一杯茶，讓自己從工作模式切換出來。</li>
+                <li>陪寵物玩、曬一點太陽，讓神經系統感覺安全。</li>
+                <li>簡單伸展、泡腳、熱敷，讓身體收到不用再撐的訊號。</li>
+                <li>把心裡的話寫下來，或找能讓你安定的人說一說。</li>
+            </ul>
         </div>
 
-        <h3 class="text-2xl font-semibold mb-6 mt-16">延伸閱讀</h3>
-        <ul class="text-[#8C7D70] space-y-4">
-            <li><a href="stress_recovery_not_rest.html" class="hover:text-[#2D2B29] underline underline-offset-4 decoration-[#8E9E9B]/30">• 為什麼休息了，卻還是很累？</a></li>
-            <li><a href="stress_old_relief_not_working.html" class="hover:text-[#2D2B29] underline underline-offset-4 decoration-[#8E9E9B]/30">• 為什麼以前有效的紓壓方式，現在越來越沒用？</a></li>
-            <li><a href="stress_personalized_recovery.html" class="hover:text-[#2D2B29] underline underline-offset-4 decoration-[#8E9E9B]/30">• 為什麼恢復沒有標準答案？</a></li>
-            <li><a href="stress_daily_recovery_tools.html" class="hover:text-[#2D2B29] underline underline-offset-4 decoration-[#8E9E9B]/30">• 為什麼明明知道該休息，卻還是做不到？</a></li>
-        </ul>
-    </article>
+        <h2>不是立刻改掉習慣，而是多一個選擇</h2>
+        <p>很多人一聽到「止痛藥」這個比喻，會擔心是不是不能追劇、不能吃零食、不能滑手機了。其實不是。止痛藥有它存在的意義，在很痛、很累、很緊繃的時候，它能幫你先撐過去。</p>
+        <p>真正需要練習的，不是把止痛藥拿掉，而是慢慢讓生活裡不只剩下這一種方法。當你累的時候，除了滑手機，也許還可以泡一杯茶；當你煩的時候，除了吃零食，也許還可以出門走五分鐘；當你壓力很大時，除了繼續撐著，也許還可以先讓身體停下來。</p>
 
-    <footer class="py-16 text-center border-t border-[#8E9E9B]/10">
-        <div class="space-x-6 mb-8 text-sm">
-            <a href="stress_recovery.html" class="text-[#8E9E9B] hover:text-[#2D2B29]">返回壓力與自律神經</a>
+        <h2>怎麼知道這個方法比較像恢復藥？</h2>
+        <div class="gentle-card">
+            <ul>
+                <li><strong>看做完之後：</strong>是更穩、更安定，還是只是更麻木？</li>
+                <li><strong>看隔天反應：</strong>睡眠、精神、食慾和情緒有沒有比較回來？</li>
+                <li><strong>看身體張力：</strong>肩頸、下巴、胃部和呼吸有沒有比較鬆？</li>
+                <li><strong>看可持續性：</strong>做完後會不會更自責、更空，或需要更多刺激？</li>
+                <li><strong>看選擇感：</strong>這個方法有沒有讓你多一點餘裕，而不是更被習慣推著走？</li>
+            </ul>
         </div>
-        <p class="text-[#8C7D70] text-xs">© METABOLIC ESTHETICS. All Rights Reserved.</p>
-    </footer>
+        <p>恢復力不是變成一個永遠不需要止痛藥的人，而是當壓力來的時候，身體還有其他路可以走。</p>
 
+        <section class="summary-card">
+            <h2>重點整理</h2>
+            <ul class="summary-list">
+                <li>止痛藥型紓壓可以讓當下比較好過，不需要被責備，但它未必能讓身體真正回穩。</li>
+                <li>恢復藥型紓壓的重點，是做完後睡眠、情緒、食慾、呼吸與身體張力比較穩定。</li>
+                <li>生活裡不能只剩止痛藥，否則壓力來時，身體容易一直回到最熟悉、最快有感的方法。</li>
+                <li>真正的調整不是禁止自己放鬆，而是慢慢增加更多讓身體回來的選擇。</li>
+            </ul>
+        </section>
+
+        <p class="closing-note">
+            如果你發現自己最近常常靠追劇、滑手機、吃東西來撐過壓力，<br>
+            不一定代表你做錯了。<br>
+            恢復力不是一下子改掉所有習慣，<br>
+            而是慢慢讓自己多一條回來的路。
+        </p>
+    </main>
+
+    <section class="related-section">
+        <div class="section-mini-title">延伸閱讀</div>
+        <div class="related-grid">
+            <a class="related-card" href="stress_recovery_not_rest.html">
+                <div>
+                    <span class="related-label">01｜恢復不足型</span>
+                    <h3>為什麼休息了，卻還是很累？</h3>
+                    <p>當休息沒有帶來回穩，身體需要的可能不只是停止消耗。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
+            <a class="related-card" href="stress_old_relief_not_working.html">
+                <div>
+                    <span class="related-label">02｜放鬆辨識型</span>
+                    <h3>為什麼以前有效的紓壓方式，現在越來越沒用？</h3>
+                    <p>同樣的方法越來越無感，可能是身體正在尋找新的恢復入口。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
+            <a class="related-card" href="stress_personalized_recovery.html">
+                <div>
+                    <span class="related-label">03｜恢復辨識型</span>
+                    <h3>為什麼恢復沒有標準答案？</h3>
+                    <p>不同人的壓力停留位置不同，恢復也需要不同入口。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
+        </div>
+    </section>
+
+    <nav class="article-nav" aria-label="文章底部導覽">
+        <a class="text-link" href="stress_recovery.html">← 回到壓力與自律神經</a>
+        <a class="text-link" href="index.html">返回代謝美學首頁</a>
+    </nav>
 </body>
 </html>
