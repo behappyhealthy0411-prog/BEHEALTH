@@ -1,148 +1,318 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>為什麼放假、旅行、按摩之後，還是沒有真正恢復？ - 代謝美學</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        stone: { 50: '#FAF8F5', 100: '#F5F0EA', 200: '#EBE5DF' },
-                        wood: { 500: '#8C7D70' },
-                        moss: { 500: '#7B8365', 50: '#E2E7D8' },
-                        stress: { main: '#8E9E9B', dark: '#6F7F7C', light: '#DDE8E6' }
-                    }
-                }
-            }
-        }
-    </script>
+    <title>為什麼放假、旅行、按摩之後，還是沒有真正恢復？｜壓力與自律神經｜代謝美學</title>
+    <meta name="description" content="放假、旅行、按摩之後，還是沒有真正恢復，不一定是休息沒用，而是長期消耗沒有被日常接住。從補償式休息、日常小修復與恢復節奏，看懂身體真正需要什麼。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/stress_compensatory_rest.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap');
-        body { font-family: 'Noto Sans TC', sans-serif; color: #2D2B29; background-color: #FAF8F5; }
-        h1, h2, h3 { font-family: 'Noto Sans TC', sans-serif; }
-        .hero-title { font-family: 'Noto Sans TC', sans-serif; }
+        :root {
+            --font-sans: 'Noto Sans TC', sans-serif;
+            --bg-primary: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #5F5A55;
+            --text-soft: #8C8680;
+            --border-color: rgba(45, 43, 41, 0.10);
+            --accent-main: #8E9E9B;
+            --accent-dark: #6F7F7C;
+            --accent-light: #DDE8E6;
+            --accent-soft: rgba(221, 232, 230, 0.42);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.95;
+            letter-spacing: 0.03em;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+        .navbar { padding: 28px 0; border-bottom: 1px solid var(--bg-block); background-color: transparent; }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+        .logo-main { display: block; font-size: 14px; font-weight: 500; letter-spacing: 0.22em; line-height: 1.2; }
+        .logo-sub { display: block; margin-top: 4px; font-size: 10px; letter-spacing: 0.2em; color: var(--text-secondary); text-transform: uppercase; }
+        .nav-links { display: flex; gap: 28px; align-items: center; font-size: 13px; color: var(--text-secondary); letter-spacing: 0.08em; }
+        .nav-item { position: relative; padding-bottom: 4px; transition: color 0.25s ease; }
+        .nav-item:hover, .nav-item.active { color: var(--accent-dark); }
+        .nav-item.active::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background-color: var(--accent-main); }
+
+        .article-hero { max-width: 760px; margin: 0 auto; padding: 82px 24px 52px; text-align: center; }
+        .hero-tag { display: block; color: var(--accent-dark); font-size: 12px; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; }
+        .hero-category { margin-top: 10px; color: var(--text-secondary); font-size: 14px; letter-spacing: 0.14em; }
+        .article-title { margin: 34px 0 0; font-size: clamp(32px, 5vw, 48px); line-height: 1.35; letter-spacing: 0.02em; font-weight: 500; }
+        .hero-intro { max-width: 620px; margin: 30px auto 0; color: var(--text-secondary); font-size: 17px; line-height: 2.05; }
+
+        .qa-section { padding: 38px 0; background-color: rgba(245, 240, 234, 0.58); border-top: 1px solid rgba(45, 43, 41, 0.08); border-bottom: 1px solid rgba(45, 43, 41, 0.08); }
+        .qa-container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+        .section-mini-title { text-align: center; color: var(--text-secondary); font-size: 12px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; }
+        .qa-divider { width: 32px; height: 1px; margin: 10px auto 24px; background-color: rgba(142, 158, 155, 0.45); }
+
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        .qa-card {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-light);
+            padding: 26px 22px;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .qa-label {
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            letter-spacing: 0.08em;
+        }
+
+        .qa-card p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.8;
+            font-weight: 400;
+            min-height: calc(1.8em * 3);
+        }
+
+        .article-content { max-width: 720px; margin: 0 auto; padding: 66px 24px 36px; }
+        .article-content p { margin: 0 0 22px; color: var(--text-primary); font-size: 16px; }
+        .article-content h2 { margin: 58px 0 22px; font-size: 25px; line-height: 1.55; font-weight: 500; letter-spacing: 0.04em; }
+        .article-content h2::after { content: ""; display: block; width: 42px; height: 1px; margin-top: 14px; background-color: var(--accent-main); }
+
+        .gentle-card, .observation-item, .summary-card { border-radius: 4px; border: 1px solid var(--border-color); }
+        .gentle-card { background-color: rgba(221, 232, 230, 0.30); border-color: rgba(142, 158, 155, 0.24); padding: 24px 28px; margin: 24px 0; }
+        .gentle-card.cream-style { background-color: var(--bg-secondary); border-color: var(--border-color); }
+        .gentle-card ul, .summary-list { list-style: none; padding: 0; margin: 0; }
+        .gentle-card li, .summary-list li { position: relative; padding-left: 24px; margin-bottom: 10px; color: var(--text-secondary); font-size: 16px; line-height: 1.9; }
+        .gentle-card li:last-child, .summary-list li:last-child { margin-bottom: 0; }
+        .gentle-card li::before, .summary-list li::before { content: "✦"; position: absolute; left: 0; top: 0; color: var(--accent-dark); font-size: 13px; }
+
+        .observation-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 28px 0 8px; }
+        .observation-item { background-color: var(--bg-secondary); padding: 24px; }
+        .observation-item h3 { margin: 0 0 10px; color: var(--accent-dark); font-size: 17px; font-weight: 500; line-height: 1.6; }
+        .observation-item p { margin: 0; color: var(--text-secondary); font-size: 15px; line-height: 1.85; }
+
+        .summary-card { background-color: rgba(221, 232, 230, 0.38); border-color: var(--accent-light); padding: 32px; margin: 56px 0 48px; }
+        .summary-card h2 { margin-top: 0; }
+        .closing-note { text-align: center; color: var(--text-secondary); font-size: 17px; line-height: 2.1; margin: 48px auto 8px; }
+
+        .related-section { max-width: 960px; margin: 0 auto; padding: 58px 24px 28px; border-top: 1px solid var(--border-color); }
+        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
+        .related-card { background-color: var(--bg-card); border: 1px solid var(--border-color); padding: 24px; min-height: 220px; display: flex; flex-direction: column; justify-content: space-between; transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease; }
+        .related-card:hover { background-color: var(--accent-light); border-color: var(--accent-main); transform: translateY(-5px); }
+        .related-label { color: var(--accent-dark); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
+        .related-card h3 { margin: 18px 0 12px; font-size: 18px; line-height: 1.55; font-weight: 500; }
+        .related-card p { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.8; }
+        .read-more { margin-top: 22px; color: var(--accent-dark); font-size: 13px; font-weight: 400; }
+
+        .article-nav { max-width: 720px; margin: 0 auto; padding: 36px 24px 64px; text-align: center; display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
+        .text-link { color: var(--text-secondary); font-size: 14px; border-bottom: 1px solid rgba(140, 125, 112, 0.42); padding-bottom: 3px; transition: color 0.25s ease, border-color 0.25s ease; }
+        .text-link:hover { color: var(--accent-dark); border-color: var(--accent-dark); }
+
+        @media (max-width: 760px) {
+            .nav-wrapper { flex-direction: column; align-items: flex-start; }
+            .nav-links { width: 100%; justify-content: space-between; gap: 14px; font-size: 12px; }
+            .article-hero { padding-top: 58px; }
+            .qa-grid, .observation-grid, .related-grid { grid-template-columns: 1fr; }
+            .qa-card, .related-card { min-height: auto; }
+            .qa-card p { min-height: auto; }
+            .article-title { font-size: 32px; }
+            .hero-intro { font-size: 16px; }
+            .article-content { padding-top: 52px; }
+            .article-content h2 { font-size: 22px; }
+        }
     </style>
 </head>
-<body class="antialiased">
-
-    <!-- Navbar -->
-    <nav class="flex justify-between items-center px-8 py-6">
-        <div>
-            <h1 class="text-sm font-semibold tracking-widest text-[#2D2B29]">代謝美學<br>METABOLIC ESTHETICS</h1>
-        </div>
-        <div class="flex items-center gap-6 text-sm text-[#8C7D70]">
-            <a href="index.html" class="hover:text-[#7B8365]">首頁</a>
-            <a href="stress_recovery.html" class="hover:text-[#7B8365]">壓力與自律神經</a>
-            <a href="https://lin.ee/pzxDU3O" class="bg-[#7B8365] text-white px-4 py-2 rounded-full hover:bg-[#6A7258]">預約諮詢</a>
+<body>
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" aria-label="返回代謝美學首頁">
+                <span class="logo-main">代謝美學</span>
+                <span class="logo-sub">METABOLIC ESTHETICS</span>
+            </a>
+            <div class="nav-links" aria-label="主選單">
+                <a class="nav-item" href="index.html">首頁</a>
+                <a class="nav-item active" href="stress_recovery.html">壓力與自律神經</a>
+                <a class="nav-item" href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener noreferrer">預約諮詢</a>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header class="max-w-3xl mx-auto px-6 py-16 text-center">
-        <span class="text-xs tracking-[0.2em] text-[#6F7F7C] uppercase">STRESS & RECOVERY</span>
-        <p class="mt-2 text-[#8C7D70] tracking-wider">壓力與自律神經 · 消耗辨識型</p>
-        <h1 class="hero-title mt-6 text-4xl md:text-5xl font-semibold text-[#2D2B29]leading-[4.0]">為什麼放假、旅行、按摩之後，<br>還是沒有真正恢復？</h1>
-        <p class="mt-8 text-lg text-[#8C7D70] leading-relaxed max-w-xl mx-auto italic">當恢復只被留到累壞以後，身體可能已經撐了太久；有些修復，其實可以從每天的小地方開始。</p>
+    <header class="article-hero">
+        <span class="hero-tag">STRESS & RECOVERY</span>
+        <div class="hero-category">壓力與自律神經 · 消耗辨識型</div>
+        <h1 class="article-title">為什麼放假、旅行、按摩之後，<br>還是沒有真正恢復？</h1>
+        <p class="hero-intro">
+            當恢復只被留到累壞以後，身體可能已經撐了太久。<br>
+            有些修復，其實可以從每天的小地方開始。
+        </p>
     </header>
 
-    <!-- Q&A Section -->
-    <section class="py-12 bg-[#DDE8E6]/20 border-y border-stone-200/30">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-8">
-                <span class="text-xs tracking-widest text-wood-500 font-medium">這篇文章會帶你看懂</span>
-                <div class="w-8 h-[1px] bg-stress-main/40 mx-auto mt-2"></div>
-            </div>
-            <div class="grid gap-4 md:grid-cols-3">
-                <div class="bg-[#DDE8E6]/45 p-6 rounded-2xl border border-[#DDE8E6] flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-[#6F7F7C] font-semibold mb-2 block">Q 1</span>
-                    <p class="text-[14px] text-[#2D2B29] leading-relaxed font-medium">為什麼大型休息後，身體反而更累？</p>
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="section-mini-title">這篇文章會帶你看懂</div>
+            <div class="qa-divider"></div>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <span class="qa-label">Q 1</span>
+                    <p>為什麼大型休息後，身體反而更累？</p>
                 </div>
-                <div class="bg-[#DDE8E6]/45 p-6 rounded-2xl border border-[#DDE8E6] flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-[#6F7F7C] font-semibold mb-2 block">Q 2</span>
-                    <p class="text-[14px] text-[#2D2B29] leading-relaxed font-medium">為什麼不能等到累壞了才去休息？</p>
+                <div class="qa-card">
+                    <span class="qa-label">Q 2</span>
+                    <p>為什麼不能等到累壞了才去休息？</p>
                 </div>
-                <div class="bg-[#DDE8E6]/45 p-6 rounded-2xl border border-[#DDE8E6] flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-[#6F7F7C] font-semibold mb-2 block">Q 3</span>
-                    <p class="text-[14px] text-[#2D2B29] leading-relaxed font-medium">生活忙碌下，如何進行日常修復？</p>
+                <div class="qa-card">
+                    <span class="qa-label">Q 3</span>
+                    <p>生活忙碌下，如何進行日常修復？</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Content -->
-    <main class="max-w-2xl mx-auto px-6 py-16 text-[#2D2B29] leading-loose">
-        <h2 class="text-2xl font-semibold mb-6">什麼是補償式休息？</h2>
-        <p class="mb-6">很多人覺得累的時候，會想安排一個比較大的休息，例如去旅行、按摩或泡溫泉。這些事情本身都很好，也能讓人暫時離開壓力源。但有些人會發現，明明去旅行了，回來還是很累；按摩當下舒服，隔天又緊回來。</p>
-        
-        <div class="bg-[#EBE5DF] p-8 rounded-xl my-10">
-            <h3 class="text-lg font-semibold mb-3">補償式休息的限制</h3>
-            <p class="text-sm text-[#8C7D70]">平常很少休息，一直忍耐與消耗，等到累壞了才安排一次大的補給。這就像一個一直在漏水的水桶，等到水快乾了才一次加滿，但如果不堵住漏水處，水很快就留不住。</p>
+    <main class="article-content">
+        <p>很多人覺得累的時候，會想安排一個比較大的休息，例如去旅行、按摩或泡溫泉。這些事情本身都很好，也能讓人暫時離開壓力源。</p>
+        <p>但有些人會發現，明明去旅行了，回來還是很累；按摩當下舒服，隔天又緊回來；放假時終於睡久一點，收假後卻像沒有真正補到電。</p>
+
+        <div class="gentle-card cream-style">
+            <p><strong>補償式休息，指的是平常很少休息，一直忍耐與消耗，等到累壞了才安排一次大的補給。</strong></p>
+            <p>這就像一個一直在漏水的水桶，等到水快乾了才一次加滿。短時間看起來有補到，但如果不處理每天持續漏掉的地方，水很快又留不住。</p>
         </div>
 
-        <h2 class="text-2xl font-semibold mb-6 mt-12">有些消耗不能立刻停止，不代表身體不能被照顧</h2>
-        <p class="mb-6">很多人其實不是不知道自己累，只是有些消耗真的不是說停就能停。工作、孩子、家人、病患或客戶的需求，不會因為我們想休息就全部暫停。現實生活裡，有些責任與壓力是不得已的，但不代表身體只能一直撐著。</p>
-        <p class="mb-6">就算消耗不能立刻停止，身體仍然需要在生活裡找到一點點回穩的空間。恢復不一定要等到出國、放假或累壞了才開始；有些修復，可以從很小的地方著手。</p>
-
-        <h2 class="text-2xl font-semibold mb-6 mt-12">日常小修復，可以從哪裡開始？</h2>
-        <ul class="list-disc pl-5 space-y-3 mb-6">
-            <li>下班後先坐下來喝幾口水，感受身體的重量。</li>
-            <li>晚餐後慢慢走十分鐘，不帶手機。</li>
-            <li>睡前少滑十分鐘手機，調暗燈光。</li>
-            <li>工作中間給自己三分鐘，停止所有訊息回覆。</li>
-            <li>忙碌的一天裡，先吃一餐比較穩定的食物。</li>
-        </ul>
-
-        <h2 class="text-2xl font-semibold mb-6 mt-12">從「補償」轉向「日常修復」</h2>
-        <p class="mb-6">真正的恢復，不是只靠一次大的休息，而是每天少漏一點，也每天補回一點。請練習把休息變成日常的一部份，而不是崩潰後的急救計畫。</p>
-    </main>
-
-    <!-- Key Points -->
-    <section class="max-w-2xl mx-auto px-6 pb-16">
-        <div class="bg-[#DDE8E6]/30 p-8 rounded-2xl border border-[#DDE8E6]">
-            <h3 class="text-xl font-semibold mb-4 text-[#6F7F7C]">重點整理</h3>
-            <ul class="space-y-3 text-sm">
-                <li>• 大休息（旅行、按摩）無法完全補回長期漏水式的慢性消耗。</li>
-                <li>• 補償式休息會讓身體長期在極度緊繃與短暫放鬆中擺盪。</li>
-                <li>• 就算生活責任無法暫停，日常小修復能提供緩衝空間。</li>
-                <li>• 真正的照顧是「每天少漏一點，每天多補一點」。</li>
+        <h2>先確認安全：累到回不來，不要只當成需要放假</h2>
+        <p>放假後沒有恢復感很常見，但如果疲倦快速惡化，或合併明顯警訊，仍然需要先確認安全。代謝美學重視恢復力，但不會用旅行、按摩或生活調整取代必要的醫療評估。</p>
+        <div class="gentle-card">
+            <ul>
+                <li>疲倦快速惡化，或明顯影響日常功能。</li>
+                <li>合併胸悶、胸痛、呼吸困難、心悸或快昏倒。</li>
+                <li>持續發燒、夜間盜汗或不明原因體重下降。</li>
+                <li>黑便、血便、持續嘔吐、劇烈腹痛或臉色蒼白頭暈。</li>
+                <li>活動後明顯惡化，且需要很久才恢復。</li>
+                <li>持續情緒低落、失去興趣、絕望感，或出現傷害自己的念頭。</li>
             </ul>
         </div>
-    </section>
 
-    <!-- Gentle Ending (Text Only) -->
-    <section class="max-w-xl mx-auto px-6 py-12 text-center text-[#7B8365]">
-        <h3 class="text-lg font-semibold mb-4">不用等到累壞了，才開始照顧自己</h3>
-        <p class="text-sm leading-relaxed">
-            有些消耗現在不一定能立刻停止，有些責任也不是說放下就能放下。但即使如此，身體仍然值得在每天的生活裡，被溫柔地照顧一點點。不一定要等到出國，不一定要等到放假，也不一定要等到真的撐不住。有些恢復，可以從今天很小的地方開始。
+        <h2>放假、旅行、按摩後還是累，常見有四種狀況</h2>
+        <div class="observation-grid">
+            <div class="observation-item">
+                <h3>一｜補償式休息型</h3>
+                <p>平常消耗太久、回補太少，等到累壞才安排一次大休息。這種休息能暫時補一點，但很難一次補回長期透支。</p>
+            </div>
+            <div class="observation-item">
+                <h3>二｜旅行也在消耗型</h3>
+                <p>旅行需要交通、行程、決定、社交與適應環境。對有些身體來說，旅行是轉換，不一定是恢復。</p>
+            </div>
+            <div class="observation-item">
+                <h3>三｜身體沒有回穩型</h3>
+                <p>按摩、泡澡或放空可以讓當下舒服，但如果睡眠、食慾、呼吸、肌肉張力與情緒沒有跟著穩下來，恢復可能還沒有真正發生。</p>
+            </div>
+            <div class="observation-item">
+                <h3>四｜日常漏水太多型</h3>
+                <p>每天睡太少、吃不穩、一直被打斷、壓力沒有出口，身體就會持續漏水。一次大休息很難抵銷每天的慢性消耗。</p>
+            </div>
+        </div>
+
+        <h2>有些消耗不能立刻停止，不代表身體不能被照顧</h2>
+        <p>很多人其實不是不知道自己累，只是有些消耗真的不是說停就能停。工作、孩子、家人、病患或客戶的需求，不會因為我們想休息就全部暫停。</p>
+        <p>現實生活裡，有些責任與壓力是不得已的。但不代表身體只能一直撐著，也不代表恢復一定要等到出國、放假或累壞了才開始。</p>
+
+        <h2>從補償式休息，轉向日常小修復</h2>
+        <p>真正的恢復，不是只靠一次大的休息，而是每天少漏一點，也每天補回一點。日常小修復不一定看起來很厲害，但它能讓身體不要一直掉到太低的位置。</p>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>下班後先坐下來喝幾口水，感受身體的重量。</li>
+                <li>晚餐後慢慢走十分鐘，不帶手機。</li>
+                <li>睡前少滑十分鐘手機，調暗燈光。</li>
+                <li>工作中間給自己三分鐘，停止所有訊息回覆。</li>
+                <li>忙碌的一天裡，先吃一餐比較穩定的食物。</li>
+            </ul>
+        </div>
+
+        <h2>判斷恢復有沒有發生，不只看當下舒服</h2>
+        <p>旅行、按摩或放假當下舒服，不代表身體一定有恢復。比較重要的是：做完之後，身體有沒有更穩、更能回到自己。</p>
+        <div class="gentle-card">
+            <ul>
+                <li>睡眠有沒有比較穩，而不是更晚睡、更淺眠？</li>
+                <li>呼吸和肩頸有沒有比較鬆，而不是隔天又緊回來？</li>
+                <li>食慾和嘴饞有沒有比較平衡？</li>
+                <li>回到日常時，是比較有餘裕，還是更想逃開？</li>
+                <li>隔天醒來，是比較有電，還是更像被抽乾？</li>
+            </ul>
+        </div>
+
+        <section class="summary-card">
+            <h2>重點整理</h2>
+            <ul class="summary-list">
+                <li>大休息，例如旅行、放假、按摩，無法完全補回長期漏水式的慢性消耗。</li>
+                <li>補償式休息會讓身體長期在極度緊繃與短暫放鬆中擺盪。</li>
+                <li>旅行與按摩可能有幫助，但也要看做完之後身體是否真的更穩。</li>
+                <li>就算生活責任無法暫停，日常小修復仍然能替身體留下緩衝空間。</li>
+                <li>真正的照顧，是每天少漏一點，每天多補一點。</li>
+            </ul>
+        </section>
+
+        <p class="closing-note">
+            不用等到累壞了，才開始照顧自己。<br>
+            有些消耗現在不一定能立刻停止，<br>
+            有些責任也不是說放下就能放下。<br>
+            但即使如此，身體仍然值得在每天的生活裡，<br>
+            被溫柔地照顧一點點。
         </p>
-    </section>
+    </main>
 
-    <!-- Reading -->
-    <section class="max-w-2xl mx-auto px-6 pb-16">
-        <h3 class="text-sm font-semibold tracking-widest text-[#8C7D70] mb-6">延伸閱讀</h3>
-        <div class="grid gap-4 md:grid-cols-2">
-            <a href="stress_personalized_recovery.html" class="block p-6 rounded-xl bg-stone-100 hover:bg-stone-200 transition">
-                <p class="text-sm font-medium">為什麼恢復沒有標準答案？</p>
+    <section class="related-section">
+        <div class="section-mini-title">延伸閱讀</div>
+        <div class="qa-divider"></div>
+        <div class="related-grid">
+            <a class="related-card" href="stress_personalized_recovery.html">
+                <div>
+                    <span class="related-label">01｜個人化恢復</span>
+                    <h3>為什麼恢復沒有標準答案？</h3>
+                    <p>恢復不是照抄別人的方法，而是看見自己最近被什麼消耗。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
             </a>
-            <a href="stress_schedule_recovery.html" class="block p-6 rounded-xl bg-stone-100 hover:bg-stone-200 transition">
-                <p class="text-sm font-medium">為什麼恢復總是被排到最後？</p>
+            <a class="related-card" href="stress_schedule_recovery.html">
+                <div>
+                    <span class="related-label">02｜恢復排程</span>
+                    <h3>為什麼恢復總是被排到最後？</h3>
+                    <p>如果恢復永遠等有空才做，身體常常已經撐到很後面。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
             </a>
-            <a href="stress_daily_recovery_tools.html" class="block p-6 rounded-xl bg-stone-100 hover:bg-stone-200 transition">
-                <p class="text-sm font-medium">為什麼明明知道該休息，卻還是做不到？</p>
-            </a>
-            <a href="stress_signs_of_recovery.html" class="block p-6 rounded-xl bg-stone-100 hover:bg-stone-200 transition">
-                <p class="text-sm font-medium">怎麼知道自己的恢復力正在變好？</p>
+            <a class="related-card" href="stress_daily_recovery_tools.html">
+                <div>
+                    <span class="related-label">03｜日常恢復工具</span>
+                    <h3>為什麼明明知道該休息，卻還是做不到？</h3>
+                    <p>恢復不只是知道道理，而是把小工具放回日常節奏裡。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
             </a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="text-center pb-16 pt-8">
-        <a href="stress_recovery.html" class="inline-block px-6 py-2 border border-[#8C7D70] text-[#8C7D70] rounded-full text-sm hover:bg-[#8C7D70] hover:text-white transition">返回壓力與自律神經</a>
-    </footer>
-
+    <nav class="article-nav" aria-label="文章底部導覽">
+        <a class="text-link" href="stress_recovery.html">← 回到壓力與自律神經</a>
+        <a class="text-link" href="index.html">返回代謝美學首頁</a>
+    </nav>
 </body>
 </html>
