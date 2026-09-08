@@ -1,180 +1,583 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>為什麼吃很少還是瘦不下來？ | 代謝美學</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#C6B27A',
-                        primaryDark: '#A69260',
-                        cream: '#F1E8C8',
-                    }
-                }
-            }
+    <title>為什麼吃很少還是瘦不下來？｜代謝美學</title>
+    <meta name="description" content="吃很少卻瘦不下來，不一定只是意志力或熱量計算問題。從代謝適應、日常活動下降、壓力睡眠與身體保護機制，重新理解體重停滯。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/glucose_cant_lose_weight.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --font-sans: 'Noto Sans TC', sans-serif;
+            --bg-primary: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #8C7D70;
+            --text-soft: #A39A92;
+            --border-color: rgba(45, 43, 41, 0.10);
+            --accent-main: #C6B27A;
+            --accent-dark: #A69260;
+            --accent-light: #F1E8C8;
+            --accent-soft: rgba(241, 232, 200, 0.42);
         }
-    </script>
-</head>
-<body class="bg-stone-50 text-stone-900 font-sans">
 
-    <!-- 導覽列 -->
-    <nav class="py-8 px-8 border-b border-stone-200/60">
-        <div class="max-w-4xl mx-auto flex justify-between items-center">
-            <div class="flex flex-col">
-                <span class="text-lg font-bold tracking-tight text-stone-800">代謝美學</span>
-                <span class="text-[10px] tracking-[0.2em] text-stone-500 uppercase">METABOLIC ESTHETICS</span>
-            </div>
-            <div class="flex items-center gap-6">
-                <a href="index.html" class="text-sm text-stone-600 hover:text-primary transition">首頁</a>
-                <a href="glucose_appetite.html" class="text-sm text-stone-600 hover:text-primary transition">血糖與食慾</a>
-                <a href="https://lin.ee/pzxDU3O" class="text-sm text-stone-600 hover:text-primary transition">預約諮詢</a>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.95;
+            letter-spacing: 0.03em;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .navbar {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--bg-block);
+            background-color: transparent;
+        }
+
+        .nav-wrapper {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo-main {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            line-height: 1.2;
+        }
+
+        .logo-sub {
+            margin-top: 4px;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+        }
+
+        .nav-item {
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.25s ease;
+        }
+
+        .nav-item:hover,
+        .nav-item.active { color: var(--accent-dark); }
+
+        .nav-item.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: var(--accent-main);
+        }
+
+        .article-hero {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 82px 24px 52px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            display: block;
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+        }
+
+        .hero-category {
+            margin-top: 10px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            letter-spacing: 0.14em;
+        }
+
+        .article-title {
+            margin: 34px 0 0;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+            font-weight: 500;
+        }
+
+        .hero-intro {
+            max-width: 620px;
+            margin: 30px auto 0;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.05;
+        }
+
+        .qa-section {
+            padding: 38px 0;
+            background-color: rgba(245, 240, 234, 0.58);
+            border-top: 1px solid rgba(45, 43, 41, 0.08);
+            border-bottom: 1px solid rgba(45, 43, 41, 0.08);
+        }
+
+        .qa-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-mini-title {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+        }
+
+        .qa-divider {
+            width: 32px;
+            height: 1px;
+            margin: 10px auto 24px;
+            background-color: rgba(198, 178, 122, 0.45);
+        }
+
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .qa-card {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-light);
+            padding: 22px 20px;
+            min-height: 112px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .qa-label {
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .qa-card p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 66px 24px 36px;
+        }
+
+        .article-content p {
+            margin: 0 0 22px;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+
+        .article-content h2 {
+            margin: 58px 0 22px;
+            font-size: 25px;
+            line-height: 1.55;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        .article-content h2::after {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 1px;
+            margin-top: 14px;
+            background-color: var(--accent-main);
+        }
+
+        .gentle-card,
+        .observation-item,
+        .summary-card {
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gentle-card {
+            background-color: rgba(241, 232, 200, 0.30);
+            border-color: rgba(198, 178, 122, 0.24);
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+
+        .gentle-card.cream-style {
+            background-color: var(--bg-secondary);
+            border-color: var(--border-color);
+        }
+
+        .gentle-card ul,
+        .summary-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .gentle-card li,
+        .summary-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+        }
+
+        .gentle-card li:last-child,
+        .summary-list li:last-child { margin-bottom: 0; }
+
+        .gentle-card li::before,
+        .summary-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-dark);
+            font-size: 13px;
+        }
+
+        .observation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 28px 0 8px;
+        }
+
+        .observation-item {
+            background-color: var(--bg-secondary);
+            padding: 24px;
+        }
+
+        .observation-item h3 {
+            margin: 0 0 10px;
+            color: var(--accent-dark);
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .observation-item p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .summary-card {
+            background-color: rgba(241, 232, 200, 0.38);
+            border-color: var(--accent-light);
+            padding: 32px;
+            margin: 56px 0 48px;
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .closing-note {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.1;
+            margin: 48px auto 8px;
+        }
+
+        .related-section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 58px 24px 28px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .related-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .related-card:hover {
+            background-color: var(--accent-light);
+            border-color: var(--accent-main);
+            transform: translateY(-5px);
+        }
+
+        .related-label {
+            color: var(--accent-dark);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .related-card h3 {
+            margin: 18px 0 12px;
+            font-size: 18px;
+            line-height: 1.55;
+            font-weight: 500;
+        }
+
+        .related-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            margin-top: 22px;
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .article-nav {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 36px 24px 64px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .text-link {
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-bottom: 1px solid rgba(140, 125, 112, 0.42);
+            padding-bottom: 3px;
+            transition: color 0.25s ease, border-color 0.25s ease;
+        }
+
+        .text-link:hover {
+            color: var(--accent-dark);
+            border-color: var(--accent-dark);
+        }
+
+        @media (max-width: 760px) {
+            .nav-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                gap: 14px;
+                font-size: 12px;
+            }
+
+            .article-hero { padding-top: 58px; }
+            .qa-grid,
+            .observation-grid,
+            .related-grid { grid-template-columns: 1fr; }
+            .article-content { padding-top: 52px; }
+            .related-card { min-height: auto; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <a href="index.html" aria-label="返回代謝美學首頁">
+                <div class="logo-main">代謝美學</div>
+                <div class="logo-sub">METABOLIC ESTHETICS</div>
+            </a>
+            <div class="nav-links" aria-label="主要導覽">
+                <a class="nav-item" href="index.html">首頁</a>
+                <a class="nav-item active" href="glucose_appetite.html">血糖與食慾</a>
+                <a class="nav-item" href="https://lin.ee/pzxDU3O" target="_blank" rel="noopener">預約諮詢</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero 區 -->
-    <header class="py-24 px-6 text-center">
-        <div class="max-w-2xl mx-auto">
-            <span class="text-[11px] tracking-[0.3em] text-primary font-bold uppercase">GLUCOSE & APPETITE</span>
-            <h2 class="text-xs text-stone-500 mt-3 tracking-widest font-medium uppercase">血糖與食慾 · 代謝代償型</h2>
-            <h1 class="text-4xl md:text-5xl font-semibold text-stone-800 mt-6">為什麼吃很少還是瘦不下來？</h1>
-            <p class="mt-8 text-lg text-stone-600 leading-loose mx-auto">
-                有些人開始調整飲食後，體重確實會下降。<br>
-                但也有些人發現：吃得越來越少，體重卻慢慢卡住。<br>
-                於是開始懷疑：是不是年紀到了？代謝變差了？<br>
-                從生理角度來看，體重停滯不只是意志力的問題，<br>
-                而是身體正在努力維持平衡。
-            </p>
-        </div>
+    <header class="article-hero">
+        <span class="hero-tag">GLUCOSE & APPETITE</span>
+        <div class="hero-category">血糖與食慾 · 代謝代償型</div>
+        <h1 class="article-title">為什麼吃很少還是瘦不下來？</h1>
+        <p class="hero-intro">
+            有些人開始調整飲食後，體重確實會下降。但也有些人發現：吃得越來越少，體重卻慢慢卡住。這不一定是意志力不夠，而可能是身體正在努力維持平衡。
+        </p>
     </header>
 
-    <!-- Q&A Section -->
-    <section class="py-12 bg-cream/20 border-y border-cream/50 backdrop-blur-sm">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-8">
-                <span class="text-xs tracking-widest text-primaryDark font-medium">這篇文章會帶你看懂</span>
-                <div class="w-8 h-[1px] bg-primaryDark/30 mx-auto mt-2"></div>
-            </div>
-            <div class="grid gap-4 md:grid-cols-3">
-                <div class="bg-cream/40 p-6 rounded-2xl border border-cream flex flex-col justify-center min-h-[120px] transition-all hover:translate-y-[-2px] hover:shadow-sm">
-                    <span class="text-xs text-primaryDark font-semibold mb-2 block">Q 1</span>
-                    <p class="text-[14px] text-stone-900 leading-relaxed font-medium">吃很少，為什麼體重還是不動？</p>
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="section-mini-title">這篇文章會帶你看懂</div>
+            <div class="qa-divider"></div>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <div class="qa-label">Q 1</div>
+                    <p>吃很少，為什麼體重還是不動？</p>
                 </div>
-                <div class="bg-cream/40 p-6 rounded-2xl border border-cream flex flex-col justify-center min-h-[120px] transition-all hover:translate-y-[-2px] hover:shadow-sm">
-                    <span class="text-xs text-primaryDark font-semibold mb-2 block">Q 2</span>
-                    <p class="text-[14px] text-stone-900 leading-relaxed font-medium">身體真的會進入節能模式嗎？</p>
+                <div class="qa-card">
+                    <div class="qa-label">Q 2</div>
+                    <p>身體真的會進入節能模式嗎？</p>
                 </div>
-                <div class="bg-cream/40 p-6 rounded-2xl border border-cream flex flex-col justify-center min-h-[120px] transition-all hover:translate-y-[-2px] hover:shadow-sm">
-                    <span class="text-xs text-primaryDark font-semibold mb-2 block">Q 3</span>
-                    <p class="text-[14px] text-stone-900 leading-relaxed font-medium">體重停滯時，應該繼續少吃嗎？</p>
+                <div class="qa-card">
+                    <div class="qa-label">Q 3</div>
+                    <p>體重停滯時，應該繼續少吃嗎？</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 主內容區 -->
-    <main class="py-16 px-6 max-w-2xl mx-auto prose prose-stone prose-lg">
-        
-        <div class="bg-cream/30 p-8 rounded-xl mb-10 border border-cream">
-            <h3 class="text-lg font-bold mb-4 text-primaryDark">吃很少，不一定等於瘦得更快</h3>
-            <p>剛開始減少熱量時，體重通常會下降。但人體不是計算機。當能量長期不足時，身體也會開始調整自己的消耗與行為。因此：<strong>吃得更少，不一定會一直瘦下去。</strong></p>
-        </div>
+    <main class="article-content">
+        <p>吃得少，不一定等於會一直瘦下去。剛開始減少熱量時，體重可能下降；但身體不是單純的計算機，當能量長期不足，身體也會開始調整消耗、活動量、食慾與恢復狀態。</p>
+        <p>所以，體重停滯不一定代表你做錯了。真正需要理解的是：身體現在是不是已經進入一種「想要省一點、守住一點」的狀態。</p>
 
-        <h2 class="text-2xl font-bold text-stone-800 mt-12 mb-6">第一種｜其實沒有想像中吃得少</h2>
-        <p>這是最常被忽略的一種情況。有些人平日吃得很少，但假日聚餐多、晚上有隱藏加餐，或是飲料零食未計入，導致整體熱量超標。</p>
-        <div class="bg-white p-6 border-l-4 border-primary rounded-r-lg my-8">
-            <p class="font-bold mb-2">觀察卡</p>
-            <ul class="list-disc pl-5">
-                <li>平日非常克制</li>
-                <li>週末容易放鬆</li>
-                <li>晚上常出現額外進食</li>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>明明已經吃很少，體重卻停住。</li>
+                <li>越控制，越容易累、越不想動。</li>
+                <li>白天很克制，晚上或週末更容易失控。</li>
+                <li>活動量下降，但自己不一定有發現。</li>
+                <li>睡眠、壓力與恢復感也跟著變差。</li>
             </ul>
         </div>
 
-        <h2 class="text-2xl font-bold text-stone-800 mt-12 mb-6">第二種｜身體開始降低消耗</h2>
-        <p>當熱量長期不足時，身體會出現一些調整。例如非運動性活動（NEAT）下降，動作變少、不愛走路、坐著時間增加，這些改變都會降低總消耗。</p>
-        <div class="bg-stone-100 p-6 rounded-xl border border-stone-200 my-6">
-            <p class="font-bold mb-3 text-stone-800">恢復能力下降</p>
-            <ul class="list-disc pl-5 space-y-1">
-                <li>容易疲倦</li>
-                <li>不想運動</li>
-                <li>恢復變慢</li>
-            </ul>
-            <p class="mt-4 text-sm text-stone-600">於是活動量也跟著下降。</p>
-        </div>
-        <div class="bg-cream/20 p-6 rounded-xl border border-cream my-8 text-center">
-            <p class="text-primaryDark font-bold mb-2">知識整理</p>
-            <p class="text-lg font-medium italic">Adaptive Thermogenesis（代謝適應）</p>
-            <p class="text-sm text-stone-600">研究發現，減重過程中除了體重下降，身體也可能同步降低部分能量消耗，是一種已知的生理現象。</p>
-        </div>
-
-        <h2 class="text-2xl font-bold text-stone-800 mt-12 mb-6">第三種｜身體進入保護模式</h2>
-        <p>從演化角度來看，人體最重要的任務不是變瘦，而是活下來。當身體感覺能量長期不足，它可能會開始：降低消耗、提高食慾、增加對食物的敏感度。</p>
-        <div class="bg-primary/5 p-6 rounded-xl border border-primary/20 my-8">
-            <p class="font-bold mb-3 text-primaryDark">這些反應其實是在保護你</p>
-            <ul class="list-none space-y-2">
-                <li>✔ 體重停滯</li>
-                <li>✔ 容易想吃東西</li>
-                <li>✔ 食慾變強</li>
-                <li>✔ 精神與恢復變差</li>
-            </ul>
-        </div>
-
-        <h2 class="text-2xl font-bold text-stone-800 mt-12 mb-6">第四種｜真正需要調整的不是熱量</h2>
-        <p>很多人在卡關時，第一個反應是：「那我再吃少一點。」但有時候，真正需要檢查的是：睡眠夠不夠、蛋白質是否足夠、活動量是否下降、壓力是否過高、飲食是否過度限制。</p>
-        <div class="bg-white p-6 border-l-4 border-primaryDark rounded-r-lg my-8">
-            <p class="font-bold mb-3">觀察卡</p>
-            <ul class="list-disc pl-5">
-                <li>睡眠變差</li>
-                <li>容易疲勞</li>
-                <li>情緒不穩</li>
-                <li>體重停滯</li>
-            </ul>
-            <p class="mt-4 font-semibold text-primaryDark italic">或許值得關心的，不只是體重。</p>
-        </div>
-
-        <!-- 重點整理區 -->
-        <section class="bg-cream/30 p-8 rounded-2xl my-12 border border-cream">
-            <h3 class="text-xl font-bold text-primaryDark mb-6">重點整理</h3>
-            <ul class="space-y-4">
-                <li><strong>飲食總量評估：</strong>先確認是否有隱藏熱量攝取。</li>
-                <li><strong>活動能量降低：</strong>身體可能會自動減少日常非運動性的熱量消耗。</li>
-                <li><strong>代謝適應：</strong>人體的生理保護機制，防止熱量長期嚴重不足。</li>
-                <li><strong>恢復能力下降：</strong>睡眠、壓力與恢復狀態都會影響體重調節。</li>
-            </ul>
-        </section>
-
-        <!-- 延伸閱讀區 -->
-        <section class="my-16">
-            <h3 class="text-lg font-bold mb-6 text-stone-800">延伸閱讀</h3>
-            <div class="grid gap-4">
-                <a href="glucose_always_hungry.html" class="block p-4 border border-cream/50 bg-cream/10 rounded-xl hover:bg-cream/30 transition">為什麼一直餓？不一定只是血糖問題</a>
-                <a href="glucose_night_craving.html" class="block p-4 border border-cream/50 bg-cream/10 rounded-xl hover:bg-cream/30 transition">晚上特別想吃東西，是意志力不好嗎？</a>
-                <a href="glucose_breakfast_not_hungry.html" class="block p-4 border border-cream/50 bg-cream/10 rounded-xl hover:bg-cream/30 transition">早餐不餓，代表代謝比較好嗎？</a>
-                <a href="glucose_afternoon_sweets.html" class="block p-4 border border-cream/50 bg-cream/10 rounded-xl hover:bg-cream/30 transition">下午特別想吃甜食，是血糖不穩嗎？</a>
+        <h2>吃很少仍瘦不下來，常見有四種狀況</h2>
+        <div class="observation-grid">
+            <div class="observation-item">
+                <h3>第一種：總量沒有想像中少</h3>
+                <p>平日很克制，但週末聚餐、飲料零食、晚上加餐或醬料點心沒有被算進去，整週平均下來，總量可能沒有想像中低。</p>
             </div>
-        </section>
-
-        <!-- 溫柔收尾 -->
-        <div class="border-t border-stone-200 pt-12 mt-12">
-            <p class="text-lg italic leading-relaxed text-stone-700">
-                如果最近已經很努力，卻發現體重沒有明顯變化，不一定代表你做錯了。有時候，身體只是正在努力保護自己。理解這些保護機制，不是要放棄調整，而是幫助我們用更長遠的角度，重新理解身體的節奏。因為健康從來不只是變瘦。更重要的是，身體是否有足夠的餘裕，穩定地運作下去。
-            </p>
+            <div class="observation-item">
+                <h3>第二種：日常活動量下降</h3>
+                <p>吃太少之後，身體可能自動減少非運動性的活動量。走路變少、坐著變久、動作變慢，總消耗也跟著下降。</p>
+            </div>
+            <div class="observation-item">
+                <h3>第三種：代謝適應型</h3>
+                <p>減重一段時間後，身體可能降低部分能量消耗，讓體重下降速度變慢。這不是失敗，而是身體面對能量不足時的保護反應。</p>
+            </div>
+            <div class="observation-item">
+                <h3>第四種：恢復不足型</h3>
+                <p>睡眠不足、壓力高、蛋白質不足或飲食限制太久，都可能讓身體更難穩定調節食慾、活動量與體重。</p>
+            </div>
         </div>
 
-        <div class="text-center mt-12">
-            <a href="glucose_appetite.html" class="inline-block px-8 py-3 bg-primary text-white rounded-full font-medium hover:bg-primaryDark transition">返回血糖與食慾</a>
+        <h2>身體的保護機制，不是故意和你作對</h2>
+        <p>從身體的角度來看，最重要的任務不是變瘦，而是活下來。當能量長期不足，身體可能會降低消耗、提高食慾、增加對食物的敏感度，並讓你更想休息、更不想動。</p>
+        <p>這些變化常常讓人很挫折，因為你會覺得自己明明更努力了，效果卻變差。但它們其實比較像是身體在說：現在的消耗和限制，可能已經超過我能穩定承接的範圍。</p>
+
+        <h2>體重卡住時，不一定要再吃更少</h2>
+        <p>很多人在卡關時，第一個反應是：「那我再吃少一點。」但有時候，真正需要檢查的不是再砍熱量，而是身體是否還有足夠餘裕。</p>
+        <div class="gentle-card">
+            <ul>
+                <li>蛋白質是否足夠？</li>
+                <li>睡眠是否比之前變差？</li>
+                <li>壓力是否一直很高？</li>
+                <li>步數、站立時間與日常活動是否下降？</li>
+                <li>飲食是否已經限制到很難長期生活？</li>
+            </ul>
         </div>
+
+        <h2>真正要找的，是身體可以重新穩定的節奏</h2>
+        <p>體重停滯的時候，當然還是需要誠實檢查飲食總量。但同時，也要看身體是不是因為長期限制而進入代償。代謝美學更在意的，不只是再找一個更嚴格的方法，而是讓身體重新有能量、有活動量、有恢復感。</p>
+        <p>當身體不再一直處於緊繃與匱乏狀態，飲食調整才比較有機會變成可以長期留下來的生活方式，而不是一次又一次的壓抑與反撲。</p>
+
+        <div class="summary-card">
+            <h2>重點整理</h2>
+            <ul class="summary-list">
+                <li>吃很少卻瘦不下來，不一定代表你不夠努力。</li>
+                <li>需要先確認整週總量、隱藏熱量與晚間或週末進食。</li>
+                <li>長期能量不足時，身體可能降低日常活動量與部分消耗。</li>
+                <li>睡眠、壓力、蛋白質與恢復狀態，都會影響體重調節。</li>
+                <li>卡關時不一定要繼續少吃，有時候更需要幫身體找回穩定節奏。</li>
+            </ul>
+        </div>
+
+        <p class="closing-note">
+            如果你已經很努力，<br>
+            卻發現體重沒有明顯變化，<br>
+            不一定代表你做錯了。<br>
+            有時候，身體只是正在努力保護自己。<br>
+            理解這些保護機制，<br>
+            不是要放棄調整，<br>
+            而是讓我們用更長遠的角度，<br>
+            重新理解身體的節奏。
+        </p>
     </main>
 
-    <!-- 頁尾 -->
-    <footer class="py-16 text-center border-t border-stone-100">
-        <p class="text-stone-400 text-xs">© 2026 代謝美學 METABOLIC ESTHETICS</p>
-    </footer>
+    <section class="related-section">
+        <div class="section-mini-title">延伸閱讀</div>
+        <div class="qa-divider"></div>
+        <div class="related-grid">
+            <a class="related-card" href="glucose_always_hungry.html">
+                <div>
+                    <div class="related-label">01｜如果你也常常餓</div>
+                    <h3>為什麼一直餓？不一定只是血糖問題</h3>
+                    <p>持續飢餓可能和能量需求、飽足訊號、睡眠壓力與代謝代償有關。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
+            </a>
+            <a class="related-card" href="glucose_night_craving.html">
+                <div>
+                    <div class="related-label">02｜如果晚上特別想吃</div>
+                    <h3>晚上特別想吃東西，是意志力不好嗎？</h3>
+                    <p>晚上的食慾不一定是意志力問題，也可能是白天能量與壓力的代償。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
+            </a>
+            <a class="related-card" href="weight_effective_long_term.html">
+                <div>
+                    <div class="related-label">03｜如果方法短期有效</div>
+                    <h3>一個方法有效，就代表適合長期做嗎？</h3>
+                    <p>短期有效不等於能長期承接，真正重要的是身體與生活都能穩定留下來。</p>
+                </div>
+                <div class="read-more">閱讀文章 →</div>
+            </a>
+        </div>
+    </section>
 
+    <div class="article-nav">
+        <a class="text-link" href="glucose_appetite.html">← 回到血糖與食慾</a>
+        <a class="text-link" href="index.html">返回代謝美學首頁</a>
+    </div>
 </body>
 </html>
