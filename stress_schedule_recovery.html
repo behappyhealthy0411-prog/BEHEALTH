@@ -1,148 +1,610 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>壓力與自律神經樹：為什麼恢復總是被排到最後？ | 代謝美學 METABOLIC ESTHETICS</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>為什麼恢復總是被排到最後？｜壓力與自律神經｜代謝美學</title>
+    <meta name="description" content="恢復常常不是不重要，而是不夠急。從重要但不急、生活錨點、日常修復與身體提醒，看懂如何替恢復留下不容易被取消的位置。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/stress_schedule_recovery.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap');
-        
-        body { font-family: 'Noto Sans TC', sans-serif; background-color: #FAF8F5; color: #2D2B29; }
-        h1, h2, h3 { font-family: 'Noto Sans TC', sans-serif; }
+        :root {
+            --font-sans: 'Noto Sans TC', sans-serif;
+            --bg-primary: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #5F5A55;
+            --text-soft: #8C8680;
+            --border-color: rgba(45, 43, 41, 0.10);
+            --accent-main: #8E9E9B;
+            --accent-dark: #6F7F7C;
+            --accent-light: #DDE8E6;
+            --accent-soft: rgba(221, 232, 230, 0.42);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.95;
+            letter-spacing: 0.03em;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .navbar {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--bg-block);
+            background-color: transparent;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo-main {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            line-height: 1.2;
+        }
+
+        .logo-sub {
+            display: block;
+            margin-top: 4px;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+        }
+
+        .nav-item {
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.25s ease;
+        }
+
+        .nav-item:hover,
+        .nav-item.active { color: var(--accent-dark); }
+
+        .nav-item.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: var(--accent-main);
+        }
+
+        .article-hero {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 82px 24px 52px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            display: block;
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+        }
+
+        .hero-category {
+            margin-top: 10px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            letter-spacing: 0.14em;
+        }
+
+        .article-title {
+            margin: 34px 0 0;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+            font-weight: 500;
+        }
+
+        .hero-intro {
+            max-width: 620px;
+            margin: 30px auto 0;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.05;
+        }
+
+        .qa-section {
+            padding: 38px 0;
+            background-color: rgba(245, 240, 234, 0.58);
+            border-top: 1px solid rgba(45, 43, 41, 0.08);
+            border-bottom: 1px solid rgba(45, 43, 41, 0.08);
+        }
+
+        .qa-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-mini-title {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+        }
+
+        .qa-divider {
+            width: 32px;
+            height: 1px;
+            margin: 10px auto 24px;
+            background-color: rgba(142, 158, 155, 0.45);
+        }
+
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        .qa-card {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-light);
+            padding: 26px 22px;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .qa-label {
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 14px;
+            letter-spacing: 0.08em;
+        }
+
+        .qa-card p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.8;
+            font-weight: 400;
+            min-height: calc(1.8em * 3);
+        }
+
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 66px 24px 36px;
+        }
+
+        .article-content p {
+            margin: 0 0 22px;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+
+        .article-content h2 {
+            margin: 58px 0 22px;
+            font-size: 25px;
+            line-height: 1.55;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        .article-content h2::after {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 1px;
+            margin-top: 14px;
+            background-color: var(--accent-main);
+        }
+
+        .gentle-card,
+        .observation-item,
+        .summary-card {
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gentle-card {
+            background-color: rgba(221, 232, 230, 0.30);
+            border-color: rgba(142, 158, 155, 0.24);
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+
+        .gentle-card.cream-style {
+            background-color: var(--bg-secondary);
+            border-color: var(--border-color);
+        }
+
+        .gentle-card ul,
+        .summary-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .gentle-card li,
+        .summary-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .gentle-card li:last-child,
+        .summary-list li:last-child { margin-bottom: 0; }
+
+        .gentle-card li::before,
+        .summary-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-dark);
+            font-size: 13px;
+        }
+
+        .observation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 28px 0 8px;
+        }
+
+        .observation-item {
+            background-color: var(--bg-secondary);
+            padding: 24px;
+        }
+
+        .observation-item h3 {
+            margin: 0 0 10px;
+            color: var(--accent-dark);
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .observation-item p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .summary-card {
+            background-color: rgba(221, 232, 230, 0.38);
+            border-color: var(--accent-light);
+            padding: 32px;
+            margin: 56px 0 48px;
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .closing-note {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 2.1;
+            margin: 48px auto 8px;
+        }
+
+        .related-section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 58px 24px 28px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .related-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .related-card:hover {
+            background-color: var(--accent-light);
+            border-color: var(--accent-main);
+            transform: translateY(-5px);
+        }
+
+        .related-label {
+            color: var(--accent-dark);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .related-card h3 {
+            margin: 18px 0 12px;
+            font-size: 18px;
+            line-height: 1.55;
+            font-weight: 500;
+        }
+
+        .related-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            margin-top: 22px;
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .article-nav {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 36px 24px 64px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .text-link {
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-bottom: 1px solid rgba(140, 125, 112, 0.42);
+            padding-bottom: 3px;
+            transition: color 0.25s ease, border-color 0.25s ease;
+        }
+
+        .text-link:hover {
+            color: var(--accent-dark);
+            border-color: var(--accent-dark);
+        }
+
+        @media (max-width: 760px) {
+            .nav-wrapper { flex-direction: column; align-items: flex-start; }
+            .nav-links { width: 100%; justify-content: space-between; gap: 14px; font-size: 12px; }
+            .article-hero { padding-top: 58px; }
+            .qa-grid,
+            .observation-grid,
+            .related-grid { grid-template-columns: 1fr; }
+            .qa-card,
+            .related-card { min-height: auto; }
+            .qa-card p { min-height: auto; }
+            .article-title { font-size: 32px; }
+            .hero-intro { font-size: 16px; }
+            .article-content { padding-top: 52px; }
+            .article-content h2 { font-size: 22px; }
+        }
     </style>
 </head>
 <body>
-
-    <!-- Nav -->
-    <nav class="flex justify-between items-center px-8 py-6 max-w-5xl mx-auto">
-        <div class="flex flex-col">
-            <span class="text-lg font-semibold tracking-wide">代謝美學</span>
-            <span class="text-[10px] tracking-[0.2em] uppercase">METABOLIC ESTHETICS</span>
-        </div>
-        <div class="flex items-center gap-8 text-sm">
-            <a href="index.html" class="hover:text-[#6F7F7C] transition-colors">首頁</a>
-            <a href="stress_recovery.html" class="hover:text-[#6F7F7C] transition-colors">壓力與自律神經</a>
-            <a href="https://lin.ee/pzxDU3O" class="bg-[#6F7F7C] text-white px-5 py-2 rounded-full hover:bg-[#5a6a67] transition-colors">預約諮詢</a>
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" aria-label="返回代謝美學首頁">
+                <span class="logo-main">代謝美學</span>
+                <span class="logo-sub">METABOLIC ESTHETICS</span>
+            </a>
+            <div class="nav-links" aria-label="主選單">
+                <a class="nav-item" href="index.html">首頁</a>
+                <a class="nav-item active" href="stress_recovery.html">壓力與自律神經</a>
+                <a class="nav-item" href="https://lin.ee/pzxDU3O">預約諮詢</a>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header class="max-w-3xl mx-auto px-6 py-20 text-center">
-        <span class="text-xs tracking-widest text-[#6F7F7C] font-medium uppercase">STRESS & RECOVERY</span>
-        <div class="mt-4 mb-8">
-            <h2 class="text-sm tracking-widest text-[#6F7F7C]">壓力與自律神經 · 恢復建立型</h2>
-            <h1 class="text-4xl md:text-5xl font-semibold mt-4 text-[#2D2B29]">為什麼恢復總是被排到最後？</h1>
-        </div>
-        <p class="text-lg text-[#8C7D70] leading-relaxed max-w-xl mx-auto">
-            恢復不是不重要，而是常常不夠急。如果沒有被刻意留下位置，它就會一直被生活擠掉，直到身體發出訊號。
+    <header class="article-hero">
+        <span class="hero-tag">STRESS & RECOVERY</span>
+        <div class="hero-category">壓力與自律神經 · 恢復建立型</div>
+        <h1 class="article-title">為什麼恢復總是<br>被排到最後？</h1>
+        <p class="hero-intro">
+            恢復不是不重要，而是常常不夠急。<br>
+            如果沒有被刻意留下位置，它就會一直被生活擠掉，直到身體發出訊號。
         </p>
     </header>
 
-    <!-- Q&A Section -->
-    <section class="py-12 bg-[#DDE8E6]/20 border-y border-stone-200/30">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-8">
-                <span class="text-xs tracking-widest text-[#6F7F7C] font-medium">這篇文章會帶你看懂</span>
-                <div class="w-8 h-[1px] bg-[#6F7F7C]/40 mx-auto mt-2"></div>
-            </div>
-            <div class="grid gap-4 md:grid-cols-3">
-                <div class="bg-[#DDE8E6]/40 p-6 rounded-2xl border border-[#DDE8E6] flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-[#6F7F7C] font-semibold mb-2 block">Q 1</span>
-                    <p class="text-[14px] text-[#2D2B29] leading-relaxed">為什麼明明知道恢復重要，卻總是排不到時間？</p>
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="section-mini-title">這篇文章會帶你看懂</div>
+            <div class="qa-divider"></div>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <span class="qa-label">Q 1</span>
+                    <p>為什麼明明知道恢復重要，卻總是排不到時間？</p>
                 </div>
-                <div class="bg-[#DDE8E6]/40 p-6 rounded-2xl border border-[#DDE8E6] flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-[#6F7F7C] font-semibold mb-2 block">Q 2</span>
-                    <p class="text-[14px] text-[#2D2B29] leading-relaxed">恢復長期被排到最後，身體會出現哪些提醒？</p>
+                <div class="qa-card">
+                    <span class="qa-label">Q 2</span>
+                    <p>恢復長期被排到最後，身體會出現哪些提醒？</p>
                 </div>
-                <div class="bg-[#DDE8E6]/40 p-6 rounded-2xl border border-[#DDE8E6] flex flex-col justify-center min-h-[120px]">
-                    <span class="text-xs text-[#6F7F7C] font-semibold mb-2 block">Q 3</span>
-                    <p class="text-[14px] text-[#2D2B29] leading-relaxed">怎麼替恢復留下一個不容易被取消的位置？</p>
+                <div class="qa-card">
+                    <span class="qa-label">Q 3</span>
+                    <p>怎麼替恢復留下一個不容易被取消的位置？</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Content -->
-    <article class="max-w-2xl mx-auto px-6 py-16 space-y-8 text-[#2D2B29] leading-loose">
+    <main class="article-content">
         <p>很多人其實知道恢復很重要。知道自己應該早點睡、少滑手機、多走路、留一點時間給自己。但在真正的生活裡，恢復常常還是被排到最後。</p>
         <p>工作、訊息、照顧孩子、家務、客戶需求……這些事情都有明確的時間感，看起來都「比較急」。等到所有事情都處理完，身體往往已經太累了，於是恢復又變成：「等有空再說」。</p>
 
-        <h3 class="text-2xl font-semibold mt-12 mb-6">為什麼明明知道恢復重要，卻總是排不到時間？</h3>
-        <p>因為恢復常常是「重要但不急」的事情。工作沒完成，會有壓力；訊息沒回，會有人等待。這些事情都有明確的時間感。但恢復不一樣，恢復通常不會立刻發出警報，也沒有人會馬上提醒你該休息。</p>
-        <p>很多人不是不知道恢復重要，而是生活裡一直有其他事情，看起來更急、更明確、更不能等。於是身體的需要，就慢慢被排到最後。重要但不急的事情，如果沒有被刻意保護，就很容易被生活吃掉。</p>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>恢復不是不重要，而是常常不夠急。</li>
+                <li>重要但不急的事情，如果沒有被保護，就很容易被生活吃掉。</li>
+                <li>恢復不是多一個待辦事項，而是替身體留下一個可以回來的位置。</li>
+            </ul>
+        </div>
 
-        <h3 class="text-2xl font-semibold mt-12 mb-6">恢復被排到最後，身體會怎麼提醒你？</h3>
-        <p>恢復長期被排到最後，身體會先用一些細微的方式提醒你。這些不一定是身體壞掉，而是身體在告訴你：「我已經被放在最後很久了」。</p>
-        <div class="bg-[#DDE8E6]/30 p-6 rounded-2xl border border-[#DDE8E6] my-6">
-            <p class="font-semibold mb-3 text-[#6F7F7C]">身體的細微提醒訊號：</p>
-            <ul class="text-sm grid grid-cols-1 md:grid-cols-2 gap-2">
-                <li>• 睡眠開始變淺</li>
-                <li>• 早上醒來沒有恢復感</li>
-                <li>• 晚上很累，腦袋卻停不下來</li>
-                <li>• 壓力一大，就想吃東西</li>
-                <li>• 情緒變得急躁、容易煩</li>
-                <li>• 肩頸、胸口、腸胃緊繃</li>
-                <li>• 放假也休不回來</li>
-                <li>• 恢復速度變慢</li>
+        <h2>為什麼明明知道恢復重要，卻總是排不到時間？</h2>
+        <p>因為恢復常常是「重要但不急」的事情。工作沒完成，會有壓力；訊息沒回，會有人等待。這些事情都有明確的時間感。</p>
+        <p>但恢復不一樣。恢復通常不會立刻發出警報，也沒有人會馬上提醒你該休息。很多人不是不知道恢復重要，而是生活裡一直有其他事情，看起來更急、更明確、更不能等。</p>
+        <p>於是身體的需要，就慢慢被排到最後。重要但不急的事情，如果沒有被刻意保護，就很容易被生活吃掉。</p>
+
+        <h2>恢復被排到最後，常見有四種狀況</h2>
+        <div class="observation-grid">
+            <div class="observation-item">
+                <h3>一｜緊急事項佔滿型</h3>
+                <p>工作、訊息、家務和照顧責任都看起來更急，恢復就一直被放到最後，等真的有空時，身體已經沒有力氣了。</p>
+            </div>
+            <div class="observation-item">
+                <h3>二｜等有空再說型</h3>
+                <p>恢復被安排在所有事情之後，但生活很少真的空下來。於是休息變成一件永遠等不到的事。</p>
+            </div>
+            <div class="observation-item">
+                <h3>三｜累壞才急救型</h3>
+                <p>平常沒有留下回穩空間，直到失眠、暴食、易怒、痠痛或身體訊號變大，才開始想要補救。</p>
+            </div>
+            <div class="observation-item">
+                <h3>四｜沒有固定位置型</h3>
+                <p>恢復只是寫在腦中，沒有時間、場景或行為錨點可以承接，所以很容易被臨時事情取消。</p>
+            </div>
+        </div>
+
+        <h2>恢復被排到最後，身體會怎麼提醒你？</h2>
+        <p>恢復長期被排到最後，身體會先用一些細微的方式提醒你。這些不一定是身體壞掉，而是身體在告訴你：「我已經被放在最後很久了。」</p>
+        <div class="gentle-card">
+            <ul>
+                <li>睡眠開始變淺，早上醒來沒有恢復感。</li>
+                <li>晚上很累，腦袋卻停不下來。</li>
+                <li>壓力一大，就特別想吃東西。</li>
+                <li>情緒變得急躁、容易煩。</li>
+                <li>肩頸、胸口、腸胃容易緊繃。</li>
+                <li>放假也休不回來，恢復速度變慢。</li>
             </ul>
         </div>
         <p>當恢復一直被延後，身體會慢慢失去回穩的空間。</p>
 
-        <h3 class="text-2xl font-semibold mt-12 mb-6">把恢復排進行事曆，不是把休息變成任務</h3>
+        <h2>把恢復排進行事曆，不是把休息變成任務</h2>
         <p>把恢復排進行事曆，不是要把休息變成任務，而是替身體留下一個不被生活吃掉的位置。</p>
-        <div class="py-4">
-            <p class="text-xl font-bold text-[#7B8365] leading-relaxed">
-                重點不是完美執行。而是讓身體知道：我不是只有累壞了，才會被照顧。我不是永遠排在最後。我在每天的生活裡，也有一點點位置。
-            </p>
+        <div class="gentle-card cream-style">
+            <ul>
+                <li>重點不是完美執行，而是讓身體知道：我不是只有累壞了，才會被照顧。</li>
+                <li>我不是永遠排在最後。</li>
+                <li>我在每天的生活裡，也有一點點位置。</li>
+            </ul>
         </div>
         <p>恢復不是多一個待辦事項。恢復是讓身體有機會回來。</p>
 
-        <h3 class="text-2xl font-semibold mt-12 mb-6">替恢復找一個「錨點」</h3>
-        <p>恢復如果只是寫在腦中，很容易被忘記。你可以替恢復找一個「錨點」，讓它附著在固定的位置上：</p>
-        <ul class="list-disc pl-6 space-y-2">
-            <li><strong>時間錨點：</strong>例如晚餐後十分鐘，或睡前三分鐘。</li>
-            <li><strong>場景錨點：</strong>例如回到家，先把燈光調暗；坐上車後，先讓身體放鬆下來。</li>
-            <li><strong>行為錨點：</strong>將恢復接在現有習慣後，例如刷牙後，把手機放遠一點。</li>
-        </ul>
+        <h2>替恢復找一個「錨點」</h2>
+        <p>恢復如果只是寫在腦中，很容易被忘記。你可以替恢復找一個「錨點」，讓它附著在固定的位置上。</p>
+        <div class="gentle-card">
+            <ul>
+                <li><strong>時間錨點：</strong>例如晚餐後十分鐘，或睡前三分鐘。</li>
+                <li><strong>場景錨點：</strong>例如回到家，先把燈光調暗；坐上車後，先讓身體放鬆下來。</li>
+                <li><strong>行為錨點：</strong>將恢復接在現有習慣後，例如刷牙後，把手機放遠一點。</li>
+            </ul>
+        </div>
         <p>重點不是完美執行，而是不要讓恢復完全消失。可以縮小、可以簡單，但讓身體知道它在生活裡，始終有一個位置。</p>
-    </article>
 
-    <!-- Key Takeaway & Conclusion -->
-    <section class="max-w-2xl mx-auto px-6 py-10 text-center">
-        <div class="bg-[#DDE8E6]/30 p-8 rounded-2xl border border-[#DDE8E6] mb-12 text-left">
-            <h3 class="text-xl font-semibold mb-4 text-center">重點整理</h3>
-            <ul class="space-y-3 text-sm text-[#2D2B29]/90">
-                <li>• 恢復重要但不急，極易被生活其他緊急事項擠壓。</li>
-                <li>• 長期忽略恢復，身體會以淺眠、嘴饞、易怒或緊繃作為提醒。</li>
-                <li>• 「等有空再說」是陷阱，必須透過時間、場景或行為錨點來主動安置恢復。</li>
-                <li>• 恢復可以縮小，但不要完全中斷；重點是讓身體保有回到自己的位置。</li>
+        <h2>恢復可以縮小，但不要完全消失</h2>
+        <p>很多時候，我們不是沒有能力休息，而是把休息想得太完整、太正式、太需要空檔。結果只要那天很忙，恢復就整個被取消。</p>
+        <p>可是恢復不一定要很大。它可以是三分鐘安靜坐著，可以是晚餐後慢慢走一小段，可以是睡前少滑十分鐘手機，也可以是把某一餐吃得穩一點。</p>
+
+        <div class="summary-card">
+            <h2>重點整理</h2>
+            <ul class="summary-list">
+                <li>恢復重要但不急，極易被生活裡其他緊急事項擠壓。</li>
+                <li>長期忽略恢復，身體可能用淺眠、嘴饞、易怒、緊繃或放假也休不回來提醒你。</li>
+                <li>「等有空再說」容易變成陷阱，因為生活很少真的自動空下來。</li>
+                <li>可以透過時間、場景或行為錨點，替恢復留下一個固定位置。</li>
+                <li>恢復可以縮小，但不要完全中斷；重點是讓身體保有回到自己的位置。</li>
             </ul>
         </div>
 
-        <p class="leading-relaxed text-[#2D2B29]">真正的恢復力，往往不是來自一次很大的改變，</p>
-        <p class="leading-relaxed text-[#2D2B29]">而是每天願意替自己留下一個可以回來的地方。</p>
-    </section>
+        <p class="closing-note">
+            真正的恢復力，往往不是來自一次很大的改變，<br>
+            而是每天願意替自己留下一個可以回來的地方。<br>
+            不一定完美，也不一定很久。<br>
+            只要身體不再永遠排在最後，<br>
+            回穩就會開始有一點點空間。
+        </p>
+    </main>
 
-    <!-- Recommended Reading -->
-    <section class="max-w-2xl mx-auto px-6 py-10 text-center">
-        <h3 class="text-xl font-semibold mb-6">延伸閱讀</h3>
-        <div class="grid gap-4">
-            <a href="stress_compensatory_rest.html" class="block bg-[#DDE8E6]/20 p-4 rounded-xl border border-[#DDE8E6] text-sm hover:bg-[#DDE8E6]/40 transition-colors">為什麼放假、旅行、按摩之後，還是沒有真正恢復？</a>
-            <a href="stress_daily_recovery_tools.html" class="block bg-[#DDE8E6]/20 p-4 rounded-xl border border-[#DDE8E6] text-sm hover:bg-[#DDE8E6]/40 transition-colors">為什麼明明知道該休息，卻還是做不到？</a>
-            <a href="stress_tired_and_craving.html" class="block bg-[#DDE8E6]/20 p-4 rounded-xl border border-[#DDE8E6] text-sm hover:bg-[#DDE8E6]/40 transition-colors">為什麼累的時候，特別容易想吃東西？</a>
-            <a href="stress_signs_of_recovery.html" class="block bg-[#DDE8E6]/20 p-4 rounded-xl border border-[#DDE8E6] text-sm hover:bg-[#DDE8E6]/40 transition-colors">怎麼知道自己的恢復力正在變好？</a>
+    <section class="related-section">
+        <div class="section-mini-title">延伸閱讀</div>
+        <div class="qa-divider"></div>
+        <div class="related-grid">
+            <a class="related-card" href="stress_compensatory_rest.html">
+                <div>
+                    <span class="related-label">01｜消耗辨識型</span>
+                    <h3>為什麼放假、旅行、按摩之後，還是沒有真正恢復？</h3>
+                    <p>大型休息不一定補得回長期累積的慢性消耗。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
+            <a class="related-card" href="stress_daily_recovery_tools.html">
+                <div>
+                    <span class="related-label">02｜日常修復型</span>
+                    <h3>為什麼明明知道該休息，卻還是做不到？</h3>
+                    <p>有時候不是不知道，而是恢復需要被設計得更小、更容易開始。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
+            <a class="related-card" href="stress_signs_of_recovery.html">
+                <div>
+                    <span class="related-label">03｜恢復訊號型</span>
+                    <h3>怎麼知道自己的恢復力正在變好？</h3>
+                    <p>恢復力變好，常常先出現在睡眠、情緒、食慾和身體餘裕裡。</p>
+                </div>
+                <span class="read-more">閱讀文章 →</span>
+            </a>
         </div>
     </section>
 
-    <!-- Footer Area -->
-    <div class="max-w-2xl mx-auto px-6 py-12 text-center border-t border-stone-200">
-        <a href="stress_recovery.html" class="text-[#8C7D70] hover:text-[#2D2B29] transition-colors underline underline-offset-4">返回壓力與自律神經</a>
-    </div>
-
-    <footer class="py-12 text-center text-[#8C7D70] text-xs">
-        © METABOLIC ESTHETICS 代謝美學
-    </footer>
-
+    <nav class="article-nav" aria-label="文章底部導覽">
+        <a class="text-link" href="stress_recovery.html">← 回到壓力與自律神經</a>
+        <a class="text-link" href="index.html">返回代謝美學首頁</a>
+    </nav>
 </body>
 </html>
