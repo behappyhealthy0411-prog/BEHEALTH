@@ -1,0 +1,63 @@
+name: Update homepage links
+
+on:
+  push:
+    paths:
+      - '.github/workflows/update-home-links.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update knowledge page home links and homepage construction state
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          root = Path('.')
+          prefixes = ('body_signals', 'glucose_', 'gut_', 'sleep_', 'stress_', 'weight_')
+          excluded = {'index.html'}
+
+          for path in root.glob('*.html'):
+              if path.name in excluded or not path.name.startswith(prefixes):
+                  continue
+              text = path.read_text(encoding='utf-8')
+              original = text
+
+              # Any explicit footer/back-home wording from the former metabolic homepage now returns to the clinic homepage knowledge map.
+              text = text.replace('返回代謝美學首頁', '返回集馨診所首頁')
+              text = text.replace('回到代謝美學首頁', '回到集馨診所首頁')
+              text = text.replace('返回首頁', '返回集馨診所首頁')
+              text = text.replace('回到首頁', '回到集馨診所首頁')
+
+              # For links whose visible text now says clinic homepage, point directly to the knowledge-map section.
+              text = re.sub(r'href="index\.html"([^>]*)>(\s*)(返回集馨診所首頁|回到集馨診所首頁)(\s*)</a>', r'href="index.html#knowledge"\1>\2\3\4</a>', text)
+
+              if text != original:
+                  path.write_text(text, encoding='utf-8')
+
+          # Homepage: weight & metabolism remains visible but is not clickable until the article set is ready.
+          index = Path('index.html')
+          text = index.read_text(encoding='utf-8')
+          text = re.sub(
+              r'<a class="knowledge-card" href="weight_metabolism\.html"><span class="knowledge-icon">↕</span><span class="knowledge-arrow">→</span><h3>體重與代謝</h3><p>明明有在努力，體重還是卡住</p></a>',
+              '<article class="knowledge-card" aria-disabled="true"><span class="knowledge-icon">↕</span><span class="knowledge-arrow" style="font-size:12px;letter-spacing:.08em;">建構中</span><h3>體重與代謝</h3><p>明明有在努力，體重還是卡住</p></article>',
+              text
+          )
+          index.write_text(text, encoding='utf-8')
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add '*.html'
+          if git diff --cached --quiet; then
+            echo "No changes needed"
+          else
+            git commit -m "Update knowledge page home links and mark weight section building"
+            git push
+          fi
