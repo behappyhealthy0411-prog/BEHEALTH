@@ -22,6 +22,7 @@ footer{padding:30px clamp(24px,6vw,88px);background:#1d2e28;color:#eef3f0}.foote
   .services h2,.section h2{font-size:27px;line-height:1.48;text-wrap:balance}
   .services h2 .line,.section h2 .line{display:block;text-wrap:balance}
   .services-intro{font-size:14px;line-height:1.85;padding:0;text-wrap:pretty}
+  .services-intro br{display:block!important}
   .service-grid{grid-template-columns:1fr}
   .service-card:last-child{grid-column:auto}
   .service-card p{font-size:13px;line-height:1.8;text-wrap:pretty}
@@ -40,7 +41,7 @@ footer{padding:30px clamp(24px,6vw,88px);background:#1d2e28;color:#eef3f0}.foote
   .method-intro h2{font-size:27px;line-height:1.5;text-wrap:balance}
   .method-intro h2 .line{white-space:normal;text-wrap:balance}
   .method-copy{padding:0;font-size:14px;line-height:1.9}
-  .method-copy br{display:none}
+  .method-copy br{display:block!important}
   .method-statement{margin-top:46px;padding:34px 0}
   .method-statement h3{font-size:24px;line-height:1.55;text-wrap:balance}
   .method-statement h3 .line{display:block;text-wrap:balance}
