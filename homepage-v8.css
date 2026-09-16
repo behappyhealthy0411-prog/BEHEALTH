@@ -12,54 +12,60 @@ footer{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;p
   .top-nav{display:none}
   .section{padding:72px 22px}
   .hero{grid-template-columns:1fr;padding:108px 22px 72px}
-  .hero h1{font-size:34px;line-height:1.45;letter-spacing:-.02em}
-  .hero-lead{font-size:16px;line-height:1.9}
+  .hero h1{font-size:30px;line-height:1.48;letter-spacing:-.02em;text-wrap:balance}
+  .hero h1 .line{display:block;text-wrap:balance}
+  .hero-lead{font-size:15px;line-height:1.9}
+  .hero-lead p,.pattern-intro p,.oat-story p,.method-copy p,.knowledge-head p,.booking-head p,.booking-card p,.booking-help{text-wrap:pretty}
   .hero-lead br{display:none}
   .breath-wrap{width:min(74vw,360px);justify-self:center;margin-top:58px}
   .services-head,.method-intro,.knowledge-head{grid-template-columns:1fr;gap:18px}
-  .services h2,.section h2{font-size:30px;line-height:1.48}
-  .services-intro{font-size:15px;line-height:1.85;padding:0}
+  .services h2,.section h2{font-size:27px;line-height:1.48;text-wrap:balance}
+  .services h2 .line,.section h2 .line{display:block;text-wrap:balance}
+  .services-intro{font-size:14px;line-height:1.85;padding:0;text-wrap:pretty}
   .service-grid{grid-template-columns:1fr}
   .service-card:last-child{grid-column:auto}
+  .service-card p{font-size:13px;line-height:1.8;text-wrap:pretty}
   .services-note{flex-direction:column;gap:8px;padding:18px 18px;line-height:1.8}
   .services-note strong{display:block;font-size:14px}
-  .services-note span{display:block;font-size:13px}
-  .pattern-intro p{font-size:16px;line-height:1.9}
+  .services-note span{display:block;font-size:13px;text-wrap:pretty}
+  .pattern-intro p{font-size:15px;line-height:1.9}
   .oat-story{margin-top:42px;padding-left:20px}
-  .oat-story p{font-size:15px;line-height:1.85}
-  .oat-story .oat-em{font-size:17px}
+  .oat-story p{font-size:14px;line-height:1.85}
+  .oat-story .oat-em{font-size:16px}
   .pattern-statement{margin-top:42px;padding:30px 0}
-  .pattern-statement h3{font-size:28px;line-height:1.5}
+  .pattern-statement h3{font-size:24px;line-height:1.5;text-wrap:balance}
   .pattern-questions{grid-template-columns:1fr;gap:26px}
-  .pattern-close{font-size:21px;line-height:1.6}
-  .method-intro h2{font-size:30px;line-height:1.5}
-  .method-intro h2 .line{white-space:normal}
-  .method-copy{padding:0;font-size:15px;line-height:1.9}
+  .pattern-questions h3{text-wrap:balance}
+  .pattern-close{font-size:19px;line-height:1.6;text-wrap:balance}
+  .method-intro h2{font-size:27px;line-height:1.5;text-wrap:balance}
+  .method-intro h2 .line{white-space:normal;text-wrap:balance}
+  .method-copy{padding:0;font-size:14px;line-height:1.9}
   .method-copy br{display:none}
   .method-statement{margin-top:46px;padding:34px 0}
-  .method-statement h3{font-size:30px;line-height:1.55}
-  .method-statement h3 .line{display:block}
+  .method-statement h3{font-size:24px;line-height:1.55;text-wrap:balance}
+  .method-statement h3 .line{display:block;text-wrap:balance}
   .method-grid{grid-template-columns:1fr;margin-top:36px}
   .method-grid article{min-height:auto;padding:24px 8px 24px 0;border-top:1px solid rgba(255,255,255,.22)}
-  .method-grid h3{font-size:19px}
-  .method-grid p{font-size:14px;line-height:1.8}
+  .method-grid h3{font-size:18px;text-wrap:balance}
+  .method-grid p{font-size:13px;line-height:1.8;text-wrap:pretty}
   .method-close{grid-template-columns:1fr;gap:24px}
-  .knowledge-head h2{white-space:normal;font-size:30px;line-height:1.48}
-  .knowledge-head p{font-size:15px;line-height:1.85}
+  .knowledge-head h2{white-space:normal;font-size:27px;line-height:1.48;text-wrap:balance}
+  .knowledge-head p{font-size:14px;line-height:1.85}
   .knowledge-grid{grid-template-columns:1fr 1fr}
   .knowledge-card{padding:20px;min-height:150px}
-  .knowledge-card h3{font-size:17px}
-  .knowledge-card p{font-size:12px;line-height:1.7}
+  .knowledge-card h3{font-size:16px;text-wrap:balance}
+  .knowledge-card p{font-size:12px;line-height:1.7;text-wrap:pretty}
   .booking-head{margin-bottom:34px}
-  .booking-head p{font-size:15px;line-height:1.85}
+  .booking-head h2{font-size:27px;line-height:1.5;text-wrap:balance}
+  .booking-head p{font-size:14px;line-height:1.85}
   .booking-head br{display:none}
   .booking-grid{grid-template-columns:1fr}
   .booking-card{min-height:0;padding:26px 22px}
-  .booking-card h3{font-size:22px}
-  .booking-card p{font-size:14px;line-height:1.85}
-  .booking-choice-note{font-size:13px!important;line-height:1.8}
+  .booking-card h3{font-size:21px;text-wrap:balance}
+  .booking-card p{font-size:13px;line-height:1.85}
+  .booking-choice-note{font-size:12px!important;line-height:1.8}
   .booking-btn{margin-top:24px}
-  .booking-help{font-size:13px;line-height:1.8;padding:0 4px}
+  .booking-help{font-size:12px;line-height:1.8;padding:0 4px}
   footer{grid-template-columns:1fr;gap:18px}
   .footer-links{justify-content:flex-start}
 }
