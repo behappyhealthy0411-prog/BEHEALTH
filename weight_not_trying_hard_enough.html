@@ -46,7 +46,7 @@
         .hero-tag{display:block;font-size:.78rem;color:var(--accent-main);letter-spacing:.22em;text-transform:uppercase;font-weight:500;margin-bottom:12px}
         .hero-category{display:block;font-size:.86rem;color:var(--text-secondary);letter-spacing:.1em;margin-bottom:24px}
         .article-title{font-size:2.05rem;font-weight:500;line-height:1.5;letter-spacing:.055em;margin-bottom:26px}
-        .hero-intro{max-width:580px;margin:0 auto;font-size:.96rem;color:var(--text-secondary);line-height:1.95;letter-spacing:.025em}
+        .hero-intro{max-width:660px;margin:0 auto;font-size:.96rem;color:var(--text-secondary);line-height:1.95;letter-spacing:.025em}
 
         .qa-section{padding:38px 0;background:rgba(245,240,234,.58);border-top:1px solid rgba(45,43,41,.08);border-bottom:1px solid rgba(45,43,41,.08)}
         .qa-container{max-width:900px;margin:0 auto;padding:0 24px}
@@ -71,6 +71,8 @@
         .gentle-card li,.summary-list li{position:relative;padding-left:24px;margin-bottom:10px;color:var(--text-secondary);font-size:16px;line-height:1.9}
         .gentle-card li:last-child,.summary-list li:last-child{margin-bottom:0}
         .gentle-card li::before,.summary-list li::before{content:"✦";position:absolute;left:0;top:0;color:var(--accent-dark);font-size:13px}
+        .gentle-card.two-col ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:30px;row-gap:10px}
+        .gentle-card.two-col li{margin-bottom:0}
 
         .observation-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:28px 0 8px}
         .observation-item{background:var(--bg-secondary);padding:24px}
@@ -103,6 +105,7 @@
             .qa-grid,.observation-grid,.related-grid{grid-template-columns:1fr}
             .qa-card,.related-card{min-height:auto}
             .qa-card p{min-height:auto}
+            .gentle-card.two-col ul{grid-template-columns:1fr}
             .article-content{padding-top:52px}
         }
     </style>
@@ -126,7 +129,7 @@
         <span class="hero-tag">WEIGHT &amp; METABOLISM</span>
         <div class="hero-category">體重與代謝 · 成效判讀</div>
         <h1 class="article-title">體重沒有下降，<br>就代表方法沒有效嗎？</h1>
-        <p class="hero-intro">體重很重要，但不是唯一答案。真正值得看的，是身體往哪裡走、付出了什麼代價，以及現在的方法有沒有帶你往原本的目標前進。</p>
+        <p class="hero-intro">體重很重要，但不是唯一答案。真正值得看的，是身體往哪裡走、付出了什麼代價，<br>以及現在的方法有沒有帶你往原本的目標前進。</p>
     </header>
 
     <section class="qa-section">
@@ -145,13 +148,20 @@
 
     <main class="article-content">
         <p>我自己其實很熟悉這種拉扯。</p>
-        <p>這些年，我也在各種減重方法裡來來回回試過不少次。斷食、低碳、控制熱量、提高蛋白質、增加運動量，我都曾經很認真地做過。</p>
-        <p>斷食的時候，我的確瘦了不少，所以我知道它可能有效；但做了一段時間之後，我也明顯感覺到腸胃消化狀態的改變。後來不敢再把斷食拉得那麼長，又發現體重似乎沒有以前掉得那麼快。</p>
-        <p>我也曾經很認真運動，體重確實下降了一陣子。結果運動量一路往上，膝蓋開始痛，又不得不停下來。</p>
+        <p>這些年，我也在各種減重方法裡來來回回試過不少次。</p>
+        <p>斷食、低碳、控制熱量、提高蛋白質、增加運動量，我都曾經很認真地做過。</p>
+
+        <p>斷食的時候，我的確瘦了不少，所以我知道它可能有效。</p>
+        <p>但做了一段時間之後，我也明顯感覺到腸胃消化狀態的改變。後來不敢再把斷食拉得那麼長，又發現體重似乎沒有以前掉得那麼快。</p>
+
+        <p>我也曾經很認真運動，體重確實下降了一陣子。</p>
+        <p>但運動量一路往上之後，膝蓋開始痛，又不得不停下來。</p>
+
         <p>一邊看著坊間很多人分享斷食、低碳、生酮、高蛋白、增加運動量，每一種方法都有成功的人，我也忍不住一直問自己：</p>
         <p><span class="highlight-text">那到底什麼方法，才是真正適合大家的？</span></p>
+
         <p>後來我才慢慢發現，這個問題可能本來就沒有一個絕對答案。</p>
-        <p>有些方法讓體重下降得很漂亮，卻不一定適合長期做；有些調整讓睡眠、食慾、腸胃或活動力慢慢變好，體重卻不一定馬上跟著變化。</p>
+        <p>有些方法讓體重下降得很漂亮，卻不一定適合長期做；有些調整讓身體感受慢慢變好，體重卻不一定馬上跟著變化。</p>
 
         <div class="gentle-card cream-style">
             <p>所以現在，我反而不太想只問「這個方法有沒有效」。</p>
@@ -161,29 +171,15 @@
         <h2>體重沒下降，就代表方法沒有效嗎？</h2>
         <p>不一定。</p>
         <p>因為體重很重要，但它不是身體唯一會改變的地方。</p>
-        <p>有時候，在開始調整飲食、運動或生活節奏之後，會先看到一些其他變化。</p>
-        <div class="gentle-card">
-            <ul>
-                <li>食慾比較穩定</li>
-                <li>零食與宵夜減少</li>
-                <li>餐後精神比較好</li>
-                <li>睡眠開始改善</li>
-                <li>腸胃比較舒服</li>
-                <li>日常活動量提高</li>
-                <li>腰圍開始改變</li>
-                <li>血糖、血脂或其他代謝指標往目標前進</li>
-            </ul>
-        </div>
+        <p>有些時候，腰圍、食慾、飲食穩定度、精神或代謝指標，可能會比體重更早出現變化。</p>
         <p>這些變化都是真的，也值得被看見。</p>
-        <p>但另一面也不能忽略。</p>
-        <p><span class="highlight-text">如果原本的目標就是減少體脂或降低體重，那最後還是要回來看，這個方法有沒有真的把你帶往那個方向。</span></p>
-        <p>所以不是「不要看體重」，而是不要只看體重。</p>
+        <p><span class="highlight-text">所以不是「不要看體重」，而是不要只看體重。</span></p>
 
         <h2>體重本來就不是每天線性下降</h2>
         <p>很多人會期待減重像一條直線：今天 70 公斤，明天 69.8，後天 69.6。</p>
         <p>但真實生活很少這麼漂亮。</p>
         <p>短期體重會受到很多因素影響：</p>
-        <div class="gentle-card">
+        <div class="gentle-card two-col">
             <ul>
                 <li>水分</li>
                 <li>鹽分</li>
@@ -195,17 +191,15 @@
                 <li>睡眠與壓力</li>
             </ul>
         </div>
-        <p>所以有時候，脂肪可能正在慢慢下降，但體重暫時看不出來。</p>
-        <p>也可能相反，體重突然掉很多，卻不代表全部都是脂肪。</p>
+        <p>所以有時候，脂肪可能正在慢慢下降，但體重暫時看不出來；也可能相反，體重突然掉很多，卻不代表全部都是脂肪。</p>
         <p><span class="highlight-text">單一天的體重，很難代表真正的趨勢。</span></p>
         <p>真正有意義的，通常是把體重放進一段時間裡一起看。</p>
 
         <h2>有些東西，不該拿來交換體重下降</h2>
         <p>這是我現在很在意的一件事。</p>
         <p>如果一個方法讓體重下降，卻同時讓睡眠越來越差、腸胃越來越不舒服，我不會把它單純看成「有效」。</p>
-        <p>因為減重不是只剩下一個體重數字。</p>
-        <p>而且有些身體訊號，我覺得特別值得留意。</p>
-        <div class="gentle-card">
+        <p>而且有些身體訊號，特別值得留意：</p>
+        <div class="gentle-card two-col">
             <ul>
                 <li>睡眠越來越差</li>
                 <li>腸胃不適、腹脹、便祕或消化能力明顯變差</li>
@@ -222,50 +216,47 @@
         <p>這些都不應該只是被一句「因為正在減重」帶過去。</p>
         <p>持續掉髮，可能需要回頭檢查整體熱量、蛋白質、鐵、鋅或減重速度；月經改變，也可能代表身體正在承受過大的壓力。</p>
         <p>如果越減越累、越沒力、肌肉與力量一路下降，也不能只因為體重數字變小就覺得成功。</p>
+
         <div class="gentle-card cream-style">
             <p><span class="highlight-text">如果體重下降的同時，睡眠、腸胃、掉髮、月經、精神、肌力與恢復都在變差，那就不只是「有沒有瘦」的問題了。</span></p>
             <p style="margin-bottom:0"><span class="highlight-text">我們不是不要體重下降，而是不希望用身體其他重要功能，去交換那個數字。</span></p>
         </div>
 
         <h2>除了體重，還有哪些變化值得一起看？</h2>
-        <p>我比較喜歡把成效拆成幾個層次一起看。</p>
+        <p>我會把成效拆成幾個面向一起看，而不是只盯著公斤數。</p>
 
         <div class="observation-grid">
             <div class="observation-item">
                 <h3>身體組成與外在變化</h3>
-                <p>腰圍、衣服鬆緊、體態、肌肉量、力量與日常活動能力，都能補足單看體重的限制。</p>
+                <p>腰圍、衣服鬆緊、體態、肌肉量與力量，可以補足單看體重的限制。</p>
             </div>
             <div class="observation-item">
                 <h3>食慾與飲食穩定度</h3>
-                <p>三餐是否更穩定、食慾是否更平順、零食與補償性進食是否減少，都值得一起看。</p>
+                <p>三餐是否更穩定、食慾是否更平順、零食與補償性進食是否減少。</p>
             </div>
             <div class="observation-item">
                 <h3>睡眠與腸胃</h3>
-                <p>如果越減越難睡、腹脹、便祕或吃東西越來越不舒服，就值得重新評估。</p>
+                <p>這兩個我會特別重視，因為它們不應該成為追求體重下降時被犧牲的代價。</p>
             </div>
             <div class="observation-item">
                 <h3>精神、活動力與恢復</h3>
-                <p>白天精神、專注力、日常活動量、運動表現與恢復速度，也反映方法是否真的適合。</p>
+                <p>白天精神、專注力、日常活動量、運動表現與恢復速度，也反映方法是否合適。</p>
             </div>
         </div>
 
         <p>如果本來就有代謝問題，也可以一起看血糖、血脂、血壓、肝功能，以及其他與個人健康目標相關的指標。</p>
-        <p><span class="highlight-text">很多時候，我們真正想改善的，本來就不只是體重。</span></p>
 
         <h2>但「其他有變好」也不能變成永遠不看體重的理由</h2>
         <p>這裡也很容易走到另一個極端。</p>
-        <p>有人會說：「雖然體重完全沒變，但我覺得精神比較好，所以就算有效。」</p>
-        <p>這有可能是真的。</p>
-        <p>但還是要回到最開始設定的目標。</p>
         <p>如果你的主要目標是改善睡眠，那睡眠變好當然可以算成功。</p>
-        <p>但如果你的主要目標是降低體脂，而經過一段足以觀察趨勢的時間之後：</p>
-        <div class="gentle-card">
+        <p>但如果主要目標是降低體脂，而經過一段足以觀察趨勢的時間之後，下面這些都沒有改變：</p>
+        <div class="gentle-card two-col">
             <ul>
-                <li>體重趨勢沒有改變</li>
-                <li>腰圍沒有改變</li>
-                <li>飲食結構沒有明顯變化</li>
-                <li>活動量沒有提高</li>
-                <li>代謝指標也沒有往目標前進</li>
+                <li>體重趨勢</li>
+                <li>腰圍</li>
+                <li>飲食結構</li>
+                <li>活動量</li>
+                <li>原本想改善的代謝指標</li>
             </ul>
         </div>
         <p>那就不能一直用一句「至少我感覺比較好」把所有問題帶過去。</p>
@@ -273,7 +264,7 @@
 
         <h2>什麼時候該繼續觀察？</h2>
         <p>如果出現下面這些狀況，我通常不會急著判定方法失敗：</p>
-        <div class="gentle-card">
+        <div class="gentle-card two-col">
             <ul>
                 <li>才剛開始調整不久</li>
                 <li>每天體重起伏很大，但趨勢還不清楚</li>
@@ -288,7 +279,7 @@
 
         <h2>什麼時候該調整方法？</h2>
         <p>如果一段時間之後發現：</p>
-        <div class="gentle-card">
+        <div class="gentle-card two-col">
             <ul>
                 <li>體重與腰圍都沒有往目標前進</li>
                 <li>原本想改善的代謝指標也沒有變化</li>
@@ -304,15 +295,14 @@
         </div>
         <p>那就值得回頭問：</p>
         <p><span class="highlight-text">是不是方法需要調整，而不是我需要再更用力？</span></p>
-        <p>有時候真正需要改的，是餐次；有時候是總量；有時候是蛋白質、纖維或整體營養不足；有時候是運動量太高。</p>
-        <p>也有時候，是這個方法根本不適合目前的身體與生活狀態。</p>
+        <p>有時候真正需要改的，是餐次、總量、營養組成或運動安排；也有時候，是這個方法根本不適合目前的身體與生活狀態。</p>
 
         <h2>體重不是唯一答案，但也不需要假裝它不重要</h2>
         <p>我不太喜歡兩種極端。</p>
         <p>一種是：「體重沒下降，就代表全部失敗。」</p>
         <p>另一種則是：「體重完全不重要，只要感覺好就好。」</p>
-        <p>如果一個人真的有減重需求，體重當然仍然是一個值得追蹤的結果。</p>
-        <p>只是它不應該變成唯一的成績單。</p>
+        <p>如果一個人真的有減重需求，體重當然仍然是一個值得追蹤的結果，只是它不應該變成唯一的成績單。</p>
+
         <div class="gentle-card cream-style">
             <p style="margin-bottom:0"><span class="highlight-text">體重沒有下降，不代表方法一定沒有效；但也不能只因為「其他感覺有變好」，就永遠不檢查它有沒有帶你往真正的目標前進。</span></p>
         </div>
