@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="t d">
+  <title id="t">同樣是一天的進食，分配方式不同，CGM 可能長得很不一樣</title>
+  <desc id="d">上方為規律三餐、份量較適中；下方為跳過早餐後午晚兩個大餐，晚餐偏晚。此為概念示意。</desc>
+  <defs>
+    <linearGradient id="sleep" x1="0" x2="1"><stop offset="0" stop-color="#EDF1F5"/><stop offset="1" stop-color="#DCE5EF"/></linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9978D" stop-opacity=".35"/><stop offset="1" stop-color="#D9978D" stop-opacity=".05"/></linearGradient>
+    <style>
+      text{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;fill:#4C3A33}
+      .title{font-size:30px;font-weight:600}.sub{font-size:18px;fill:#8A6657}.label{font-size:19px;font-weight:600}.small{font-size:14px;fill:#715E54}.axis{stroke:#8A7B72;stroke-width:1}.grid{stroke:#E7DDD7;stroke-width:1}.curve{fill:none;stroke:#B63A53;stroke-width:5;stroke-linecap:round}.meal{font-size:15px;font-weight:600;fill:#9B645A}.note{font-size:14px;fill:#77655B}
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="#FBF7F3"/>
+  <text x="45" y="52" class="title">同樣是一天的進食，分配方式不同，CGM 可能長得很不一樣</text>
+  <text x="45" y="84" class="sub">規律三餐、份量較適中  vs.  跳過早餐後的午晚兩個大餐（尤其晚餐偏晚）</text>
+
+  <g transform="translate(45,120)">
+    <rect x="0" y="0" width="1110" height="255" rx="8" fill="#FFFDFC" stroke="#E7D5CC"/>
+    <text x="22" y="35" class="label">規律三餐｜份量較適中</text>
+    <rect x="830" y="48" width="260" height="170" fill="url(#sleep)"/>
+    <text x="905" y="73" class="small">睡眠時段 23:00–07:00</text>
+    <line x1="120" y1="210" x2="1090" y2="210" class="axis"/>
+    <line x1="120" y1="70" x2="120" y2="210" class="axis"/>
+    <line x1="120" y1="165" x2="1090" y2="165" class="grid"/>
+    <line x1="120" y1="120" x2="1090" y2="120" class="grid"/>
+    <text x="74" y="214" class="small">60</text><text x="68" y="169" class="small">100</text><text x="68" y="124" class="small">140</text>
+    <text x="120" y="233" class="small">06:00</text><text x="360" y="233" class="small">12:00</text><text x="600" y="233" class="small">18:00</text><text x="830" y="233" class="small">23:00</text><text x="1040" y="233" class="small">06:00</text>
+    <path d="M120 185 C175 184 190 182 215 170 C245 150 255 123 280 110 C310 98 340 138 355 155 C380 178 410 183 430 180 C475 175 490 156 505 126 C520 100 550 107 572 135 C600 170 620 180 660 180 C705 180 720 164 735 135 C750 108 780 112 805 145 C825 170 840 177 875 181 C940 187 1010 188 1090 187" class="curve"/>
+    <text x="205" y="95" class="meal">早餐 07:30</text><text x="473" y="95" class="meal">午餐 12:30</text><text x="713" y="95" class="meal">晚餐 18:30</text>
+  </g>
+
+  <g transform="translate(45,405)">
+    <rect x="0" y="0" width="1110" height="255" rx="8" fill="#FFFDFC" stroke="#E7D5CC"/>
+    <text x="22" y="35" class="label">午晚兩個大餐｜跳過早餐＋晚餐偏晚</text>
+    <rect x="830" y="48" width="260" height="170" fill="url(#sleep)"/>
+    <text x="905" y="73" class="small">睡眠時段 23:00–07:00</text>
+    <line x1="120" y1="210" x2="1090" y2="210" class="axis"/>
+    <line x1="120" y1="70" x2="120" y2="210" class="axis"/>
+    <line x1="120" y1="165" x2="1090" y2="165" class="grid"/>
+    <line x1="120" y1="120" x2="1090" y2="120" class="grid"/>
+    <text x="74" y="214" class="small">60</text><text x="68" y="169" class="small">100</text><text x="68" y="124" class="small">140</text>
+    <text x="120" y="233" class="small">06:00</text><text x="360" y="233" class="small">12:00</text><text x="600" y="233" class="small">18:00</text><text x="830" y="233" class="small">23:00</text><text x="1040" y="233" class="small">06:00</text>
+    <path d="M120 188 C205 188 285 188 350 185 C385 182 400 160 420 120 C438 86 470 74 505 102 C545 135 585 152 635 158 C685 163 710 145 728 120 C744 98 758 78 784 74 C812 70 832 98 848 115 C875 143 905 151 945 153 C995 155 1035 170 1090 182" class="curve"/>
+    <path d="M120 210 L120 188 C205 188 285 188 350 185 C385 182 400 160 420 120 C438 86 470 74 505 102 C545 135 585 152 635 158 C685 163 710 145 728 120 C744 98 758 78 784 74 C812 70 832 98 848 115 C875 143 905 151 945 153 C995 155 1035 170 1090 182 L1090 210 Z" fill="url(#area)"/>
+    <text x="395" y="86" class="meal">午餐 12:00</text><text x="735" y="86" class="meal">晚餐 19:30</text>
+    <text x="155" y="112" class="note">上午長時間空腹</text>
+    <text x="435" y="50" class="note">午餐份量較大，餐後血糖上升幅度可能較高</text>
+    <text x="790" y="50" class="note">晚餐較晚、份量較大，夜間可能維持較高較久</text>
+  </g>
+
+  <rect x="45" y="690" width="1110" height="45" rx="6" fill="#F5ECE7"/>
+  <text x="65" y="718" class="small">概念示意：實際反應仍會受到餐量、食物組成、進食時間、活動量與個人代謝狀態影響。</text>
+</svg>
