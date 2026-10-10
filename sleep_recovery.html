@@ -59,6 +59,11 @@
 
         .category-map { padding-bottom: 120px; }
         .section-title { text-align: center; font-size: 1.35rem; font-weight: 500; color: var(--accent-dark); letter-spacing: 0.12em; margin-bottom: 70px; }
+        .featured-group { max-width: 100%; margin: 0 auto 84px; align-items: center; text-align: center; }
+        .featured-group .group-header { min-height: auto; margin-bottom: 30px; align-items: center; }
+        .featured-group .group-desc { max-width: 620px; }
+        .featured-articles { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; gap: 24px; text-align: left; }
+        .featured-articles .article-card { min-height: 220px; }
         .map-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 72px 56px; align-items: stretch; }
         .map-group { display: flex; flex-direction: column; min-height: 100%; }
         .group-header { margin-bottom: 24px; min-height: 164px; display: flex; flex-direction: column; justify-content: flex-start; }
@@ -90,6 +95,9 @@
             .hero { padding: 86px 0 58px; }
             .hero-title { font-size: 2rem; letter-spacing: 0.08em; }
             .map-grid { grid-template-columns: 1fr; gap: 72px; }
+            .featured-group { margin-bottom: 72px; }
+            .featured-articles { grid-template-columns: 1fr; gap: 18px; }
+            .featured-articles .article-card { min-height: auto; }
             .group-header { min-height: auto; }
             .article-list { grid-template-rows: auto; }
             .article-card { min-height: auto; }
@@ -118,15 +126,16 @@
             <h1 class="hero-title">睡眠與恢復力</h1>
             <p class="hero-subtitle">睡眠不只是睡著。</p>
             <p class="hero-description">
-                有些人半夜總是在固定時間醒來，有些人睡很久卻還是疲憊，有些人明明很累卻無法真正休息。這些現象的背後，往往不只是睡眠本身，而是恢復力、自律神經、消化系統與生活節奏，正在透過睡眠表現出來。
+                有些人明明很累，躺上床卻久久睡不著；有些人半夜總是在固定時間醒來，也有人睡很久卻還是疲憊。這些現象的背後，往往不只是睡眠本身，而是恢復力、自律神經、消化系統與生活節奏，正在透過睡眠表現出來。
             </p>
             <div class="divider"></div>
         </header>
 
         <section class="category-map container">
-            <h2 class="section-title">從四個方向開始理解</h2>
+            <h2 class="section-title">從五個方向開始理解</h2>
+            <section class="map-group featured-group"><div class="group-header"><div class="group-label">01</div><h3 class="group-title">入睡困難型</h3><p class="group-desc">明明很累，躺上床卻久久無法入睡。</p></div><div class="article-list featured-articles"><div class="article-card article-card-pending"><div><h3>明明很累，為什麼躺上床卻睡不著？</h3><p>從睡眠壓力、生活節律與身體干擾，找出入睡困難的可能線索。</p></div><span class="read-more">文章準備中</span></div><div class="article-card article-card-pending"><div><h3>越想睡，為什麼反而越睡不著？</h3><p>理解睡眠焦慮，以及越努力入睡反而越清醒的循環。</p></div><span class="read-more">文章準備中</span></div></div></section>
             <div class="map-grid">
-                <section class="map-group"><div class="group-header"><div class="group-label">01</div><h3 class="group-title">入睡困難型</h3><p class="group-desc">明明很累，躺上床卻久久無法入睡。</p></div><div class="article-list"><div class="article-card article-card-pending"><div><h3>明明很累，為什麼躺上床卻睡不著？</h3><p>從睡眠壓力、生活節律與身體干擾，找出入睡困難的可能線索。</p></div><span class="read-more">文章準備中</span></div><div class="article-card article-card-pending"><div><h3>越想睡，為什麼反而越睡不著？</h3><p>理解睡眠焦慮，以及越努力入睡反而越清醒的循環。</p></div><span class="read-more">文章準備中</span></div></div></section>
+
                 <section class="map-group"><div class="group-header"><div class="group-label">02</div><h3 class="group-title">夜醒型</h3><p class="group-desc">明明睡得著，卻總是在半夜醒來。</p></div><div class="article-list"><a href="sleep_2am.html" class="article-card"><div><h3>半夜2–3點醒，真的只是失眠嗎？</h3><p>固定時間醒來，很多時候不只是失眠。</p></div><span class="read-more">閱讀文章 →</span></a><a href="sleep_light_sleep.html" class="article-card"><div><h3>為什麼後半夜越睡越淺？</h3><p>後半夜的淺眠，可能反映恢復力的變化。</p></div><span class="read-more">閱讀文章 →</span></a></div></section>
                 <section class="map-group"><div class="group-header"><div class="group-label">03</div><h3 class="group-title">恢復不足型</h3><p class="group-desc">睡眠時間夠，卻始終覺得沒有恢復。</p></div><div class="article-list"><a href="sleep_tired_after_sleep.html" class="article-card"><div><h3>睡很久還是累？</h3><p>問題有時候不在睡眠長度，而在恢復效率。</p></div><span class="read-more">閱讀文章 →</span></a><a href="sleep_dreams.html" class="article-card"><div><h3>一直做夢代表睡不好嗎？</h3><p>夢變多，有時候是身體正在傳遞訊息。</p></div><span class="read-more">閱讀文章 →</span></a></div></section>
                 <section class="map-group"><div class="group-header"><div class="group-label">04</div><h3 class="group-title">腸胃干擾型</h3><p class="group-desc">有些夜醒，其實來自消化系統。</p></div><div class="article-list"><a href="sleep_chest_pressure.html" class="article-card"><div><h3>胸悶夜醒，可能不只是心臟問題</h3><p>有些胸口不適，其實來自胃食道逆流。</p></div><span class="read-more">閱讀文章 →</span></a><a href="sleep_reflux_waking.html" class="article-card"><div><h3>逆流夜醒，身體其實在提醒什麼？</h3><p>睡眠與消化，比想像中更有關聯。</p></div><span class="read-more">閱讀文章 →</span></a></div></section>
