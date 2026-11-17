@@ -22,7 +22,7 @@
     try { url = new URL(href, location.href); } catch (e) { return; }
     var isBooking = url.origin === location.origin &&
       /(?:^|\/)index\.html$/.test(url.pathname) && url.hash === '#booking';
-    if (isBooking || (href === '#booking' && location.pathname.endsWith('/'))) {
+    if (isBooking || (href === '#booking' && (location.pathname.endsWith('/') || location.pathname.endsWith('/index.html')))) {
       var page = location.pathname.split('/').pop() || 'index.html';
       save(page);
       emit('booking_click', { booking_source_page: page, booking_link_location: 'navigation' });
