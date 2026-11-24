@@ -28,6 +28,8 @@
 .article-list>.article-card:nth-child(n+3) p{display:none}
 .article-list>.article-card:nth-child(n+3) .read-more{flex-shrink:0;margin:0;align-self:center;font-size:.76rem}
 @media(max-width:600px){.article-list>.article-card:nth-child(n+3){padding:14px 16px;gap:10px}.article-list>.article-card:nth-child(n+3) .read-more{font-size:.72rem}}
+/* Keep feature cards aligned independently of compact additional rows. */
+@media(min-width:821px){.article-list{grid-template-rows:repeat(2,250px);grid-auto-rows:auto}.article-list>.article-card:nth-child(-n+2){min-height:0;height:100%;box-sizing:border-box}.article-list>.article-card:nth-child(-n+2):hover,.article-list>.article-card:nth-child(-n+2):focus-visible{transform:none}}
 </style>
 </head>
 <body>
