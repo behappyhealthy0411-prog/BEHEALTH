@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-41JZH0EK7W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-41JZH0EK7W');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>血糖曲線越平越好嗎？｜代謝美學</title>
+    <meta name="description" content="CGM 看得到血糖變化，卻看不到完整的代謝健康。從餐後血糖、胰島素、血脂與頻量全心，理解適合自己的飲食方式。">
+    <link rel="canonical" href="https://behappyhealthy0411-prog.github.io/BEHEALTH/glucose_cgm_flat_curve.html">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #FAF8F5;
+            --bg-secondary: #F5F0EA;
+            --bg-block: #EBE5DF;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B29;
+            --text-secondary: #8C7D70;
+            --border-color: #E2DCD5;
+            --accent-main: #C6B27A;
+            --accent-dark: #A69260;
+            --accent-light: #F1E8C8;
+            --accent-soft: rgba(241, 232, 200, 0.42);
+            --font-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            --transition-slow: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.95;
+            letter-spacing: 0.032em;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        a { color: inherit; text-decoration: none; transition: var(--transition-slow); }
+
+        .container {
+            width: 100%;
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .navbar {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--bg-block);
+            background-color: transparent;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo { display: flex; flex-direction: column; line-height: 1.3; }
+
+        .logo-main {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.14em;
+        }
+
+        .logo-sub {
+            font-size: 0.68rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            letter-spacing: 0.16em;
+            margin-top: 2px;
+        }
+
+        .nav-links { display: flex; gap: 28px; align-items: center; }
+
+        .nav-item {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-main);
+            transform-origin: bottom right;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .nav-item:hover { color: var(--text-primary); }
+        .nav-item:hover::after, .nav-item.active::after { transform: scaleX(1); transform-origin: bottom left; }
+        .nav-item.active { color: var(--accent-dark); }
+
+        .article-hero {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 82px 24px 52px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            display: block;
+            font-size: 0.78rem;
+            color: var(--accent-main);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .hero-category {
+            display: block;
+            font-size: 0.86rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.1em;
+            margin-bottom: 24px;
+        }
+
+        .article-title {
+            font-size: 2.05rem;
+            font-weight: 500;
+            line-height: 1.5;
+            color: var(--text-primary);
+            letter-spacing: 0.055em;
+            margin-bottom: 26px;
+        }
+
+        .hero-intro {
+            max-width: 580px;
+            margin: 0 auto;
+            font-size: 0.96rem;
+            color: var(--text-secondary);
+            line-height: 1.95;
+            letter-spacing: 0.025em;
+        }
+
+        .qa-section {
+            padding: 38px 0;
+            background-color: rgba(245, 240, 234, 0.58);
+            border-top: 1px solid rgba(45, 43, 41, 0.08);
+            border-bottom: 1px solid rgba(45, 43, 41, 0.08);
+        }
+
+        .qa-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .qa-header { text-align: center; margin-bottom: 22px; }
+
+        .qa-title {
+            font-size: 0.82rem;
+            letter-spacing: 0.18em;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .qa-divider {
+            width: 36px;
+            height: 1px;
+            background-color: rgba(198, 178, 122, 0.45);
+            margin: 10px auto 0;
+        }
+
+        .qa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            align-items: stretch;
+        }
+
+        .qa-card {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-light);
+            padding: 22px 20px;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .qa-num {
+            display: block;
+            font-size: 0.74rem;
+            color: var(--accent-dark);
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            margin-bottom: 8px;
+        }
+
+        .qa-text {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            line-height: 1.65;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            min-height: calc(1.8em * 3);
+        }
+
+        .article-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 58px 24px 28px;
+        }
+
+        .article-section { margin-bottom: 46px; }
+
+        .section-heading {
+            font-size: 1.42rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin: 52px 0 22px;
+            letter-spacing: 0.05em;
+            line-height: 1.5;
+            position: relative;
+            padding-bottom: 9px;
+        }
+
+        .section-heading::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 28px;
+            height: 1px;
+            background-color: var(--accent-main);
+        }
+
+        .article-p {
+            font-size: 0.96rem;
+            color: var(--text-secondary);
+            line-height: 1.98;
+            letter-spacing: 0.025em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight-text { color: var(--text-primary); font-weight: 500; }
+
+        .gentle-card,
+        .observation-item,
+        .summary-card {
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gentle-card {
+            background-color: rgba(241, 232, 200, 0.30);
+            border-color: rgba(198, 178, 122, 0.24);
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+
+        .gentle-card.cream-style { background-color: var(--bg-secondary); border-color: var(--border-color); }
+
+        .gentle-card ul,
+        .summary-list { list-style: none; }
+
+        .gentle-card li,
+        .summary-list li {
+            position: relative;
+            padding-left: 26px;
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .gentle-card li:last-child,
+        .summary-list li:last-child { margin-bottom: 0; }
+
+        .gentle-card li::before,
+        .summary-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--accent-main);
+            font-size: 0.82rem;
+        }
+
+        .gentle-card li { color: var(--text-primary); font-size: 0.94rem; }
+        .summary-list li { color: var(--text-primary); font-size: 0.94rem; }
+
+        .observation-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin: 28px 0;
+        }
+
+        .observation-item {
+            background-color: var(--bg-secondary);
+            padding: 24px;
+        }
+
+        .observation-title {
+            font-size: 1rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .observation-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.78;
+        }
+
+        .summary-card {
+            background-color: rgba(241, 232, 200, 0.38);
+            border-color: var(--accent-light);
+            padding: 32px 32px;
+            margin: 56px 0 48px;
+        }
+
+        .summary-title {
+            font-size: 1.12rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 18px;
+            letter-spacing: 0.08em;
+        }
+
+        .closing-text {
+            text-align: center;
+            font-size: 1.02rem;
+            color: var(--text-secondary);
+            line-height: 2.05;
+            margin: 56px auto;
+            max-width: 540px;
+            letter-spacing: 0.035em;
+        }
+
+        .related-section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 58px 24px 28px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-title {
+            text-align: center;
+            font-size: 1.28rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+
+        .related-intro {
+            text-align: center;
+            max-width: 560px;
+            margin: 0 auto 28px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.85;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .related-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .related-card:hover,
+        .related-card:focus-visible {
+            background-color: var(--accent-light);
+            border-color: var(--accent-main);
+            transform: translateY(-5px);
+            outline: none;
+        }
+
+        .related-label {
+            display: block;
+            font-size: 0.76rem;
+            color: var(--accent-dark);
+            letter-spacing: 0.08em;
+            line-height: 1.55;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .related-card h3 {
+            font-size: 1.04rem;
+            font-weight: 500;
+            line-height: 1.65;
+            letter-spacing: 0.04em;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .related-card p {
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            line-height: 1.78;
+            letter-spacing: 0.02em;
+        }
+
+        .read-more {
+            display: inline-block;
+            align-self: flex-start;
+            font-size: 0.78rem;
+            color: var(--accent-dark);
+            border-bottom: 1px solid var(--accent-main);
+            letter-spacing: 0.1em;
+            padding-bottom: 2px;
+            margin-top: 18px;
+        }
+
+        .article-nav {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 36px 24px 64px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .text-link {
+            display: inline-block;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--text-secondary);
+            padding-bottom: 3px;
+        }
+
+        .text-link:hover { color: var(--accent-dark); border-color: var(--accent-main); }
+
+        @media (max-width: 820px) {
+            body { letter-spacing: 0.025em; }
+            .navbar { padding: 24px 0; }
+            .nav-wrapper { align-items: flex-start; }
+            .nav-links { gap: 16px; font-size: 0.78rem; flex-wrap: wrap; justify-content: flex-end; }
+            .article-hero { padding: 64px 24px 42px; }
+            .article-title { font-size: 1.75rem; letter-spacing: 0.04em; }
+            .qa-section { padding: 32px 0; }
+            .qa-grid, .related-grid, .observation-grid { grid-template-columns: 1fr; }
+            .qa-card, .related-card { min-height: auto; }
+            .qa-text { min-height: auto; }
+            .article-content { padding-top: 46px; }
+            .section-heading { margin-top: 44px; }
+            .article-section { margin-bottom: 38px; }
+        }
+    .article-title, .hero-intro { text-wrap: balance; }
+.closing-group { margin: 56px auto; }
+.closing-group .closing-text { margin: 0 auto 24px; max-width: 620px; }
+.closing-group .closing-text:last-child { margin-bottom: 0; }
+a:focus-visible { outline: 2px solid var(--accent-dark); outline-offset: 4px; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://behappyhealthy0411-prog.github.io/BEHEALTH/glucose_cgm_flat_curve.html#article",
+  "headline": "血糖曲線越平越好嗎？",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://behappyhealthy0411-prog.github.io/BEHEALTH/glucose_cgm_flat_curve.html"
+  },
+  "url": "https://behappyhealthy0411-prog.github.io/BEHEALTH/glucose_cgm_flat_curve.html",
+  "inLanguage": "zh-Hant-TW",
+  "author": {
+    "@type": "Person",
+    "@id": "https://behappyhealthy0411-prog.github.io/BEHEALTH/about_doctor.html#doctor",
+    "name": "徐醫師",
+    "url": "https://behappyhealthy0411-prog.github.io/BEHEALTH/about_doctor.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "集馨診所",
+    "url": "https://behappyhealthy0411-prog.github.io/BEHEALTH/"
+  },
+  "description": "CGM 看得到血糖變化，卻看不到完整的代謝健康。從餐後血糖、胰島素、血脂與頻量全心，理解適合自己的飲食方式。"
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <span class="logo-main">代謝美學</span>
+                <span class="logo-sub">METABOLIC ESTHETICS</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">首頁</a>
+                <a href="glucose_appetite.html" class="nav-item active">血糖與食慾</a>
+                <a href="index.html#booking" class="nav-item">預約諮詢</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="article-hero">
+        <span class="hero-tag">GLUCOSE & APPETITE</span>
+        <span class="hero-category">血糖與食慾 · 血糖波動型</span>
+        <h1 class="article-title">血糖曲線越平越好嗎？</h1>
+        <p class="hero-intro">CGM 看得到血糖變化，卻看不到完整的代謝健康。從餐後血糖、胰島素、血脂與頻量全心，理解適合自己的飲食方式。</p>
+    </header>
+
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="qa-header">
+                <span class="qa-title">這篇文章會帶你看懂</span>
+                <div class="qa-divider"></div>
+            </div>
+            <div class="qa-grid">
+                <div class="qa-card">
+                    <span class="qa-num">Q 1</span>
+                    <p class="qa-text">餐後血糖上升，一定是不好的事嗎？</p>
+                </div>
+                <div class="qa-card">
+                    <span class="qa-num">Q 2</span>
+                    <p class="qa-text">為什麼有些高脂肪餐，血糖曲線反而比較平穩？</p>
+                </div>
+                <div class="qa-card">
+                    <span class="qa-num">Q 3</span>
+                    <p class="qa-text">除了 CGM，還需要看哪些資訊？</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <article class="article-content"><section class="article-section"><p class="article-p">有些人開始使用連續血糖監測（CGM）後，發現原本以為吃甜點血糖一定會大幅上升，結果曲線卻意外平穩。</p><p class="article-p">這時候可能會忍不住想：「醫師，我是不是天選之人？吃甜點血糖都不會升！」</p><p class="article-p">也有人發現，吃白飯時血糖比較容易上升，吃炸物反而沒有明顯變化。那麼，炸物真的比白飯更適合自己嗎？</p><p class="article-p">CGM 測量的是組織間液中的葡萄糖，並不能呈現身體所有的代謝反應。<strong>血糖曲線越平穩，真的就代表吃得越健康嗎？</strong></p></section><section class="article-section"><h2 class="section-heading">餐後血糖上升，不一定代表代謝不好</h2><p class="article-p">吃進含有碳水化合物的食物後，葡萄糖經消化吸收進入血液，血糖自然可能上升。身體透過胰島素等調節機制，協助葡萄糖利用或儲存，讓血糖逐漸回落。</p><p class="article-p">真正值得觀察的是上升程度、持續時間、回落情形，以及這樣的變化是否反覆出現。</p><p class="article-p">對於糖尿病或血糖調節異常的人，餐後血糖控制確實重要。但對血糖調節正常的人，目前沒有充分證據顯示必須把每一次正常餐後上升都壓到最低，才能獲得更好的長期健康結果。</p><p class="article-p"><strong>我們希望的是良好的血糖調節能力，而不是一條永遠不會上升的曲線。</strong></p></section><section class="article-section"><h2 class="section-heading">為什麼吃炸物，血糖反而可能比較平穩？</h2><p class="article-p">白飯含有較多可消化的碳水化合物，血糖可能明顯上升。以脂肪與蛋白質為主、碳水較少的餐點，短時間內的血糖上升則可能比較不明顯。</p><p class="article-p">脂肪也可能延緩胃排空，使混合餐的血糖反應延後。因此不能只看餐後前一、兩個小時的最高點。</p><p class="article-p">一份高脂肪餐仍可能含有大量熱量、飽和脂肪或鈉，這些因素不一定直接反映在 CGM 曲線上，卻可能影響長期血脂、體重與心血管健康。</p><p class="article-p">當然，不是所有高脂肪食物都不好。橄欖油、堅果、魚類與高度加工的油炸食品，在脂肪組成及營養品質上可能有明顯差異。</p><p class="article-p"><strong>血糖反應比較小，不代表其他代謝面向也一定比較好。</strong></p></section><section class="article-section"><h2 class="section-heading">CGM 看不到的，還有哪些代謝反應？</h2><p class="article-p"><strong>1. 胰島素分泌</strong><br>同樣的血糖曲線，背後可能有不同的胰島素反應。有些人可能需要分泌較多胰島素才能維持相近的血糖。單靠 CGM 無法判斷胰島素分泌量，也不能直接診斷胰島素阻抗。</p><p class="article-p"><strong>2. 血脂與脂蛋白代謝</strong><br>脂肪的消化、吸收與運送涉及三酸甘油酯及脂蛋白的變化。血糖平穩不代表三酸甘油酯、LDL 膽固醇或 ApoB 一定在理想範圍。</p><p class="article-p"><strong>3. 整體營養品質</strong><br>CGM 不會告訴我們蛋白質、纖維是否足夠，或鈉與飽和脂肪是否過多。只用血糖峰值選擇食物，可能忽略重要的營養差異。</p></section><section class="article-section"><h2 class="section-heading">那麼，CGM 到底應該怎麼用？</h2><p class="article-p">當糖化血色素（A1C）與飲食紀錄無法完整解釋血糖狀態時，CGM 可以幫助我們找到值得進一步確認的線索。</p><p class="article-p">例如哪些餐點後血糖反覆上升較多或回落較慢？改變份量、搭配方式或飯後散步後，血糖反應有什麼不同？晚餐、宵夜、睡眠與活動習慣是否和全天血糖型態有關？</p><p class="article-p">CGM 也有測量誤差與時間延遲，單次曲線可能受到餐點組成、活動、睡眠與感測器狀態影響。</p><p class="article-p"><strong>它比較適合觀察反覆出現的模式，以及生活調整前後的差異，而不是替每一餐打分數。</strong></p></section><section class="article-section"><h2 class="section-heading">代謝美學怎麼看：不要只讓一個數字決定你的飲食</h2><p class="article-p">在集馨，我們也會依個人需求參考飲食紀錄、身體感受、A1C、血脂、體重變化及其他適合的檢驗。如果血糖控制良好，但三酸甘油酯或 ApoB 持續偏高，仍需要檢視整體飲食與心血管風險。反過來，反覆過高或持續偏高的血糖也不能忽略。</p><p class="article-p">在代謝美學的飲食評估中，我們稱這四個方向為「頻量全心」：</p><p class="article-p"><strong>頻｜看頻率<br>量｜看份量<br>全｜看全貌<br>心｜顧身心</strong></p><p class="article-p">偶爾享受甜點或炸物，和每天以這些食物作為主要飲食來源，對健康的意義並不相同。目前抽血數據正常，也不代表可以忽略長期飲食習慣。</p><p class="article-p">如果為了追求漂亮的健康數據，讓自己長期處於飢餓、焦慮或壓抑之中，甚至出現反彈式進食，這樣的飲食方式也值得重新思考。</p><p class="article-p"><strong>健康飲食不是什麼都不能吃，也不是什麼都可以無限制地吃。</strong></p><p class="article-p">我們希望找到的，不是一份每餐都必須完美的菜單，而是一種能照顧身心健康、保有享受食物的空間，也能在日常生活中長久維持的飲食方式。</p><p class="article-p">血糖、血脂與其他健康數據，是幫助我們確認方向的工具，而不是用來替每一種食物貼上好壞標籤。</p></section><section class="summary-card"><h2 class="summary-title">重點整理</h2><ul class="summary-list"><li>餐後血糖適度上升是正常生理反應。</li><li>高脂肪或低碳水餐點可能讓曲線較平穩，但不代表整體代謝負擔較低。</li><li>CGM 無法直接測量胰島素、血脂或營養品質。</li><li>觀察反覆出現的模式，而不是替每餐打分數。</li><li>結合頻量全心、生活紀錄、身體感受與適當檢驗。</li></ul></section><div class="closing-group"><p class="closing-text">有時候，血糖上升不代表吃錯了。<br>有時候，血糖平穩也不代表一切都很好。</p><p class="closing-text"><strong>我們不需要追求每一條曲線都完美，而是希望透過這些訊號，更完整地理解自己的身體。</strong></p></div></article>
+
+    <!-- 作者資訊：單篇試行，確認版面後再決定是否套用其他文章 -->
+    <section class="doctor-byline" aria-label="文章作者" style="max-width:920px;margin:32px auto 48px;padding:24px 26px;border:1px solid #E2DCD5;border-radius:12px;background:#FFFFFF;color:#2D2B29;font-family:'Noto Sans TC','PingFang TC',sans-serif;line-height:1.8;">
+      <p style="font-size:12px;letter-spacing:.08em;color:#8C7D70;margin:0 0 7px;">本文作者</p>
+      <p style="font-size:16px;font-weight:600;margin:0 0 4px;">集馨診所 徐醫師</p>
+      
+      <p style="font-size:14px;margin:0 0 10px;">從症狀與生活線索出發，陪你理解身體的變化。</p>
+      <a href="about_doctor.html" style="display:inline-block;font-size:13px;color:#74613A;text-decoration:underline;text-underline-offset:4px;">認識徐醫師 →</a>
+    </section>
+
+    <section class="related-section"><h2 class="related-title">延伸閱讀</h2><p class="related-intro">從血糖變化與身體感受，繼續理解飲食調整。</p><div class="related-grid"><a href="glucose_a1c_low_carb.html" class="related-card"><div><span class="related-label">血糖與食慾｜代謝代償型</span><h3>A1C 沒有降，就代表碳水還不夠低嗎？</h3><p>血糖沒有如預期改善，下一步不一定是繼續減少主食。</p></div><span class="read-more">閱讀文章 →</span></a><a href="glucose_aftermeal_sleepy.html" class="related-card"><div><span class="related-label">血糖與食慾｜血糖波動型</span><h3>飯後昏沉，是身體在提醒你什麼？</h3><p>飯後疲倦也可能與睡眠、壓力及消化狀態有關。</p></div><span class="read-more">閱讀文章 →</span></a><a href="metabolic_aesthetics.html" class="related-card"><div><span class="related-label">代謝美學｜照顧方式</span><h3>代謝美學｜我們怎麼找答案</h3><p>從身體感受、生活紀錄與檢驗數據出發，找到適合自己的健康管理方向。</p></div><span class="read-more">閱讀文章 →</span></a></div></section>
+
+    <nav class="article-nav">
+        <a href="glucose_appetite.html" class="text-link">← 回到血糖與食慾</a>
+        <a href="index.html#knowledge" class="text-link">返回集馨診所首頁</a>
+    </nav>
+<script defer src="booking-tracking.js"></script>
+</body>
+</html>
